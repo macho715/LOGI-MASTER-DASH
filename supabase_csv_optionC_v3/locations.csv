@@ -1,0 +1,4 @@
+location_id,location_code,name,category,hvdc_node,is_mosb,is_site,is_port,active
+1,CUSTOMS_UAE,Customs (UAE),CUSTOMS,CUSTOMS,False,False,False,True
+2,EDAS,eDAS / Attestation,CUSTOMS,CUSTOMS,False,False,False,True
+3,PORT_AGENT,Port Agent / DO Collection,PORT,PORT,False,False,True,True

@@ -1,0 +1,25 @@
+# HVDC Option C ETL Report
+
+- **all_rows**: 874
+- **all_invalid_rows**: 874
+- **all_unique_case_keys**: 0
+- **wh_rows**: 8804
+- **wh_unique_case_keys**: 6703
+- **wh_invalid_rows**: 1999
+- **wh_matched**: 0
+- **wh_unmatched**: 8804
+- **merged_rows**: 0
+- **dedup_rows**: 0
+- **dedup_duplicates_removed**: 0
+- **shipments**: 0
+- **cases**: 0
+- **ssot_cases_minus_all_unique**: 0
+- **flows**: 0
+- **events**: 0
+- **events_missing_case_fk**: 0
+- **flows_missing_case_fk**: 0
+- **flow_mismatch_cnt**: 0
+- **flow_mismatch_pct**: 0.0
+- **flow5_cnt**: 0
+- **agi_das_violation_cnt**: 0
+- **customs_hvdc_keys**: 871
