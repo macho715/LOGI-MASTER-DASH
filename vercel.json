@@ -1,6 +1,8 @@
 {
-  "buildCommand": "cd apps/logistics-dashboard && pnpm build",
-  "outputDirectory": "apps/logistics-dashboard/.next",
-  "installCommand": "pnpm install",
-  "framework": "nextjs"
+  "builds": [
+    {
+      "src": "apps/logistics-dashboard/package.json",
+      "use": "@vercel/next"
+    }
+  ]
 }
