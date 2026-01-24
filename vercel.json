@@ -2,6 +2,5 @@
   "buildCommand": "cd apps/logistics-dashboard && pnpm build",
   "outputDirectory": "apps/logistics-dashboard/.next",
   "installCommand": "pnpm install",
-  "framework": "nextjs",
-  "rootDirectory": "apps/logistics-dashboard"
+  "framework": "nextjs"
 }
