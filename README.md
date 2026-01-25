@@ -12,6 +12,13 @@
 
 ## 🚀 빠른 시작
 
+### 배포 상태
+
+✅ **Vercel 배포 성공**
+- 프로덕션 URL: https://logimasterdash-rkz2dqsc8-chas-projects-08028e73.vercel.app/
+- 프로젝트: [logimasterdash](https://vercel.com/chas-projects-08028e73/logimasterdash)
+- Monorepo 구조에서 Next.js 감지 및 빌드 정상 동작 확인
+
 ### 사전 요구사항
 
 - Node.js 20+

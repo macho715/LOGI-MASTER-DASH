@@ -7,6 +7,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Fixed
+- ✅ Vercel 배포 성공: monorepo 구조에서 Next.js 감지 및 빌드 정상 동작 확인
+  - 배포 URL: https://logimasterdash-rkz2dqsc8-chas-projects-08028e73.vercel.app/
+  - 해결된 문제: Next.js 감지 실패, pnpm 워크스페이스 해결, monorepo 빌드 설정
+
 ### Added
 - 핸드오프 문서 번들 추가 (`SETUP.md`, `.env.example`, `CHANGELOG.md`)
 - plan.md 요약/상세 불일치 탐지 PoC 추가 (`packages/doc-intelligence`)
