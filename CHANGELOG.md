@@ -28,7 +28,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 - 루트 `package.json`의 `packageManager` 필드 제거 (Turborepo 호환성 문제 해결)
 - Vercel 배포 시 서브모듈 페치 경고를 유발하던 레거시 서브모듈 엔트리 제거
-- Vercel 빌드 설정: 레거시 `builds` 형식 제거, Root Directory는 대시보드에서 설정하도록 변경
+- Vercel 빌드 경고를 피하도록 `apps/logistics-dashboard` 루트 지정으로 전환
 
 ### Security
 
