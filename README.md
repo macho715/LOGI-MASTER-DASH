@@ -4,6 +4,7 @@
 
 **SSOT 문서**:
 - 📊 **[PROJECT_SUMMARY.md](./PROJECT_SUMMARY.md)** - 🆕 한눈에 보는 개발 현황 및 다음 단계
+- ✅ **[docs/VERCEL_DEPLOYMENT_SUCCESS.md](./docs/VERCEL_DEPLOYMENT_SUCCESS.md)** - 🆕 Vercel 배포 성공 리포트
 - [STATUS.md](./STATUS.md) - 통합 상태 SSOT
 - [AGENTS.md](./AGENTS.md) - 코딩 규칙 SSOT
 - [docs/INTEGRATION_ROADMAP.md](./docs/INTEGRATION_ROADMAP.md) - 통합 로드맵
@@ -127,6 +128,7 @@ pnpm test
 ## 📚 주요 문서
 
 - 📊 **[PROJECT_SUMMARY.md](./PROJECT_SUMMARY.md)** - 🆕 한눈에 보는 개발 현황 및 다음 단계
+- ✅ **[docs/VERCEL_DEPLOYMENT_SUCCESS.md](./docs/VERCEL_DEPLOYMENT_SUCCESS.md)** - 🆕 Vercel 배포 성공 리포트 (문제 해결 과정 및 최종 설정)
 - [SETUP.md](./SETUP.md) - 로컬/CI 설정 가이드
 - [CHANGELOG.md](./CHANGELOG.md) - 변경 이력
 - [STATUS (통합 상태 SSOT)](./STATUS.md)
