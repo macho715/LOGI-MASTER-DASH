@@ -26,7 +26,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Removed
 
 ### Fixed
-- 루트 `package.json`의 `packageManager` 필드 제거 (Turborepo 호환성 문제 해결)
+- 루트 `package.json`에 `packageManager: "pnpm@10.28.0"` 필드 추가 (pnpm 워크스페이스 해결을 위해 필요)
 - Vercel 배포 시 서브모듈 페치 경고를 유발하던 레거시 서브모듈 엔트리 제거
 - Vercel 빌드 경고를 피하도록 `apps/logistics-dashboard` 루트 지정으로 전환
 
