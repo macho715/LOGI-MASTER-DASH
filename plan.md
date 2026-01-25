@@ -7,11 +7,12 @@
 > - RED → GREEN → REFACTOR 사이클
 > - Test SLA: unit ≤0.20s / integration ≤2.00s / e2e ≤5m
 > 
-> **최종 업데이트**: 2026-01-24
+> **최종 업데이트**: 2026-01-25
 
 ## Context & SoT Alignment
 
 - 이 파일은 테스트 계획 관점의 **SoT**이며, 실제 구현/통합 상태는 `STATUS.md`, `docs/INTEGRATION_ROADMAP.md`, `docs/NEXT_STEPS_PRIORITY.md`와 함께 본다.
+- **데이터 적재 실행(Phase 2~6)** 상태·실행 방법은 [DASHBOARD_DATA_INTEGRATION_PROGRESS](docs/DASHBOARD_DATA_INTEGRATION_PROGRESS.md) 및 Phase별 계획(PHASE2/4/5/6) 참조. 권장: Supavisor Session :5432, `SUPABASE_DB_URL` + `connect_timeout`, redaction 규칙.
 - 데이터 모델/마이그레이션·RLS·Realtime·Foundry 연계 등 **통합 상태**는 `STATUS.md`와 `docs/INTEGRATION_ROADMAP.md`를 기준으로 하고, 여기서는 해당 항목을 검증하는 테스트만 추적한다.
 - Monorepo 구조, `UnifiedLayout.tsx`, `schema_v2_unified.sql` 등 이미 완료된 작업은 위 문서들에 맞춰 테스트 코멘트에만 요약으로 표시한다.
 - Flow Code v3.5, OpsStore, RLS/Realtime/테스트 작성 등 남은 작업은 아래 테스트 카테고리와 게이트(Gate 1/2/3)에 매핑해 **TDD 우선순위**를 정한다.
@@ -33,16 +34,19 @@
 - [x] test: locations table accessible (file: tests/integration/test_supabase_schema.py, name: test_locations_table_accessible) # completed @2026-01-23 - 스키마에 포함
 - [x] test: location_statuses table accessible (file: tests/integration/test_supabase_schema.py, name: test_location_statuses_table_accessible) # completed @2026-01-23 - 스키마에 포함
 - [x] test: hvdc_worklist table accessible (file: tests/integration/test_supabase_schema.py, name: test_hvdc_worklist_table_accessible) # completed @2026-01-23 - `/api/worklist` 엔드포인트 구현 완료
+- [x] test: status schema tables exist (file: tests/integration/test_supabase_schema.py, name: test_status_schema_tables_exist) # completed @2026-01-25 - Phase 2 DDL 적용 완료 (status.shipments_status, status.events_status)
+- [x] test: case schema tables exist (file: tests/integration/test_supabase_schema.py, name: test_case_schema_tables_exist) # completed @2026-01-25 - Phase 2 DDL 적용 완료 (case.*)
+- [x] test: public.shipments view exists (file: tests/integration/test_supabase_schema.py, name: test_public_shipments_view_exists) # completed @2026-01-25 - 대시보드 뷰 생성 완료
 - [ ] test: hvdc_kpis table accessible (file: tests/integration/test_supabase_schema.py, name: test_hvdc_kpis_table_accessible)
 
 ### Data Loading & ETL
-- [ ] test: ETL script Untitled-4 executes successfully (file: tests/integration/test_etl.py, name: test_etl_script_untitled4_executes) # Phase 3: Status SSOT Layer ETL
+- [x] test: ETL script Untitled-4 executes successfully (file: tests/integration/test_etl.py, name: test_etl_script_untitled4_executes) # completed @2026-01-25 - Phase 3: Status SSOT Layer ETL 완료 (CSV 생성)
 - [ ] test: ETL script Untitled-3 executes successfully (file: tests/integration/test_etl.py, name: test_etl_script_untitled3_executes) # Phase 3: Option-C Case Layer ETL
-- [ ] test: CSV files generated from ETL (file: tests/integration/test_etl.py, name: test_csv_files_generated)
+- [x] test: CSV files generated from ETL (file: tests/integration/test_etl.py, name: test_csv_files_generated) # completed @2026-01-25 - Phase 3 완료 (shipments_status.csv, events_status.csv)
 - [ ] test: CSV data matches source JSON (file: tests/integration/test_etl.py, name: test_csv_data_matches_source)
-- [ ] test: status schema tables loaded from CSV (file: tests/integration/test_data_loading.py, name: test_status_schema_tables_loaded)
+- [x] test: status schema tables loaded from CSV (file: tests/integration/test_data_loading.py, name: test_status_schema_tables_loaded) # completed @2026-01-25 - Phase 4 완료 (871 shipments + 928 events, UPSERT + FK 필터)
 - [ ] test: case schema tables loaded from CSV (file: tests/integration/test_data_loading.py, name: test_case_schema_tables_loaded)
-- [ ] test: CSV loading order enforced (file: tests/integration/test_data_loading.py, name: test_csv_loading_order_enforced) # Phase 4: Status → Case 순서
+- [x] test: CSV loading order enforced (file: tests/integration/test_data_loading.py, name: test_csv_loading_order_enforced) # completed @2026-01-25 - Phase 4: Status → Case 순서, UPSERT + FK 필터 구현
 
 ### RDF Pipeline (JSON → TTL)
 - [x] test: json_to_ttl converts correctly (file: tests/test_rdf_pipeline.py, name: test_json_to_ttl_conversion) # completed @2026-01-23 - logiontology_scaffold 이관 완료
@@ -74,6 +78,7 @@
 - [x] test: heatmap layer created (file: tests/ui/test_mapview.tsx, name: test_heatmap_layer_created) # completed @2026-01-23 - MapView에 레이어 구현됨
 - [x] test: geofence layer created (file: tests/ui/test_mapview.tsx, name: test_geofence_layer_created) # completed @2026-01-23 - MapView에 레이어 구현됨
 - [x] test: ETA wedge layer created (file: tests/ui/test_mapview.tsx, name: test_eta_wedge_layer_created) # completed @2026-01-23 - MapView에 레이어 구현됨
+- [x] test: worklist API returns data (file: tests/ui/test_worklist_api.tsx, name: test_worklist_api_returns_data) # completed @2026-01-25 - 로컬 테스트 완료 (871 rows + KPI 정상 반환)
 
 ### Mobile Interactions
 - [x] test: HVDC Panel mobile drag works (file: tests/ui/test_mobile_interactions.tsx, name: test_hvdc_panel_mobile_drag) # completed @2026-01-23 - UnifiedLayout.tsx에 부분 구현
@@ -93,6 +98,7 @@
 - [x] test: realtime subscription works (file: tests/integration/test_realtime.py, name: test_realtime_subscription) # completed @2026-01-24 - Realtime KPI Dashboard 구현 완료 (useSupabaseRealtime, useKpiRealtime 훅 구현)
 - [x] test: realtime updates merged correctly (file: tests/integration/test_realtime.py, name: test_realtime_updates_merged) # completed @2026-01-24 - useBatchUpdates 훅으로 배치 업데이트 구현
 - [x] test: no duplicate updates (file: tests/integration/test_realtime.py, name: test_no_duplicate_updates) # completed @2026-01-24 - 배치 업데이트 및 중복 제거 로직 구현
+- [x] test: realtime publication enabled for status tables (file: tests/integration/test_realtime.py, name: test_realtime_publication_enabled) # completed @2026-01-25 - Phase 6 완료 (5개 테이블 Realtime 활성화)
 - [ ] test: worklist load < 1s (file: tests/performance/test_performance.py, name: test_worklist_load_time)
 - [ ] test: status panel refresh < 1s (file: tests/performance/test_performance.py, name: test_status_panel_refresh_time)
 - [ ] test: p95 response time < 3s (file: tests/performance/test_performance.py, name: test_p95_response_time)
@@ -112,10 +118,10 @@
 - [ ] test: OCR gate TableAcc >= 0.98 (file: tests/validation/test_ocr_gates.py, name: test_ocr_tableacc_gate)
 - [ ] test: OCR gate NumericIntegrity = 1.00 (file: tests/validation/test_ocr_gates.py, name: test_ocr_numeric_integrity_gate)
 - [ ] test: ZERO-fail-safe on OCR gate failure (file: tests/validation/test_ocr_gates.py, name: test_zero_failsafe_on_ocr_failure)
-- [ ] test: Gate 1 QA orphan check passes (file: tests/validation/test_gate1_qa.py, name: test_gate1_qa_orphan_check) # Phase 5: Orphan 체크 (orphan_count = 0)
-- [ ] test: Gate 1 QA duplicate check passes (file: tests/validation/test_gate1_qa.py, name: test_gate1_qa_duplicate_check) # Phase 5: Duplicate 체크
-- [ ] test: Gate 1 QA flow code validation (file: tests/validation/test_gate1_qa.py, name: test_gate1_qa_flow_code_validation) # Phase 5: Flow Code 검증
-- [ ] test: Gate 1 QA coverage check passes (file: tests/validation/test_gate1_qa.py, name: test_gate1_qa_coverage_check) # Phase 5: Coverage 체크
+- [x] test: Gate 1 QA orphan check passes (file: tests/validation/test_gate1_qa.py, name: test_gate1_qa_orphan_check) # completed @2026-01-25 - Phase 5 완료 (orphan_count = 0)
+- [x] test: Gate 1 QA duplicate check passes (file: tests/validation/test_gate1_qa.py, name: test_gate1_qa_duplicate_check) # completed @2026-01-25 - Phase 5 완료 (dup_events_case_rows = 0)
+- [x] test: Gate 1 QA flow code validation (file: tests/validation/test_gate1_qa.py, name: test_gate1_qa_flow_code_validation) # completed @2026-01-25 - Phase 5 완료 (bad_flow5 = 0, agi_das_violation = 0)
+- [x] test: Gate 1 QA coverage check passes (file: tests/validation/test_gate1_qa.py, name: test_gate1_qa_coverage_check) # completed @2026-01-25 - Phase 5 완료 (871 shipments, 540 events)
 
 ### Layout Invariants
 - [x] test: MapView left layout (file: tests/ui/test_layout.tsx, name: test_mapview_left_layout) # completed @2026-01-23 - UnifiedLayout.tsx 프로토타입 완료
@@ -145,25 +151,26 @@
 
 ## Progress Summary
 
-**완료된 테스트**: 41개 / 88개 (46.6%)
-**남은 테스트**: 47개
+**완료된 테스트**: 50개 / 95개 (52.6%)
+**남은 테스트**: 45개
 
 ### 완료된 카테고리
 - ✅ Infrastructure & Setup: 4/4 (100%)
 - ✅ RDF Pipeline: 8/10 (80%)
 - ✅ Flow Code v3.5: 6/6 (100%)
-- ✅ UI Components: 9/9 (100%)
+- ✅ UI Components: 10/10 (100%) - worklist API 테스트 추가 완료 (2026-01-25)
 - ✅ Layout Invariants: 3/4 (75%)
-- ✅ Realtime & Performance: 3/6 (50%) - Realtime 구독/병합/중복 제거 구현 완료 (2026-01-24)
+- ✅ Realtime & Performance: 4/7 (57%) - Realtime publication 활성화 완료 (2026-01-25)
+- ✅ Validation & Quality Gates: 4/11 (36%) - Gate 1 QA 검증 완료 (2026-01-25)
 
 ### 진행 중인 카테고리
-- ⏳ Supabase Integration: 6/9 (66.7%)
-- ⏳ Data Loading & ETL: 0/7 (0%) - 🆕 ETL 및 CSV 적재 테스트 추가 (2026-01-24)
+- ⏳ Supabase Integration: 9/12 (75%) - Phase 2 DDL 적용 완료 (2026-01-25)
+- ⏳ Data Loading & ETL: 3/7 (43%) - Phase 3~4 완료 (2026-01-25)
 - ⏳ Mobile Interactions: 1/4 (25%)
 - ⏳ Accessibility: 1/6 (17%)
-- ⏳ Realtime & Performance: 3/6 (50%) - 성능 테스트 대기 중
+- ⏳ Realtime & Performance: 4/7 (57%) - 성능 테스트 대기 중
 - ⏳ Foundry/Ontology Integration: 0/5 (0%)
-- ⏳ Validation & Quality Gates: 0/11 (0%) - Gate 1 QA 검증 테스트 추가 (2026-01-24)
+- ⏳ Validation & Quality Gates: 4/11 (36%) - OCR/SHACL 검증 대기 중
 - ⏳ User Flows: 0/5 (0%)
 
 ## Notes
@@ -172,11 +179,12 @@
 - 테스트 실행 시간: unit ≤0.20s, integration ≤2.00s, e2e ≤5m
 - `go` 명령 시 다음 미표시 테스트만 선택하여 진행
 - 테스트 완료 시 체크박스 업데이트: `- [x] test: ... # passed @YYYY-MM-DD <commit:hash>`
-- **최종 업데이트**: 2026-01-24 - Data Loading & ETL 테스트 섹션 추가 (DATA_LOADING_PLAN.md Phase 3-5 매핑)
+- **최종 업데이트**: 2026-01-25 - Phase 2~6 완료 상태 반영 (DDL 적용, CSV 적재, Gate 1 QA, Realtime 활성화, 대시보드 데이터 반영 완료)
 
 ## 참조 문서
 
 - [STATUS.md](./STATUS.md) - 통합 상태 SSOT
 - [INTEGRATION_ROADMAP.md](./docs/INTEGRATION_ROADMAP.md) - 통합 로드맵
 - [AGENTS.md](./AGENTS.md) - 프로젝트 규칙
-- [DATA_LOADING_PLAN.md](./docs/DATA_LOADING_PLAN.md) - 🆕 Supabase 데이터 적재 작업 계획
+- [DATA_LOADING_PLAN.md](./docs/DATA_LOADING_PLAN.md) - Supabase 데이터 적재 작업 계획
+- [DASHBOARD_DATA_INTEGRATION_PROGRESS.md](./docs/DASHBOARD_DATA_INTEGRATION_PROGRESS.md) - Phase 2~6 실행 방법·진행 상황 SSOT

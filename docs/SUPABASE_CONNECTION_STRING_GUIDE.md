@@ -41,17 +41,26 @@
 
 ## 3. 이 프로젝트에서 쓰는 값 (SUPABASE_DB_URL)
 
-**Phase 2~6 (DDL, CSV 적재, Gate 1 QA, Realtime)** 및 `scripts/hvdc/run_all.ps1` 등은 **psql / migrations** 용이므로 **Direct 연결**을 사용한다.
+**Phase 2~6 (DDL, CSV 적재, Gate 1 QA, Realtime)** 기준:
 
-- **Direct** 연결 문자열을 복사한 뒤 `[YOUR-PASSWORD]` 만 실제 DB 비밀번호로 바꾼다.
-- 예:
-  ```text
-  postgresql://postgres:[YOUR-PASSWORD]@db.abcdefghijklmnopqrst.supabase.co:5432/postgres
-  ```
+- VPN/IPv6 이슈가 있으면 **Session pooler(5432)** 를 기본값으로 사용.
+- IPv6가 안정적인 환경에서는 **Direct** 도 가능.
+- DB URL 전체는 문서/로그에 남기지 말고 `user:***@host` 형태로 마스킹.
+
+예 (Session pooler):
+```text
+postgresql://postgres.[PROJECT-REF]:[YOUR-PASSWORD]@aws-0-[REGION].pooler.supabase.com:5432/postgres
+```
+
+예 (Direct):
+```text
+postgresql://postgres:[YOUR-PASSWORD]@db.abcdefghijklmnopqrst.supabase.co:5432/postgres
+```
 
 PowerShell 설정 예:
 ```powershell
-$env:SUPABASE_DB_URL = "postgresql://postgres:실제비밀번호@db.프로젝트REF.supabase.co:5432/postgres"
+$env:SUPABASE_DB_URL = "postgresql://postgres:[PASSWORD]@aws-0-[REGION].pooler.supabase.com:5432/postgres"
+$env:PGCONNECT_TIMEOUT = "10"
 ```
 
 ---

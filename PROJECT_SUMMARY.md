@@ -1,7 +1,7 @@
 # 📊 프로젝트 종합 현황 요약
 
 > **한눈에 보는 개발 현황 및 다음 단계**  
-> **최종 업데이트**: 2026-01-24  
+> **최종 업데이트**: 2026-01-25  
 > **SSOT**: [STATUS.md](./STATUS.md) - 상세 상태는 이 문서 참조
 
 ---
@@ -9,19 +9,20 @@
 ## 🎯 Executive Summary
 
 **프로젝트**: HVDC + Logistics 통합 대시보드  
-**현재 단계**: Phase 3 (데이터 통합 및 Realtime 구현)  
-**전체 진행률**: 약 60% 완료
+**현재 단계**: Phase 6 완료 + 대시보드 데이터 반영 완료  
+**전체 진행률**: 약 75% 완료
 
 ### 핵심 성과 ✅
 - ✅ Monorepo 구조 완성
 - ✅ 통합 UI 레이아웃 프로토타입 완료
 - ✅ Realtime KPI Dashboard 구현 완료 (2026-01-24)
-- ✅ Flow Code v3.5 마이그레이션 스크립트 준비 완료
+- ✅ Phase 2~6 완료: DDL 적용, CSV 적재 (871+928), Gate 1 QA, Realtime 활성화
+- ✅ `public.shipments` 뷰 생성, Worklist API 연동 — 로컬 테스트 완료 (871 rows·KPI)
 
 ### 다음 우선순위 ⏭️
-1. **Flow Code v3.5 마이그레이션 실행** (CRITICAL)
+1. **Realtime 구독 최적화** (선택): `status.shipments_status` 테이블 구독 전환
 2. **통합 Store (OpsStore) 설계 및 연동** (HIGH)
-3. **RLS/Realtime/성능 게이트 검증** (MEDIUM)
+3. **Vercel 프로덕션 worklist 검증** (MEDIUM)
 
 ---
 
@@ -38,10 +39,9 @@
 
 ### 3. 데이터 통합
 - ✅ /api/worklist 엔드포인트 구현
-- ✅ Flow Code v3.5 마이그레이션 스크립트 생성
-- ✅ ETL 스크립트 준비 완료
-  - Status SSOT 레이어: `Untitled-4_dashboard_ready_FULL.py`
-  - Option-C Case 레이어: `Untitled-3_dashboard_ready_FULL.py`
+- ✅ Phase 2~6: DDL, CSV 적재, Gate 1 QA, Realtime 활성화
+- ✅ `public.shipments` 뷰, Worklist API 연동, 로컬 테스트 871 rows·KPI 확인
+- ✅ ETL/적재 스크립트: `load_csv.py`, `apply_ddl.py`, `check_status_tables.py`, `gate1_qa.py`
 
 ### 4. Realtime 구현 (2026-01-24 완료) ⭐
 - ✅ Realtime KPI Dashboard 구현
@@ -52,26 +52,21 @@
 
 ## ⏳ 진행 중인 작업
 
-1. **Flow Code v3.5 마이그레이션 실행** (스크립트 준비 완료, DB 적용 대기)
-2. **통합 Store (OpsStore) 설계** (인터페이스 설계 필요)
-3. **Map ↔ Worklist ↔ Detail 동기화** (설계 단계)
-4. **ETL 스크립트 실행 및 데이터 적재** (스크립트 준비 완료, 실행 대기)
+- 없음 (Phase 2~6 및 대시보드 데이터 반영 완료)
 
 ---
 
 ## 🎯 다음 우선순위 작업
 
-### Priority 1: Flow Code v3.5 마이그레이션 (CRITICAL) 🔴
-- **예상 시간**: 0.5-1일
-- **작업**: Supabase에 마이그레이션 스크립트 적용
+### Priority 1: Realtime 구독 최적화 (선택) 🟢
+- **작업**: `useKpiRealtime` → `status.shipments_status` 구독 전환 (뷰는 Realtime 미지원)
 
 ### Priority 2: 통합 Store (OpsStore) 설계 (HIGH) 🟡
 - **예상 시간**: 1-2일
 - **작업**: 인터페이스 정의 및 Zustand 구현
 
-### Priority 3: RLS/Realtime/성능 게이트 검증 (MEDIUM) 🟢
-- **예상 시간**: 2-3일
-- **작업**: 테스트 구현 및 성능 검증
+### Priority 3: Vercel 프로덕션 worklist 검증 (MEDIUM) 🟢
+- **작업**: 배포 환경에서 `/api/worklist` 871 rows·KPI 확인
 
 ---
 
@@ -89,25 +84,21 @@
 
 ---
 
-## 📊 ETL 스크립트 현황
+## 📊 ETL·적재 스크립트 현황
 
-### Status SSOT 레이어 (Untitled-4)
-- **목적**: Status(SSOT) 전량 기준으로 `status.shipments_status`, `status.events_status` 생성
-- **입력**: HVDC_all_status.json, hvdc_warehouse_status.json
-- **출력**: shipments_status.csv, events_status.csv, TTL 파일
-- **위치**: `supabass_ontol/Untitled-4_dashboard_ready_FULL.py`
-
-### Option-C Case 레이어 (Untitled-3)
-- **목적**: 케이스 단위 정밀 흐름을 `case.*` 테이블용 CSV 생성
-- **입력**: hvdc_allshpt_status.json, hvdc_warehouse_status.json, HVDC_STATUS.json
-- **출력**: shipments_case.csv, cases.csv, flows.csv, events_case.csv
-- **위치**: `supabass_ontol/Untitled-3_dashboard_ready_FULL.py`
+### 사용 중 스크립트 (`scripts/hvdc/`)
+- **`apply_ddl.py`**: DDL 적용 (`SUPABASE_DB_URL` 또는 `--db-url`)
+- **`load_csv.py`**: CSV 적재, `--status-only`, UPSERT + FK 필터
+- **`check_status_tables.py`**: Phase 4 검증 (행 수, unique hvdc, orphan 0)
+- **`gate1_qa.py`**: Gate 1 QA (`--json` 지원)
+- **`verify_realtime_publication.py`**: Phase 6 Realtime publication 검증
+- **`check_dashboard_data.py`**: 대시보드 데이터·뷰·Realtime 현황 확인
 
 ### Supabase 적재 순서
-1. **Status 레이어**: shipments_status → events_status
-2. **Case 레이어**: locations → shipments_case → cases → flows → events_case
+1. **Status 레이어**: `load_csv.py --status-only` → shipments_status (871) → events_status (928)
+2. **Case 레이어**: (선택) locations → shipments_case → cases → flows → events_case
 
-**상세 가이드**: [ETL_GUIDE.md](./docs/ETL_GUIDE.md)
+**상세 가이드**: [ETL_GUIDE.md](./docs/ETL_GUIDE.md), [DASHBOARD_DATA_INTEGRATION_PROGRESS.md](./docs/DASHBOARD_DATA_INTEGRATION_PROGRESS.md)
 
 ---
 
@@ -121,18 +112,20 @@
 - 📊 [ETL_GUIDE.md](./docs/ETL_GUIDE.md) - 🆕 ETL 스크립트 가이드
 - 📋 [DATA_LOADING_PLAN.md](./docs/DATA_LOADING_PLAN.md) - 🆕 Supabase 데이터 적재 작업 계획
 - 📁 [PROJECT_STRUCTURE.md](./docs/PROJECT_STRUCTURE.md) - 🆕 프로젝트 구조 온보딩 가이드
+- 📊 [DASHBOARD_DATA_INTEGRATION_PROGRESS.md](./docs/DASHBOARD_DATA_INTEGRATION_PROGRESS.md) - Phase 2~6·대시보드 반영·로컬 테스트
 
 ---
 
 ## 🚀 빠른 시작
 
-`ash
+```bash
 # 의존성 설치
 pnpm install
 
-# 개발 서버 실행
-pnpm dev
-`
+# 개발 서버 실행 (logistics-dashboard, 포트 3001)
+cd apps/logistics-dashboard && pnpm dev
+# .env.local에 Supabase 키 설정 후 /api/worklist → 871 rows·KPI 확인
+```
 
 ---
 

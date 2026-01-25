@@ -39,7 +39,7 @@ export async function GET(request: NextRequest) {
     // Asia/Dubai 시간대 기준 오늘 날짜 사용 (필터링 및 계산 일관성)
     const today = getDubaiToday()
 
-    // 1. Shipments 조회 (warehouse_inventory와 함께, Flow Code 필드 포함)
+    // 1. Shipments 조회 (public.shipments view = status.shipments_status + case layer; no warehouse_inventory)
     const { data: shipments, error: shipmentsError } = await supabase
       .from("shipments")
       .select(
@@ -69,19 +69,7 @@ export async function GET(request: NextRequest) {
         flow_code,
         flow_code_original,
         flow_override_reason,
-        final_location,
-        warehouse_inventory (
-          mosb,
-          dsv_indoor,
-          dsv_outdoor,
-          dsv_mzd,
-          jdn_mzd,
-          jdn_waterfront,
-          project_shu2,
-          project_mir3,
-          project_das4,
-          project_agi5
-        )
+        final_location
       `
       )
       .order("eta", { ascending: false })
@@ -92,15 +80,10 @@ export async function GET(request: NextRequest) {
       return NextResponse.json(getFallbackPayload())
     }
 
-    // 2. ShipmentRow[] → WorklistRow[] 변환
+    // 2. ShipmentRow[] → WorklistRow[] 변환 (view has no warehouse_inventory; use null)
     const worklistRows = (shipments || [])
       .map((s: any) => {
         try {
-          // warehouse_inventory는 배열일 수 있으므로 첫 번째 항목 사용
-          const wh = Array.isArray(s.warehouse_inventory)
-            ? s.warehouse_inventory[0]
-            : s.warehouse_inventory
-
           const shipmentRow: ShipmentRow = {
             id: s.id,
             sct_ship_no: s.sct_ship_no,
@@ -121,27 +104,14 @@ export async function GET(request: NextRequest) {
             customs_start_date: s.customs_start_date,
             customs_close_date: s.customs_close_date,
             delivery_date: s.delivery_date,
-            duty_amount_aed: s.duty_amount_aed ? Number(s.duty_amount_aed) : null,
-            vat_amount_aed: s.vat_amount_aed ? Number(s.vat_amount_aed) : null,
+            duty_amount_aed: s.duty_amount_aed != null ? Number(s.duty_amount_aed) : null,
+            vat_amount_aed: s.vat_amount_aed != null ? Number(s.vat_amount_aed) : null,
             incoterms: s.incoterms,
-            flow_code: s.flow_code ? Number(s.flow_code) : null,
-            flow_code_original: s.flow_code_original ? Number(s.flow_code_original) : null,
+            flow_code: s.flow_code != null ? Number(s.flow_code) : null,
+            flow_code_original: s.flow_code_original != null ? Number(s.flow_code_original) : null,
             flow_override_reason: s.flow_override_reason,
             final_location: s.final_location,
-            warehouse_inventory: wh
-              ? {
-                  mosb: wh.mosb,
-                  dsv_indoor: wh.dsv_indoor,
-                  dsv_outdoor: wh.dsv_outdoor,
-                  dsv_mzd: wh.dsv_mzd,
-                  jdn_mzd: wh.jdn_mzd,
-                  jdn_waterfront: wh.jdn_waterfront,
-                  project_shu2: wh.project_shu2,
-                  project_mir3: wh.project_mir3,
-                  project_das4: wh.project_das4,
-                  project_agi5: wh.project_agi5,
-                }
-              : null,
+            warehouse_inventory: null,
           }
 
           return shipmentToWorklistRow(shipmentRow, today)

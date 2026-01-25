@@ -9,5 +9,10 @@ if [[ -z "${SUPABASE_DB_URL:-}" ]]; then
   exit 1
 fi
 
+if [[ -z "${PGCONNECT_TIMEOUT:-}" ]]; then
+  export PGCONNECT_TIMEOUT=10
+  echo "[run_gate1_qa] PGCONNECT_TIMEOUT=10 (override via env if needed)"
+fi
+
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 psql "${SUPABASE_DB_URL}" -f "${SCRIPT_DIR}/gate1_qa.sql"

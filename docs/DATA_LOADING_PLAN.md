@@ -1,7 +1,7 @@
 # 대시보드 데이터 Supabase 적재 작업 계획
 
 > **HVDC + Logistics 통합 대시보드 데이터 적재 단계별 실행 계획**  
-> **최종 업데이트**: 2026-01-24  
+> **최종 업데이트**: 2026-01-25  
 > **참조**: [RUNBOOK_HVDC_SUPABASE_SETUP.md](../supabass_ontol/RUNBOOK_HVDC_SUPABASE_SETUP.md), [README_dashboard_ready_FULL.md](../supabass_ontol/README_dashboard_ready_FULL.md)
 
 ---
@@ -52,6 +52,15 @@ Supabase 적재 (COPY/Import)
 ### Phase 2: DDL 적용 (0.5일)
 
 #### 2.1 스키마 마이그레이션 실행
+
+**실행 방법**:
+- **권장**: `SUPABASE_DB_URL` (Session pooler :5432 권장, VPN/IPv4 대응) 설정 후 `run_phase2_ddl.ps1` (또는 `apply_ddl.py` + `verify_phase2_ddl.py`). Access Token 불필요. `PGCONNECT_TIMEOUT=10` 또는 `--connect-timeout 10` 권장(무한 대기 방지).
+- **대안**: Supabase CLI (`supabase login` + `link` → `db execute -f ...`) 또는 `SUPABASE_ACCESS_TOKEN` + `SUPABASE_PROJECT_REF` 후 `run_phase2_ddl.ps1`.
+- **대안**: Supabase Dashboard SQL Editor, 로컬 psql.
+- **VPN/failed to resolve/SSL reset** 시 [SUPABASE_CONNECTION_TROUBLESHOOTING](./SUPABASE_CONNECTION_TROUBLESHOOTING.md) (Session pooler 5432) 참조.
+- 상세: [Phase 2 DDL 적용 계획](./PHASE2_DDL_APPLICATION_PLAN.md)
+
+**체크리스트**:
 - [ ] `supabass_ontol/20260124_hvdc_layers_status_case_ops.sql` 실행
   - Status 레이어: `status.shipments_status`, `status.events_status`
   - Case 레이어: `case.locations`, `case.shipments_case`, `case.cases`, `case.flows`, `case.events_case`
@@ -129,7 +138,14 @@ python Untitled-3_dashboard_ready_FULL.py \
 
 **순서**: shipments_status → events_status
 
-**방법 1: psql \copy (권장)**
+**실행 방법**:
+- **권장**: Supabase Dashboard Table Editor Import
+  - Table Editor → `status.shipments_status` → Import data → CSV 업로드
+  - 상세: [Phase 4 CSV 적재 계획](./PHASE4_CSV_LOADING_PLAN.md)
+- **대안**: `SUPABASE_DB_URL`(Session 5432 권장) 또는 `--db-url` 설정 후 `python scripts/hvdc/load_csv.py [--db-url URL] [--connect-timeout 10] [--truncate] --status-only`. **VPN/failed to resolve** 시 [SUPABASE_CONNECTION_TROUBLESHOOTING](./SUPABASE_CONNECTION_TROUBLESHOOTING.md) (Session pooler 5432) 참조.
+- **고급**: psql \copy (로컬 psql 사용 시)
+
+**방법 1: psql \copy (로컬 psql 사용 시)**
 
 ```sql
 -- 1) shipments_status 적재
@@ -226,6 +242,11 @@ WITH (FORMAT csv, HEADER true, ENCODING 'UTF8');
 
 ### Phase 5: Gate 1 QA 검증 (0.5일)
 
+**실행 방법**:
+- **권장**: 스크립트 실행 (`scripts/hvdc/run_gate1_qa.ps1` 또는 `.sh`)
+- **대안**: Supabase Dashboard SQL Editor
+- **상세**: [Phase 5 Gate 1 QA 계획](./PHASE5_GATE1_QA_PLAN.md)
+
 #### 5.1 Orphan 체크
 
 ```sql
@@ -314,12 +335,12 @@ LEFT JOIN "case".cases c ON c.hvdc_code = ss.hvdc_code
 GROUP BY ss.hvdc_code, ss.status_no, ss.vendor, ss.eta, ss.ata;
 ```
 
-#### 6.2 API 엔드포인트 테스트
+#### 6.3 API 엔드포인트 테스트
 - [ ] `/api/worklist` 엔드포인트 정상 작동 확인
 - [ ] KPI 계산 정상 작동 확인
 - [ ] Flow Code 표시 정상 확인
 
-#### 6.3 Realtime 구독 테스트
+#### 6.4 Realtime 구독 테스트
 - [ ] `status.shipments_status` Realtime 구독 확인
 - [ ] KPI 업데이트 정상 작동 확인
 - [ ] ConnectionStatusBadge 상태 확인
@@ -420,12 +441,24 @@ GROUP BY ss.hvdc_code, ss.status_no, ss.vendor, ss.eta, ss.ata;
 
 ## 📚 참조 문서
 
+### Phase별 상세 플랜
+- [Phase 2: DDL 적용 계획](./PHASE2_DDL_APPLICATION_PLAN.md) - Supabase CLI 사용
+- [Phase 4: CSV 적재 계획](./PHASE4_CSV_LOADING_PLAN.md) - Dashboard Import 또는 Python 스크립트
+- [Phase 5: Gate 1 QA 계획](./PHASE5_GATE1_QA_PLAN.md) - 데이터 무결성 검증
+- [Phase 6: Realtime 활성화 계획](./PHASE6_REALTIME_ACTIVATION_PLAN.md) - Realtime publication 활성화
+
+### 통합 플랜
+- [supabass_ontol 데이터 Supabase 업로드 완전 플랜](./SUPABASE_UPLOAD_COMPLETE_PLAN.md) - Phase 2~6 통합 플랜
+
+### 관련 문서
 - [RUNBOOK_HVDC_SUPABASE_SETUP.md](../supabass_ontol/RUNBOOK_HVDC_SUPABASE_SETUP.md) - Supabase 구성 Runbook
 - [README_dashboard_ready_FULL.md](../supabass_ontol/README_dashboard_ready_FULL.md) - ETL 스크립트 설명
 - [ETL_GUIDE.md](./ETL_GUIDE.md) - ETL 스크립트 가이드
+- [DATA_LOADING_RUNBOOK.md](./DATA_LOADING_RUNBOOK.md) - 실행 Runbook
+- [DASHBOARD_DATA_INTEGRATION_PROGRESS.md](./DASHBOARD_DATA_INTEGRATION_PROGRESS.md) - 진행 상황
 - [STATUS.md](../STATUS.md) - 통합 상태 SSOT
 - [PROJECT_SUMMARY.md](../PROJECT_SUMMARY.md) - 프로젝트 종합 현황
 
 ---
 
-**최종 업데이트**: 2026-01-24
+**최종 업데이트**: 2026-01-25 — Phase 2·4 실행 방법 Session 5432·connect_timeout·VPN/Pooler 반영

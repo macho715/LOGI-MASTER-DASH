@@ -71,3 +71,7 @@ python scripts/hvdc/validate_inputs.py --repo-root . --source-dir supabass_ontol
 실행 결과를 공유해 주시면 다음 단계(Phase 3: Status ETL 실행)로 진행하겠습니다.
 
 실행 계획 문서는 `docs/V2_PATCH_EXECUTION_PLAN.md`로 저장하세요. 위 명령어를 실행한 결과를 알려주세요.
+
+---
+
+**Phase 2~6 진행 시**: [DASHBOARD_DATA_INTEGRATION_PROGRESS](docs/DASHBOARD_DATA_INTEGRATION_PROGRESS.md) 및 Phase별 계획(PHASE2/4/5/6) 참조. **Session pooler :5432** 권장, **connect_timeout**·**redaction** 준수. VPN/failed to resolve 시 [SUPABASE_CONNECTION_TROUBLESHOOTING](docs/SUPABASE_CONNECTION_TROUBLESHOOTING.md) 방법 1~5 참조.

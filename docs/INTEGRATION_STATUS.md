@@ -1,8 +1,8 @@
 # HVDC + Logistics 통합 상태 문서
 
-**Last Updated**: 2026-01-24  
-**Status**: 통합 진행 중  
-**Reference**: [AGENTS.md](../AGENTS.md), [프로젝트 STATUS.MD](../archive/docs/project-status-legacy.md)
+**Last Updated**: 2026-01-25  
+**Status**: 통합 진행 중 (Phase 2~6·대시보드 데이터 반영 완료)  
+**Reference**: [AGENTS.md](../AGENTS.md), [DASHBOARD_DATA_INTEGRATION_PROGRESS.md](./DASHBOARD_DATA_INTEGRATION_PROGRESS.md), [STATUS.md](../STATUS.md)
 
 ---
 
@@ -537,4 +537,4 @@ interface UnifiedStore {
 ---
 
 **문서 버전**: 1.1  
-**최종 업데이트**: 2026-01-24
+**최종 업데이트**: 2026-01-25

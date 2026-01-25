@@ -36,19 +36,21 @@ pnpm install
 pnpm dev
 
 # 특정 앱만 실행
-pnpm --filter hvdc-dashboard dev      # 포트 3001
-pnpm --filter logistics-dashboard dev # 포트 3000
+cd apps/logistics-dashboard && pnpm dev   # Logistics 대시보드 (포트 3001)
+pnpm --filter hvdc-dashboard dev          # HVDC 대시보드 (포트 3001, 동시 실행 시 충돌 주의)
 ```
 
 ### 환경 변수 설정
 
-루트 `.env.local` 파일을 생성하고 Supabase 키를 입력:
+로컬 대시보드 `/api/worklist` 연동을 위해 `apps/logistics-dashboard/.env.local` 생성:
 
 ```env
-NEXT_PUBLIC_SUPABASE_URL=your_supabase_url
+NEXT_PUBLIC_SUPABASE_URL=https://your-project.supabase.co
 NEXT_PUBLIC_SUPABASE_ANON_KEY=your_anon_key
 SUPABASE_SERVICE_ROLE_KEY=your_service_role_key
 ```
+
+설정 후 `pnpm dev` → `http://localhost:3001/api/worklist` 에서 871 rows·KPI 확인 가능.
 
 ---
 
@@ -58,7 +60,7 @@ SUPABASE_SERVICE_ROLE_KEY=your_service_role_key
 /
 ├── apps/
 │   ├── hvdc-dashboard/          # HVDC Dashboard (포트 3001)
-│   └── logistics-dashboard/     # Logistics Dashboard (포트 3000)
+│   └── logistics-dashboard/     # Logistics Dashboard (포트 3001)
 ├── packages/
 │   ├── ui-components/           # 공용 UI 컴포넌트
 │   └── shared/                 # 공유 타입/유틸리티
@@ -119,6 +121,8 @@ pnpm test
 
 ### 데이터 통합
 - ✅ Supabase 단일 DB (SSOT)
+- ✅ Phase 2~6 완료: DDL 적용, CSV 적재 (871 shipments + 928 events), Gate 1 QA, Realtime 활성화
+- ✅ `public.shipments` 뷰 생성, Worklist API 연동 — 로컬 테스트 완료 (871 rows·KPI)
 - ✅ Flow Code v3.5 계산 및 검증
 - ✅ RLS (Row Level Security) 정책 적용
 - ✅ JSON → RDF(Turtle) 파이프라인
@@ -147,6 +151,7 @@ pnpm test
 - [데이터 로딩 Runbook](./docs/DATA_LOADING_RUNBOOK.md) - 🆕 Phase 1~7 상세 실행 가이드
 - [데이터 로딩 리포트 템플릿](./docs/DATA_LOADING_REPORT_TEMPLATE.md) - 🆕 실행 결과 기록 템플릿
 - [Realtime KPI 개발 계획](./docs/DEVELOPMENT_PLAN_REALTIME_KPI_DASHBOARD.md) - 🆕 Realtime KPI 개발 계획
+- [대시보드 데이터 통합 진행](./docs/DASHBOARD_DATA_INTEGRATION_PROGRESS.md) - Phase 2~6·대시보드 반영·로컬 테스트 완료
 
 ---
 
@@ -168,4 +173,4 @@ Private
 
 ---
 
-**최종 업데이트**: 2026-01-24
+**최종 업데이트**: 2026-01-25

@@ -1,7 +1,7 @@
 # 다음 단계 우선순위 및 실행 계획
 
-**작성일**: 2026-01-24  
-**현재 상태**: Monorepo 이관 및 1차 통합 설계 완료 ✅
+**작성일**: 2026-01-25  
+**현재 상태**: Phase 2~6·대시보드 데이터 반영·로컬 테스트 완료 ✅
 
 ---
 
@@ -26,19 +26,20 @@
    - Realtime 마이그레이션 스크립트 생성 (`supabase/migrations/20260124_enable_realtime.sql`)
    - 폴백 폴링 메커니즘 구현
    - 루트 `package.json`의 `packageManager` 필드 제거 (Turborepo 호환성)
+9. ✅ **Phase 2~6·대시보드 데이터 반영 완료** (2026-01-25)
+   - DDL 적용, CSV 적재 (871+928), Gate 1 QA, Realtime 활성화
+   - `public.shipments` 뷰 생성, Worklist API 연동, 로컬 테스트 871 rows·KPI 확인
 
 ### 대기 중인 작업 ⏳
 
-1. ⏳ Flow Code v3.5 마이그레이션  
-   - SQL 마이그레이션 파일 생성 및 적용  
-   - 기존 `shipments` 데이터에 Flow Code 필드 반영
-2. ⏳ 통합 Store 설계 (`OpsStore`)  
+1. ⏳ 통합 Store 설계 (`OpsStore`)  
    - Map ↔ Worklist ↔ Detail 동기화  
    - `selected_case_id`, `selected_location_id`, 필터/UI 상태 통합
-3. ⏳ RLS/Realtime/성능 게이트 검증  
+2. ⏳ RLS/Realtime/성능 게이트 검증  
    - RLS 정책 테스트  
    - Realtime 성능 테스트 (p95 < 3s 검증)  
    - plan.md 상 남은 테스트 (Validation, User Flows 등)
+3. ⏳ (선택) Realtime 구독 최적화: `status.shipments_status` 테이블 구독 전환
 
 ---
 
@@ -270,4 +271,4 @@ k6 run scripts/k6_api_smoke.js
 ---
 
 **문서 버전**: 1.2  
-**최종 업데이트**: 2026-01-24
+**최종 업데이트**: 2026-01-25
