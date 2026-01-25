@@ -98,6 +98,25 @@
   - `pnpm dev` (포트 3001) → `/api/worklist` **871 rows·KPI** 정상 반환
 - **참고**: Realtime 구독은 뷰에서 이벤트를 받지 않으므로, 필요 시 `status.shipments_status`로 구독 변경
 
+### 10. 맵 레이어 API 라우트 Supabase 전환 ✅
+
+**상태**: 완료 (Mock → 실제 데이터 조회 전환)
+
+- **API 수정**: `apps/logistics-dashboard/app/api/locations/route.ts`, `/api/location-status/route.ts`, `/api/events/route.ts`
+  - Mock 데이터 반환에서 Supabase `public.locations`, `public.location_statuses`, `public.events` 조회로 전환
+  - 스키마 매핑 적용:
+    - Locations: `id→location_id`, `lng→lon`, `type→siteType` (매핑 함수)
+    - Location Statuses: `status→status_code` (대문자 변환), `occupancy_rate` (0–100→0–1), `updated_at→last_updated`
+    - Events: `locations!inner` 조인 (좌표 필수), `shipments` 조인 (선택적), `event_type→status`, `description→remark`
+  - Fallback 로직: DB 조회 실패 또는 빈 데이터 시 Mock 데이터 반환
+- **검증**: 로컬 테스트 완료 (2026-01-25)
+  - `/api/locations`: 정상 응답 (Mock fallback, `public.locations` 테이블 없음)
+  - `/api/location-status`: 정상 응답 (Mock fallback, `public.location_statuses` 테이블 없음)
+  - `/api/events`: 정상 응답 (Mock fallback, `public.events` 테이블 없음 — `PGRST205` 에러)
+- **참고**:
+  - Geofence/Heatmap/ETA wedge 레이어는 Supabase 테이블이 채워지면 실제 데이터 사용 (자동 반영)
+  - `public.locations`, `public.location_statuses`, `public.events` 테이블 생성·적재 후 실제 데이터 사용 가능
+
 ---
 
 ## 진행 중인 작업
@@ -117,9 +136,14 @@
 
 ## 다음 단계 권장 사항
 
-1. **Realtime 구독 최적화** (선택)
+1. **dash 패치 적용** (맵 POI·StageCardsStrip·GlobalSearch)
+   - 맵 POI 레이어 (11개 고정 POI, reakmapping SSOT)
+   - StageCardsStrip (HVDC Panel 하단 3카드, 라우팅 연동)
+   - GlobalSearch (locations·worklist 검색)
+   - 참조: [docs/DASH_PLAN.md](./DASH_PLAN.md), [dash/reakmapping.md](../dash/reakmapping.md), [dash/docs/APPLY_PATCH.md](../dash/docs/APPLY_PATCH.md)
+2. **Realtime 구독 최적화** (선택)
    - `status.shipments_status` 테이블로 구독 변경 후 실시간 업데이트 테스트
-2. **Vercel 프로덕션 worklist 검증**
+3. **Vercel 프로덕션 worklist 검증**
    - 배포 환경에서 `/api/worklist` 871 rows·KPI 확인
 
 **대시보드 데이터 반영 참고**: [연결 문제 해결](./SUPABASE_CONNECTION_TROUBLESHOOTING.md)

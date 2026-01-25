@@ -1,16 +1,19 @@
 "use client"
 
 import { useCallback, useEffect, useRef, useState } from "react"
-import { useOpsActions } from "@repo/shared"
+import { usePathname, useRouter, useSearchParams } from "next/navigation"
+import { useOpsActions, useWorklistRows } from "@repo/shared"
 import { HeaderBar } from "@/components/dashboard/HeaderBar"
 import { RightPanel } from "@/components/dashboard/RightPanel"
 import { KpiStrip } from "@/components/hvdc/KpiStrip"
+import { StageCardsStrip } from "@/components/hvdc/StageCardsStrip"
 import { WorklistTable } from "@/components/hvdc/WorklistTable"
 import { DetailDrawer } from "@/components/hvdc/DetailDrawer"
 import { MapView } from "@/components/map/MapView"
 import { useLiveFeed } from "@/hooks/useLiveFeed"
 import { useInitialDataLoad } from "@/hooks/useInitialDataLoad"
 import { fetchEvents, fetchLocationStatuses, fetchLocations } from "@/lib/api"
+import type { HvdcBucket } from "@/lib/hvdc/buckets"
 
 const MIN_PANEL_HEIGHT = 200
 const MAX_PANEL_HEIGHT = 600
@@ -21,7 +24,11 @@ export function UnifiedLayout() {
   const [panelHeight, setPanelHeight] = useState(DEFAULT_PANEL_HEIGHT)
   const panelDragRef = useRef<{ startY: number; startHeight: number } | null>(null)
 
+  const pathname = usePathname()
+  const router = useRouter()
+  const searchParams = useSearchParams()
   const actions = useOpsActions()
+  const worklistRows = useWorklistRows()
 
   // Initial data load for worklist/KPI (before Realtime subscriptions)
   const { isLoading: isWorklistLoading } = useInitialDataLoad({
@@ -111,6 +118,24 @@ export function UnifiedLayout() {
 
   useEffect(() => () => handlePanelDragEnd(), [handlePanelDragEnd])
 
+  useEffect(() => {
+    const raw = searchParams.get("bucket")
+    if (raw !== "cumulative" && raw !== "current" && raw !== "future") {
+      actions.setFilters({ bucket: undefined })
+      return
+    }
+    actions.setFilters({ bucket: raw as HvdcBucket })
+  }, [actions, searchParams])
+
+  const handleNavigateBucket = useCallback(
+    (bucket: HvdcBucket) => {
+      const params = new URLSearchParams(searchParams.toString())
+      params.set("bucket", bucket)
+      router.push(`${pathname}?${params.toString()}`)
+    },
+    [pathname, router, searchParams],
+  )
+
   return (
     <div className="h-screen w-screen overflow-hidden bg-background dark">
       <HeaderBar />
@@ -130,7 +155,8 @@ export function UnifiedLayout() {
         aria-label="HVDC Worklist Panel"
       >
         <div className="h-96 flex flex-col">
-          <div className="p-4 border-b">
+          <div className="p-4 border-b space-y-3">
+            <StageCardsStrip rows={worklistRows} onNavigateBucket={handleNavigateBucket} />
             <KpiStrip />
           </div>
           <div className="flex-1 overflow-hidden">
@@ -161,7 +187,8 @@ export function UnifiedLayout() {
         />
 
         <div className="overflow-hidden transition-all duration-200" style={{ height: `${panelHeight}px` }}>
-          <div className="p-4 border-b">
+          <div className="p-4 border-b space-y-3">
+            <StageCardsStrip rows={worklistRows} onNavigateBucket={handleNavigateBucket} />
             <KpiStrip />
           </div>
           <div className="flex-1 overflow-auto" style={{ height: `${panelHeight - 120}px` }}>

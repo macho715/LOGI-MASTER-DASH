@@ -1,8 +1,12 @@
 "use client"
 
 import { useMemo } from "react"
+import { usePathname, useRouter, useSearchParams } from "next/navigation"
 import { useOpsStore } from "@repo/shared"
 import { useLogisticsStore } from "@/store/logisticsStore"
+import { GlobalSearch } from "@/components/search/GlobalSearch"
+import { POI_LOCATIONS } from "@/lib/map/poiLocations"
+import { buildSearchIndex, type SearchResult } from "@/lib/search/searchIndex"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Switch } from "@/components/ui/switch"
@@ -15,8 +19,12 @@ import { LogOut, Radio } from "lucide-react"
 export function HeaderBar() {
   const isLoading = useOpsStore((state) => state.isLoading)
   const eventsById = useOpsStore((state) => state.eventsById)
+  const worklistRows = useOpsStore((state) => state.worklistRows)
   const isConnected = useLogisticsStore((state) => state.isConnected)
   const windowHours = useLogisticsStore((state) => state.windowHours)
+  const pathname = usePathname()
+  const router = useRouter()
+  const searchParams = useSearchParams()
 
   const kpis = useMemo(() => {
     const events = Object.values(eventsById)
@@ -67,6 +75,23 @@ export function HeaderBar() {
     console.log("Logout clicked")
   }
 
+  const searchItems = useMemo(
+    () => buildSearchIndex({ worklistRows, pois: POI_LOCATIONS }),
+    [worklistRows],
+  )
+
+  const handleSearchSelect = (res: SearchResult) => {
+    const params = new URLSearchParams(searchParams.toString())
+    if (res.type === "shipment") {
+      params.set("focus", String(res.payload.hvdc_code ?? res.primary))
+    } else if (res.type === "case") {
+      params.set("case", String(res.payload.case_no ?? res.primary))
+    } else if (res.type === "location") {
+      params.set("loc", String(res.payload.poi_code ?? res.primary))
+    }
+    router.push(`${pathname}?${params.toString()}`)
+  }
+
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-card/95 backdrop-blur-sm border-b border-border">
       <div className="flex items-center justify-between px-4 py-2 gap-4">
@@ -104,6 +129,11 @@ export function HeaderBar() {
               <KPIBadge label="Events" value={kpis.eventsInWindow} color="purple" />
             </>
           )}
+        </div>
+
+        {/* Global Search */}
+        <div className="hidden xl:block w-80 shrink-0">
+          <GlobalSearch items={searchItems} onSelect={handleSearchSelect} />
         </div>
 
         {/* Toggles */}

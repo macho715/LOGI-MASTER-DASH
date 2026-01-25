@@ -1,7 +1,7 @@
 "use client"
 
-import { useCallback, useRef, useTransition } from "react"
-import { useOpsStore, useOpsActions } from "@repo/shared"
+import { useCallback, useEffect, useRef, useTransition } from "react"
+import { useOpsStore, useOpsActions, type WorklistRow } from "@repo/shared"
 import { calculateKpis, getDubaiToday, shipmentToWorklistRow, type ShipmentRow } from "@/lib/worklist-utils"
 import { useSupabaseRealtime, type Binding } from "./useSupabaseRealtime"
 import { useBatchUpdates } from "./useBatchUpdates"
@@ -32,12 +32,13 @@ export function useKpiRealtime(opts: UseKpiRealtimeOptions = {}) {
   const worklistRowsRef = useRef(useOpsStore.getState().worklistRows)
 
   // Keep worklistRowsRef in sync with store
-  useOpsStore.subscribe(
-    (state) => state.worklistRows,
-    (rows) => {
-      worklistRowsRef.current = rows
-    }
-  )
+  // Use useEffect to subscribe to store changes
+  useEffect(() => {
+    const unsubscribe = useOpsStore.subscribe((state) => {
+      worklistRowsRef.current = state.worklistRows
+    })
+    return unsubscribe
+  }, [])
 
   // Use React.useTransition for non-urgent KPI updates (performance optimization)
   const [isPending, startTransition] = useTransition()

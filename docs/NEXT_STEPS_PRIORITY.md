@@ -32,18 +32,55 @@
 
 ### 대기 중인 작업 ⏳
 
-1. ⏳ 통합 Store 설계 (`OpsStore`)  
+1. ⏳ **dash 패치 적용** (맵 POI·StageCardsStrip·GlobalSearch)  
+   - 맵 POI 레이어 (11개 고정 POI, reakmapping SSOT)  
+   - StageCardsStrip (HVDC Panel 하단 3카드, 라우팅 연동)  
+   - GlobalSearch (locations·worklist 검색)  
+   - 참조: [docs/DASH_PLAN.md](./DASH_PLAN.md), [dash/reakmapping.md](../dash/reakmapping.md), [dash/docs/APPLY_PATCH.md](../dash/docs/APPLY_PATCH.md)
+2. ⏳ 통합 Store 설계 (`OpsStore`)  
    - Map ↔ Worklist ↔ Detail 동기화  
    - `selected_case_id`, `selected_location_id`, 필터/UI 상태 통합
-2. ⏳ RLS/Realtime/성능 게이트 검증  
+3. ⏳ RLS/Realtime/성능 게이트 검증  
    - RLS 정책 테스트  
    - Realtime 성능 테스트 (p95 < 3s 검증)  
    - plan.md 상 남은 테스트 (Validation, User Flows 등)
-3. ⏳ (선택) Realtime 구독 최적화: `status.shipments_status` 테이블 구독 전환
+4. ⏳ (선택) Realtime 구독 최적화: `status.shipments_status` 테이블 구독 전환
 
 ---
 
 ## 우선순위별 실행 계획
+
+### Priority 0: dash 패치 적용 (HIGH)
+
+**이유**:  
+- 맵 POI 레이어, StageCardsStrip, GlobalSearch는 사용자 경험 향상에 직접적으로 기여  
+- `reakmapping.md` SSOT에 맞춘 POI 좌표 적용으로 맵 정확도 향상  
+- StageCardsStrip과 GlobalSearch는 Worklist 필터링/검색 효율성 개선
+
+**작업 내용**:
+
+1. dash 패치 파일 확인 및 통합  
+   - `dash/` 내 `poiTypes`, `poiLocations`, `PoiLocationsLayer`, `buckets`, `StageCardsStrip`, `searchIndex`, `GlobalSearch` 경로·내용 확인  
+   - [dash/docs/APPLY_PATCH.md](../dash/docs/APPLY_PATCH.md) 절차에 따라 통합
+
+2. Phase A: POI 레이어 (reakmapping SSOT)  
+   - `lib/map/poiTypes.ts`, `lib/map/poiLocations.ts` 추가·확장  
+   - `components/map/PoiLocationsLayer.ts` 추가  
+   - MapView에 POI 레이어·getTooltip·fitBounds 연동
+
+3. Phase B: StageCardsStrip  
+   - `lib/hvdc/buckets.ts`, `components/hvdc/StageCardsStrip.tsx` 추가  
+   - UnifiedLayout/HVDC Panel에 통합, 라우팅 연동
+
+4. Phase C: GlobalSearch  
+   - `lib/search/searchIndex.ts`, `components/search/GlobalSearch.tsx` 추가  
+   - 헤더/레이아웃에 배치, worklist·locations 연동
+
+**예상 시간**: 1–2일 (통합·검증 포함)
+
+**참조**: [docs/DASH_PLAN.md](./DASH_PLAN.md) - 상세 작업 계획
+
+---
 
 ### Priority 1: Flow Code v3.5 마이그레이션 (CRITICAL)
 
@@ -255,9 +292,11 @@ k6 run scripts/k6_api_smoke.js
 
 1. ✅ Monorepo 구조 이관 및 1차 통합 설계 완료  
 2. ✅ Realtime KPI Dashboard 구현 완료 (2026-01-24)
-3. ⏭️ **Flow Code v3.5 마이그레이션 SQL 작성 및 적용 (Priority 1)**  
-4. ⏭️ OpsStore 설계 및 UnifiedLayout 연동 (Priority 2)  
-5. ⏭️ RLS/Realtime/성능/Foundry 통합 테스트 구현 (Priority 3)
+3. ✅ Phase 2~6·대시보드 데이터 반영 완료 (2026-01-25)
+4. ⏭️ **dash 패치 적용 (Priority 0)** - 맵 POI·StageCardsStrip·GlobalSearch 통합
+5. ⏭️ **Flow Code v3.5 마이그레이션 SQL 작성 및 적용 (Priority 1)**  
+6. ⏭️ OpsStore 설계 및 UnifiedLayout 연동 (Priority 2)  
+7. ⏭️ RLS/Realtime/성능/Foundry 통합 테스트 구현 (Priority 3)
 
 ---
 
@@ -266,6 +305,9 @@ k6 run scripts/k6_api_smoke.js
 - [STATUS.md](../STATUS.md) - 통합 상태 SSOT  
 - [INTEGRATION_ROADMAP.md](./INTEGRATION_ROADMAP.md) - 통합 로드맵  
 - [MIGRATION_CHECKLIST.md](./MIGRATION_CHECKLIST.md) - 이관 체크리스트  
+- [DASH_PLAN.md](./DASH_PLAN.md) - dash 패치 적용 계획 (맵 POI·StageCardsStrip·GlobalSearch)
+- [dash/reakmapping.md](../dash/reakmapping.md) - 맵 POI 좌표·레이어 SSOT
+- [dash/docs/APPLY_PATCH.md](../dash/docs/APPLY_PATCH.md) - dash 패치 통합 절차
 - [migrations/FLOW_CODE_V35_MIGRATION_GUIDE.md](./migrations/FLOW_CODE_V35_MIGRATION_GUIDE.md) - Flow Code 마이그레이션 가이드 (작성 대상)  
 
 ---

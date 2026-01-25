@@ -12,6 +12,7 @@
   "dependencies": {
     "@deck.gl/aggregation-layers": "9.2.5",
     "@deck.gl/core": "latest",
+    "@deck.gl/extensions": "9.2.5",
     "@deck.gl/layers": "9.2.5",
     "@deck.gl/mapbox": "9.2.5",
     "@hookform/resolvers": "^3.10.0",

@@ -114,7 +114,7 @@ export function useSupabaseRealtime(opts: UseSupabaseRealtimeOptions) {
         config.filter = binding.filter
       }
 
-      channel.on("postgres_changes", config, (payload) => {
+      channel.on("postgres_changes" as any, config, (payload: any) => {
         if (!isMountedRef.current || !isVisibleRef.current) return
         onChange(payload)
       })

@@ -59,6 +59,9 @@ env/
 *.swo
 *~
 
+# Supabase CLI temp/cache (machine-generated, env-specific)
+supabase/.temp/
+
 # Temporary files
 Untitled-*.md
 Untitled-*.txt

@@ -65,6 +65,12 @@
   - `public.shipments` 뷰 생성: `status.shipments_status` + `case.flows` + `case.cases` 조인
   - Worklist API 수정: `warehouse_inventory` 제거, `public.shipments` 뷰 조회
   - 로컬 테스트 성공: 871 rows + KPI 정상 반환 (`driAvg=44.27`, `redCount=867`)
+- ✅ **맵 레이어 API 라우트 Supabase 전환 완료** (2026-01-25)
+  - `/api/locations`, `/api/location-status`, `/api/events`를 Mock 데이터에서 Supabase 실제 데이터 조회로 전환
+  - 스키마 매핑: `id→location_id`, `lng→lon`, `type→siteType`, `status→status_code` (대문자), `occupancy_rate` (0-100→0-1)
+  - Fallback: DB 조회 실패 시 Mock 데이터 반환
+  - Events 조인: `locations!inner`, `shipments` (PostgREST 조인)
+  - Geofence/Heatmap/ETA wedge 레이어는 테이블 채워지면 실제 Supabase 데이터 사용 (자동 반영)
 
 ---
 
@@ -103,6 +109,9 @@
 - [x] 3패널 레이아웃 프로토타입 (`packages/ui-components/src/UnifiedLayout.tsx`)
 - [ ] Map 선택 ↔ Worklist 선택 ↔ Detail Drawer 동기화(`selected_case_id`)
 - [ ] 모바일: Bottom sheet / Right drawer 제스처(드래그/스냅) ⚠️ 부분 구현
+- [x] **맵 POI 레이어** (11개 고정 POI, reakmapping SSOT) ✅ 적용 완료 — [DASH_PLAN §3.0](docs/DASH_PLAN.md) 체크리스트 참조
+- [x] **StageCardsStrip** (HVDC Panel 내 KpiStrip 상단 3카드, 라우팅 연동) ✅ 적용 완료
+- [x] **GlobalSearch** (locations·worklist 검색, `searchIndex` 연동) ✅ 적용 완료
 
 ### B. 상태관리/데이터계층
 
@@ -181,6 +190,7 @@
 - [ ] Map ↔ Worklist ↔ Detail 연결(하이라이트/필터)
 - [ ] 통합 Store 구현 (`OpsStore`)
 - [ ] **Realtime 구독 최적화**: `status.shipments_status` 테이블로 구독 변경
+- [x] **dash 패치 적용** (POI → Stage → Search): 맵 POI 레이어, StageCardsStrip, GlobalSearch 통합 ([docs/DASH_PLAN.md](./docs/DASH_PLAN.md) §3.0 체크리스트·[dash/reakmapping](./dash/reakmapping.md)·[APPLY_PATCH](./dash/docs/APPLY_PATCH.md) 참조)
 
 ---
 
@@ -315,6 +325,8 @@
 - **2026-01-25**: **Phase 5 Gate 1 QA 완료** - 모든 검사 통과 (Orphan/Duplicate/Flow Code)
 - **2026-01-25**: **Phase 6 Realtime 활성화 완료** - 5개 테이블 Realtime publication 추가
 - **2026-01-25**: **대시보드 데이터 반영 완료** - `public.shipments` 뷰 생성, Worklist API 수정, 로컬 테스트 성공 (871 rows)
+- **2026-01-25**: **dash 패치 문서 반영** - DASH_PLAN §3.0 진행 체크리스트 추가, STATUS 갭 분석·다음 2주에 dash §3.0·reakmapping·APPLY_PATCH 링크 반영
+- **2026-01-25**: **맵 레이어 API 라우트 Supabase 전환 완료** - `/api/locations`, `/api/location-status`, `/api/events` Mock→실제 데이터 조회, 스키마 매핑·Fallback 구현
 
 ---
 
@@ -329,3 +341,6 @@
 - [PHASE5_GATE1_QA_PLAN.md](./docs/PHASE5_GATE1_QA_PLAN.md) - Phase 5 Gate 1 QA 계획
 - [PHASE6_REALTIME_ACTIVATION_PLAN.md](./docs/PHASE6_REALTIME_ACTIVATION_PLAN.md) - Phase 6 Realtime 활성화 계획
 - [SUPABASE_CONNECTION_TROUBLESHOOTING.md](./docs/SUPABASE_CONNECTION_TROUBLESHOOTING.md) - 연결 문제 해결 가이드
+- [DASH_PLAN.md](./docs/DASH_PLAN.md) - dash 패치 적용 계획 (맵 POI·StageCardsStrip·GlobalSearch)
+- [dash/reakmapping.md](./dash/reakmapping.md) - 맵 POI 좌표·레이어 SSOT
+- [dash/docs/APPLY_PATCH.md](./dash/docs/APPLY_PATCH.md) - dash 패치 통합 절차

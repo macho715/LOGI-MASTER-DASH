@@ -13,6 +13,7 @@
 
 - 이 파일은 테스트 계획 관점의 **SoT**이며, 실제 구현/통합 상태는 `STATUS.md`, `docs/INTEGRATION_ROADMAP.md`, `docs/NEXT_STEPS_PRIORITY.md`와 함께 본다.
 - **데이터 적재 실행(Phase 2~6)** 상태·실행 방법은 [DASHBOARD_DATA_INTEGRATION_PROGRESS](docs/DASHBOARD_DATA_INTEGRATION_PROGRESS.md) 및 Phase별 계획(PHASE2/4/5/6) 참조. 권장: Supavisor Session :5432, `SUPABASE_DB_URL` + `connect_timeout`, redaction 규칙.
+- **dash 패치 적용** (맵 POI·StageCardsStrip·GlobalSearch) 상태·실행 방법은 [DASH_PLAN](docs/DASH_PLAN.md) §3.0 진행 체크리스트, 검증은 §4, [dash/reakmapping.md](../dash/reakmapping.md) (POI 좌표 SSOT), [dash/docs/APPLY_PATCH.md](../dash/docs/APPLY_PATCH.md) 참조.
 - 데이터 모델/마이그레이션·RLS·Realtime·Foundry 연계 등 **통합 상태**는 `STATUS.md`와 `docs/INTEGRATION_ROADMAP.md`를 기준으로 하고, 여기서는 해당 항목을 검증하는 테스트만 추적한다.
 - Monorepo 구조, `UnifiedLayout.tsx`, `schema_v2_unified.sql` 등 이미 완료된 작업은 위 문서들에 맞춰 테스트 코멘트에만 요약으로 표시한다.
 - Flow Code v3.5, OpsStore, RLS/Realtime/테스트 작성 등 남은 작업은 아래 테스트 카테고리와 게이트(Gate 1/2/3)에 매핑해 **TDD 우선순위**를 정한다.
@@ -79,6 +80,9 @@
 - [x] test: geofence layer created (file: tests/ui/test_mapview.tsx, name: test_geofence_layer_created) # completed @2026-01-23 - MapView에 레이어 구현됨
 - [x] test: ETA wedge layer created (file: tests/ui/test_mapview.tsx, name: test_eta_wedge_layer_created) # completed @2026-01-23 - MapView에 레이어 구현됨
 - [x] test: worklist API returns data (file: tests/ui/test_worklist_api.tsx, name: test_worklist_api_returns_data) # completed @2026-01-25 - 로컬 테스트 완료 (871 rows + KPI 정상 반환)
+- [ ] test: POI layer displays 11 fixed locations (file: tests/ui/test_mapview.tsx, name: test_poi_layer_displays_11_fixed_locations) # dash 패치: reakmapping SSOT 기준 11개 POI (AGI/DAS/MIR/SHU, DSV, MOSB, Port, Airport)
+- [ ] test: StageCardsStrip renders 3 cards (file: tests/ui/test_hvdc_panel.tsx, name: test_stagecardsstrip_renders_3_cards) # dash 패치: HVDC Panel 내 KpiStrip 상단 3카드
+- [ ] test: GlobalSearch filters worklist (file: tests/ui/test_search.tsx, name: test_globalsearch_filters_worklist) # dash 패치: locations·worklist 검색
 
 ### Mobile Interactions
 - [x] test: HVDC Panel mobile drag works (file: tests/ui/test_mobile_interactions.tsx, name: test_hvdc_panel_mobile_drag) # completed @2026-01-23 - UnifiedLayout.tsx에 부분 구현
@@ -130,10 +134,10 @@
 - [ ] test: layout does not break on resize (file: tests/ui/test_layout.tsx, name: test_layout_resize)
 
 ### User Flows
-- [ ] test: location selection shows status panel (file: tests/e2e/test_user_flows.ts, name: test_location_selection_flow)
+- [ ] test: location selection shows status panel (file: tests/e2e/test_user_flows.ts, name: test_location_selection_flow) # POI 클릭 시 RightPanel 연동 (dash 패치)
 - [ ] test: worklist item opens detail drawer (file: tests/e2e/test_user_flows.ts, name: test_worklist_detail_drawer)
-- [ ] test: worklist filter works (file: tests/e2e/test_user_flows.ts, name: test_worklist_filter)
-- [ ] test: worklist search works (file: tests/e2e/test_user_flows.ts, name: test_worklist_search)
+- [ ] test: worklist filter works (file: tests/e2e/test_user_flows.ts, name: test_worklist_filter) # GlobalSearch 연동 (dash 패치)
+- [ ] test: worklist search works (file: tests/e2e/test_user_flows.ts, name: test_worklist_search) # GlobalSearch 연동 (dash 패치)
 - [ ] test: failure recovery with cached data (file: tests/e2e/test_user_flows.ts, name: test_failure_recovery)
 
 ## Gates & Test Taxonomy
@@ -188,3 +192,6 @@
 - [AGENTS.md](./AGENTS.md) - 프로젝트 규칙
 - [DATA_LOADING_PLAN.md](./docs/DATA_LOADING_PLAN.md) - Supabase 데이터 적재 작업 계획
 - [DASHBOARD_DATA_INTEGRATION_PROGRESS.md](./docs/DASHBOARD_DATA_INTEGRATION_PROGRESS.md) - Phase 2~6 실행 방법·진행 상황 SSOT
+- [DASH_PLAN.md](./docs/DASH_PLAN.md) - dash 패치 적용 계획 (맵 POI·StageCardsStrip·GlobalSearch)
+- [dash/reakmapping.md](./dash/reakmapping.md) - 맵 POI 좌표·레이어 SSOT
+- [dash/docs/APPLY_PATCH.md](./dash/docs/APPLY_PATCH.md) - dash 패치 통합 절차

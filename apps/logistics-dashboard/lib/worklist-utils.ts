@@ -258,6 +258,8 @@ export function shipmentToWorklistRow(shipment: ShipmentRow, today?: string): Wo
       customs_close: formatDate(shipment.customs_close_date),
       duty_aed: shipment.duty_amount_aed,
       vat_aed: shipment.vat_amount_aed,
+      etd: formatDate(shipment.etd),
+      delivery_date: formatDate(shipment.delivery_date),
     },
   }
 }

@@ -1,4 +1,5 @@
 import { ScatterplotLayer } from "@deck.gl/layers"
+import type { PickingInfo } from "@deck.gl/core"
 import type { Location, LocationStatus, StatusCode } from "@/types/logistics"
 
 // Color mapping for status codes (RGBA)
@@ -15,7 +16,7 @@ interface LocationWithStatus extends Location {
 export function createLocationLayer(
   locations: Location[],
   statusByLocationId: Record<string, LocationStatus>,
-  onHover?: (info: { object?: LocationWithStatus; x: number; y: number }) => void,
+  onHover?: (info: PickingInfo<LocationWithStatus>) => void,
 ) {
   const data: LocationWithStatus[] = locations.map((loc) => ({
     ...loc,

@@ -1,6 +1,7 @@
 "use client"
 
 import { useMemo } from "react"
+import { useShallow } from "zustand/react/shallow"
 import { selectFilteredWorklistRows, useOpsActions, useOpsStore, useSelectedCaseId } from "@repo/shared"
 import type { Gate } from "@repo/shared"
 
@@ -16,7 +17,7 @@ function gateClass(gate: Gate) {
 export function WorklistTable() {
   const actions = useOpsActions()
   const selectedCaseId = useSelectedCaseId()
-  const rows = useOpsStore(selectFilteredWorklistRows)
+  const rows = useOpsStore(useShallow(selectFilteredWorklistRows))
 
   const visible = useMemo(() => rows.slice(0, MAX_ROWS), [rows])
 

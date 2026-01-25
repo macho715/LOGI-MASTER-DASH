@@ -1,5 +1,6 @@
 export type Gate = "GREEN" | "AMBER" | "RED" | "ZERO";
 export type RowKind = "SHIPMENT" | "WAREHOUSE" | "COST" | "EXCEPTION" | "ACTION";
+export type HvdcBucket = "cumulative" | "current" | "future";
 
 export type TriggerBadge =
   | "DO_MISSING"
@@ -118,4 +119,7 @@ export interface DashboardFilters {
 
   // Search
   searchQuery?: string;
+
+  // Bucket filter
+  bucket?: HvdcBucket;
 }

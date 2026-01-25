@@ -23,6 +23,7 @@ import type {
   LocationStatus,
   WorklistRow,
 } from "../types";
+import { deriveBucket, toBucketRecord } from "../utils/buckets";
 
 // ------------------------------------------------------------
 // Types
@@ -267,6 +268,13 @@ export const selectSelectedLocation = (
 export const selectFilteredWorklistRows = (state: OpsStoreState): WorklistRow[] => {
   const { filters } = state;
   let rows = state.worklistRows;
+
+  if (filters.bucket) {
+    const now = new Date();
+    rows = rows.filter(
+      (r) => deriveBucket(toBucketRecord(r), now) === filters.bucket
+    );
+  }
 
   // Gate
   if (filters.gates?.length) {
