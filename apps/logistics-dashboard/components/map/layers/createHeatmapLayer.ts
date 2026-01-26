@@ -1,7 +1,15 @@
 import { HeatmapLayer } from "@deck.gl/aggregation-layers"
 import type { Event } from "@/types/logistics"
 
-export function createHeatmapLayer(events: Event[], visible = true) {
+type HeatmapLayerOptions = {
+  radiusPixels?: number
+  visible?: boolean
+}
+
+export function createHeatmapLayer(
+  events: Event[],
+  { radiusPixels = 60, visible = true }: HeatmapLayerOptions = {},
+) {
   return new HeatmapLayer<Event>({
     id: "heatmap-layer",
     data: events,
@@ -9,7 +17,7 @@ export function createHeatmapLayer(events: Event[], visible = true) {
     pickable: false,
     getPosition: (d) => [d.lon, d.lat],
     getWeight: 1,
-    radiusPixels: 60,
+    radiusPixels,
     intensity: 1,
     threshold: 0.03,
     colorRange: [

@@ -7,6 +7,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed (2026-02-06)
+- logistics-dashboard: heatmap radius now scales with zoom level for clearer density at different map scales
+
 ### Changed (2026-02-05)
 - logistics-dashboard mock events/locations fallback now uses ontology/POI sources with reduced coordinate jitter for closer heatmap alignment
 - logistics-dashboard POI labels emphasize MOSB yard sites and add DSV warehouse to the map

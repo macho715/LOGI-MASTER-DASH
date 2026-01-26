@@ -63,6 +63,16 @@ export function MapView() {
     return events.filter((evt) => now - new Date(evt.ts).getTime() <= windowMs)
   }, [eventsById, windowHours])
 
+  const heatmapRadiusPixels = useMemo(() => {
+    if (zoom >= 12) {
+      return 40
+    }
+    if (zoom >= 9) {
+      return 60
+    }
+    return 80
+  }, [zoom])
+
   const handleHover = useCallback((info: PickingInfo) => {
     if (!info?.object) {
       setTooltip(null)
@@ -159,7 +169,10 @@ export function MapView() {
 
     const layers = [
       createGeofenceLayer(locations, showGeofence),
-      createHeatmapLayer(filteredEvents, showHeatmap),
+      createHeatmapLayer(filteredEvents, {
+        radiusPixels: heatmapRadiusPixels,
+        visible: showHeatmap,
+      }),
       createEtaWedgeLayer(locations, showEtaWedge),
       createLocationLayer(locations, statusByLocationId, handleHover),
       ...poiLayers,
@@ -176,6 +189,7 @@ export function MapView() {
     showEtaWedge,
     heatFilter,
     handleHover,
+    heatmapRadiusPixels,
     selectedPoiId,
     zoom,
   ])
