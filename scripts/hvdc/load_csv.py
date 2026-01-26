@@ -351,7 +351,8 @@ def main():
                             "hvdc_code", "shipment_invoice_no", "vendor", "coe", "pol", "pod",
                             "vessel", "hs_code", "currency", "price"
                         ],
-                        do_truncate=False
+                        do_truncate=False,
+                        force_null=["price"]
                     )
                     total_rows += rows
                 
@@ -362,7 +363,8 @@ def main():
                             "hvdc_code", "case_no", "site_code", "eq_no", "pkg", "description",
                             "final_location", "storage", "l_cm", "w_cm", "h_cm", "cbm", "nw_kg", "gw_kg", "sqm", "vendor"
                         ],
-                        do_truncate=False
+                        do_truncate=False,
+                        force_null=["pkg", "l_cm", "w_cm", "h_cm", "cbm", "nw_kg", "gw_kg", "sqm"]
                     )
                     total_rows += rows
                 
@@ -374,7 +376,14 @@ def main():
                             "override_reason", "warehouse_count", "has_mosb_leg", "has_site_arrival",
                             "customs_code", "customs_start_iso", "customs_end_iso", "last_status", "requires_review"
                         ],
-                        do_truncate=False
+                        do_truncate=False,
+                        force_null=[
+                            "flow_code_original",
+                            "flow_code_derived",
+                            "warehouse_count",
+                            "customs_start_iso",
+                            "customs_end_iso",
+                        ]
                     )
                     total_rows += rows
                 
@@ -385,7 +394,8 @@ def main():
                             "hvdc_code", "case_no", "event_type", "event_time_iso", "location_id",
                             "source_field", "source_system", "raw_epoch_ms"
                         ],
-                        do_truncate=False
+                        do_truncate=False,
+                        force_null=["raw_epoch_ms"]
                     )
                     total_rows += rows
             

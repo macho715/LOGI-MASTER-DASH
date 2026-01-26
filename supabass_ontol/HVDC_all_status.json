@@ -1,7 +1,86 @@
 [
-  {
-    "No": "1",
-    "SCT SHIP NO.": "HVDC-ADOPT-PPL-0001",
+    {
+        "No": "1",
+        "SCT SHIP NO.": "HVDC-ADOPT-PPL-0001",
+        "MR#": "E02",
+        "COMMERCIAL INVOICE No.": "HVDC-ADOPT-PPL-0001",
+        "INVOICE Date": "11/10/2023",
+        "PO No.": "5000675246",
+        "VENDOR": "Prysmian",
+        "CATEGORY": "Elec",
+        "MAIN DESCRIPTION (PO)": "320kV HVDC Cable System",
+        "SUB DESCRIPTION": "±320kV Land Cable",
+        "SHU": "",
+        "DAS": "",
+        "MIR": "O",
+        "AGI": "O",
+        "INCOTERMS": "CIF",
+        "CURRENCY": "EUR",
+        "INVOICE VALUE(A)": "7,724,999.40",
+        "FREIGHT(B)": "193,522.63",
+        "INSURANCE(C)": "115,874.99",
+        "CIF VALUE(A+B+C)": "8,034,397.02",
+        "COE": "FRANCE",
+        "POL": "Le Havre",
+        "POD": "Mina Zayed",
+        "B/L No.AWB No.": "ASLGMS003217/E01",
+        "VESSEL NAME/\nFLIGHT No.": "BBC ASIA",
+        "SHIPPING LINE": "BBC",
+        "FORWARDER": "Allied Sea freight Line",
+        "SHIP MODE": "B",
+        "PKG": "19",
+        "20DC": "",
+        "40DC": "",
+        "40HQ": "",
+        "45HQ": "",
+        "20OT(IN)": "",
+        "20OT(OH)": "",
+        "40OT(IN)": "",
+        "40OT(OH)": "",
+        "20FR(IN)": "",
+        "40FR(IN)": "",
+        "20FR(FV)": "",
+        "40FR(OW)": "",
+        "20FR(OW,OH)": "",
+        "40FR(OW,OH)": "",
+        "40FR(OW,OL)": "",
+        "LCL": "",
+        "QTY OF CNTR": "0",
+        "G Bulk": "",
+        "O Bulk": "1,290.89",
+        "H Bulk": "",
+        "GWT(KG)": "659,580.00",
+        "CBM": "1,290.89",
+        "R/T(GRAND- TOTAL)": "1,290.89",
+        "A_CWT(KG)": "",
+        "ETD": "2023-11-12",
+        "ATD": "2023-11-12",
+        "ETA": "2023-11-30",
+        "ATA": "2023-12-01",
+        "Attestation Date": "2023-11-29",
+        "DO Collection": "2023-11-30",
+        "Customs Start": "2023-11-29",
+        "Customs Close": "2023-12-01",
+        "Custom Code": "47150",
+        "DUTY AMT(AED)": "1,609,553.00",
+        "VAT AMT (AED)": "1,690,031.00",
+        "SHU2": "",
+        "MIR3": "",
+        "DAS4": "",
+        "AGI5": "",
+        "DSV Indoor Indoor": "",
+        "DSV Outdoor": "",
+        "DSV MZD": "",
+        "DSV Kizad": "",
+        "JDN MZD": "2023-12-05",
+        "JDN Waterfront": "",
+        "MOSB": "",
+        "AAA Storage": "",
+        "ZENER (WH)": "",
+        "Hauler DG Storage": "",
+        "Vijay Tanks": "",
+        "REMARK": ""
+    },No": "1","SCT SHIP NO.": "HVDC-ADOPT-PPL-0001",
     "MR#": "E02",
     "COMMERCIAL INVOICE No.": "HVDC-ADOPT-PPL-0001",
     "INVOICE Date": "11/10/2023",
@@ -80,8 +159,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "2",
     "SCT SHIP NO.": "HVDC-ADOPT-PPL-0002",
     "MR#": "E02",
@@ -162,8 +241,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": "Duty Exempted Materials"
-  },
-  {
+},
+{
     "No": "3",
     "SCT SHIP NO.": "HVDC-ADOPT-HS-0001",
     "MR#": "M02",
@@ -244,8 +323,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "2024-01-20",
     "REMARK": "Reimbursement request (24.01.28)"
-  },
-  {
+},
+{
     "No": "4",
     "SCT SHIP NO.": "HVDC-ADOPT-PPL-0003",
     "MR#": "E02",
@@ -326,8 +405,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": "Duty Exempted Materials"
-  },
-  {
+},
+{
     "No": "5",
     "SCT SHIP NO.": "HVDC-ADOPT-PPL-0004",
     "MR#": "E02",
@@ -408,8 +487,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "6",
     "SCT SHIP NO.": "HVDC-ADOPT-PPL-0005",
     "MR#": "E02",
@@ -490,8 +569,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": "On Board"
-  },
-  {
+},
+{
     "No": "7",
     "SCT SHIP NO.": "HVDC-ADOPT-PPL-0006",
     "MR#": "E02",
@@ -572,8 +651,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": "On Board"
-  },
-  {
+},
+{
     "No": "8",
     "SCT SHIP NO.": "HVDC-ADOPT-PPL-0007",
     "MR#": "E02",
@@ -654,8 +733,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": "On Board"
-  },
-  {
+},
+{
     "No": "9",
     "SCT SHIP NO.": "HVDC-ADOPT-PPL-0008",
     "MR#": "E02",
@@ -736,8 +815,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": "On Board"
-  },
-  {
+},
+{
     "No": "10",
     "SCT SHIP NO.": "HVDC-ADOPT-PPL-0009",
     "MR#": "E02",
@@ -818,8 +897,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "11",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0001",
     "MR#": "E01",
@@ -900,8 +979,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": "Duty Exempted Materials"
-  },
-  {
+},
+{
     "No": "12",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0002",
     "MR#": "E01",
@@ -982,8 +1061,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": "Duty Exempted Materials"
-  },
-  {
+},
+{
     "No": "13",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0003",
     "MR#": "E01",
@@ -1064,8 +1143,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": "Duty Exempted Materials"
-  },
-  {
+},
+{
     "No": "14",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0004",
     "MR#": "E01",
@@ -1146,8 +1225,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": "Duty Exempted Materials"
-  },
-  {
+},
+{
     "No": "15",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0005",
     "MR#": "E01",
@@ -1228,8 +1307,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": "Duty Exempted Materials"
-  },
-  {
+},
+{
     "No": "16",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0007",
     "MR#": "E01",
@@ -1310,8 +1389,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": "Duty Exempted Materials"
-  },
-  {
+},
+{
     "No": "17",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0008",
     "MR#": "E01",
@@ -1392,8 +1471,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": "Duty Exempted Materials"
-  },
-  {
+},
+{
     "No": "18",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0009",
     "MR#": "E01",
@@ -1474,8 +1553,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": "Duty Exempted Materials"
-  },
-  {
+},
+{
     "No": "19",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0010",
     "MR#": "E01",
@@ -1556,8 +1635,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": "Duty Exempted Materials"
-  },
-  {
+},
+{
     "No": "20",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0011",
     "MR#": "E01",
@@ -1638,8 +1717,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": "Duty Exempted Materials"
-  },
-  {
+},
+{
     "No": "21",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0020",
     "MR#": "E01",
@@ -1720,8 +1799,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": "Duty Exempted Materials"
-  },
-  {
+},
+{
     "No": "22",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0012",
     "MR#": "E01",
@@ -1802,8 +1881,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": "Duty Exempted Materials"
-  },
-  {
+},
+{
     "No": "23",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0013",
     "MR#": "E01",
@@ -1884,8 +1963,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": "Duty Exempted Materials"
-  },
-  {
+},
+{
     "No": "24",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0014",
     "MR#": "E01",
@@ -1966,8 +2045,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": "Duty Exempted Materials"
-  },
-  {
+},
+{
     "No": "25",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0015",
     "MR#": "E01",
@@ -2048,8 +2127,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": "Duty Exempted Materials"
-  },
-  {
+},
+{
     "No": "26",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0016",
     "MR#": "E01",
@@ -2130,8 +2209,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": "Duty Exempted Materials"
-  },
-  {
+},
+{
     "No": "27",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0017",
     "MR#": "E01",
@@ -2212,8 +2291,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": "Duty Exempted Materials"
-  },
-  {
+},
+{
     "No": "28",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0018",
     "MR#": "E01",
@@ -2294,8 +2373,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": "Duty Exempted Materials"
-  },
-  {
+},
+{
     "No": "29",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0019",
     "MR#": "E01",
@@ -2376,8 +2455,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": "Duty Exempted Materials"
-  },
-  {
+},
+{
     "No": "30",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0021",
     "MR#": "E01",
@@ -2458,8 +2537,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": "Duty Exempted Materials"
-  },
-  {
+},
+{
     "No": "31",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0022",
     "MR#": "E01",
@@ -2540,8 +2619,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": "Duty Exempted Materials"
-  },
-  {
+},
+{
     "No": "32",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0023",
     "MR#": "E01",
@@ -2622,8 +2701,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": "Duty Exempted Materials"
-  },
-  {
+},
+{
     "No": "33",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0024",
     "MR#": "E01",
@@ -2704,8 +2783,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": "Duty Exempted Materials"
-  },
-  {
+},
+{
     "No": "34",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0025",
     "MR#": "E01",
@@ -2786,8 +2865,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": "Duty Exempted Materials"
-  },
-  {
+},
+{
     "No": "35",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0026",
     "MR#": "E01",
@@ -2868,8 +2947,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": "Duty Exempted Materials"
-  },
-  {
+},
+{
     "No": "36",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0027",
     "MR#": "E01",
@@ -2950,8 +3029,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": "Duty Exempted Materials"
-  },
-  {
+},
+{
     "No": "37",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0062",
     "MR#": "E01",
@@ -3032,8 +3111,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "38",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0063",
     "MR#": "E01",
@@ -3114,8 +3193,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "39",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0064",
     "MR#": "E01",
@@ -3196,8 +3275,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "40",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0065",
     "MR#": "E01",
@@ -3278,8 +3357,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "41",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0066",
     "MR#": "E01",
@@ -3360,8 +3439,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "42",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0067",
     "MR#": "E01",
@@ -3442,8 +3521,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "43",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0028",
     "MR#": "E01",
@@ -3524,8 +3603,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": "Duty Exempted Materials"
-  },
-  {
+},
+{
     "No": "44",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0058",
     "MR#": "E01",
@@ -3606,8 +3685,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": "Duty Exempted Materials"
-  },
-  {
+},
+{
     "No": "45",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0059",
     "MR#": "E01",
@@ -3688,8 +3767,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": "Duty Exempted Materials"
-  },
-  {
+},
+{
     "No": "46",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0060",
     "MR#": "E01",
@@ -3770,8 +3849,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": "Duty Exempted Materials"
-  },
-  {
+},
+{
     "No": "47",
     "SCT SHIP NO.": "HVDC-ADOPT-PPL-0010",
     "MR#": "E02",
@@ -3852,8 +3931,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": "Duty Exempted Materials"
-  },
-  {
+},
+{
     "No": "48",
     "SCT SHIP NO.": "HVDC-ADOPT-PPL-0011",
     "MR#": "E02",
@@ -3934,8 +4013,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "49",
     "SCT SHIP NO.": "HVDC-ADOPT-PPL-0012",
     "MR#": "E02",
@@ -4016,8 +4095,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "50",
     "SCT SHIP NO.": "HVDC-ADOPT-PPL-0013",
     "MR#": "E02",
@@ -4098,8 +4177,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "51",
     "SCT SHIP NO.": "HVDC-ADOPT-SCT-0001",
     "MR#": "E08",
@@ -4180,8 +4259,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "52",
     "SCT SHIP NO.": "HVDC-ADOPT-SCT-0002",
     "MR#": "M01",
@@ -4262,8 +4341,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "53",
     "SCT SHIP NO.": "HVDC-ADOPT-SEI-0001",
     "MR#": "E03",
@@ -4344,8 +4423,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "54",
     "SCT SHIP NO.": "HVDC-ADOPT-SEI-0002",
     "MR#": "E03",
@@ -4426,8 +4505,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "55",
     "SCT SHIP NO.": "HVDC-ADOPT-SIM-0001",
     "MR#": "E04-1",
@@ -4508,8 +4587,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "56",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0053",
     "MR#": "E01",
@@ -4590,8 +4669,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "57",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0054",
     "MR#": "E01",
@@ -4672,8 +4751,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "58",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0056",
     "MR#": "E01",
@@ -4754,8 +4833,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "59",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0029",
     "MR#": "E01",
@@ -4836,8 +4915,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": "Duty Exempted Materials"
-  },
-  {
+},
+{
     "No": "60",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0071",
     "MR#": "E01",
@@ -4918,8 +4997,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": "Duty Exempted Materials"
-  },
-  {
+},
+{
     "No": "61",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0061",
     "MR#": "E01",
@@ -5000,8 +5079,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": "Duty Exempted Materials"
-  },
-  {
+},
+{
     "No": "62",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0074",
     "MR#": "E01",
@@ -5082,8 +5161,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": "Duty Exempted Materials"
-  },
-  {
+},
+{
     "No": "63",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0072",
     "MR#": "E01",
@@ -5164,8 +5243,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": "Duty Exempted Materials"
-  },
-  {
+},
+{
     "No": "64",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0057",
     "MR#": "E01",
@@ -5246,8 +5325,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": "Duty Exempted Materials"
-  },
-  {
+},
+{
     "No": "65",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0075",
     "MR#": "E01",
@@ -5328,8 +5407,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": "Duty Exempted Materials"
-  },
-  {
+},
+{
     "No": "66",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0069",
     "MR#": "E01",
@@ -5410,8 +5489,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "67",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0070",
     "MR#": "E01",
@@ -5492,8 +5571,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "68",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0068-1",
     "MR#": "E01",
@@ -5574,8 +5653,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "69",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0080-1",
     "MR#": "E01",
@@ -5656,8 +5735,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "70",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0081",
     "MR#": "E01",
@@ -5738,8 +5817,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "71",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0073",
     "MR#": "E01",
@@ -5820,8 +5899,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": "Duty Exempted Materials"
-  },
-  {
+},
+{
     "No": "72",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0078",
     "MR#": "E01",
@@ -5902,8 +5981,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": "Duty Exempted Materials"
-  },
-  {
+},
+{
     "No": "73",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0030",
     "MR#": "E01",
@@ -5984,8 +6063,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": "Duty Exempted Materials"
-  },
-  {
+},
+{
     "No": "74",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0076",
     "MR#": "E01",
@@ -6066,8 +6145,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": "Duty Exempted Materials"
-  },
-  {
+},
+{
     "No": "75",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0077",
     "MR#": "E01",
@@ -6148,8 +6227,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": "Duty Exempted Materials"
-  },
-  {
+},
+{
     "No": "76",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0068-2",
     "MR#": "E01",
@@ -6230,8 +6309,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "77",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0080-2",
     "MR#": "E01",
@@ -6312,8 +6391,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "78",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0031",
     "MR#": "E01",
@@ -6394,8 +6473,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": "Duty Exempted Materials"
-  },
-  {
+},
+{
     "No": "79",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0055",
     "MR#": "E01",
@@ -6476,8 +6555,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "80",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0082",
     "MR#": "E01",
@@ -6558,8 +6637,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "81",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0083",
     "MR#": "E01",
@@ -6640,8 +6719,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "82",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0084-1",
     "MR#": "E01",
@@ -6722,8 +6801,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "83",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0079",
     "MR#": "E01",
@@ -6804,8 +6883,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": "Duty Exempted Materials"
-  },
-  {
+},
+{
     "No": "84",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0032",
     "MR#": "E01",
@@ -6886,8 +6965,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": "Duty Exempted Materials"
-  },
-  {
+},
+{
     "No": "85",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0084-2",
     "MR#": "E01",
@@ -6968,8 +7047,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "86",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0048",
     "MR#": "E01",
@@ -7050,8 +7129,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": "Duty Exempted Materials"
-  },
-  {
+},
+{
     "No": "87",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0050",
     "MR#": "E01",
@@ -7132,8 +7211,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": "Duty Exempted Materials"
-  },
-  {
+},
+{
     "No": "88",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0051",
     "MR#": "E01",
@@ -7214,8 +7293,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": "Duty Exempted Materials"
-  },
-  {
+},
+{
     "No": "89",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0049",
     "MR#": "E01",
@@ -7296,8 +7375,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": "Duty Exempted Materials"
-  },
-  {
+},
+{
     "No": "90",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0052",
     "MR#": "E01",
@@ -7378,8 +7457,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": "Duty Exempted Materials"
-  },
-  {
+},
+{
     "No": "91",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0044",
     "MR#": "E01",
@@ -7460,8 +7539,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": "Duty Exempted Materials"
-  },
-  {
+},
+{
     "No": "92",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0047",
     "MR#": "E01",
@@ -7542,8 +7621,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": "Duty Exempted Materials"
-  },
-  {
+},
+{
     "No": "93",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0046",
     "MR#": "E01",
@@ -7624,8 +7703,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": "Duty Exempted Materials"
-  },
-  {
+},
+{
     "No": "94",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0043",
     "MR#": "E01",
@@ -7706,8 +7785,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": "Duty Exempted Materials"
-  },
-  {
+},
+{
     "No": "95",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0045",
     "MR#": "",
@@ -7788,8 +7867,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": "Duty Exempted Materials"
-  },
-  {
+},
+{
     "No": "96",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0039",
     "MR#": "E01",
@@ -7870,8 +7949,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": "Duty Exempted Materials"
-  },
-  {
+},
+{
     "No": "97",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0042",
     "MR#": "E01",
@@ -7952,8 +8031,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": "Duty Exempted Materials"
-  },
-  {
+},
+{
     "No": "98",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0038",
     "MR#": "E01",
@@ -8034,8 +8113,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": "Duty Exempted Materials"
-  },
-  {
+},
+{
     "No": "99",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0040",
     "MR#": "E01",
@@ -8116,8 +8195,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": "Duty Exempted Materials"
-  },
-  {
+},
+{
     "No": "100",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0041",
     "MR#": "E01",
@@ -8198,8 +8277,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": "Duty Exempted Materials"
-  },
-  {
+},
+{
     "No": "101",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0034",
     "MR#": "E01",
@@ -8280,8 +8359,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": "Duty Exempted Materials"
-  },
-  {
+},
+{
     "No": "102",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0037",
     "MR#": "E01",
@@ -8362,8 +8441,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": "Duty Exempted Materials"
-  },
-  {
+},
+{
     "No": "103",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0033",
     "MR#": "E01",
@@ -8444,8 +8523,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": "Duty Exempted Materials"
-  },
-  {
+},
+{
     "No": "104",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0035",
     "MR#": "E01",
@@ -8526,8 +8605,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": "Duty Exempted Materials"
-  },
-  {
+},
+{
     "No": "105",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0036",
     "MR#": "E01",
@@ -8608,8 +8687,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": "Duty Exempted Materials"
-  },
-  {
+},
+{
     "No": "106",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0085",
     "MR#": "E01",
@@ -8690,8 +8769,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "107",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0088",
     "MR#": "E01",
@@ -8772,8 +8851,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "108",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0089",
     "MR#": "E01",
@@ -8854,8 +8933,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "109",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0087",
     "MR#": "E01",
@@ -8936,8 +9015,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "110",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0090",
     "MR#": "E01",
@@ -9018,8 +9097,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "111",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0091",
     "MR#": "E01",
@@ -9100,8 +9179,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "112",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0092",
     "MR#": "E01",
@@ -9182,8 +9261,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "113",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0103",
     "MR#": "E01",
@@ -9264,8 +9343,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "114",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0104",
     "MR#": "E01",
@@ -9346,8 +9425,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "115",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0105",
     "MR#": "E01",
@@ -9428,8 +9507,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "116",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0106",
     "MR#": "E01",
@@ -9510,8 +9589,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "117",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0107",
     "MR#": "E01",
@@ -9592,8 +9671,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "118",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0101",
     "MR#": "E01",
@@ -9674,8 +9753,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "119",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0102",
     "MR#": "E01",
@@ -9756,8 +9835,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "120",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0108",
     "MR#": "E01",
@@ -9838,8 +9917,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "121",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0109",
     "MR#": "E01",
@@ -9920,8 +9999,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "122",
     "SCT SHIP NO.": "HVDC-ADOPT-PPL-0014",
     "MR#": "E02",
@@ -10002,8 +10081,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": "Duty Exempted Materials"
-  },
-  {
+},
+{
     "No": "123",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0110",
     "MR#": "E01",
@@ -10084,8 +10163,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "124",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0116",
     "MR#": "E01",
@@ -10166,8 +10245,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "125",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0093",
     "MR#": "E01",
@@ -10248,8 +10327,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": "Duty Exempted Materials"
-  },
-  {
+},
+{
     "No": "126",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0094",
     "MR#": "E01",
@@ -10330,8 +10409,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": "Duty Exempted Materials"
-  },
-  {
+},
+{
     "No": "127",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0095",
     "MR#": "E01",
@@ -10412,8 +10491,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": "Duty Exempted Materials"
-  },
-  {
+},
+{
     "No": "128",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0096",
     "MR#": "E01",
@@ -10494,8 +10573,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": "Duty Exempted Materials"
-  },
-  {
+},
+{
     "No": "129",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0097",
     "MR#": "E01",
@@ -10576,8 +10655,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": "Duty Exempted Materials"
-  },
-  {
+},
+{
     "No": "130",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0098",
     "MR#": "E01",
@@ -10658,8 +10737,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": "Duty Exempted Materials"
-  },
-  {
+},
+{
     "No": "131",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0115",
     "MR#": "E01",
@@ -10740,8 +10819,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": "Duty Exempted Materials"
-  },
-  {
+},
+{
     "No": "132",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0117",
     "MR#": "E01",
@@ -10822,8 +10901,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": "Duty Exempted Materials"
-  },
-  {
+},
+{
     "No": "133",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0120",
     "MR#": "E01",
@@ -10904,8 +10983,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "134",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0121",
     "MR#": "E01",
@@ -10986,8 +11065,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "135",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0123",
     "MR#": "E01",
@@ -11068,8 +11147,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "136",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0122",
     "MR#": "E01",
@@ -11150,8 +11229,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "137",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0124",
     "MR#": "E01",
@@ -11232,8 +11311,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "138",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0099",
     "MR#": "E01",
@@ -11314,8 +11393,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": "Duty Exempted Materials"
-  },
-  {
+},
+{
     "No": "139",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0100",
     "MR#": "E01",
@@ -11396,8 +11475,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": "Duty Exempted Materials"
-  },
-  {
+},
+{
     "No": "140",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0114",
     "MR#": "E01",
@@ -11478,8 +11557,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": "Duty Exempted Materials"
-  },
-  {
+},
+{
     "No": "141",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0118",
     "MR#": "E01",
@@ -11560,8 +11639,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": "Duty Exempted Materials"
-  },
-  {
+},
+{
     "No": "142",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0119",
     "MR#": "E01",
@@ -11642,8 +11721,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": "Duty Exempted Materials"
-  },
-  {
+},
+{
     "No": "143",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0111",
     "MR#": "E01",
@@ -11724,8 +11803,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "144",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0112",
     "MR#": "E01",
@@ -11806,8 +11885,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "145",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0125",
     "MR#": "E01",
@@ -11888,8 +11967,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "146",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0126",
     "MR#": "E01",
@@ -11970,8 +12049,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "147",
     "SCT SHIP NO.": "HVDC-ADOPT-SIM-0002",
     "MR#": "E04-1",
@@ -12052,8 +12131,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "148",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0113",
     "MR#": "E01",
@@ -12134,8 +12213,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "149",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0145",
     "MR#": "E01",
@@ -12216,8 +12295,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "150",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0142",
     "MR#": "E01",
@@ -12298,8 +12377,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "151",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0146",
     "MR#": "E01",
@@ -12380,8 +12459,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "152",
     "SCT SHIP NO.": "HVDC-ADOPT-SEI-0003",
     "MR#": "E03",
@@ -12462,8 +12541,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "153",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0128",
     "MR#": "E01",
@@ -12544,8 +12623,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "154",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0127-1",
     "MR#": "E01",
@@ -12626,8 +12705,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "155",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0153-1",
     "MR#": "E01",
@@ -12708,8 +12787,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "156",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0154-1",
     "MR#": "E01",
@@ -12790,8 +12869,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "157",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0155",
     "MR#": "E01",
@@ -12872,8 +12951,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "158",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0156",
     "MR#": "E01",
@@ -12954,8 +13033,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "159",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0157",
     "MR#": "E01",
@@ -13036,8 +13115,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "160",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0158",
     "MR#": "E01",
@@ -13118,8 +13197,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "161",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0159",
     "MR#": "E01",
@@ -13200,8 +13279,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "162",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0153-2",
     "MR#": "E01",
@@ -13282,8 +13361,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "163",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0154-2",
     "MR#": "E01",
@@ -13364,8 +13443,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "164",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0127-2",
     "MR#": "E01",
@@ -13446,8 +13525,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "165",
     "SCT SHIP NO.": "HVDC-ADOPT-SCT-0003",
     "MR#": "E08",
@@ -13528,8 +13607,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "166",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0143",
     "MR#": "E01",
@@ -13610,8 +13689,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "167",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0144",
     "MR#": "E01",
@@ -13692,8 +13771,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "168",
     "SCT SHIP NO.": "HVDC-ADOPT-SCT-0004",
     "MR#": "M01",
@@ -13774,8 +13853,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "169",
     "SCT SHIP NO.": "HVDC-ADOPT-SCT-0005",
     "MR#": "E08",
@@ -13856,8 +13935,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "170",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0160",
     "MR#": "E01",
@@ -13938,8 +14017,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "171",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0162",
     "MR#": "E01",
@@ -14020,8 +14099,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "172",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0163",
     "MR#": "E01",
@@ -14102,8 +14181,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "173",
     "SCT SHIP NO.": "HVDC-ADOPT-SEI-0005",
     "MR#": "E03",
@@ -14184,8 +14263,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "174",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0135",
     "MR#": "E01",
@@ -14266,8 +14345,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "175",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0134",
     "MR#": "E01",
@@ -14348,8 +14427,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "176",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0138",
     "MR#": "E01",
@@ -14430,8 +14509,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "177",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0139",
     "MR#": "E01",
@@ -14512,8 +14591,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "178",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0136",
     "MR#": "E01",
@@ -14594,8 +14673,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "179",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0137",
     "MR#": "E01",
@@ -14676,8 +14755,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "180",
     "SCT SHIP NO.": "HVDC-ADOPT-SCT-0007",
     "MR#": "M01",
@@ -14758,8 +14837,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "181",
     "SCT SHIP NO.": "HVDC-ADOPT-SCT-0008",
     "MR#": "M01",
@@ -14840,8 +14919,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "182",
     "SCT SHIP NO.": "HVDC-ADOPT-SEI-0004-1",
     "MR#": "E03",
@@ -14922,8 +15001,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "183",
     "SCT SHIP NO.": "HVDC-ADOPT-SEI-0004-2",
     "MR#": "E03",
@@ -15004,8 +15083,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "184",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0161",
     "MR#": "E01",
@@ -15086,8 +15165,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "185",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0130",
     "MR#": "E01",
@@ -15168,8 +15247,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": "Duty Exempted Materials"
-  },
-  {
+},
+{
     "No": "186",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0131",
     "MR#": "E01",
@@ -15250,8 +15329,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": "Duty Exempted Materials"
-  },
-  {
+},
+{
     "No": "187",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0132",
     "MR#": "E01",
@@ -15332,8 +15411,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": "Duty Exempted Materials"
-  },
-  {
+},
+{
     "No": "188",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0133",
     "MR#": "E01",
@@ -15414,8 +15493,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": "Duty Exempted Materials"
-  },
-  {
+},
+{
     "No": "189",
     "SCT SHIP NO.": "HVDC-ADOPT-SCT-0006",
     "MR#": "E08",
@@ -15496,8 +15575,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "190",
     "SCT SHIP NO.": "HVDC-ADOPT-SEI-0007",
     "MR#": "E03",
@@ -15578,8 +15657,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "191",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0151",
     "MR#": "E01",
@@ -15660,8 +15739,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "192",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0149",
     "MR#": "E01",
@@ -15742,8 +15821,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "193",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0150",
     "MR#": "E01",
@@ -15824,8 +15903,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "194",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0152",
     "MR#": "E01",
@@ -15906,8 +15985,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "195",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0148",
     "MR#": "E01",
@@ -15988,8 +16067,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "196",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0147",
     "MR#": "E01",
@@ -16070,8 +16149,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "197",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0141",
     "MR#": "E01",
@@ -16152,8 +16231,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "198",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0140",
     "MR#": "E01",
@@ -16234,8 +16313,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "199",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0164",
     "MR#": "E01",
@@ -16316,8 +16395,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "200",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0168",
     "MR#": "E01",
@@ -16398,8 +16477,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "201",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0172",
     "MR#": "E01",
@@ -16480,8 +16559,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "202",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0167",
     "MR#": "E01",
@@ -16562,8 +16641,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "203",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0170",
     "MR#": "E01",
@@ -16644,8 +16723,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "204",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0165",
     "MR#": "E01",
@@ -16726,8 +16805,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "205",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0169",
     "MR#": "E01",
@@ -16808,8 +16887,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "206",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0166",
     "MR#": "E01",
@@ -16890,8 +16969,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "207",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0171",
     "MR#": "E01",
@@ -16972,8 +17051,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "208",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0174",
     "MR#": "E01",
@@ -17054,8 +17133,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "209",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0173",
     "MR#": "E01",
@@ -17136,8 +17215,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "210",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0179-A",
     "MR#": "E01",
@@ -17218,8 +17297,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "211",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0179-B",
     "MR#": "E01",
@@ -17300,8 +17379,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "212",
     "SCT SHIP NO.": "HVDC-ADOPT-SCT-0009",
     "MR#": "E08",
@@ -17382,8 +17461,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "213",
     "SCT SHIP NO.": "HVDC-ADOPT-SIM-0005-1",
     "MR#": "E04-1",
@@ -17464,8 +17543,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "214",
     "SCT SHIP NO.": "HVDC-ADOPT-SCT-0010",
     "MR#": "M01",
@@ -17546,8 +17625,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "215",
     "SCT SHIP NO.": "HVDC-ADOPT-SIM-0006",
     "MR#": "E04-1",
@@ -17628,8 +17707,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "216",
     "SCT SHIP NO.": "HVDC-ADOPT-SIM-0005-2A",
     "MR#": "E04-1",
@@ -17710,8 +17789,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "217",
     "SCT SHIP NO.": "HVDC-ADOPT-SIM-0005-2B",
     "MR#": "E04-1",
@@ -17792,8 +17871,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "218",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0178",
     "MR#": "E01",
@@ -17874,8 +17953,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "219",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0176",
     "MR#": "E01",
@@ -17956,8 +18035,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "220",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0177",
     "MR#": "E01",
@@ -18038,8 +18117,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "221",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0175",
     "MR#": "E01",
@@ -18120,8 +18199,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "222",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0129",
     "MR#": "E01",
@@ -18202,8 +18281,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "223",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0181",
     "MR#": "E01",
@@ -18284,8 +18363,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "224",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0180",
     "MR#": "E01",
@@ -18366,8 +18445,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "225",
     "SCT SHIP NO.": "HVDC-ADOPT-SIM-0009-1A",
     "MR#": "E04-1",
@@ -18448,8 +18527,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "226",
     "SCT SHIP NO.": "HVDC-ADOPT-SIM-0009-1B",
     "MR#": "E04-1",
@@ -18530,8 +18609,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "227",
     "SCT SHIP NO.": "HVDC-ADOPT-SCT-0013",
     "MR#": "E08",
@@ -18612,8 +18691,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "228",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0182",
     "MR#": "E01",
@@ -18694,8 +18773,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "229",
     "SCT SHIP NO.": "HVDC-ADOPT-SCT-0014",
     "MR#": "E08",
@@ -18776,8 +18855,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "230",
     "SCT SHIP NO.": "HVDC-ADOPT-SIM-0009-2A",
     "MR#": "E04-1",
@@ -18858,8 +18937,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "231",
     "SCT SHIP NO.": "HVDC-ADOPT-SIM-0009-2B",
     "MR#": "E04-1",
@@ -18940,8 +19019,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "232",
     "SCT SHIP NO.": "HVDC-ADOPT-SIM-0010",
     "MR#": "E04-1",
@@ -19022,8 +19101,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "233",
     "SCT SHIP NO.": "HVDC-ADOPT-SIM-0016",
     "MR#": "E04-1",
@@ -19104,8 +19183,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "234",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0183",
     "MR#": "E01",
@@ -19186,8 +19265,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "235",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0184",
     "MR#": "E01",
@@ -19268,8 +19347,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "236",
     "SCT SHIP NO.": "HVDC-ADOPT-SIM-0017-A",
     "MR#": "E04-1",
@@ -19350,8 +19429,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "237",
     "SCT SHIP NO.": "HVDC-ADOPT-SIM-0017-B",
     "MR#": "E04-1",
@@ -19432,8 +19511,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "238",
     "SCT SHIP NO.": "HVDC-ADOPT-ZEN-0001",
     "MR#": "",
@@ -19514,8 +19593,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "239",
     "SCT SHIP NO.": "HVDC-ADOPT-SEI-0006",
     "MR#": "E03",
@@ -19596,8 +19675,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "240",
     "SCT SHIP NO.": "HVDC-ADOPT-SEI-0012",
     "MR#": "E03",
@@ -19678,8 +19757,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "241",
     "SCT SHIP NO.": "HVDC-ADOPT-ZEN-0002",
     "MR#": "",
@@ -19760,8 +19839,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "242",
     "SCT SHIP NO.": "HVDC-ADOPT-PPL-0015",
     "MR#": "E02",
@@ -19842,8 +19921,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "243",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0187",
     "MR#": "E01",
@@ -19924,8 +20003,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": "Duty Exempted Materials"
-  },
-  {
+},
+{
     "No": "244",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0185",
     "MR#": "E01",
@@ -20006,8 +20085,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": "Duty Exempted Materials"
-  },
-  {
+},
+{
     "No": "245",
     "SCT SHIP NO.": "HVDC-ADOPT-SCT-0016",
     "MR#": "E08",
@@ -20088,8 +20167,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "246",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0188",
     "MR#": "E01",
@@ -20170,8 +20249,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "247",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0190",
     "MR#": "E01",
@@ -20252,8 +20331,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "248",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0191",
     "MR#": "E01",
@@ -20334,8 +20413,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "249",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0193",
     "MR#": "E01",
@@ -20416,8 +20495,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "250",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0197",
     "MR#": "E01",
@@ -20498,8 +20577,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "251",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0189",
     "MR#": "E01",
@@ -20580,8 +20659,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "252",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0192",
     "MR#": "E01",
@@ -20662,8 +20741,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "253",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0195",
     "MR#": "E01",
@@ -20744,8 +20823,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "254",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0194",
     "MR#": "E01",
@@ -20826,8 +20905,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "255",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0196",
     "MR#": "E01",
@@ -20908,8 +20987,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "256",
     "SCT SHIP NO.": "HVDC-ADOPT-SEI-0011",
     "MR#": "E03",
@@ -20990,8 +21069,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "257",
     "SCT SHIP NO.": "HVDC-ADOPT-SIM-0014-A",
     "MR#": "E04-1",
@@ -21072,8 +21151,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "258",
     "SCT SHIP NO.": "HVDC-ADOPT-SIM-0014-B",
     "MR#": "E04-1",
@@ -21154,8 +21233,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "259",
     "SCT SHIP NO.": "HVDC-ADOPT-SIM-0012-A",
     "MR#": "E04-1",
@@ -21236,8 +21315,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "260",
     "SCT SHIP NO.": "HVDC-ADOPT-SIM-0012-B",
     "MR#": "E04-1",
@@ -21318,8 +21397,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "261",
     "SCT SHIP NO.": "HVDC-ADOPT-SIM-0012-C",
     "MR#": "E04-1",
@@ -21400,8 +21479,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "262",
     "SCT SHIP NO.": "HVDC-ADOPT-SIM-0015",
     "MR#": "E04-1",
@@ -21482,8 +21561,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "263",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0198",
     "MR#": "E01",
@@ -21564,8 +21643,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "264",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0199",
     "MR#": "E01",
@@ -21646,8 +21725,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "265",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0200",
     "MR#": "E01",
@@ -21728,8 +21807,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "266",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0201",
     "MR#": "E01",
@@ -21810,8 +21889,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "267",
     "SCT SHIP NO.": "HVDC-ADOPT-SCT-0017",
     "MR#": "M01",
@@ -21892,8 +21971,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "268",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0207",
     "MR#": "E01",
@@ -21974,8 +22053,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "269",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0211",
     "MR#": "E01",
@@ -22056,8 +22135,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "270",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0206",
     "MR#": "E01",
@@ -22138,8 +22217,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "271",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0209",
     "MR#": "E01",
@@ -22220,8 +22299,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "272",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0210",
     "MR#": "E01",
@@ -22302,8 +22381,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "273",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0212",
     "MR#": "E01",
@@ -22384,8 +22463,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "274",
     "SCT SHIP NO.": "HVDC-ADOPT-SIM-0013",
     "MR#": "E04-1",
@@ -22466,8 +22545,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "275",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0186",
     "MR#": "E01",
@@ -22548,8 +22627,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": "Duty Exempted Materials"
-  },
-  {
+},
+{
     "No": "276",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0202",
     "MR#": "E01",
@@ -22630,8 +22709,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": "Duty Exempted Materials"
-  },
-  {
+},
+{
     "No": "277",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0203",
     "MR#": "E01",
@@ -22712,8 +22791,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": "Duty Exempted Materials"
-  },
-  {
+},
+{
     "No": "278",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0204",
     "MR#": "E01",
@@ -22794,8 +22873,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": "Duty Exempted Materials"
-  },
-  {
+},
+{
     "No": "279",
     "SCT SHIP NO.": "HVDC-ADOPT-SIM-0024",
     "MR#": "E04-1",
@@ -22876,8 +22955,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "280",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0205",
     "MR#": "E01",
@@ -22958,8 +23037,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "281",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0213",
     "MR#": "E01",
@@ -23040,8 +23119,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "282",
     "SCT SHIP NO.": "HVDC-ADOPT-SCT-0018",
     "MR#": "E08",
@@ -23122,8 +23201,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "283",
     "SCT SHIP NO.": "HVDC-ADOPT-SCT-0015",
     "MR#": "E08",
@@ -23204,8 +23283,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "284",
     "SCT SHIP NO.": "HVDC-ADOPT-SEI-0008",
     "MR#": "E03",
@@ -23286,8 +23365,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "285",
     "SCT SHIP NO.": "HVDC-ADOPT-ZEN-0003",
     "MR#": "",
@@ -23368,8 +23447,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "286",
     "SCT SHIP NO.": "HVDC-ADOPT-ZEN-0003",
     "MR#": "",
@@ -23450,8 +23529,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "287",
     "SCT SHIP NO.": "HVDC-ADOPT-SCT-0021",
     "MR#": "E08",
@@ -23532,8 +23611,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "288",
     "SCT SHIP NO.": "HVDC-ADOPT-SCT-0019",
     "MR#": "E08",
@@ -23614,8 +23693,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "289",
     "SCT SHIP NO.": "HVDC-ADOPT-SCT-0020",
     "MR#": "E08",
@@ -23696,8 +23775,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "290",
     "SCT SHIP NO.": "HVDC-ADOPT-SCT-0027",
     "MR#": "E08",
@@ -23778,8 +23857,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "291",
     "SCT SHIP NO.": "HVDC-ADOPT-ZEN-0007",
     "MR#": "",
@@ -23860,8 +23939,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "292",
     "SCT SHIP NO.": "HVDC-ADOPT-SEI-0015",
     "MR#": "E03",
@@ -23942,8 +24021,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "293",
     "SCT SHIP NO.": "HVDC-ADOPT-SIM-0021",
     "MR#": "E04-1",
@@ -24024,8 +24103,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "294",
     "SCT SHIP NO.": "HVDC-ADOPT-SIM-0025",
     "MR#": "E04-1",
@@ -24106,8 +24185,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "295",
     "SCT SHIP NO.": "HVDC-ADOPT-SIM-0018",
     "MR#": "E04-1",
@@ -24188,8 +24267,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "296",
     "SCT SHIP NO.": "HVDC-ADOPT-SIM-0030",
     "MR#": "E04-1",
@@ -24270,8 +24349,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "297",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0214",
     "MR#": "E01",
@@ -24352,8 +24431,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": "Duty Exempted Materials,2024-11-19(DHL WARE HOUSE)"
-  },
-  {
+},
+{
     "No": "298",
     "SCT SHIP NO.": "HVDC-ADOPT-SIM-0019-A",
     "MR#": "E04-1",
@@ -24434,8 +24513,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "299",
     "SCT SHIP NO.": "HVDC-ADOPT-SIM-0019-B",
     "MR#": "E04-1",
@@ -24516,8 +24595,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "300",
     "SCT SHIP NO.": "HVDC-ADOPT-SIM-0019-C",
     "MR#": "E04-1",
@@ -24598,8 +24677,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "301",
     "SCT SHIP NO.": "HVDC-ADOPT-SIM-0019-D",
     "MR#": "E04-1",
@@ -24680,8 +24759,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "302",
     "SCT SHIP NO.": "HVDC-ADOPT-SEI-0009",
     "MR#": "E03",
@@ -24762,8 +24841,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "303",
     "SCT SHIP NO.": "HVDC-ADOPT-SIM-0020",
     "MR#": "E04-1",
@@ -24844,8 +24923,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "304",
     "SCT SHIP NO.": "HVDC-ADOPT-SIM-0028-A",
     "MR#": "E04-1",
@@ -24926,8 +25005,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "305",
     "SCT SHIP NO.": "HVDC-ADOPT-SIM-0028-B",
     "MR#": "E04-1",
@@ -25008,8 +25087,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "306",
     "SCT SHIP NO.": "HVDC-ADOPT-SCT-0033",
     "MR#": "E08",
@@ -25090,8 +25169,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "307",
     "SCT SHIP NO.": "HVDC-ADOPT-SIM-0032",
     "MR#": "E04-1",
@@ -25172,8 +25251,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "308",
     "SCT SHIP NO.": "HVDC-ADOPT-SIM-0033",
     "MR#": "E04-1",
@@ -25254,8 +25333,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "309",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0244",
     "MR#": "E01",
@@ -25336,8 +25415,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "310",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0237",
     "MR#": "E01",
@@ -25418,8 +25497,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "311",
     "SCT SHIP NO.": "HVDC-ADOPT-ZEN-0009",
     "MR#": "",
@@ -25500,8 +25579,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "312",
     "SCT SHIP NO.": "HVDC-ADOPT-SIM-0039",
     "MR#": "E04-1",
@@ -25582,8 +25661,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "313",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0208",
     "MR#": "E01",
@@ -25664,8 +25743,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": "Duty Exempted Materials"
-  },
-  {
+},
+{
     "No": "314",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0208",
     "MR#": "E01",
@@ -25746,8 +25825,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": "Duty Exempted Materials"
-  },
-  {
+},
+{
     "No": "315",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0251",
     "MR#": "E01",
@@ -25828,8 +25907,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": "Duty Exempted Materials"
-  },
-  {
+},
+{
     "No": "316",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0252",
     "MR#": "E01",
@@ -25910,8 +25989,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": "Duty Exempted Materials"
-  },
-  {
+},
+{
     "No": "317",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0223",
     "MR#": "E01",
@@ -25992,8 +26071,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": "Duty Exempted Materials"
-  },
-  {
+},
+{
     "No": "318",
     "SCT SHIP NO.": "HVDC-ADOPT-SIM-0038",
     "MR#": "E04-1",
@@ -26074,8 +26153,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "319",
     "SCT SHIP NO.": "HVDC-ADOPT-SCT-0022",
     "MR#": "E08",
@@ -26156,8 +26235,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "320",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0215",
     "MR#": "E01",
@@ -26238,8 +26317,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "321",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0232",
     "MR#": "E01",
@@ -26320,8 +26399,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "322",
     "SCT SHIP NO.": "HVDC-ADOPT-SEI-0014",
     "MR#": "E03",
@@ -26402,8 +26481,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "323",
     "SCT SHIP NO.": "HVDC-ADOPT-ZEN-0010",
     "MR#": "",
@@ -26484,8 +26563,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "324",
     "SCT SHIP NO.": "HVDC-ADOPT-SCT-0025",
     "MR#": "E08",
@@ -26566,8 +26645,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "325",
     "SCT SHIP NO.": "HVDC-ADOPT-SCT-0023",
     "MR#": "E08",
@@ -26648,8 +26727,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "326",
     "SCT SHIP NO.": "HVDC-ADOPT-ZEN-0011",
     "MR#": "",
@@ -26730,8 +26809,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "327",
     "SCT SHIP NO.": "HVDC-ADOPT-ZEN-0005",
     "MR#": "",
@@ -26812,8 +26891,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "328",
     "SCT SHIP NO.": "HVDC-ADOPT-SCT-0011",
     "MR#": "E08",
@@ -26894,8 +26973,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "329",
     "SCT SHIP NO.": "HVDC-ADOPT-SCT-0012",
     "MR#": "E08",
@@ -26976,8 +27055,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "330",
     "SCT SHIP NO.": "HVDC-ADOPT-SCT-0024",
     "MR#": "E08",
@@ -27058,8 +27137,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": "Duty Exempted Materials"
-  },
-  {
+},
+{
     "No": "331",
     "SCT SHIP NO.": "HVDC-ADOPT-SCT-0026",
     "MR#": "E08",
@@ -27140,8 +27219,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "332",
     "SCT SHIP NO.": "HVDC-ADOPT-SCT-0040",
     "MR#": "E08",
@@ -27222,8 +27301,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "333",
     "SCT SHIP NO.": "HVDC-ADOPT-SCT-0041",
     "MR#": "E08",
@@ -27304,8 +27383,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "334",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0234",
     "MR#": "E01",
@@ -27386,8 +27465,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "335",
     "SCT SHIP NO.": "HVDC-ADOPT-SIM-0027",
     "MR#": "E04-1",
@@ -27468,8 +27547,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "336",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0264",
     "MR#": "E01",
@@ -27550,8 +27629,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": "Duty Exempted Materials"
-  },
-  {
+},
+{
     "No": "337",
     "SCT SHIP NO.": "HVDC-ADOPT-ZEN-0004",
     "MR#": "",
@@ -27632,8 +27711,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "338",
     "SCT SHIP NO.": "HVDC-ADOPT-SEI-0013",
     "MR#": "E03",
@@ -27714,8 +27793,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "339",
     "SCT SHIP NO.": "HVDC-ADOPT-SCT-0030",
     "MR#": "E08",
@@ -27796,8 +27875,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "340",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0258",
     "MR#": "E01",
@@ -27878,8 +27957,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": "Duty Exempted Materials"
-  },
-  {
+},
+{
     "No": "341",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0259",
     "MR#": "E01",
@@ -27960,8 +28039,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": "Duty Exempted Materials"
-  },
-  {
+},
+{
     "No": "342",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0260",
     "MR#": "E01",
@@ -28042,8 +28121,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": "Duty Exempted Materials"
-  },
-  {
+},
+{
     "No": "343",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0261",
     "MR#": "E01",
@@ -28124,8 +28203,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": "Duty Exempted Materials"
-  },
-  {
+},
+{
     "No": "344",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0262",
     "MR#": "E01",
@@ -28206,8 +28285,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": "Duty Exempted Materials"
-  },
-  {
+},
+{
     "No": "345",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0263",
     "MR#": "E01",
@@ -28288,8 +28367,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": "Duty Exempted Materials"
-  },
-  {
+},
+{
     "No": "346",
     "SCT SHIP NO.": "HVDC-ADOPT-SIM-0035",
     "MR#": "E04-1",
@@ -28370,8 +28449,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "347",
     "SCT SHIP NO.": "HVDC-ADOPT-SIM-0043",
     "MR#": "E04-1",
@@ -28452,8 +28531,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "348",
     "SCT SHIP NO.": "HVDC-ADOPT-SIM-0045",
     "MR#": "E04-1",
@@ -28534,8 +28613,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "349",
     "SCT SHIP NO.": "HVDC-ADOPT-SIM-0041",
     "MR#": "E04-1",
@@ -28616,8 +28695,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "350",
     "SCT SHIP NO.": "HVDC-ADOPT-SIM-0029",
     "MR#": "E04-1",
@@ -28698,8 +28777,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "351",
     "SCT SHIP NO.": "HVDC-ADOPT-SIM-0034",
     "MR#": "E04-1",
@@ -28780,8 +28859,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "352",
     "SCT SHIP NO.": "HVDC-ADOPT-ZEN-0012",
     "MR#": "",
@@ -28862,8 +28941,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "353",
     "SCT SHIP NO.": "HVDC-ADOPT-SCT-0031",
     "MR#": "E08",
@@ -28944,8 +29023,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "354",
     "SCT SHIP NO.": "HVDC-ADOPT-SCT-0032",
     "MR#": "E08",
@@ -29026,8 +29105,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "355",
     "SCT SHIP NO.": "HVDC-ADOPT-SCT-0036",
     "MR#": "I01",
@@ -29108,8 +29187,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "356",
     "SCT SHIP NO.": "HVDC-ADOPT-SEI-0018",
     "MR#": "E03",
@@ -29190,8 +29269,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "357",
     "SCT SHIP NO.": "HVDC-ADOPT-ZEN-0015",
     "MR#": "",
@@ -29272,8 +29351,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "358",
     "SCT SHIP NO.": "HVDC-ADOPT-SCT-0044",
     "MR#": "E08",
@@ -29354,8 +29433,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "359",
     "SCT SHIP NO.": "HVDC-ADOPT-SCT-0035",
     "MR#": "E08",
@@ -29436,8 +29515,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "360",
     "SCT SHIP NO.": "HVDC-ADOPT-SCT-0034",
     "MR#": "E08",
@@ -29518,8 +29597,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "361",
     "SCT SHIP NO.": "HVDC-ADOPT-SCT-0028",
     "MR#": "E08",
@@ -29600,8 +29679,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "362",
     "SCT SHIP NO.": "HVDC-ADOPT-SIM-0036-A",
     "MR#": "E04-1",
@@ -29682,8 +29761,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "363",
     "SCT SHIP NO.": "HVDC-ADOPT-SIM-0036-B",
     "MR#": "E04-1",
@@ -29764,8 +29843,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "364",
     "SCT SHIP NO.": "HVDC-ADOPT-SIM-0037-A",
     "MR#": "E04-1",
@@ -29846,8 +29925,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "365",
     "SCT SHIP NO.": "HVDC-ADOPT-SIM-0037-B",
     "MR#": "E04-1",
@@ -29928,8 +30007,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "366",
     "SCT SHIP NO.": "HVDC-ADOPT-SEI-0019",
     "MR#": "E03",
@@ -30010,8 +30089,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "367",
     "SCT SHIP NO.": "HVDC-ADOPT-SCT-0046",
     "MR#": "E08",
@@ -30092,8 +30171,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "368",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0238",
     "MR#": "E01",
@@ -30174,8 +30253,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": "Duty Exempted Materials"
-  },
-  {
+},
+{
     "No": "369",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0239",
     "MR#": "E01",
@@ -30256,8 +30335,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": "Duty Exempted Materials"
-  },
-  {
+},
+{
     "No": "370",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0243",
     "MR#": "E01",
@@ -30338,8 +30417,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "371",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0253",
     "MR#": "E01",
@@ -30420,8 +30499,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "372",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0254",
     "MR#": "E01",
@@ -30502,8 +30581,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": "Duty Exempted Materials"
-  },
-  {
+},
+{
     "No": "373",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0255",
     "MR#": "E01",
@@ -30584,8 +30663,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": "Duty Exempted Materials"
-  },
-  {
+},
+{
     "No": "374",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0256",
     "MR#": "E01",
@@ -30666,8 +30745,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": "Duty Exempted Materials"
-  },
-  {
+},
+{
     "No": "375",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0257",
     "MR#": "E01",
@@ -30748,8 +30827,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": "Duty Exempted Materials"
-  },
-  {
+},
+{
     "No": "376",
     "SCT SHIP NO.": "HVDC-ADOPT-SCT-0037",
     "MR#": "E08",
@@ -30830,8 +30909,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "377",
     "SCT SHIP NO.": "HVDC-ADOPT-SCT-0029",
     "MR#": "M01",
@@ -30912,8 +30991,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "378",
     "SCT SHIP NO.": "HVDC-ADOPT-ZEN-0013",
     "MR#": "",
@@ -30994,8 +31073,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": "Duty Exempted Materials"
-  },
-  {
+},
+{
     "No": "379",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0290",
     "MR#": "E01",
@@ -31076,8 +31155,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "380",
     "SCT SHIP NO.": "HVDC-ADOPT-SEI-0017-03",
     "MR#": "E03",
@@ -31158,8 +31237,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "381",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0233",
     "MR#": "E01",
@@ -31240,8 +31319,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "382",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0236",
     "MR#": "E01",
@@ -31322,8 +31401,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "383",
     "SCT SHIP NO.": "HVDC-ADOPT-SCT-0048",
     "MR#": "E08",
@@ -31404,8 +31483,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "384",
     "SCT SHIP NO.": "HVDC-ADOPT-SEI-0017-01",
     "MR#": "E03",
@@ -31486,8 +31565,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "385",
     "SCT SHIP NO.": "HVDC-ADOPT-SCT-0038",
     "MR#": "E08",
@@ -31568,8 +31647,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "386",
     "SCT SHIP NO.": "HVDC-ADOPT-ZEN-0006",
     "MR#": "",
@@ -31650,8 +31729,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "387",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0302",
     "MR#": "E01",
@@ -31732,8 +31811,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "388",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0307",
     "MR#": "E01",
@@ -31814,8 +31893,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "389",
     "SCT SHIP NO.": "HVDC-ADOPT-SCT-0056",
     "MR#": "E08",
@@ -31896,8 +31975,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "390",
     "SCT SHIP NO.": "HVDC-ADOPT-SCT-0039",
     "MR#": "E08",
@@ -31978,8 +32057,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "391",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0267",
     "MR#": "E01",
@@ -32060,8 +32139,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "392",
     "SCT SHIP NO.": "HVDC-ADOPT-SCT-0042",
     "MR#": "E08",
@@ -32142,8 +32221,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "393",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0245",
     "MR#": "E01",
@@ -32224,8 +32303,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "394",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0246",
     "MR#": "E01",
@@ -32306,8 +32385,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "395",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0247",
     "MR#": "E01",
@@ -32388,8 +32467,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "396",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0248",
     "MR#": "E01",
@@ -32470,8 +32549,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "397",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0249",
     "MR#": "E01",
@@ -32551,8 +32630,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "398",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0250",
     "MR#": "E01",
@@ -32633,8 +32712,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "399",
     "SCT SHIP NO.": "HVDC-ADOPT-SIM-0042-A",
     "MR#": "E04-1",
@@ -32715,8 +32794,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "400",
     "SCT SHIP NO.": "HVDC-ADOPT-SIM-0042-B",
     "MR#": "E04-1",
@@ -32797,8 +32876,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "401",
     "SCT SHIP NO.": "HVDC-ADOPT-SIM-0050",
     "MR#": "E04-1",
@@ -32879,8 +32958,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "402",
     "SCT SHIP NO.": "HVDC-ADOPT-SIM-0053",
     "MR#": "E04-1",
@@ -32961,8 +33040,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "403",
     "SCT SHIP NO.": "HVDC-ADOPT-SIM-0052",
     "MR#": "E04-1",
@@ -33043,8 +33122,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "404",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0216",
     "MR#": "E01",
@@ -33125,8 +33204,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "405",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0220",
     "MR#": "E01",
@@ -33207,8 +33286,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "406",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0221",
     "MR#": "E01",
@@ -33289,8 +33368,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "407",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0222",
     "MR#": "E01",
@@ -33371,8 +33450,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "408",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0217",
     "MR#": "E01",
@@ -33453,8 +33532,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "409",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0218",
     "MR#": "E01",
@@ -33535,8 +33614,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "410",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0219",
     "MR#": "E01",
@@ -33617,8 +33696,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "411",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0318-1",
     "MR#": "E01",
@@ -33699,8 +33778,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "412",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0318-2",
     "MR#": "E01",
@@ -33781,8 +33860,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "413",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0318-3",
     "MR#": "E01",
@@ -33863,8 +33942,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "414",
     "SCT SHIP NO.": "HVDC-ADOPT-SCT-0063",
     "MR#": "E08",
@@ -33945,8 +34024,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "415",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0318-4",
     "MR#": "E01",
@@ -34027,8 +34106,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "416",
     "SCT SHIP NO.": "HVDC-ADOPT-ZEN-0008",
     "MR#": "",
@@ -34109,8 +34188,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "417",
     "SCT SHIP NO.": "HVDC-ADOPT-SCT-0043",
     "MR#": "E08",
@@ -34191,8 +34270,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "418",
     "SCT SHIP NO.": "HVDC-ADOPT-SCT-0045",
     "MR#": "M01",
@@ -34273,8 +34352,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "419",
     "SCT SHIP NO.": "HVDC-ADOPT-SCT-0047",
     "MR#": "E08",
@@ -34355,8 +34434,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "420",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0265",
     "MR#": "E01",
@@ -34437,8 +34516,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "421",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0266",
     "MR#": "E01",
@@ -34519,8 +34598,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "422",
     "SCT SHIP NO.": "HVDC-ADOPT-SEI-0020",
     "MR#": "E03",
@@ -34601,8 +34680,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "423",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0317-1",
     "MR#": "E01",
@@ -34683,8 +34762,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "424",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0317-2",
     "MR#": "E01",
@@ -34765,8 +34844,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "425",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0317-3",
     "MR#": "E01",
@@ -34847,8 +34926,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "426",
     "SCT SHIP NO.": "HVDC-ADOPT-ZEN-0006 A",
     "MR#": "",
@@ -34929,8 +35008,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": "Duty Exempted Materials"
-  },
-  {
+},
+{
     "No": "427",
     "SCT SHIP NO.": "HVDC-ADOPT-SIM-0044",
     "MR#": "E04-1",
@@ -35010,8 +35089,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "428",
     "SCT SHIP NO.": "HVDC-ADOPT-SIM-0057",
     "MR#": "E04-1",
@@ -35092,8 +35171,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "429",
     "SCT SHIP NO.": "HVDC-ADOPT-SCT-0069",
     "MR#": "E08",
@@ -35174,8 +35253,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "430",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0319-1",
     "MR#": "E01",
@@ -35256,8 +35335,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "431",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0319-2",
     "MR#": "E01",
@@ -35338,8 +35417,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "432",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0319-3",
     "MR#": "E01",
@@ -35420,8 +35499,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "433",
     "SCT SHIP NO.": "HVDC-ADOPT-SCT-0065",
     "MR#": "E08",
@@ -35502,8 +35581,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "434",
     "SCT SHIP NO.": "HVDC-ADOPT-SCT-0054",
     "MR#": "E08",
@@ -35584,8 +35663,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "435",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0268",
     "MR#": "E01",
@@ -35666,8 +35745,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": "Duty Exempted Materials"
-  },
-  {
+},
+{
     "No": "436",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0269",
     "MR#": "E01",
@@ -35748,8 +35827,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": "Duty Exempted Materials"
-  },
-  {
+},
+{
     "No": "437",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0270",
     "MR#": "E01",
@@ -35830,8 +35909,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": "Duty Exempted Materials"
-  },
-  {
+},
+{
     "No": "438",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0271",
     "MR#": "E01",
@@ -35912,8 +35991,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": "Duty Exempted Materials"
-  },
-  {
+},
+{
     "No": "439",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0272",
     "MR#": "E01",
@@ -35994,8 +36073,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": "Duty Exempted Materials"
-  },
-  {
+},
+{
     "No": "440",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0273",
     "MR#": "E01",
@@ -36076,8 +36155,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": "Duty Exempted Materials"
-  },
-  {
+},
+{
     "No": "441",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0274",
     "MR#": "E01",
@@ -36158,8 +36237,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": "Duty Exempted Materials"
-  },
-  {
+},
+{
     "No": "442",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0275",
     "MR#": "E01",
@@ -36240,8 +36319,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": "Duty Exempted Materials"
-  },
-  {
+},
+{
     "No": "443",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0326",
     "MR#": "E01",
@@ -36322,8 +36401,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "444",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0291",
     "MR#": "E01",
@@ -36404,8 +36483,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "445",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0292",
     "MR#": "E01",
@@ -36486,8 +36565,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "446",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0298",
     "MR#": "E01",
@@ -36568,8 +36647,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "447",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0299",
     "MR#": "E01",
@@ -36650,8 +36729,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "448",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0300",
     "MR#": "E01",
@@ -36732,8 +36811,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "449",
     "SCT SHIP NO.": "HVDC-ADOPT-SCT-0055",
     "MR#": "E08",
@@ -36814,8 +36893,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "450",
     "SCT SHIP NO.": "HVDC-ADOPT-SCT-0052",
     "MR#": "E08",
@@ -36896,8 +36975,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "451",
     "SCT SHIP NO.": "HVDC-ADOPT-SCT-0051",
     "MR#": "E08",
@@ -36978,8 +37057,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "452",
     "SCT SHIP NO.": "HVDC-ADOPT-SCT-0050",
     "MR#": "E08",
@@ -37060,8 +37139,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "453",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0301-1",
     "MR#": "E01",
@@ -37142,8 +37221,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "454",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0311-1",
     "MR#": "E01",
@@ -37224,8 +37303,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "455",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0308",
     "MR#": "E01",
@@ -37306,8 +37385,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "456",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0309-1",
     "MR#": "E01",
@@ -37388,8 +37467,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "457",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0310-1",
     "MR#": "E01",
@@ -37470,8 +37549,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "458",
     "SCT SHIP NO.": "HVDC-ADOPT-SCT-0053",
     "MR#": "E08",
@@ -37552,8 +37631,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "459",
     "SCT SHIP NO.": "HVDC-ADOPT-SCT-0061",
     "MR#": "E08",
@@ -37634,8 +37713,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "460",
     "SCT SHIP NO.": "HVDC-ADOPT-SIM-0066",
     "MR#": "E04-1",
@@ -37716,8 +37795,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "461",
     "SCT SHIP NO.": "HVDC-ADOPT-SCT-0079",
     "MR#": "E08",
@@ -37798,8 +37877,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "462",
     "SCT SHIP NO.": "HVDC-ADOPT-SIM-0056",
     "MR#": "E04-1",
@@ -37880,8 +37959,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "463",
     "SCT SHIP NO.": "HVDC-ADOPT-SIM-0061",
     "MR#": "E04-1",
@@ -37962,8 +38041,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "464",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0334",
     "MR#": "E01",
@@ -38044,8 +38123,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "465",
     "SCT SHIP NO.": "HVDC-ADOPT-SIM-0062",
     "MR#": "E04-1",
@@ -38126,8 +38205,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "466",
     "SCT SHIP NO.": "HVDC-ADOPT-PPL-0016",
     "MR#": "E02",
@@ -38208,8 +38287,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "467",
     "SCT SHIP NO.": "HVDC-ADOPT-SCT-0090",
     "MR#": "E08",
@@ -38290,8 +38369,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": "Duty Exempted Materials"
-  },
-  {
+},
+{
     "No": "468",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0301-2",
     "MR#": "E01",
@@ -38372,8 +38451,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "469",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0311-2",
     "MR#": "E01",
@@ -38454,8 +38533,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "470",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0309-2",
     "MR#": "E01",
@@ -38536,8 +38615,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "471",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0310-2",
     "MR#": "E01",
@@ -38618,8 +38697,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "472",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0314",
     "MR#": "E01",
@@ -38700,8 +38779,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "473",
     "SCT SHIP NO.": "HVDC-ADOPT-SIM-0054",
     "MR#": "E04-1",
@@ -38782,8 +38861,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "474",
     "SCT SHIP NO.": "HVDC-ADOPT-SIM-0055",
     "MR#": "E04-1",
@@ -38864,8 +38943,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "475",
     "SCT SHIP NO.": "HVDC-ADOPT-SIM-0065",
     "MR#": "E04-1",
@@ -38946,8 +39025,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "476",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0327",
     "MR#": "E01",
@@ -39028,8 +39107,8 @@
     "Hauler DG Storage": "2025-05-09",
     "Vijay Tanks": "",
     "REMARK": "Duty Exempted Materials"
-  },
-  {
+},
+{
     "No": "477",
     "SCT SHIP NO.": "HVDC-ADOPT-SCT-0049",
     "MR#": "E08",
@@ -39110,8 +39189,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "478",
     "SCT SHIP NO.": "HVDC-ADOPT-SCT-0057",
     "MR#": "E08",
@@ -39192,8 +39271,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "479",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0335",
     "MR#": "E01",
@@ -39274,8 +39353,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "480",
     "SCT SHIP NO.": "HVDC-ADOPT-ZEN-0014",
     "MR#": "",
@@ -39356,8 +39435,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "481",
     "SCT SHIP NO.": "HVDC-ADOPT-SCT-0091",
     "MR#": "E08",
@@ -39438,8 +39517,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "482",
     "SCT SHIP NO.": "HVDC-ADOPT-ZEN-0016",
     "MR#": "",
@@ -39520,8 +39599,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "483",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0312",
     "MR#": "E01",
@@ -39602,8 +39681,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": "Duty Exempted Materials"
-  },
-  {
+},
+{
     "No": "484",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0313",
     "MR#": "E01",
@@ -39684,8 +39763,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": "Duty Exempted Materials"
-  },
-  {
+},
+{
     "No": "485",
     "SCT SHIP NO.": "HVDC-ADOPT-SIM-0064",
     "MR#": "E04-1",
@@ -39766,8 +39845,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "486",
     "SCT SHIP NO.": "HVDC-ADOPT-SIM-0040",
     "MR#": "E04-1",
@@ -39848,8 +39927,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "487",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0320",
     "MR#": "E01",
@@ -39930,8 +40009,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "488",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0293",
     "MR#": "E01",
@@ -40012,8 +40091,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "489",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0294",
     "MR#": "E01",
@@ -40094,8 +40173,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "490",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0295",
     "MR#": "E01",
@@ -40176,8 +40255,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "491",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0288",
     "MR#": "E01",
@@ -40258,8 +40337,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": "Duty Exempted Materials"
-  },
-  {
+},
+{
     "No": "492",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0289",
     "MR#": "E01",
@@ -40340,8 +40419,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": "Duty Exempted Materials"
-  },
-  {
+},
+{
     "No": "493",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0296",
     "MR#": "E01",
@@ -40422,8 +40501,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": "Duty Exempted Materials"
-  },
-  {
+},
+{
     "No": "494",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0297",
     "MR#": "E01",
@@ -40504,8 +40583,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": "Duty Exempted Materials"
-  },
-  {
+},
+{
     "No": "495",
     "SCT SHIP NO.": "HVDC-ADOPT-ZEN-0018",
     "MR#": "",
@@ -40586,8 +40665,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "496",
     "SCT SHIP NO.": "HVDC-ADOPT-SCT-0077",
     "MR#": "E08",
@@ -40668,8 +40747,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "497",
     "SCT SHIP NO.": "HVDC-ADOPT-SCT-0080",
     "MR#": "E08",
@@ -40750,8 +40829,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "498",
     "SCT SHIP NO.": "HVDC-ADOPT-SCT-0088",
     "MR#": "E08",
@@ -40832,8 +40911,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "499",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0321",
     "MR#": "E01",
@@ -40914,8 +40993,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "500",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0322",
     "MR#": "E01",
@@ -40996,8 +41075,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "501",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0276",
     "MR#": "E01",
@@ -41078,8 +41157,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": "Duty Exempted Materials"
-  },
-  {
+},
+{
     "No": "502",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0277",
     "MR#": "E01",
@@ -41160,8 +41239,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": "Duty Exempted Materials"
-  },
-  {
+},
+{
     "No": "503",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0278",
     "MR#": "E01",
@@ -41242,8 +41321,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": "Duty Exempted Materials"
-  },
-  {
+},
+{
     "No": "504",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0279",
     "MR#": "E01",
@@ -41324,8 +41403,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": "Duty Exempted Materials"
-  },
-  {
+},
+{
     "No": "505",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0280",
     "MR#": "E01",
@@ -41406,8 +41485,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": "Duty Exempted Materials"
-  },
-  {
+},
+{
     "No": "506",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0281",
     "MR#": "E01",
@@ -41488,8 +41567,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": "Duty Exempted Materials"
-  },
-  {
+},
+{
     "No": "507",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0282",
     "MR#": "E01",
@@ -41570,8 +41649,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": "Duty Exempted Materials"
-  },
-  {
+},
+{
     "No": "508",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0283",
     "MR#": "E01",
@@ -41652,8 +41731,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": "Duty Exempted Materials"
-  },
-  {
+},
+{
     "No": "509",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0284",
     "MR#": "E01",
@@ -41734,8 +41813,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": "Duty Exempted Materials"
-  },
-  {
+},
+{
     "No": "510",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0285",
     "MR#": "E01",
@@ -41816,8 +41895,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": "Duty Exempted Materials"
-  },
-  {
+},
+{
     "No": "511",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0286",
     "MR#": "E01",
@@ -41898,8 +41977,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": "Duty Exempted Materials"
-  },
-  {
+},
+{
     "No": "512",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0287",
     "MR#": "E01",
@@ -41980,8 +42059,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": "Duty Exempted Materials"
-  },
-  {
+},
+{
     "No": "513",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0356",
     "MR#": "E01",
@@ -42062,8 +42141,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": "Duty Exempted Materials"
-  },
-  {
+},
+{
     "No": "514",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0355",
     "MR#": "E01",
@@ -42144,8 +42223,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "515",
     "SCT SHIP NO.": "HVDC-ADOPT-SCT-0066",
     "MR#": "E08",
@@ -42226,8 +42305,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "516",
     "SCT SHIP NO.": "HVDC-ADOPT-SIM-0072",
     "MR#": "E04-1",
@@ -42308,8 +42387,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "517",
     "SCT SHIP NO.": "HVDC-ADOPT-SIM-0073",
     "MR#": "E04-1",
@@ -42390,8 +42469,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "518",
     "SCT SHIP NO.": "HVDC-ADOPT-SEI-0017-02",
     "MR#": "E03",
@@ -42472,8 +42551,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "519",
     "SCT SHIP NO.": "HVDC-ADOPT-SIM-0048",
     "MR#": "E04-1",
@@ -42554,8 +42633,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "520",
     "SCT SHIP NO.": "HVDC-ADOPT-SIM-0049",
     "MR#": "E04-1",
@@ -42636,8 +42715,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "521",
     "SCT SHIP NO.": "HVDC-ADOPT-SIM-0051",
     "MR#": "E04-1",
@@ -42718,8 +42797,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "522",
     "SCT SHIP NO.": "HVDC-ADOPT-SCT-0075",
     "MR#": "E08",
@@ -42800,8 +42879,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "523",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0330",
     "MR#": "E01",
@@ -42882,8 +42961,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "524",
     "SCT SHIP NO.": "HVDC-ADOPT-SEI-0021-T",
     "MR#": "E03",
@@ -42964,8 +43043,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "525",
     "SCT SHIP NO.": "HVDC-ADOPT-SEI-0021-L",
     "MR#": "E03",
@@ -43046,8 +43125,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "526",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0315",
     "MR#": "E01",
@@ -43128,8 +43207,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": "Duty Exempted Materials"
-  },
-  {
+},
+{
     "No": "527",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0316",
     "MR#": "E01",
@@ -43210,8 +43289,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": "Duty Exempted Materials"
-  },
-  {
+},
+{
     "No": "528",
     "SCT SHIP NO.": "HVDC-ADOPT-SCT-0058",
     "MR#": "E08",
@@ -43292,8 +43371,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": "Duty Exempted Materials"
-  },
-  {
+},
+{
     "No": "529",
     "SCT SHIP NO.": "HVDC-ADOPT-SCT-0070",
     "MR#": "I01",
@@ -43374,8 +43453,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "530",
     "SCT SHIP NO.": "HVDC-ADOPT-SCT-0089",
     "MR#": "E08",
@@ -43456,8 +43535,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "531",
     "SCT SHIP NO.": "HVDC-ADOPT-SIM-0076-A",
     "MR#": "E04-1",
@@ -43538,8 +43617,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": "Duty Exempted Materials"
-  },
-  {
+},
+{
     "No": "532",
     "SCT SHIP NO.": "HVDC-ADOPT-SIM-0076-B",
     "MR#": "E04-1",
@@ -43620,8 +43699,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": "Duty Exempted Materials"
-  },
-  {
+},
+{
     "No": "533",
     "SCT SHIP NO.": "HVDC-ADOPT-SIM-0076-C",
     "MR#": "E04-1",
@@ -43702,8 +43781,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": "Duty Exempted Materials"
-  },
-  {
+},
+{
     "No": "534",
     "SCT SHIP NO.": "HVDC-ADOPT-SIM-0076-D",
     "MR#": "E04-1",
@@ -43784,8 +43863,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": "Duty Exempted Materials"
-  },
-  {
+},
+{
     "No": "535",
     "SCT SHIP NO.": "HVDC-ADOPT-SCT-0100",
     "MR#": "E08",
@@ -43866,8 +43945,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "536",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0340",
     "MR#": "E01",
@@ -43948,8 +44027,8 @@
     "Hauler DG Storage": "2025-05-16",
     "Vijay Tanks": "",
     "REMARK": "Duty Exempted Materials"
-  },
-  {
+},
+{
     "No": "537",
     "SCT SHIP NO.": "HVDC-ADOPT-SCT-0067",
     "MR#": "E08",
@@ -44030,8 +44109,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "538",
     "SCT SHIP NO.": "HVDC-ADOPT-SCT-0068",
     "MR#": "E08",
@@ -44112,8 +44191,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "539",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0303",
     "MR#": "E01",
@@ -44194,8 +44273,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "540",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0304",
     "MR#": "E01",
@@ -44276,8 +44355,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "541",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0305",
     "MR#": "E01",
@@ -44358,8 +44437,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "542",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0306",
     "MR#": "E01",
@@ -44440,8 +44519,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "543",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0328",
     "MR#": "E01",
@@ -44522,8 +44601,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": "Duty Exempted Materials"
-  },
-  {
+},
+{
     "No": "544",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0344",
     "MR#": "E01",
@@ -44604,8 +44683,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": "Duty Exempted Materials"
-  },
-  {
+},
+{
     "No": "545",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0345",
     "MR#": "E01",
@@ -44686,8 +44765,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": "Duty Exempted Materials"
-  },
-  {
+},
+{
     "No": "546",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0346",
     "MR#": "E01",
@@ -44768,8 +44847,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": "Duty Exempted Materials"
-  },
-  {
+},
+{
     "No": "547",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0347",
     "MR#": "E01",
@@ -44850,8 +44929,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": "Duty Exempted Materials"
-  },
-  {
+},
+{
     "No": "548",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0348",
     "MR#": "E01",
@@ -44932,8 +45011,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": "Duty Exempted Materials"
-  },
-  {
+},
+{
     "No": "549",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0349",
     "MR#": "E01",
@@ -45014,8 +45093,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": "Duty Exempted Materials"
-  },
-  {
+},
+{
     "No": "550",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0360",
     "MR#": "E01",
@@ -45096,8 +45175,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": "Duty Exempted Materials"
-  },
-  {
+},
+{
     "No": "551",
     "SCT SHIP NO.": "HVDC-ADOPT-SCT-0060",
     "MR#": "E08",
@@ -45178,8 +45257,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "552",
     "SCT SHIP NO.": "HVDC-ADOPT-SCT-0062",
     "MR#": "E08",
@@ -45260,8 +45339,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "553",
     "SCT SHIP NO.": "HVDC-ADOPT-SCT-0099",
     "MR#": "E08",
@@ -45342,8 +45421,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "554",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0358",
     "MR#": "E01",
@@ -45424,8 +45503,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": "Duty Exempted Materials"
-  },
-  {
+},
+{
     "No": "555",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0357",
     "MR#": "E01",
@@ -45506,8 +45585,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": "Duty Exempted Materials"
-  },
-  {
+},
+{
     "No": "556",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0341",
     "MR#": "E01",
@@ -45588,8 +45667,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": "Duty Exempted Materials"
-  },
-  {
+},
+{
     "No": "557",
     "SCT SHIP NO.": "HVDC-ADOPT-SCT-0076",
     "MR#": "E08",
@@ -45670,8 +45749,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "558",
     "SCT SHIP NO.": "HVDC-ADOPT-SCT-0081",
     "MR#": "I01",
@@ -45752,8 +45831,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "559",
     "SCT SHIP NO.": "HVDC-ADOPT-SCT-0103",
     "MR#": "E08",
@@ -45834,8 +45913,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "560",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0323",
     "MR#": "E01",
@@ -45916,8 +45995,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "561",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0324",
     "MR#": "E01",
@@ -45998,8 +46077,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "562",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0325-1",
     "MR#": "E01",
@@ -46080,8 +46159,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "563",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0325-2",
     "MR#": "E01",
@@ -46162,8 +46241,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "564",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0331",
     "MR#": "E01",
@@ -46244,8 +46323,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "565",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0332",
     "MR#": "E01",
@@ -46326,8 +46405,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": "Duty Exempted Materials"
-  },
-  {
+},
+{
     "No": "566",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0333",
     "MR#": "E01",
@@ -46408,8 +46487,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": "Duty Exempted Materials"
-  },
-  {
+},
+{
     "No": "567",
     "SCT SHIP NO.": "HVDC-ADOPT-SCT-0074",
     "MR#": "E08",
@@ -46490,8 +46569,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "568",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0224",
     "MR#": "E01",
@@ -46572,8 +46651,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "569",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0225",
     "MR#": "E01",
@@ -46654,8 +46733,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "570",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0363",
     "MR#": "E01",
@@ -46736,8 +46815,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": "Duty Exempted Materials"
-  },
-  {
+},
+{
     "No": "571",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0361",
     "MR#": "E01",
@@ -46818,8 +46897,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": "Duty Exempted Materials"
-  },
-  {
+},
+{
     "No": "572",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0240",
     "MR#": "E01",
@@ -46900,8 +46979,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "573",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0241",
     "MR#": "E01",
@@ -46982,8 +47061,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "574",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0242",
     "MR#": "E01",
@@ -47064,8 +47143,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "575",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0368-1",
     "MR#": "E01",
@@ -47146,8 +47225,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "576",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0368-4",
     "MR#": "E01",
@@ -47228,8 +47307,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "577",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0368-6",
     "MR#": "E01",
@@ -47310,8 +47389,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "578",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0354",
     "MR#": "E01",
@@ -47392,8 +47471,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": "Duty Exempted Materials"
-  },
-  {
+},
+{
     "No": "579",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0369",
     "MR#": "E01",
@@ -47474,8 +47553,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "580",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0370",
     "MR#": "E01",
@@ -47556,8 +47635,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "581",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0371",
     "MR#": "E01",
@@ -47638,8 +47717,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "582",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0372",
     "MR#": "E01",
@@ -47720,8 +47799,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": "Duty Exempted Materials"
-  },
-  {
+},
+{
     "No": "583",
     "SCT SHIP NO.": "HVDC-ADOPT-SIM-0080-A",
     "MR#": "E04-1",
@@ -47802,8 +47881,8 @@
     "Hauler DG Storage": "2025-06-02",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "584",
     "SCT SHIP NO.": "HVDC-ADOPT-SIM-0080-B",
     "MR#": "E04-1",
@@ -47884,8 +47963,8 @@
     "Hauler DG Storage": "2025-06-02",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "585",
     "SCT SHIP NO.": "HVDC-ADOPT-SIM-0080-C",
     "MR#": "E04-1",
@@ -47966,8 +48045,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "586",
     "SCT SHIP NO.": "HVDC-ADOPT-SIM-0080-D",
     "MR#": "E04-1",
@@ -48048,8 +48127,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "587",
     "SCT SHIP NO.": "HVDC-ADOPT-SCT-0085",
     "MR#": "E08",
@@ -48130,8 +48209,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "588",
     "SCT SHIP NO.": "HVDC-ADOPT-SCT-0104",
     "MR#": "E08",
@@ -48212,8 +48291,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "589",
     "SCT SHIP NO.": "HVDC-ADOPT-SCT-0087",
     "MR#": "I01",
@@ -48294,8 +48373,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "590",
     "SCT SHIP NO.": "HVDC-ADOPT-SCT-0072",
     "MR#": "E08",
@@ -48376,8 +48455,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "591",
     "SCT SHIP NO.": "HVDC-ADOPT-SCT-0082",
     "MR#": "E08",
@@ -48458,8 +48537,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "592",
     "SCT SHIP NO.": "HVDC-ADOPT-SCT-0084",
     "MR#": "I01",
@@ -48540,8 +48619,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "593",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0228",
     "MR#": "E01",
@@ -48622,8 +48701,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "594",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0229",
     "MR#": "E01",
@@ -48704,8 +48783,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "595",
     "SCT SHIP NO.": "HVDC-ADOPT-PPL-0017",
     "MR#": "E02",
@@ -48786,8 +48865,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "596",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0368-3",
     "MR#": "E01",
@@ -48868,8 +48947,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "597",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0368-5",
     "MR#": "E01",
@@ -48950,8 +49029,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "598",
     "SCT SHIP NO.": "HVDC-ADOPT-SCT-0071",
     "MR#": "E08",
@@ -49032,8 +49111,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "599",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0373",
     "MR#": "E01",
@@ -49114,8 +49193,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "600",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0375",
     "MR#": "E01",
@@ -49196,8 +49275,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "601",
     "SCT SHIP NO.": "HVDC-ADOPT-SCT-0059",
     "MR#": "E08",
@@ -49278,8 +49357,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "602",
     "SCT SHIP NO.": "HVDC-ADOPT-PPL-0018",
     "MR#": "E02",
@@ -49360,8 +49439,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "603",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0337",
     "MR#": "E01",
@@ -49442,8 +49521,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "604",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0338",
     "MR#": "E01",
@@ -49523,8 +49602,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "605",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0339",
     "MR#": "E01",
@@ -49605,8 +49684,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "606",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0350",
     "MR#": "E01",
@@ -49687,8 +49766,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "607",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0351",
     "MR#": "E01",
@@ -49769,8 +49848,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "608",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0329",
     "MR#": "E01",
@@ -49851,8 +49930,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": "Duty Exempted Materials"
-  },
-  {
+},
+{
     "No": "609",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0336",
     "MR#": "E01",
@@ -49933,8 +50012,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": "Duty Exempted Materials"
-  },
-  {
+},
+{
     "No": "610",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0368-2",
     "MR#": "E01",
@@ -50015,8 +50094,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "611",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0401",
     "MR#": "E01",
@@ -50097,8 +50176,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "612",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0368-7",
     "MR#": "E01",
@@ -50179,8 +50258,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "613",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0398",
     "MR#": "E01",
@@ -50261,8 +50340,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "614",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0399",
     "MR#": "E01",
@@ -50343,8 +50422,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "615",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0403",
     "MR#": "E01",
@@ -50425,8 +50504,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "616",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0404",
     "MR#": "E01",
@@ -50507,8 +50586,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "617",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0406",
     "MR#": "E01",
@@ -50589,8 +50668,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "618",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0407",
     "MR#": "E01",
@@ -50671,8 +50750,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "619",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0402",
     "MR#": "E01",
@@ -50753,8 +50832,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "620",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0405",
     "MR#": "E01",
@@ -50835,8 +50914,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "621",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0230",
     "MR#": "E01",
@@ -50917,8 +50996,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "622",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0231",
     "MR#": "E01",
@@ -50999,8 +51078,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "623",
     "SCT SHIP NO.": "HVDC-ADOPT-SCT-0116",
     "MR#": "E08",
@@ -51081,8 +51160,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "624",
     "SCT SHIP NO.": "HVDC-ADOPT-SCT-0092",
     "MR#": "E08",
@@ -51163,8 +51242,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "625",
     "SCT SHIP NO.": "HVDC-ADOPT-SCT-0083",
     "MR#": "E08",
@@ -51245,8 +51324,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": "Duty Exempted Materials"
-  },
-  {
+},
+{
     "No": "626",
     "SCT SHIP NO.": "HVDC-ADOPT-SCT-0093",
     "MR#": "E08",
@@ -51327,8 +51406,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "627",
     "SCT SHIP NO.": "HVDC-ADOPT-SCT-0098",
     "MR#": "E08",
@@ -51409,8 +51488,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "628",
     "SCT SHIP NO.": "HVDC-ADOPT-SCT-0097-1",
     "MR#": "E08",
@@ -51491,8 +51570,8 @@
     "Hauler DG Storage": "2025-07-18",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "629",
     "SCT SHIP NO.": "HVDC-ADOPT-SCT-0086",
     "MR#": "E08",
@@ -51573,8 +51652,8 @@
     "Hauler DG Storage": "2025-07-10",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "630",
     "SCT SHIP NO.": "HVDC-ADOPT-ZEN-0017",
     "MR#": "",
@@ -51655,8 +51734,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "631",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0364",
     "MR#": "E01",
@@ -51737,8 +51816,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": "Duty Exempted Materials"
-  },
-  {
+},
+{
     "No": "632",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0365",
     "MR#": "E01",
@@ -51819,8 +51898,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": "Duty Exempted Materials"
-  },
-  {
+},
+{
     "No": "633",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0366",
     "MR#": "E01",
@@ -51901,8 +51980,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": "Duty Exempted Materials"
-  },
-  {
+},
+{
     "No": "634",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0411",
     "MR#": "E01",
@@ -51983,8 +52062,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "635",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0409",
     "MR#": "E01",
@@ -52065,8 +52144,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "636",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0410",
     "MR#": "E01",
@@ -52147,8 +52226,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "637",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0408",
     "MR#": "E01",
@@ -52229,8 +52308,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "638",
     "SCT SHIP NO.": "HVDC-ADOPT-SCT-0105",
     "MR#": "E08",
@@ -52311,8 +52390,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "639",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0412",
     "MR#": "E01",
@@ -52393,8 +52472,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": "Duty Exempted Materials"
-  },
-  {
+},
+{
     "No": "640",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0415",
     "MR#": "E01",
@@ -52475,8 +52554,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": "Duty Exempted Materials"
-  },
-  {
+},
+{
     "No": "641",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0417",
     "MR#": "E01",
@@ -52557,8 +52636,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": "Duty Exempted Materials"
-  },
-  {
+},
+{
     "No": "642",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0343",
     "MR#": "E01",
@@ -52639,8 +52718,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "643",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0342",
     "MR#": "E01",
@@ -52721,8 +52800,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "644",
     "SCT SHIP NO.": "HVDC-ADOPT-SCT-0096",
     "MR#": "I01",
@@ -52803,8 +52882,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "645",
     "SCT SHIP NO.": "HVDC-ADOPT-SCT-0095",
     "MR#": "E08",
@@ -52885,8 +52964,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "646",
     "SCT SHIP NO.": "HVDC-ADOPT-SCT-0094",
     "MR#": "E08",
@@ -52967,8 +53046,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "647",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0226",
     "MR#": "E01",
@@ -53049,8 +53128,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "648",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0227",
     "MR#": "E01",
@@ -53131,8 +53210,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "649",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0359",
     "MR#": "E01",
@@ -53213,8 +53292,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "650",
     "SCT SHIP NO.": "HVDC-ADOPT-SCT-0119",
     "MR#": "E08",
@@ -53295,8 +53374,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "651",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0352",
     "MR#": "E01",
@@ -53377,8 +53456,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": "Duty Exempted Materials"
-  },
-  {
+},
+{
     "No": "652",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0353",
     "MR#": "E01",
@@ -53459,8 +53538,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": "Duty Exempted Materials"
-  },
-  {
+},
+{
     "No": "653",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0418",
     "MR#": "E01",
@@ -53541,8 +53620,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": "Duty Exempted Materials"
-  },
-  {
+},
+{
     "No": "654",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0419",
     "MR#": "E01",
@@ -53623,8 +53702,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": "Duty Exempted Materials"
-  },
-  {
+},
+{
     "No": "655",
     "SCT SHIP NO.": "HVDC-ADOPT-SCT-0101",
     "MR#": "E08",
@@ -53705,8 +53784,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "656",
     "SCT SHIP NO.": "HVDC-ADOPT-SCT-0102",
     "MR#": "E08",
@@ -53787,8 +53866,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "657",
     "SCT SHIP NO.": "HVDC-ADOPT-SCT-0073",
     "MR#": "E08",
@@ -53869,8 +53948,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": "Duty Exempted Materials"
-  },
-  {
+},
+{
     "No": "658",
     "SCT SHIP NO.": "HVDC-ADOPT-SCT-0097-2",
     "MR#": "E08",
@@ -53951,8 +54030,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "659",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0442",
     "MR#": "E01",
@@ -54033,8 +54112,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "660",
     "SCT SHIP NO.": "HVDC-ADOPT-SIM-0079-A",
     "MR#": "E04-1",
@@ -54115,8 +54194,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": "Duty Exempted Materials"
-  },
-  {
+},
+{
     "No": "661",
     "SCT SHIP NO.": "HVDC-ADOPT-SIM-0079-B",
     "MR#": "E04-1",
@@ -54197,8 +54276,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": "Duty Exempted Materials"
-  },
-  {
+},
+{
     "No": "662",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0443",
     "MR#": "E01",
@@ -54279,8 +54358,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "663",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0444",
     "MR#": "E01",
@@ -54361,8 +54440,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "664",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0445",
     "MR#": "E01",
@@ -54443,8 +54522,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "665",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0446",
     "MR#": "E01",
@@ -54525,8 +54604,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "666",
     "SCT SHIP NO.": "HVDC-ADOPT-SCT-0110",
     "MR#": "E08",
@@ -54607,8 +54686,8 @@
     "Hauler DG Storage": "2025-07-22",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "667",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0421",
     "MR#": "E01",
@@ -54689,8 +54768,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": "Duty Exempted Materials"
-  },
-  {
+},
+{
     "No": "668",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0422",
     "MR#": "E01",
@@ -54771,8 +54850,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": "Duty Exempted Materials"
-  },
-  {
+},
+{
     "No": "669",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0433",
     "MR#": "E01",
@@ -54853,8 +54932,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "670",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0447",
     "MR#": "E01",
@@ -54935,8 +55014,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "671",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0448",
     "MR#": "E01",
@@ -55017,8 +55096,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "672",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0382",
     "MR#": "E01",
@@ -55099,8 +55178,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "673",
     "SCT SHIP NO.": "HVDC-ADOPT-SCT-0109",
     "MR#": "E08",
@@ -55181,8 +55260,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "674",
     "SCT SHIP NO.": "HVDC-ADOPT-SCT-0106",
     "MR#": "E08",
@@ -55263,8 +55342,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "675",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0449",
     "MR#": "E01",
@@ -55345,8 +55424,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": "Duty Exempted Materials"
-  },
-  {
+},
+{
     "No": "676",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0453",
     "MR#": "E01",
@@ -55427,8 +55506,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": "Duty Exempted Materials"
-  },
-  {
+},
+{
     "No": "677",
     "SCT SHIP NO.": "HVDC-ADOPT-SIM-0088",
     "MR#": "E04-1",
@@ -55509,8 +55588,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "678",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0461",
     "MR#": "E01",
@@ -55591,8 +55670,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "679",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0462",
     "MR#": "E01",
@@ -55673,8 +55752,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "680",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0463",
     "MR#": "E01",
@@ -55755,8 +55834,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "681",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0455",
     "MR#": "E01",
@@ -55837,8 +55916,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "682",
     "SCT SHIP NO.": "HVDC-ADOPT-PPL-0019",
     "MR#": "E02",
@@ -55919,8 +55998,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "683",
     "SCT SHIP NO.": "HVDC-ADOPT-SCT-0113",
     "MR#": "E08",
@@ -56001,8 +56080,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "684",
     "SCT SHIP NO.": "HVDC-ADOPT-SCT-0115",
     "MR#": "I01",
@@ -56083,8 +56162,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "685",
     "SCT SHIP NO.": "HVDC-ADOPT-SCT-0112",
     "MR#": "E08",
@@ -56165,8 +56244,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "686",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0469",
     "MR#": "E01",
@@ -56247,8 +56326,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "687",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0456",
     "MR#": "E01",
@@ -56329,8 +56408,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "688",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0457",
     "MR#": "E01",
@@ -56411,8 +56490,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "689",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0458",
     "MR#": "E01",
@@ -56493,8 +56572,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "690",
     "SCT SHIP NO.": "HVDC-ADOPT-SCT-0117",
     "MR#": "E08",
@@ -56575,8 +56654,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "691",
     "SCT SHIP NO.": "HVDC-ADOPT-SCT-0118",
     "MR#": "E08",
@@ -56657,8 +56736,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "692",
     "SCT SHIP NO.": "HVDC-ADOPT-SCT-0107",
     "MR#": "E08",
@@ -56739,8 +56818,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "693",
     "SCT SHIP NO.": "HVDC-ADOPT-SCT-0114",
     "MR#": "E08",
@@ -56821,8 +56900,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "694",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0380",
     "MR#": "E01",
@@ -56903,8 +56982,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "695",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0381",
     "MR#": "E01",
@@ -56985,8 +57064,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "696",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0385-2",
     "MR#": "E01",
@@ -57067,8 +57146,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "697",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0387-2",
     "MR#": "E01",
@@ -57149,8 +57228,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "698",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0378",
     "MR#": "E01",
@@ -57231,8 +57310,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "699",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0379",
     "MR#": "E01",
@@ -57313,8 +57392,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "700",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0383",
     "MR#": "E01",
@@ -57395,8 +57474,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "701",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0384",
     "MR#": "E01",
@@ -57477,8 +57556,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "702",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0385-1",
     "MR#": "E01",
@@ -57559,8 +57638,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "703",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0386",
     "MR#": "E01",
@@ -57641,8 +57720,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "704",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0387-1",
     "MR#": "E01",
@@ -57723,8 +57802,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "705",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0388",
     "MR#": "E01",
@@ -57805,8 +57884,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "706",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0389",
     "MR#": "E01",
@@ -57887,8 +57966,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "707",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0390",
     "MR#": "E01",
@@ -57969,8 +58048,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "708",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0391",
     "MR#": "E01",
@@ -58051,8 +58130,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "709",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0392",
     "MR#": "E01",
@@ -58133,8 +58212,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "710",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0393",
     "MR#": "E01",
@@ -58215,8 +58294,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "711",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0394",
     "MR#": "E01",
@@ -58297,8 +58376,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "712",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0400",
     "MR#": "E01",
@@ -58379,8 +58458,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "713",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0362",
     "MR#": "E01",
@@ -58461,8 +58540,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "714",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0374",
     "MR#": "E01",
@@ -58543,8 +58622,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "715",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0376",
     "MR#": "E01",
@@ -58625,8 +58704,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "716",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0377",
     "MR#": "E01",
@@ -58707,8 +58786,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "717",
     "SCT SHIP NO.": "HVDC-ADOPT-SCT-0125",
     "MR#": "E08",
@@ -58789,8 +58868,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "718",
     "SCT SHIP NO.": "HVDC-ADOPT-SCT-0120",
     "MR#": "E08",
@@ -58871,8 +58950,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "719",
     "SCT SHIP NO.": "HVDC-ADOPT-SCT-0129",
     "MR#": "E08",
@@ -58953,8 +59032,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "720",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0480",
     "MR#": "E01",
@@ -59035,8 +59114,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": "Duty Exempted Materials"
-  },
-  {
+},
+{
     "No": "721",
     "SCT SHIP NO.": "HVDC-ADOPT-SCT-0121",
     "MR#": "E08",
@@ -59117,8 +59196,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "722",
     "SCT SHIP NO.": "HVDC-ADOPT-SIM-0094",
     "MR#": "E04-1",
@@ -59199,8 +59278,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "723",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0420",
     "MR#": "E01",
@@ -59281,8 +59360,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": "Duty Exempted Materials"
-  },
-  {
+},
+{
     "No": "724",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0423",
     "MR#": "E01",
@@ -59363,8 +59442,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": "Duty Exempted Materials"
-  },
-  {
+},
+{
     "No": "725",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0424",
     "MR#": "E01",
@@ -59445,8 +59524,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": "Duty Exempted Materials"
-  },
-  {
+},
+{
     "No": "726",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0395",
     "MR#": "E01",
@@ -59527,8 +59606,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": "Duty Exempted Materials"
-  },
-  {
+},
+{
     "No": "727",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0396",
     "MR#": "E01",
@@ -59609,8 +59688,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": "Duty Exempted Materials"
-  },
-  {
+},
+{
     "No": "728",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0397",
     "MR#": "E01",
@@ -59691,8 +59770,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": "Duty Exempted Materials"
-  },
-  {
+},
+{
     "No": "729",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0413",
     "MR#": "E01",
@@ -59773,8 +59852,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": "Duty Exempted Materials"
-  },
-  {
+},
+{
     "No": "730",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0414",
     "MR#": "E01",
@@ -59855,8 +59934,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": "Duty Exempted Materials"
-  },
-  {
+},
+{
     "No": "731",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0477-1",
     "MR#": "E01",
@@ -59937,8 +60016,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "732",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0434",
     "MR#": "E01",
@@ -60019,8 +60098,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "733",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0435",
     "MR#": "E01",
@@ -60101,8 +60180,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "734",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0436",
     "MR#": "E01",
@@ -60183,8 +60262,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "735",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0429",
     "MR#": "E01",
@@ -60265,8 +60344,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "736",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0430",
     "MR#": "E01",
@@ -60347,8 +60426,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "737",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0431",
     "MR#": "E01",
@@ -60429,8 +60508,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "738",
     "SCT SHIP NO.": "HVDC-ADOPT-SCT-0130",
     "MR#": "E08",
@@ -60511,8 +60590,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "739",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0493",
     "MR#": "E01",
@@ -60593,8 +60672,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "740",
     "SCT SHIP NO.": "HVDC-ADOPT-SCT-0108",
     "MR#": "E08",
@@ -60675,8 +60754,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "741",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0477-2",
     "MR#": "E01",
@@ -60757,8 +60836,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "742",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0438",
     "MR#": "E01",
@@ -60839,8 +60918,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "743",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0439",
     "MR#": "E01",
@@ -60921,8 +61000,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "744",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0440",
     "MR#": "E01",
@@ -61003,8 +61082,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "745",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0441",
     "MR#": "E01",
@@ -61085,8 +61164,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "746",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0454",
     "MR#": "E01",
@@ -61167,8 +61246,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "747",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0482",
     "MR#": "E01",
@@ -61249,8 +61328,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "748",
     "SCT SHIP NO.": "HVDC-ADOPT-SCT-0126",
     "MR#": "E08",
@@ -61331,8 +61410,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "749",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0471",
     "MR#": "E01",
@@ -61413,8 +61492,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "750",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0472",
     "MR#": "E01",
@@ -61495,8 +61574,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "751",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0473",
     "MR#": "E01",
@@ -61577,8 +61656,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "752",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0487",
     "MR#": "E01",
@@ -61659,8 +61738,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": "Duty Exempted Materials"
-  },
-  {
+},
+{
     "No": "753",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0488",
     "MR#": "E01",
@@ -61741,8 +61820,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "754",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0495",
     "MR#": "E01",
@@ -61823,8 +61902,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "755",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0496",
     "MR#": "E01",
@@ -61905,8 +61984,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "756",
     "SCT SHIP NO.": "HVDC-ADOPT-SCT-0131",
     "MR#": "E08",
@@ -61987,8 +62066,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "757",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0460",
     "MR#": "E01",
@@ -62069,8 +62148,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": "Duty Exempted Materials"
-  },
-  {
+},
+{
     "No": "758",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0450",
     "MR#": "E01",
@@ -62151,8 +62230,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": "Duty Exempted Materials"
-  },
-  {
+},
+{
     "No": "759",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0459",
     "MR#": "E01",
@@ -62233,8 +62312,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": "Duty Exempted Materials"
-  },
-  {
+},
+{
     "No": "760",
     "SCT SHIP NO.": "HVDC-ADOPT-SCT-0122",
     "MR#": "E08",
@@ -62315,8 +62394,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "761",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0464",
     "MR#": "E01",
@@ -62397,8 +62476,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "762",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0465",
     "MR#": "E01",
@@ -62479,8 +62558,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "763",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0470",
     "MR#": "E01",
@@ -62561,8 +62640,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "764",
     "SCT SHIP NO.": "HVDC-ADOPT-SCT-0127",
     "MR#": "E08",
@@ -62643,8 +62722,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "765",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0497",
     "MR#": "E01",
@@ -62725,8 +62804,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": "Duty Exempted Materials"
-  },
-  {
+},
+{
     "No": "766",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0466",
     "MR#": "E01",
@@ -62807,8 +62886,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "767",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0467",
     "MR#": "E01",
@@ -62889,8 +62968,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "768",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0468",
     "MR#": "E01",
@@ -62971,8 +63050,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "769",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0499",
     "MR#": "E01",
@@ -63053,8 +63132,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "770",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0499",
     "MR#": "E01",
@@ -63135,8 +63214,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "771",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0437",
     "MR#": "E01",
@@ -63217,8 +63296,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "772",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0438-2",
     "MR#": "E01",
@@ -63299,8 +63378,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "773",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0439-2",
     "MR#": "E01",
@@ -63381,8 +63460,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "774",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0440-2",
     "MR#": "E01",
@@ -63463,8 +63542,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "775",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0441-2",
     "MR#": "E01",
@@ -63545,8 +63624,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "776",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0500",
     "MR#": "E01",
@@ -63627,8 +63706,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "777",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0425",
     "MR#": "E01",
@@ -63709,8 +63788,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "778",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0426",
     "MR#": "E01",
@@ -63791,8 +63870,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "779",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0427",
     "MR#": "E01",
@@ -63873,8 +63952,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "780",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0428",
     "MR#": "E01",
@@ -63955,8 +64034,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "781",
     "SCT SHIP NO.": "HVDC-ADOPT-SCT-0123",
     "MR#": "E08",
@@ -64037,8 +64116,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "782",
     "SCT SHIP NO.": "HVDC-ADOPT-SCT-0124",
     "MR#": "E08",
@@ -64119,8 +64198,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "783",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0475",
     "MR#": "E01",
@@ -64201,8 +64280,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "784",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0499-2",
     "MR#": "E01",
@@ -64283,8 +64362,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "785",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0498",
     "MR#": "E01",
@@ -64365,8 +64444,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": "Duty Exempted Materials"
-  },
-  {
+},
+{
     "No": "786",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0501",
     "MR#": "E01",
@@ -64447,8 +64526,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "787",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0502",
     "MR#": "E01",
@@ -64529,8 +64608,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "788",
     "SCT SHIP NO.": "HVDC-ADOPT-SIM-0092",
     "MR#": "E04-1",
@@ -64611,8 +64690,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": "Duty Exempted Materials"
-  },
-  {
+},
+{
     "No": "789",
     "SCT SHIP NO.": "HVDC-ADOPT-SCT-0134",
     "MR#": "E08",
@@ -64693,8 +64772,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "790",
     "SCT SHIP NO.": "HVDC-ADOPT-PPL-0020",
     "MR#": "E02",
@@ -64775,8 +64854,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "791",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0504",
     "MR#": "E01",
@@ -64857,8 +64936,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "792",
     "SCT SHIP NO.": "HVDC-ADOPT-SIM-0099",
     "MR#": "E04-1",
@@ -64939,8 +65018,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "793",
     "SCT SHIP NO.": "HVDC-ADOPT-SCT-0137",
     "MR#": "E08",
@@ -65021,8 +65100,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "794",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0508",
     "MR#": "E01",
@@ -65103,8 +65182,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": "Duty Exempted Materials"
-  },
-  {
+},
+{
     "No": "795",
     "SCT SHIP NO.": "HVDC-ADOPT-SCT-0136",
     "MR#": "E08",
@@ -65185,8 +65264,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "796",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0509",
     "MR#": "E01",
@@ -65267,8 +65346,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "797",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0484",
     "MR#": "E01",
@@ -65349,8 +65428,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "798",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0451",
     "MR#": "E01",
@@ -65431,8 +65510,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": "Duty Exempted Materials"
-  },
-  {
+},
+{
     "No": "799",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0452",
     "MR#": "E01",
@@ -65513,8 +65592,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "800",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0476",
     "MR#": "E01",
@@ -65595,8 +65674,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": "Duty Exempted Materials"
-  },
-  {
+},
+{
     "No": "801",
     "SCT SHIP NO.": "HVDC-ADOPT-SCT-0139",
     "MR#": "E08",
@@ -65677,8 +65756,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "802",
     "SCT SHIP NO.": "HVDC-ADOPT-SCT-0141",
     "MR#": "E08",
@@ -65759,8 +65838,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "803",
     "SCT SHIP NO.": "HVDC-ADOPT-SCT-0133",
     "MR#": "E08",
@@ -65841,8 +65920,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "804",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0483",
     "MR#": "E01",
@@ -65923,8 +66002,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "805",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0510",
     "MR#": "E01",
@@ -66005,8 +66084,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "806",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0511",
     "MR#": "E01",
@@ -66087,8 +66166,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "807",
     "SCT SHIP NO.": "HVDC-ADOPT-SEI-0022",
     "MR#": "E03",
@@ -66169,8 +66248,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "808",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0485",
     "MR#": "E01",
@@ -66251,8 +66330,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "809",
     "SCT SHIP NO.": "HVDC-ADOPT-SIM-0103",
     "MR#": "E04-1",
@@ -66333,8 +66412,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "810",
     "SCT SHIP NO.": "HVDC-ADOPT-SIM-0102",
     "MR#": "E04-1",
@@ -66415,8 +66494,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "811",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0499-1",
     "MR#": "E01",
@@ -66497,8 +66576,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "812",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0517",
     "MR#": "E01",
@@ -66579,8 +66658,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": "Duty Exempted Materials"
-  },
-  {
+},
+{
     "No": "813",
     "SCT SHIP NO.": "HVDC-ADOPT-SCT-0145",
     "MR#": "E08",
@@ -66661,8 +66740,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "814",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0516",
     "MR#": "E01",
@@ -66743,8 +66822,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": "Duty Exempted Materials"
-  },
-  {
+},
+{
     "No": "815",
     "SCT SHIP NO.": "HVDC-ADOPT-SCT-0148",
     "MR#": "E08",
@@ -66825,8 +66904,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": "Duty Exempted Materials"
-  },
-  {
+},
+{
     "No": "816",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0486",
     "MR#": "E01",
@@ -66907,8 +66986,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "817",
     "SCT SHIP NO.": "HVDC-ADOPT-SCT-0147",
     "MR#": "E08",
@@ -66989,8 +67068,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "818",
     "SCT SHIP NO.": "HVDC-ADOPT-SCT-0128",
     "MR#": "E08",
@@ -67071,8 +67150,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "819",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0518",
     "MR#": "E01",
@@ -67153,8 +67232,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "820",
     "SCT SHIP NO.": "HVDC-ADOPT-SCT-0132",
     "MR#": "E08",
@@ -67235,8 +67314,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "821",
     "SCT SHIP NO.": "HVDC-ADOPT-SCT-0149",
     "MR#": "E08",
@@ -67317,8 +67396,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "822",
     "SCT SHIP NO.": "HVDC-ADOPT-SCT-0150",
     "MR#": "E08",
@@ -67399,8 +67478,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "823",
     "SCT SHIP NO.": "HVDC-ADOPT-SCT-0135",
     "MR#": "E08",
@@ -67481,8 +67560,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "824",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0499-5",
     "MR#": "E01",
@@ -67563,8 +67642,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "825",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0499-6",
     "MR#": "E01",
@@ -67645,8 +67724,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "826",
     "SCT SHIP NO.": "HVDC-ADOPT-SIM-0095",
     "MR#": "E04-1",
@@ -67727,8 +67806,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "827",
     "SCT SHIP NO.": "HVDC-ADOPT-SCT-0138",
     "MR#": "E08",
@@ -67809,8 +67888,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "828",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0505",
     "MR#": "E01",
@@ -67891,8 +67970,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "829",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0506",
     "MR#": "E01",
@@ -67973,8 +68052,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "830",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0507",
     "MR#": "E01",
@@ -68055,8 +68134,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "831",
     "SCT SHIP NO.": "HVDC-ADOPT-SCT-0152",
     "MR#": "E08",
@@ -68137,8 +68216,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "832",
     "SCT SHIP NO.": "HVDC-ADOPT-SCT-0156",
     "MR#": "E08",
@@ -68219,8 +68298,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "833",
     "SCT SHIP NO.": "HVDC-ADOPT-SCT-0157",
     "MR#": "E08",
@@ -68301,8 +68380,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": "Duty Exempted Materials"
-  },
-  {
+},
+{
     "No": "834",
     "SCT SHIP NO.": "HVDC-ADOPT-PPL-0021",
     "MR#": "E02",
@@ -68383,8 +68462,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "835",
     "SCT SHIP NO.": "HVDC-ADOPT-PPL-0022",
     "MR#": "E02",
@@ -68465,8 +68544,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "836",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0527",
     "MR#": "E01",
@@ -68547,8 +68626,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "837",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0529",
     "MR#": "E01",
@@ -68629,8 +68708,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "838",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0530",
     "MR#": "E01",
@@ -68711,8 +68790,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "839",
     "SCT SHIP NO.": "HVDC-ADOPT-SCT-0140",
     "MR#": "E08",
@@ -68793,8 +68872,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "840",
     "SCT SHIP NO.": "HVDC-ADOPT-SCT-0142",
     "MR#": "E08",
@@ -68875,8 +68954,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "841",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0531",
     "MR#": "E01",
@@ -68957,8 +69036,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": "Duty Exempted Materials"
-  },
-  {
+},
+{
     "No": "842",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0528",
     "MR#": "E01",
@@ -69039,8 +69118,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "843",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0532",
     "MR#": "E01",
@@ -69121,8 +69200,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": "Duty Exempted Materials"
-  },
-  {
+},
+{
     "No": "844",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0533",
     "MR#": "E01",
@@ -69203,8 +69282,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": "Duty Exempted Materials"
-  },
-  {
+},
+{
     "No": "845",
     "SCT SHIP NO.": "HVDC-ADOPT-SIM-0107",
     "MR#": "E04-1",
@@ -69285,8 +69364,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "846",
     "SCT SHIP NO.": "HVDC-ADOPT-SCT-0143",
     "MR#": "E08",
@@ -69367,8 +69446,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "847",
     "SCT SHIP NO.": "HVDC-ADOPT-SCT-0144",
     "MR#": "E08",
@@ -69449,8 +69528,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "848",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0512",
     "MR#": "E01",
@@ -69531,8 +69610,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "849",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0513",
     "MR#": "E01",
@@ -69613,8 +69692,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "850",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0514",
     "MR#": "E01",
@@ -69695,8 +69774,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "851",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0515",
     "MR#": "E01",
@@ -69777,8 +69856,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "852",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0519",
     "MR#": "E01",
@@ -69859,8 +69938,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": "Duty Exempted Materials"
-  },
-  {
+},
+{
     "No": "853",
     "SCT SHIP NO.": "HVDC-ADOPT-SIM-0108",
     "MR#": "E04-1",
@@ -69941,8 +70020,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "854",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0538",
     "MR#": "E01",
@@ -70023,8 +70102,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": "Duty Exempted Materials"
-  },
-  {
+},
+{
     "No": "855",
     "SCT SHIP NO.": "HVDC-ADOPT-SCT-0154",
     "MR#": "E08",
@@ -70105,8 +70184,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "856",
     "SCT SHIP NO.": "HVDC-ADOPT-SCT-0146",
     "MR#": "E08",
@@ -70187,8 +70266,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "857",
     "SCT SHIP NO.": "HVDC-ADOPT-SCT-0151",
     "MR#": "E08",
@@ -70269,8 +70348,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "858",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0534",
     "MR#": "E01",
@@ -70351,8 +70430,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "859",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0520",
     "MR#": "E01",
@@ -70433,8 +70512,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "860",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0521",
     "MR#": "E01",
@@ -70515,8 +70594,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "861",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0522",
     "MR#": "E01",
@@ -70597,8 +70676,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "862",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0499-12",
     "MR#": "E01",
@@ -70679,8 +70758,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "863",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0499-13",
     "MR#": "E01",
@@ -70761,8 +70840,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "864",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0499-10",
     "MR#": "E01",
@@ -70843,8 +70922,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "865",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0499-11",
     "MR#": "E01",
@@ -70925,8 +71004,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "866",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0537",
     "MR#": "E01",
@@ -71007,8 +71086,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "867",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0523",
     "MR#": "E01",
@@ -71089,8 +71168,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "868",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0524",
     "MR#": "E01",
@@ -71171,8 +71250,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "869",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0525",
     "MR#": "E01",
@@ -71253,8 +71332,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "870",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0540",
     "MR#": "E01",
@@ -71335,8 +71414,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": "Duty Exempted Materials"
-  },
-  {
+},
+{
     "No": "871",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0535",
     "MR#": "E01",
@@ -71417,8 +71496,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "872",
     "SCT SHIP NO.": "HVDC-ADOPT-HE-0536",
     "MR#": "E01",
@@ -71499,8 +71578,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "873",
     "SCT SHIP NO.": "HVDC-ADOPT-SCT-0155",
     "MR#": "E08",
@@ -71581,8 +71660,8 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  },
-  {
+},
+{
     "No": "874",
     "SCT SHIP NO.": "HVDC-ADOPT-SCT-0159",
     "MR#": "E08",
@@ -71663,5 +71742,5 @@
     "Hauler DG Storage": "",
     "Vijay Tanks": "",
     "REMARK": ""
-  }
+}
 ]

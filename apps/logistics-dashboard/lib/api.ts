@@ -1,8 +1,9 @@
 import type { Location, LocationStatus, Event } from "@/types/logistics"
+import { ontologyLocations } from "@/lib/data/ontology-locations"
 
 const API_BASE = process.env.NEXT_PUBLIC_API_BASE || ""
 
-// Mock data for fallback
+// Fallback for location-status / events (ontology used for locations API fallback)
 const mockLocations: Location[] = [
   { location_id: "site-1", name: "SITE Alpha", siteType: "SITE", lat: 24.4539, lon: 54.3773 },
   { location_id: "site-2", name: "SITE Bravo", siteType: "SITE", lat: 24.4839, lon: 54.3573 },
@@ -25,13 +26,14 @@ const mockStatuses: LocationStatus[] = [
   { location_id: "extra-1", occupancy_rate: 0.55, status_code: "OK", last_updated: new Date().toISOString() },
 ]
 
-// Generate mock events
+// Generate mock events (uses ontology locations when available)
 function generateMockEvents(): Event[] {
   const events: Event[] = []
   const statuses = ["PICKUP", "IN_TRANSIT", "DELIVERED", "DELAYED", "HOLD"]
+  const locs = ontologyLocations.length ? ontologyLocations : mockLocations
 
   for (let i = 0; i < 50; i++) {
-    const location = mockLocations[Math.floor(Math.random() * mockLocations.length)]
+    const location = locs[Math.floor(Math.random() * locs.length)]
     const hoursAgo = Math.random() * 48
     const ts = new Date(Date.now() - hoursAgo * 60 * 60 * 1000).toISOString()
 
@@ -56,8 +58,8 @@ export async function fetchLocations(): Promise<Location[]> {
     if (!res.ok) throw new Error("Failed to fetch locations")
     return await res.json()
   } catch {
-    console.warn("Using mock locations data")
-    return mockLocations
+    console.warn("Using ontology locations fallback (map/HVDC_Location_Master_Ontology)")
+    return ontologyLocations
   }
 }
 

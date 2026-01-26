@@ -240,8 +240,17 @@ def _normalize_token(value: str) -> str:
     return token or "UNKNOWN"
 
 
+def _ttl_escape(s: Any) -> str:
+    return str(s).replace("\\", "\\\\").replace('"', '\\"')
+
+
 def _extract_ids(record: Dict[str, Any]) -> Tuple[str, str]:
-    hvdc_raw = record.get("HVDC CODE") or record.get("hvdc_code")
+    hvdc_raw = (
+        record.get("HVDC CODE")
+        or record.get("hvdc_code")
+        or record.get("SCT SHIP NO.")
+        or record.get("SCT SHIP NO")
+    )
     hvdc_code = str(hvdc_raw).strip() if hvdc_raw is not None else ""
     if not hvdc_code:
         raise ValueError("HVDC CODE is missing")

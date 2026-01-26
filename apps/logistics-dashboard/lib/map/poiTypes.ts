@@ -35,4 +35,9 @@ export type PoiLocation = {
   address?: string
   priority?: number
   tags?: string[]
+  /**
+   * Optional unified display label (abbreviation) for map rendering.
+   * If present, used instead of `${code} - ${summary}` format.
+   */
+  displayLabel?: string
 }

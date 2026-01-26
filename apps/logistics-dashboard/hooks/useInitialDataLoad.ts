@@ -3,6 +3,7 @@
 import { useEffect, useState, useRef } from "react"
 import { useOpsStore } from "@repo/shared"
 import type { DashboardPayload } from "@repo/shared"
+import { getDubaiTimestamp } from "@/lib/worklist-utils"
 
 export interface UseInitialDataLoadOptions {
   /**
@@ -105,10 +106,30 @@ export function useInitialDataLoad(opts: UseInitialDataLoadOptions = {}) {
       } catch (err) {
         const error =
           err instanceof Error ? err : new Error("Unknown error during initial load")
-        setError(error)
+
+        const fallback: DashboardPayload = {
+          rows: [],
+          kpis: {
+            driAvg: 0,
+            wsiAvg: 0,
+            redCount: 0,
+            overdueCount: 0,
+            recoverableAED: 0,
+            zeroStops: 0,
+          },
+          lastRefreshAt: getDubaiTimestamp(),
+        }
+
+        actions.setWorklistRows(fallback.rows)
+        actions.setKPIs(fallback.kpis)
+        actions.setLastRefreshAt(fallback.lastRefreshAt)
+
+        hasLoadedRef.current = true
         setIsLoading(false)
+        setError(null)
+        onLoadComplete?.(fallback)
         onLoadError?.(error)
-        console.error("Initial data load failed:", error)
+        console.warn("Initial worklist fetch failed, using fallback", error)
       }
     }
 

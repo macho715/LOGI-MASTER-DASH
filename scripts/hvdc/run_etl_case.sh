@@ -36,9 +36,17 @@ if [[ -z "${ALL_JSON}" ]]; then
   exit 1
 fi
 
-WAREHOUSE_JSON="${SRC_DIR}/hvdc_warehouse_status.json"
-if [[ ! -f "${WAREHOUSE_JSON}" ]]; then
-  echo "[run_etl_case] ERROR: Warehouse JSON not found: ${WAREHOUSE_JSON}" >&2
+# Auto-detect warehouse json filename variants
+WAREHOUSE_JSON=""
+for cand in "hvdc_warehouse_status.json" "HVDC_warehouse_status.json" "warehouse_status.json"; do
+  if [[ -f "${SRC_DIR}/${cand}" ]]; then
+    WAREHOUSE_JSON="${SRC_DIR}/${cand}"
+    break
+  fi
+done
+
+if [[ -z "${WAREHOUSE_JSON}" ]]; then
+  echo "[run_etl_case] ERROR: Warehouse JSON not found in ${SRC_DIR} (expected hvdc_warehouse_status.json or variants)" >&2
   exit 1
 fi
 

@@ -88,7 +88,7 @@ export function createPoiLayers(opts: PoiLayersOptions): Layer[] {
     pickable: true,
     visible: showLabels,
     getPosition: getPoiPosition,
-    getText: (d) => `${d.code} - ${d.summary}`,
+    getText: (d) => d.displayLabel ?? `${d.code} - ${d.summary}`,
     sizeUnits: "pixels",
     getSize: (d) => (d.id === selectedPoiId ? 13 : 12),
     getPixelOffset: (d) => d.labelOffsetPx ?? [0, -16],

@@ -278,6 +278,13 @@ const layers = [
 
 ## 6) 검증 시나리오(빠른 체크)
 
+> **구현 상태**: ✅ 완료 (2026-01-25)
+> - POI 레이어 구현 완료: `PoiLocationsLayer.ts`, `poiLocations.ts`, `poiTypes.ts`
+> - MapView 연동 완료: 줌·툴팁·fitBounds
+> - 맵 레이어 API Supabase 전환 완료: `/api/locations`, `/api/location-status`, `/api/events` (실제 데이터 조회, Fallback: Mock)
+> - StageCardsStrip 구현 완료: HVDC Panel 내 KpiStrip 상단 3카드, 라우팅 연동
+> - GlobalSearch 구현 완료: HeaderBar 검색창, locations·worklist 검색
+
 1. 대시보드 MapView 실행
 2. 줌을 **8.5 이상**으로 확대
 3. 아래 POI가 지도에 모두 보이는지 확인
@@ -285,6 +292,31 @@ const layers = [
    * HVDC 4개(AGI/DAS/MIR/SHU), DSV 2개(M-19/M-44), MOSB 2개(일반/삼성), Port 2개(Zayed/KPCT), Airport 1개(AUH)
 4. 라벨이 과도하게 겹치지 않고(충돌 시 일부 숨김), 마커 클릭 시 tooltip이 뜨는지 확인
 5. MOSB와 MOSB-SAM이 **서로 클릭 가능**한지 확인(중첩 분리 동작)
+6. **StageCardsStrip** (HVDC Panel 내 KpiStrip 상단 3카드) 클릭 시 라우팅 동작 확인
+7. **GlobalSearch** (HeaderBar 검색창) 입력 시 locations·worklist 필터/검색 동작 확인
+
+---
+
+## 7) 맵 레이어 API Supabase 전환 (2026-01-25 완료)
+
+### API 라우트 전환
+- `/api/locations`: Supabase `public.locations` 조회 (Fallback: Mock)
+  - 스키마 매핑: `id→location_id`, `lng→lon`, `type→siteType` (매핑 함수)
+  - 필터: 좌표가 있는 행만 반환
+- `/api/location-status`: Supabase `public.location_statuses` 조회 (Fallback: Mock)
+  - 스키마 매핑: `status→status_code` (대문자 변환), `occupancy_rate` (0-100→0-1), `updated_at→last_updated`
+- `/api/events`: Supabase `public.events` 조회 with joins (Fallback: Mock)
+  - 조인: `locations!inner` (좌표 필수), `shipments` (선택적, PostgREST 조인 구문)
+  - 스키마 매핑: `event_type→status`, `description→remark`, `shipments.sct_ship_no→shpt_no`
+  - 필터: 유효한 좌표가 있는 이벤트만 반환
+
+### 레이어 데이터 소스
+- **Geofence Layer**: `/api/locations` 데이터 사용 (실제 Supabase 데이터 또는 Mock Fallback)
+- **Heatmap Layer**: `/api/events` 데이터 사용 (실제 Supabase 데이터 또는 Mock Fallback)
+- **ETA Wedge Layer**: `/api/locations` (PORT 타입 필터) 사용 (실제 Supabase 데이터 또는 Mock Fallback)
+- **POI Layer**: 정적 데이터 (`lib/map/poiLocations.ts`, reakmapping SSOT)
+
+**참고**: `public.locations`, `public.location_statuses`, `public.events` 테이블이 비어 있거나 조회 실패 시 Mock 데이터로 Fallback됩니다. 테이블이 채워지면 자동으로 실제 데이터를 사용합니다.
 
 ---
 

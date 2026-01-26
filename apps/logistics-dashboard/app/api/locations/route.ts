@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server"
 import { supabaseAdmin as supabase } from "@/lib/supabase"
-import { mockLocations } from "@/lib/api"
+import { ontologyLocations } from "@/lib/data/ontology-locations"
 import type { Location } from "@/types/logistics"
 
 function mapDbTypeToSiteType(type: string | null): Location["siteType"] {
@@ -22,8 +22,8 @@ export async function GET() {
 
     if (error) throw error
     if (!data || data.length === 0) {
-      console.warn("No locations found in DB, using mock data")
-      return NextResponse.json(mockLocations)
+      console.warn("No locations found in DB, using ontology fallback (map/HVDC_Location_Master_Ontology)")
+      return NextResponse.json(ontologyLocations)
     }
 
     const locations: Location[] = data
@@ -37,13 +37,13 @@ export async function GET() {
       }))
 
     if (locations.length === 0) {
-      console.warn("Locations missing coordinates, using mock data")
-      return NextResponse.json(mockLocations)
+      console.warn("Locations missing coordinates, using ontology fallback")
+      return NextResponse.json(ontologyLocations)
     }
 
     return NextResponse.json(locations)
   } catch (error) {
-    console.warn("Error fetching locations, using mock data")
-    return NextResponse.json(mockLocations)
+    console.warn("Error fetching locations, using ontology fallback (map/HVDC_Location_Master_Ontology)")
+    return NextResponse.json(ontologyLocations)
   }
 }

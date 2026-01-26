@@ -33,8 +33,12 @@ STATUS_CANDIDATES = [
 ]
 
 WAREHOUSE_CANDIDATES = [
-    "hvdc_warehouse_status.json",
+    "hvdc_warehouse_status.json",  # 기본 이름
+    "HVDC_warehouse_status.json",  # 대문자 변형
+    "warehouse_status.json",        # 단축 이름
     "hvdc_warehouse_status.json".lower(),
+    "HVDC_warehouse_status.json".lower(),
+    "warehouse_status.json".lower(),
 ]
 
 CUSTOMS_CANDIDATES = [

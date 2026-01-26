@@ -3,7 +3,7 @@
 > **목적**: Phase 3에서 생성된 CSV 파일들을 Supabase 테이블에 적재합니다.  
 > **최종 업데이트**: 2026-01-25  
 > **전제 조건**: Phase 2 (DDL 적용) 완료 필요  
-> **참조**: [DATA_LOADING_PLAN.md](./DATA_LOADING_PLAN.md), [DATA_LOADING_RUNBOOK.md](./DATA_LOADING_RUNBOOK.md)
+> **참조**: [SUPABASE_LOADING_HYBRID_STRATEGY.md](./SUPABASE_LOADING_HYBRID_STRATEGY.md) ⭐ **권장 방법**, [DATA_LOADING_PLAN.md](./DATA_LOADING_PLAN.md), [DATA_LOADING_RUNBOOK.md](./DATA_LOADING_RUNBOOK.md)
 
 ---
 
@@ -334,6 +334,7 @@ Phase 4 완료 후:
 
 ## 참조 문서
 
+- **[SUPABASE_LOADING_HYBRID_STRATEGY.md](./SUPABASE_LOADING_HYBRID_STRATEGY.md)** - ⭐ **권장: 하이브리드 접근법** (초기 Full-Load는 `psql \copy`, 일상 증분은 `load_csv.py` UPSERT)
 - [DATA_LOADING_PLAN.md](./DATA_LOADING_PLAN.md) - 전체 데이터 로딩 계획
 - [DATA_LOADING_RUNBOOK.md](./DATA_LOADING_RUNBOOK.md) - 실행 Runbook
 - [PHASE2_DDL_APPLICATION_PLAN.md](./PHASE2_DDL_APPLICATION_PLAN.md) - Phase 2 DDL 적용

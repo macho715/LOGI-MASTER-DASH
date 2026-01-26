@@ -1,7 +1,7 @@
 # System Architecture
 
-**Last Updated**: 2026-01-24  
-**Reference**: [AGENTS.md](../AGENTS.md), [INTEGRATION_STATUS.md](./INTEGRATION_STATUS.md), [DATA_LOADING_PLAN.md](./DATA_LOADING_PLAN.md), [REALTIME_IMPLEMENTATION.md](./REALTIME_IMPLEMENTATION.md)
+**Last Updated**: 2026-01-25  
+**Reference**: [AGENTS.md](../AGENTS.md), [INTEGRATION_STATUS.md](./INTEGRATION_STATUS.md), [DATA_LOADING_PLAN.md](./DATA_LOADING_PLAN.md), [REALTIME_IMPLEMENTATION.md](./REALTIME_IMPLEMENTATION.md), [DASH_PLAN.md](./DASH_PLAN.md)
 
 ---
 
@@ -11,11 +11,13 @@
 
 **핵심 아키텍처**: MapView (left) + RightPanel (right) + HVDC Panel (bottom)
 
-**주요 성과** (2026-01-24):
+**주요 성과** (2026-01-25):
 - ✅ Realtime KPI Dashboard 구현 완료 (Supabase Realtime 기반)
 - ✅ ETL 파이프라인 준비 완료 (Status/Case 레이어)
 - ✅ Flow Code v3.5 통합 완료
 - ✅ 통합 레이아웃 프로토타입 완료
+- ✅ **맵 레이어 API 라우트 Supabase 전환 완료** (Mock → 실제 데이터 조회)
+- ✅ **dash 패치 적용 완료** (POI 레이어, StageCardsStrip, GlobalSearch)
 
 ---
 
@@ -51,9 +53,9 @@ graph TB
 
     subgraph "Frontend Application"
         NextJS[Next.js 16 App]
-        API[API Routes<br/>/api/worklist<br/>/api/locations]
+        API[API Routes<br/>/api/worklist<br/>/api/locations<br/>/api/location-status<br/>/api/events]
         Store[Zustand Store]
-        UI[UnifiedLayout<br/>MapView + RightPanel + HVDC Panel]
+        UI[UnifiedLayout<br/>MapView + RightPanel + HVDC Panel<br/>POI + StageCardsStrip + GlobalSearch]
     end
 
     JSON --> ETL4
@@ -248,8 +250,9 @@ graph TB
 
     subgraph "API Layer"
         WorklistAPI[/api/worklist<br/>Dashboard Payload]
-        LocationsAPI[/api/locations]
-        EventsAPI[/api/events]
+        LocationsAPI[/api/locations<br/>Supabase public.locations]
+        LocationStatusAPI[/api/location-status<br/>Supabase public.location_statuses]
+        EventsAPI[/api/events<br/>Supabase public.events<br/>with joins]
     end
 
     subgraph "Data Layer"
@@ -262,10 +265,12 @@ graph TB
 
     UnifiedStore --> WorklistAPI
     UnifiedStore --> LocationsAPI
+    UnifiedStore --> LocationStatusAPI
     UnifiedStore --> EventsAPI
 
     WorklistAPI --> SupabaseClient
     LocationsAPI --> SupabaseClient
+    LocationStatusAPI --> SupabaseClient
     EventsAPI --> SupabaseClient
 ```
 
@@ -397,8 +402,15 @@ erDiagram
 
 **Core Tables** (`public` schema):
 - `locations`: 물류 위치 (포트, 창고, 현장)
+  - 컬럼: `id` (UUID), `name`, `lat`, `lng`, `type`
+  - API 매핑: `id→location_id`, `lng→lon`, `type→siteType`
 - `location_statuses`: 위치별 실시간 상태
+  - 컬럼: `location_id` (UUID FK), `status` (text), `occupancy_rate` (0-100), `updated_at`
+  - API 매핑: `status→status_code` (대문자), `occupancy_rate` (0-100→0-1), `updated_at→last_updated`
 - `events`: 이벤트 로그
+  - 컬럼: `id` (UUID), `location_id` (UUID FK), `shipment_id` (UUID FK), `event_type`, `description`, `metadata`, `ts`
+  - API 조인: `locations!inner` (좌표 필수), `shipments` (선택적)
+  - API 매핑: `event_type→status`, `description→remark`, `shipments.sct_ship_no→shpt_no`
 - `hvdc_kpis`: HVDC KPI 메트릭
 - `hvdc_worklist`: HVDC 워크리스트
 - `logs`: 시스템 로그 (pipeline/audit)
@@ -453,6 +465,7 @@ graph TB
 graph TD
     UnifiedLayout[UnifiedLayout.tsx]
     
+    UnifiedLayout --> HeaderBar[HeaderBar]
     UnifiedLayout --> MapView[MapView Component]
     UnifiedLayout --> RightPanel[RightPanel Component]
     UnifiedLayout --> HVDCPanel[HVDC Panel Component]
@@ -461,14 +474,18 @@ graph TD
     MapView --> HeatmapLayer[Heatmap Layer<br/>deck.gl HeatmapLayer]
     MapView --> GeofenceLayer[Geofence Layer<br/>deck.gl PathLayer]
     MapView --> ETAWedgeLayer[ETA Wedge Layer<br/>deck.gl ArcLayer]
+    MapView --> PoiLayer[POI Layer<br/>deck.gl ScatterplotLayer + TextLayer<br/>11개 고정 POI, reakmapping SSOT]
     
     RightPanel --> LocationStatus[Location Status Card]
     RightPanel --> EventList[Event List]
     RightPanel --> OccupancyChart[Occupancy Rate Chart]
     
+    HVDCPanel --> StageCardsStrip[StageCardsStrip<br/>3카드, 라우팅 연동]
     HVDCPanel --> KpiStrip[KpiStrip Component]
     HVDCPanel --> WorklistTable[WorklistTable Component]
     HVDCPanel --> DetailDrawer[DetailDrawer Component]
+    
+    HeaderBar --> GlobalSearch[GlobalSearch<br/>locations·worklist 검색]
     
     KpiStrip --> KpiCard1[Total Shipments]
     KpiStrip --> KpiCard2[In Transit]
@@ -593,8 +610,16 @@ graph TB
 
 **Logistics APIs**:
 - `GET /api/locations`: 물류 위치 목록
-- `GET /api/location-statuses`: 위치별 상태
+  - **데이터 소스**: Supabase `public.locations` (Fallback: Mock 데이터)
+  - **스키마 매핑**: `id→location_id`, `lng→lon`, `type→siteType` (매핑 함수)
+  - **필터**: 좌표가 있는 행만 반환
+- `GET /api/location-status`: 위치별 상태
+  - **데이터 소스**: Supabase `public.location_statuses` (Fallback: Mock 데이터)
+  - **스키마 매핑**: `status→status_code` (대문자 변환), `occupancy_rate` (0-100→0-1), `updated_at→last_updated`
 - `GET /api/events`: 이벤트 로그
+  - **데이터 소스**: Supabase `public.events` with `locations!inner` + `shipments` joins (Fallback: Mock 데이터)
+  - **스키마 매핑**: `event_type→status`, `description→remark`, `shipments.sct_ship_no→shpt_no`
+  - **필터**: 유효한 좌표가 있는 이벤트만 반환
 
 ### 7.2 API 데이터 플로우
 
@@ -834,10 +859,12 @@ graph LR
 
 ---
 
-**문서 버전**: 2.0  
-**최종 업데이트**: 2026-01-24  
+**문서 버전**: 2.1  
+**최종 업데이트**: 2026-01-25  
 **주요 변경사항**:
 - Realtime KPI Dashboard 구현 완료 반영
 - Data Loading & ETL 파이프라인 추가
 - Status/Case 레이어 구조 반영
+- **맵 레이어 API 라우트 Supabase 전환 완료** (Mock → 실제 데이터 조회, 스키마 매핑, Fallback 로직)
+- **dash 패치 적용 완료** (POI 레이어, StageCardsStrip, GlobalSearch)
 - 머메이드 다이어그램 추가 (시스템 아키텍처, 데이터 플로우, ETL 파이프라인, 컴포넌트 구조, Realtime 아키텍처)

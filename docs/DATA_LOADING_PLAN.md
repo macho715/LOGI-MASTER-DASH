@@ -33,6 +33,8 @@ Supabase 적재 (COPY/Import)
 #### 1.1 입력 파일 확인
 - [ ] `supabass_ontol/HVDC all status.json` 존재 확인
 - [ ] `supabass_ontol/hvdc_warehouse_status.json` 존재 확인
+- [ ] (Option-C용) `supabass_ontol/hvdc_excel_reporter_final_sqm_rev_3.json` 존재 확인 (✅ 우선: FLOW_CODE 포함된 처리 완료 데이터, 8,804 rows)
+- [ ] (Option-C용) `supabass_ontol/hvdc_excel_reporter_final_sqm_rev_3.csv` 존재 확인 (✅ 백업/참조용)
 - [ ] (Option-C용) `HVDC_STATUS.json` 존재 확인
 - [ ] 파일 크기 및 형식 검증
 

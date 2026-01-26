@@ -11,6 +11,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - dash 패치 적용 계획 문서 추가 (`docs/DASH_PLAN.md`) - 맵 POI·StageCardsStrip·GlobalSearch 실제 작업 계획
 - dash 패치 관련 문서 링크 추가 (README, STATUS, plan, NEXT_STEPS_PRIORITY 등)
 - 맵 POI 레이어, StageCardsStrip, GlobalSearch 기능 설명 추가 (README 주요 기능 섹션)
+- Supabase 하이브리드 적재 전략 문서 보완 (`docs/SUPABASE_LOADING_HYBRID_STRATEGY.md`)
 
 ### Added (2026-01-25)
 - Phase 2~6 완료: DDL 적용, CSV 적재 (871 shipments + 928 events), Gate 1 QA, Realtime 활성화
@@ -24,6 +25,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - ✅ Vercel 배포 성공: monorepo 구조에서 Next.js 감지 및 빌드 정상 동작 확인
   - 배포 URL: https://logimasterdash-rkz2dqsc8-chas-projects-08028e73.vercel.app/
   - 해결된 문제: Next.js 감지 실패, pnpm 워크스페이스 해결, monorepo 빌드 설정
+- Option-C ETL: `_extract_ids()`가 `SCT SHIP NO.`/`SCT SHIP NO`도 인식하도록 보완 (status JSON 호환)
+- `useInitialDataLoad`: 초기 fetch 실패 시 API 동일 포맷의 fallback payload로 스토어 채우고 로딩 종료
+- `load_csv.py`: Option-C CSV의 빈 숫자/시간 필드를 NULL로 처리하여 적재 오류 방지
+- Option-C ETL: TTL export 누락된 `_ttl_escape` 추가로 `--export-ttl` 실행 복구
+
+### Changed (2026-01-25)
+- RAW DATA 파일 이동: `hvdc_excel_reporter_final_sqm_rev_3.json`, `.csv`를 `supabass_ontol/`로 이동 (FLOW_CODE 포함된 처리 완료 데이터, 8,804 rows)
+- `run_all.ps1`: Option-C ETL 입력 파일 우선순위 변경 - `hvdc_excel_reporter_final_sqm_rev_3.json` 우선 인식
+- `DATA_LOADING_PLAN.md`: RAW DATA 입력 파일 확인 항목 추가
+- `SUPABASE_UPLOAD_DATA_LOCATIONS.md`: RAW DATA 섹션 추가 (FLOW_CODE 분포 포함)
 
 ### Added
 - 핸드오프 문서 번들 추가 (`SETUP.md`, `.env.example`, `CHANGELOG.md`)

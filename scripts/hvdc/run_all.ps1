@@ -31,6 +31,26 @@ $RepoRoot = (Resolve-Path (Join-Path $PSScriptRoot "..\.." )).Path
 
 Write-Host "[run_all.ps1] repo_root=$RepoRoot"
 
+# 0) Move RAW DATA files if needed
+Write-Host "[run_all.ps1] Checking RAW DATA files..."
+$SrcDir = Join-Path $RepoRoot "supabass_ontol"
+$rawJsonSource = Join-Path $RepoRoot "hvdc_excel_reporter_final_sqm_rev_3.json"
+$rawJsonDest = Join-Path $SrcDir "hvdc_excel_reporter_final_sqm_rev_3.json"
+$rawCsvSource = Join-Path $RepoRoot "hvdc_excel_reporter_final_sqm_rev_3.csv"
+$rawCsvDest = Join-Path $SrcDir "hvdc_excel_reporter_final_sqm_rev_3.csv"
+
+if ((Test-Path $rawJsonSource) -and -not (Test-Path $rawJsonDest)) {
+  Write-Host "[run_all.ps1] Moving RAW DATA JSON to supabass_ontol/..."
+  Move-Item -Path $rawJsonSource -Destination $rawJsonDest -Force
+  Write-Host "[run_all.ps1] ✅ Moved: hvdc_excel_reporter_final_sqm_rev_3.json"
+}
+
+if ((Test-Path $rawCsvSource) -and -not (Test-Path $rawCsvDest)) {
+  Write-Host "[run_all.ps1] Moving RAW DATA CSV to supabass_ontol/..."
+  Move-Item -Path $rawCsvSource -Destination $rawCsvDest -Force
+  Write-Host "[run_all.ps1] ✅ Moved: hvdc_excel_reporter_final_sqm_rev_3.csv"
+}
+
 # 1) Validate inputs
 python (Join-Path $RepoRoot "scripts\hvdc\validate_inputs.py") --repo-root $RepoRoot --source-dir "supabass_ontol" --require-customs
 
@@ -59,9 +79,19 @@ if (-not $statusJson) {
   throw "[run_all.ps1] Status JSON not found in $SrcDir (expected HVDC all status.json or HVDC_all_status.json)"
 }
 
-$warehouseJson = Join-Path $SrcDir "hvdc_warehouse_status.json"
-if (-not (Test-Path $warehouseJson)) {
-  throw "[run_all.ps1] Warehouse JSON not found: $warehouseJson"
+# Detect warehouse JSON variants (similar to status JSON)
+$warehouseCandidates = @(
+  "hvdc_warehouse_status.json",
+  "HVDC_warehouse_status.json",
+  "warehouse_status.json"
+)
+$warehouseJson = $null
+foreach ($c in $warehouseCandidates) {
+  $p = Join-Path $SrcDir $c
+  if (Test-Path $p) { $warehouseJson = $p; break }
+}
+if (-not $warehouseJson) {
+  throw "[run_all.ps1] Warehouse JSON not found in $SrcDir (expected hvdc_warehouse_status.json or variants)"
 }
 
 $etl4 = Join-Path $SrcDir "Untitled-4_dashboard_ready_FULL.py"
@@ -84,6 +114,23 @@ if (-not (Test-Path $etl3)) {
   throw "[run_all.ps1] ETL script not found: $etl3"
 }
 
+# Detect Option-C input JSON (prefer hvdc_excel_reporter_final_sqm_rev_3.json - FLOW_CODE 포함된 처리 완료 데이터)
+$allshptCandidates = @(
+  "hvdc_excel_reporter_final_sqm_rev_3.json",  # ✅ 우선: FLOW_CODE 포함된 처리 완료 데이터 (8,804 rows)
+  "hvdc_allshpt_status.json",
+  "HVDC all status.json",
+  "HVDC_all_status.json",
+  "hvdc_all_status.json"
+)
+$allshptJson = $null
+foreach ($c in $allshptCandidates) {
+  $p = Join-Path $SrcDir $c
+  if (Test-Path $p) { $allshptJson = $p; break }
+}
+if (-not $allshptJson) {
+  throw "[run_all.ps1] Option-C input JSON not found in $SrcDir (expected hvdc_excel_reporter_final_sqm_rev_3.json or hvdc_allshpt_status.json)"
+}
+
 $customsCandidates = @("HVDC_STATUS.json", "hvdc_status.json")
 $customsJson = $null
 foreach ($c in $customsCandidates) {
@@ -97,7 +144,7 @@ if (-not $customsJson) {
 $caseOutDir = Join-Path $RepoRoot "supabase_csv_optionC_v3"
 if (-not (Test-Path $caseOutDir)) { New-Item -ItemType Directory -Force -Path $caseOutDir | Out-Null }
 
-python $etl3 --all $statusJson --wh $warehouseJson --customs $customsJson --output-dir $caseOutDir --base-iri $BaseIri --export-ttl
+python $etl3 --all $allshptJson --wh $warehouseJson --customs $customsJson --output-dir $caseOutDir --base-iri $BaseIri --export-ttl
 
 # 4) Load CSVs
 Write-Host "[run_all.ps1] Loading CSVs..."

@@ -15,6 +15,7 @@ export const POI_LOCATIONS: ReadonlyArray<PoiLocation> = [
     summary: "HVDC Site - Jetty (rep.)",
     priority: 900,
     tags: ["HVDC", "site"],
+    displayLabel: "AGI",
   },
   {
     id: "das-island",
@@ -26,6 +27,7 @@ export const POI_LOCATIONS: ReadonlyArray<PoiLocation> = [
     summary: "HVDC Site - Island",
     priority: 890,
     tags: ["HVDC", "site"],
+    displayLabel: "DAS",
   },
   {
     id: "mirfa-iwpp",
@@ -37,6 +39,7 @@ export const POI_LOCATIONS: ReadonlyArray<PoiLocation> = [
     summary: "HVDC Site - IWPP",
     priority: 880,
     tags: ["HVDC", "site"],
+    displayLabel: "MIR",
   },
   {
     id: "shuweihat-complex",
@@ -48,6 +51,7 @@ export const POI_LOCATIONS: ReadonlyArray<PoiLocation> = [
     summary: "HVDC Site - Complex",
     priority: 870,
     tags: ["HVDC", "site"],
+    displayLabel: "SHU",
   },
   {
     id: "dsv-mussafah-office-m19",
@@ -59,28 +63,19 @@ export const POI_LOCATIONS: ReadonlyArray<PoiLocation> = [
     summary: "Office - DSV (M-19)",
     priority: 800,
     tags: ["DSV", "office"],
+    displayLabel: "DSV OFFICE",
   },
   {
-    id: "dsv-mussafah-warehouse-m44",
-    code: "DSV-M44",
-    name: "DSV M-44 Inland Warehouse(대표)",
-    category: "WAREHOUSE",
-    latitude: 24.3447,
-    longitude: 54.58183,
-    summary: "Warehouse - DSV (M-44)",
-    priority: 790,
-    tags: ["DSV", "warehouse"],
-  },
-  {
-    id: "mosb-esnaad",
-    code: "MOSB",
-    name: "MOSB – Mussafah Offshore Support Base(ESNAAD)",
+    id: "mosb-yard",
+    code: "MOSB-YARD",
+    name: "MOSB YARD",
     category: "YARD",
-    latitude: 24.32479,
-    longitude: 54.46685,
-    summary: "Yard - MOSB (ESNAAD)",
+    latitude: 24.331414,
+    longitude: 54.456911,
+    summary: "Yard - MOSB YARD",
     priority: 780,
     tags: ["MOSB", "yard"],
+    displayLabel: "MOSB YARD",
   },
   {
     id: "mosb-samsung-yard",
@@ -94,6 +89,7 @@ export const POI_LOCATIONS: ReadonlyArray<PoiLocation> = [
     summary: "Yard - Samsung (rep.)",
     priority: 770,
     tags: ["MOSB", "yard", "samsung"],
+    displayLabel: "MOSB-SCT",
   },
   {
     id: "zayed-port",
@@ -105,6 +101,7 @@ export const POI_LOCATIONS: ReadonlyArray<PoiLocation> = [
     summary: "Port - Zayed",
     priority: 860,
     tags: ["port"],
+    displayLabel: "MZP",
   },
   {
     id: "khalifa-port-kpct",
@@ -116,6 +113,7 @@ export const POI_LOCATIONS: ReadonlyArray<PoiLocation> = [
     summary: "Port - Khalifa (KPCT)",
     priority: 850,
     tags: ["port", "KPCT"],
+    displayLabel: "KPP",
   },
   {
     id: "auh-airport",
@@ -127,6 +125,7 @@ export const POI_LOCATIONS: ReadonlyArray<PoiLocation> = [
     summary: "Airport - AUH",
     priority: 840,
     tags: ["airport"],
+    displayLabel: "AUH",
   },
 ]
 

@@ -12,6 +12,7 @@ import { createHeatmapLayer } from "./layers/createHeatmapLayer"
 import { createGeofenceLayer } from "./layers/createGeofenceLayer"
 import { createEtaWedgeLayer } from "./layers/createEtaWedgeLayer"
 import { createPoiLayers, getPoiTooltip } from "@/components/map/PoiLocationsLayer"
+import { createHvdcPoiLayers } from "./HvdcPoiLayers"
 import { POI_LOCATIONS } from "@/lib/map/poiLocations"
 import { formatInDubaiTimezone } from "@/lib/time"
 import type { Location, LocationStatus } from "@repo/shared"
@@ -162,6 +163,7 @@ export function MapView() {
       createEtaWedgeLayer(locations, showEtaWedge),
       createLocationLayer(locations, statusByLocationId, handleHover),
       ...poiLayers,
+      ...createHvdcPoiLayers(),
     ]
 
     overlayRef.current.setProps({ layers })

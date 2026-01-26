@@ -80,9 +80,12 @@
 - [x] test: geofence layer created (file: tests/ui/test_mapview.tsx, name: test_geofence_layer_created) # completed @2026-01-23 - MapView에 레이어 구현됨
 - [x] test: ETA wedge layer created (file: tests/ui/test_mapview.tsx, name: test_eta_wedge_layer_created) # completed @2026-01-23 - MapView에 레이어 구현됨
 - [x] test: worklist API returns data (file: tests/ui/test_worklist_api.tsx, name: test_worklist_api_returns_data) # completed @2026-01-25 - 로컬 테스트 완료 (871 rows + KPI 정상 반환)
-- [ ] test: POI layer displays 11 fixed locations (file: tests/ui/test_mapview.tsx, name: test_poi_layer_displays_11_fixed_locations) # dash 패치: reakmapping SSOT 기준 11개 POI (AGI/DAS/MIR/SHU, DSV, MOSB, Port, Airport)
-- [ ] test: StageCardsStrip renders 3 cards (file: tests/ui/test_hvdc_panel.tsx, name: test_stagecardsstrip_renders_3_cards) # dash 패치: HVDC Panel 내 KpiStrip 상단 3카드
-- [ ] test: GlobalSearch filters worklist (file: tests/ui/test_search.tsx, name: test_globalsearch_filters_worklist) # dash 패치: locations·worklist 검색
+- [x] test: POI layer displays 11 fixed locations (file: tests/ui/test_mapview.tsx, name: test_poi_layer_displays_11_fixed_locations) # completed @2026-01-25 - dash 패치 적용 완료: reakmapping SSOT 기준 11개 POI (AGI/DAS/MIR/SHU, DSV, MOSB, Port, Airport), PoiLocationsLayer.ts 구현
+- [x] test: StageCardsStrip renders 3 cards (file: tests/ui/test_hvdc_panel.tsx, name: test_stagecardsstrip_renders_3_cards) # completed @2026-01-25 - dash 패치 적용 완료: HVDC Panel 내 KpiStrip 상단 3카드, 라우팅 연동
+- [x] test: GlobalSearch filters worklist (file: tests/ui/test_search.tsx, name: test_globalsearch_filters_worklist) # completed @2026-01-25 - dash 패치 적용 완료: locations·worklist 검색, searchIndex 연동, HeaderBar 통합
+- [x] test: locations API returns Supabase data (file: tests/ui/test_locations_api.tsx, name: test_locations_api_returns_supabase_data) # completed @2026-01-25 - 맵 레이어 API Supabase 전환 완료: /api/locations (public.locations 조회, 스키마 매핑, Fallback: Mock)
+- [x] test: location-status API returns Supabase data (file: tests/ui/test_location_status_api.tsx, name: test_location_status_api_returns_supabase_data) # completed @2026-01-25 - 맵 레이어 API Supabase 전환 완료: /api/location-status (public.location_statuses 조회, 스키마 매핑, Fallback: Mock)
+- [x] test: events API returns Supabase data with joins (file: tests/ui/test_events_api.tsx, name: test_events_api_returns_supabase_data) # completed @2026-01-25 - 맵 레이어 API Supabase 전환 완료: /api/events (public.events with locations!inner + shipments joins, 스키마 매핑, Fallback: Mock)
 
 ### Mobile Interactions
 - [x] test: HVDC Panel mobile drag works (file: tests/ui/test_mobile_interactions.tsx, name: test_hvdc_panel_mobile_drag) # completed @2026-01-23 - UnifiedLayout.tsx에 부분 구현
@@ -155,14 +158,14 @@
 
 ## Progress Summary
 
-**완료된 테스트**: 50개 / 95개 (52.6%)
-**남은 테스트**: 45개
+**완료된 테스트**: 56개 / 98개 (57.1%)
+**남은 테스트**: 42개
 
 ### 완료된 카테고리
 - ✅ Infrastructure & Setup: 4/4 (100%)
 - ✅ RDF Pipeline: 8/10 (80%)
 - ✅ Flow Code v3.5: 6/6 (100%)
-- ✅ UI Components: 10/10 (100%) - worklist API 테스트 추가 완료 (2026-01-25)
+- ✅ UI Components: 15/15 (100%) - dash 패치 적용 완료 (POI 레이어, StageCardsStrip, GlobalSearch), 맵 레이어 API Supabase 전환 완료 (2026-01-25)
 - ✅ Layout Invariants: 3/4 (75%)
 - ✅ Realtime & Performance: 4/7 (57%) - Realtime publication 활성화 완료 (2026-01-25)
 - ✅ Validation & Quality Gates: 4/11 (36%) - Gate 1 QA 검증 완료 (2026-01-25)
@@ -183,7 +186,7 @@
 - 테스트 실행 시간: unit ≤0.20s, integration ≤2.00s, e2e ≤5m
 - `go` 명령 시 다음 미표시 테스트만 선택하여 진행
 - 테스트 완료 시 체크박스 업데이트: `- [x] test: ... # passed @YYYY-MM-DD <commit:hash>`
-- **최종 업데이트**: 2026-01-25 - Phase 2~6 완료 상태 반영 (DDL 적용, CSV 적재, Gate 1 QA, Realtime 활성화, 대시보드 데이터 반영 완료)
+- **최종 업데이트**: 2026-01-25 - Phase 2~6 완료 상태 반영 (DDL 적용, CSV 적재, Gate 1 QA, Realtime 활성화, 대시보드 데이터 반영 완료), dash 패치 적용 완료 (POI 레이어, StageCardsStrip, GlobalSearch), 맵 레이어 API Supabase 전환 완료 (/api/locations, /api/location-status, /api/events)
 
 ## 참조 문서
 

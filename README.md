@@ -7,6 +7,7 @@
 - ✅ **[docs/VERCEL_DEPLOYMENT_SUCCESS.md](./docs/VERCEL_DEPLOYMENT_SUCCESS.md)** - Vercel 배포 성공 리포트
 - [STATUS.md](./STATUS.md) - 통합 상태 SSOT
 - [DASHBOARD_DATA_INTEGRATION_PROGRESS](./docs/DASHBOARD_DATA_INTEGRATION_PROGRESS.md) - Phase 2~6 실행·진행 SSOT
+- [DATA_INTEGRATION_SUMMARY](./docs/DATA_INTEGRATION_SUMMARY.md) - 데이터 연동 요약 (흐름·확인·재실행)
 - [dash/reakmapping.md](./dash/reakmapping.md) - 맵 POI 좌표·레이어 SSOT
 - [dash/docs/APPLY_PATCH.md](./dash/docs/APPLY_PATCH.md) - dash 패치 통합 절차
 - [AGENTS.md](./AGENTS.md) - 코딩 규칙 SSOT
