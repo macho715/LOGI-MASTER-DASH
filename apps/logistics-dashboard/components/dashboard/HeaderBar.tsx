@@ -99,12 +99,12 @@ export function HeaderBar() {
           {/* Title and Connection Status */}
           <div className="flex items-center gap-3 shrink-0">
             <h1 className="text-lg font-semibold text-foreground whitespace-nowrap">MOSB Logistics Dashboard</h1>
-            <Badge variant="secondary" className="text-xs">
+            <Badge variant="secondary" className="text-sm">
               Client-Only Mode
             </Badge>
             <div className="flex items-center gap-1.5">
               <Radio className={`h-3.5 w-3.5 ${isConnected ? "text-green-500" : "text-red-500"}`} />
-              <span className={`text-xs font-medium ${isConnected ? "text-green-500" : "text-red-500"}`}>
+              <span className={`text-sm font-medium ${isConnected ? "text-green-500" : "text-red-500"}`}>
                 LIVE: {isConnected ? "ON" : "OFF"}
               </span>
             </div>
@@ -119,19 +119,19 @@ export function HeaderBar() {
           <div className="flex items-center gap-4 shrink-0">
             <div className="flex items-center gap-2">
               <Switch id="geofence" checked={showGeofence} onCheckedChange={toggleGeofence} />
-              <Label htmlFor="geofence" className="text-xs whitespace-nowrap">
+              <Label htmlFor="geofence" className="text-sm whitespace-nowrap">
                 Geofence
               </Label>
             </div>
             <div className="flex items-center gap-2">
               <Switch id="heatmap" checked={showHeatmap} onCheckedChange={toggleHeatmap} />
-              <Label htmlFor="heatmap" className="text-xs whitespace-nowrap">
+              <Label htmlFor="heatmap" className="text-sm whitespace-nowrap">
                 Heatmap
               </Label>
             </div>
             <div className="flex items-center gap-2">
               <Switch id="eta-wedge" checked={showEtaWedge} onCheckedChange={toggleEtaWedge} />
-              <Label htmlFor="eta-wedge" className="text-xs whitespace-nowrap">
+              <Label htmlFor="eta-wedge" className="text-sm whitespace-nowrap">
                 ETA Wedge
               </Label>
             </div>
@@ -139,10 +139,10 @@ export function HeaderBar() {
 
           {/* Inputs */}
           <div className="flex items-center gap-3 shrink-0">
-            <div className="flex items-center gap-2">
-              <Label htmlFor="window" className="text-xs whitespace-nowrap">
-                Window (h)
-              </Label>
+          <div className="flex items-center gap-2">
+            <Label htmlFor="window" className="text-sm whitespace-nowrap">
+              Window (h)
+            </Label>
               <Input
                 id="window"
                 type="number"
@@ -153,10 +153,10 @@ export function HeaderBar() {
                 className="w-16 h-8 text-sm"
               />
             </div>
-            <div className="flex items-center gap-2">
-              <Label htmlFor="heat-filter" className="text-xs whitespace-nowrap">
-                Heat Filter
-              </Label>
+          <div className="flex items-center gap-2">
+            <Label htmlFor="heat-filter" className="text-sm whitespace-nowrap">
+              Heat Filter
+            </Label>
               <Select value={heatFilter} onValueChange={(v) => setHeatFilter(v as typeof heatFilter)}>
                 <SelectTrigger className="w-24 h-8 text-sm">
                   <SelectValue />
@@ -239,7 +239,7 @@ function KPIBadge({
   }
 
   return (
-    <div className={`flex items-center gap-1.5 px-2 py-1 rounded-md border text-xs ${colorClasses[color]}`}>
+    <div className={`flex items-center gap-1.5 px-2 py-1 rounded-md border text-sm ${colorClasses[color]}`}>
       <span className="font-medium">{label}:</span>
       <span className="font-bold">{value}</span>
     </div>

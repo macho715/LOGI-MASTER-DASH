@@ -81,7 +81,7 @@ export function RightPanel() {
                 aria-controls={`right-panel-panel-${tab.id}`}
                 aria-selected={activeTab === tab.id}
                 onClick={() => setActiveTab(tab.id as typeof activeTab)}
-                className={`rounded-md px-2 py-1.5 text-xs font-semibold transition-colors ${
+                className={`rounded-md px-2 py-1.5 text-sm font-semibold transition-colors ${
                   activeTab === tab.id
                     ? "bg-card text-foreground shadow-sm"
                     : "text-muted-foreground hover:text-foreground"

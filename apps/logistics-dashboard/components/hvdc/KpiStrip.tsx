@@ -58,7 +58,7 @@ export function KpiStrip() {
 function KpiCard({ label, value }: { label: string; value: string }) {
   return (
     <div className="rounded-xl border border-border bg-card/80 p-3">
-      <div className="text-xs text-muted-foreground">{label}</div>
+      <div className="text-sm text-muted-foreground">{label}</div>
       <div className="mt-1 text-lg font-semibold tabular-nums text-foreground">{value}</div>
     </div>
   )

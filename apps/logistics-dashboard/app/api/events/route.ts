@@ -114,7 +114,8 @@ export async function GET() {
 
     const events = data
       .map((row): Event | null => {
-        const record = row as Record<string, unknown>
+        const record = getObject(row)
+        if (!record) return null
         const location = getLocationJoin(record.locations)
         if (!location) return null
         const ts = typeof record.ts === "string" ? record.ts : null
