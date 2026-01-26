@@ -94,116 +94,124 @@ export function HeaderBar() {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-card/95 backdrop-blur-sm border-b border-border">
-      <div className="flex items-center justify-between px-4 py-2 gap-4">
-        {/* Title and Connection Status */}
-        <div className="flex items-center gap-3 shrink-0">
-          <h1 className="text-lg font-semibold text-foreground whitespace-nowrap">MOSB Logistics Dashboard</h1>
-          <Badge variant="secondary" className="text-xs">
-            Client-Only Mode
-          </Badge>
-          <div className="flex items-center gap-1.5">
-            <Radio className={`h-3.5 w-3.5 ${isConnected ? "text-green-500" : "text-red-500"}`} />
-            <span className={`text-xs font-medium ${isConnected ? "text-green-500" : "text-red-500"}`}>
-              LIVE: {isConnected ? "ON" : "OFF"}
-            </span>
-          </div>
-        </div>
-
-        {/* KPI Badges */}
-        <div className="flex items-center gap-2 overflow-x-auto hide-scrollbar">
-          {isLoading ? (
-            <>
-              {Array.from({ length: 8 }).map((_, i) => (
-                <Skeleton key={i} className="h-6 w-20" />
-              ))}
-            </>
-          ) : (
-            <>
-              <KPIBadge label="Shipments" value={kpis.shipments} />
-              <KPIBadge label="Planned" value={kpis.planned} color="blue" />
-              <KPIBadge label="In-Transit" value={kpis.inTransit} color="cyan" />
-              <KPIBadge label="Arrived" value={kpis.arrived} color="green" />
-              <KPIBadge label="Delayed" value={kpis.delayed} color="amber" />
-              <KPIBadge label="Hold" value={kpis.hold} color="orange" />
-              <KPIBadge label="Unknown" value={kpis.unknown} color="gray" />
-              <KPIBadge label="Events" value={kpis.eventsInWindow} color="purple" />
-            </>
-          )}
-        </div>
-
-        {/* Global Search */}
-        <div className="hidden xl:block w-80 shrink-0">
-          <GlobalSearch items={searchItems} onSelect={handleSearchSelect} />
-        </div>
-
-        {/* Toggles */}
-        <div className="flex items-center gap-4 shrink-0">
-          <div className="flex items-center gap-2">
-            <Switch id="geofence" checked={showGeofence} onCheckedChange={toggleGeofence} />
-            <Label htmlFor="geofence" className="text-xs whitespace-nowrap">
-              Geofence
-            </Label>
-          </div>
-          <div className="flex items-center gap-2">
-            <Switch id="heatmap" checked={showHeatmap} onCheckedChange={toggleHeatmap} />
-            <Label htmlFor="heatmap" className="text-xs whitespace-nowrap">
-              Heatmap
-            </Label>
-          </div>
-          <div className="flex items-center gap-2">
-            <Switch id="eta-wedge" checked={showEtaWedge} onCheckedChange={toggleEtaWedge} />
-            <Label htmlFor="eta-wedge" className="text-xs whitespace-nowrap">
-              ETA Wedge
-            </Label>
-          </div>
-        </div>
-
-        {/* Inputs */}
-        <div className="flex items-center gap-3 shrink-0">
-          <div className="flex items-center gap-2">
-            <Label htmlFor="window" className="text-xs whitespace-nowrap">
-              Window (h)
-            </Label>
-            <Input
-              id="window"
-              type="number"
-              min={1}
-              max={168}
-              value={windowHours}
-              onChange={(e) => setWindowHours(Math.max(1, Number.parseInt(e.target.value) || 24))}
-              className="w-16 h-8 text-sm"
-            />
-          </div>
-          <div className="flex items-center gap-2">
-            <Label htmlFor="heat-filter" className="text-xs whitespace-nowrap">
-              Heat Filter
-            </Label>
-            <Select value={heatFilter} onValueChange={(v) => setHeatFilter(v as typeof heatFilter)}>
-              <SelectTrigger className="w-24 h-8 text-sm">
-                <SelectValue />
-              </SelectTrigger>
-              <SelectContent>
-                <SelectItem value="all">All</SelectItem>
-                <SelectItem value="OK">OK</SelectItem>
-                <SelectItem value="WARNING">Warning</SelectItem>
-                <SelectItem value="CRITICAL">Critical</SelectItem>
-              </SelectContent>
-            </Select>
-          </div>
-        </div>
-
-        {/* User info and Logout */}
-        <div className="flex items-center gap-3 shrink-0">
-          <span className="text-sm text-muted-foreground whitespace-nowrap">
-            User: <span className="text-foreground font-medium">admin</span>{" "}
-            <Badge variant="outline" className="text-xs ml-1">
-              ADMIN
+      <div className="flex flex-col">
+        <div className="flex items-center justify-between px-4 py-2 gap-4">
+          {/* Title and Connection Status */}
+          <div className="flex items-center gap-3 shrink-0">
+            <h1 className="text-lg font-semibold text-foreground whitespace-nowrap">MOSB Logistics Dashboard</h1>
+            <Badge variant="secondary" className="text-xs">
+              Client-Only Mode
             </Badge>
-          </span>
-          <Button variant="ghost" size="sm" onClick={handleLogout}>
-            <LogOut className="h-4 w-4 mr-1" />
-            Logout
-          </Button>
+            <div className="flex items-center gap-1.5">
+              <Radio className={`h-3.5 w-3.5 ${isConnected ? "text-green-500" : "text-red-500"}`} />
+              <span className={`text-xs font-medium ${isConnected ? "text-green-500" : "text-red-500"}`}>
+                LIVE: {isConnected ? "ON" : "OFF"}
+              </span>
+            </div>
+          </div>
+
+          {/* Global Search */}
+          <div className="hidden xl:block w-80 shrink-0">
+            <GlobalSearch items={searchItems} onSelect={handleSearchSelect} />
+          </div>
+
+          {/* Toggles */}
+          <div className="flex items-center gap-4 shrink-0">
+            <div className="flex items-center gap-2">
+              <Switch id="geofence" checked={showGeofence} onCheckedChange={toggleGeofence} />
+              <Label htmlFor="geofence" className="text-xs whitespace-nowrap">
+                Geofence
+              </Label>
+            </div>
+            <div className="flex items-center gap-2">
+              <Switch id="heatmap" checked={showHeatmap} onCheckedChange={toggleHeatmap} />
+              <Label htmlFor="heatmap" className="text-xs whitespace-nowrap">
+                Heatmap
+              </Label>
+            </div>
+            <div className="flex items-center gap-2">
+              <Switch id="eta-wedge" checked={showEtaWedge} onCheckedChange={toggleEtaWedge} />
+              <Label htmlFor="eta-wedge" className="text-xs whitespace-nowrap">
+                ETA Wedge
+              </Label>
+            </div>
+          </div>
+
+          {/* Inputs */}
+          <div className="flex items-center gap-3 shrink-0">
+            <div className="flex items-center gap-2">
+              <Label htmlFor="window" className="text-xs whitespace-nowrap">
+                Window (h)
+              </Label>
+              <Input
+                id="window"
+                type="number"
+                min={1}
+                max={168}
+                value={windowHours}
+                onChange={(e) => setWindowHours(Math.max(1, Number.parseInt(e.target.value) || 24))}
+                className="w-16 h-8 text-sm"
+              />
+            </div>
+            <div className="flex items-center gap-2">
+              <Label htmlFor="heat-filter" className="text-xs whitespace-nowrap">
+                Heat Filter
+              </Label>
+              <Select value={heatFilter} onValueChange={(v) => setHeatFilter(v as typeof heatFilter)}>
+                <SelectTrigger className="w-24 h-8 text-sm">
+                  <SelectValue />
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectItem value="all">All</SelectItem>
+                  <SelectItem value="OK">OK</SelectItem>
+                  <SelectItem value="WARNING">Warning</SelectItem>
+                  <SelectItem value="CRITICAL">Critical</SelectItem>
+                </SelectContent>
+              </Select>
+            </div>
+          </div>
+
+          {/* User info and Logout */}
+          <div className="flex items-center gap-3 shrink-0">
+            <span className="text-sm text-muted-foreground whitespace-nowrap">
+              User: <span className="text-foreground font-medium">admin</span>{" "}
+              <Badge variant="outline" className="text-xs ml-1">
+                ADMIN
+              </Badge>
+            </span>
+            <Button variant="ghost" size="sm" onClick={handleLogout}>
+              <LogOut className="h-4 w-4 mr-1" />
+              Logout
+            </Button>
+          </div>
+        </div>
+
+        {/* KPI Summary */}
+        <div className="border-t border-border bg-card/80">
+          <div
+            className="flex items-center gap-2 px-4 py-2 overflow-x-auto hide-scrollbar"
+            aria-live="polite"
+            aria-label="KPI summary"
+          >
+            {isLoading ? (
+              <>
+                {Array.from({ length: 8 }).map((_, i) => (
+                  <Skeleton key={i} className="h-6 w-20" />
+                ))}
+              </>
+            ) : (
+              <>
+                <KPIBadge label="Shipments" value={kpis.shipments} />
+                <KPIBadge label="Planned" value={kpis.planned} color="blue" />
+                <KPIBadge label="In-Transit" value={kpis.inTransit} color="cyan" />
+                <KPIBadge label="Arrived" value={kpis.arrived} color="green" />
+                <KPIBadge label="Delayed" value={kpis.delayed} color="amber" />
+                <KPIBadge label="Hold" value={kpis.hold} color="orange" />
+                <KPIBadge label="Unknown" value={kpis.unknown} color="gray" />
+                <KPIBadge label="Events" value={kpis.eventsInWindow} color="purple" />
+              </>
+            )}
+          </div>
         </div>
       </div>
     </header>

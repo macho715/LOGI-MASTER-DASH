@@ -185,15 +185,6 @@ export function RightPanel() {
                 </ResponsiveContainer>
               </div>
             )}
-            <div className="flex justify-center gap-4 mt-2">
-              {statusData.map((item) => (
-                <div key={item.name} className="flex items-center gap-1.5 text-sm">
-                  <div className="w-2.5 h-2.5 rounded-full" style={{ backgroundColor: item.color }} />
-                  <span className="text-muted-foreground">{item.name}</span>
-                  <span className="font-medium text-foreground">{item.value}</span>
-                </div>
-              ))}
-            </div>
           </CardContent>
         </Card>
       </div>

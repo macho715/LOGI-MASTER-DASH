@@ -140,7 +140,7 @@ export function UnifiedLayout() {
     <div className="h-screen w-screen overflow-hidden bg-background dark">
       <HeaderBar />
 
-      <div className="flex h-full pt-14">
+      <div className="flex h-full pt-24 lg:pb-96">
         <div className="flex-1 relative min-w-0" role="main" aria-label="Logistics Map View">
           <MapView />
         </div>
@@ -197,7 +197,7 @@ export function UnifiedLayout() {
         </div>
       </div>
 
-      <div className="hidden lg:block fixed top-14 right-80 bottom-96 w-96 z-50">
+      <div className="hidden lg:block fixed top-24 right-80 bottom-96 w-96 z-50">
         <DetailDrawer mode="sidepanel" />
       </div>
       <div className="lg:hidden">
