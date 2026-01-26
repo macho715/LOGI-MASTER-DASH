@@ -261,8 +261,8 @@ HVDC 대시보드와 물류 대시보드를 **단일 웹 애플리케이션**으
 ## 참조 문서
 
 - [AGENTS.md](../../../AGENTS.md) - 프로젝트 규칙 상세 (이 문서의 소스)
-- [docs/architecture.md](../../../docs/architecture.md) - 아키텍처 문서
-- [docs/roadmap_system_doc.md](../../../docs/roadmap_system_doc.md) - 로드맵
+- [docs/architecture/architecture.md](../../../docs/architecture/architecture.md) - 아키텍처 문서
+- [docs/integration/roadmap_system_doc.md](../../../docs/integration/roadmap_system_doc.md) - 로드맵
 - [docs/constitution.md](../../../docs/constitution.md) - 프로젝트 헌법
 
 ## Nested AGENTS.md (선택사항)

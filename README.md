@@ -6,12 +6,12 @@
 - 📊 **[PROJECT_SUMMARY.md](./PROJECT_SUMMARY.md)** - 한눈에 보는 개발 현황 및 다음 단계
 - ✅ **[docs/VERCEL_DEPLOYMENT_SUCCESS.md](./docs/VERCEL_DEPLOYMENT_SUCCESS.md)** - Vercel 배포 성공 리포트
 - [STATUS.md](./STATUS.md) - 통합 상태 SSOT
-- [DASHBOARD_DATA_INTEGRATION_PROGRESS](./docs/DASHBOARD_DATA_INTEGRATION_PROGRESS.md) - Phase 2~6 실행·진행 SSOT
-- [DATA_INTEGRATION_SUMMARY](./docs/DATA_INTEGRATION_SUMMARY.md) - 데이터 연동 요약 (흐름·확인·재실행)
+- [DASHBOARD_DATA_INTEGRATION_PROGRESS](./docs/data-loading/DASHBOARD_DATA_INTEGRATION_PROGRESS.md) - Phase 2~6 실행·진행 SSOT
+- [DATA_INTEGRATION_SUMMARY](./docs/data-loading/DATA_INTEGRATION_SUMMARY.md) - 데이터 연동 요약 (흐름·확인·재실행)
 - [dash/reakmapping.md](./dash/reakmapping.md) - 맵 POI 좌표·레이어 SSOT
 - [dash/docs/APPLY_PATCH.md](./dash/docs/APPLY_PATCH.md) - dash 패치 통합 절차
 - [AGENTS.md](./AGENTS.md) - 코딩 규칙 SSOT
-- [docs/INTEGRATION_ROADMAP.md](./docs/INTEGRATION_ROADMAP.md) - 통합 로드맵
+- [docs/integration/INTEGRATION_ROADMAP.md](./docs/integration/INTEGRATION_ROADMAP.md) - 통합 로드맵
 
 ---
 
@@ -92,7 +92,7 @@ SUPABASE_SERVICE_ROLE_KEY=your_service_role_key
 | `check_dashboard_data.py` | `public.shipments` 뷰·Worklist 연동 검증 |
 
 **실행**: `SUPABASE_DB_URL` (Session pooler :5432) 설정 후 `run_phase2_ddl.ps1` 또는 개별 스크립트 실행.  
-자세한 순서·옵션은 [DASHBOARD_DATA_INTEGRATION_PROGRESS](docs/DASHBOARD_DATA_INTEGRATION_PROGRESS.md) 및 [PHASE2/4/5/6 계획](docs/PHASE2_DDL_APPLICATION_PLAN.md) 참조.
+자세한 순서·옵션은 [DASHBOARD_DATA_INTEGRATION_PROGRESS](docs/data-loading/DASHBOARD_DATA_INTEGRATION_PROGRESS.md) 및 [PHASE2/4/5/6 계획](docs/data-loading/PHASE2_DDL_APPLICATION_PLAN.md) 참조.
 
 ---
 
@@ -154,11 +154,21 @@ pnpm test
 - ✅ MapView (좌측) + RightPanel (우측) + HVDC Panel (하단)
 - ✅ 모바일 드래그 제스처 지원
 - ✅ 접근성 개선 (WCAG 2.2 AA 준수)
+- ✅ RightPanel 탭 UI: Status/Occupancy/Distribution 섹션 분리 및 키보드 포커스 처리 (2026-02-06)
+- ✅ KPI 요약 스트립 헤더 고정 및 레이아웃 간격 조정 (2026-02-07)
+- ✅ HVDC 워크리스트 간소화: 핵심 상태 컬럼만 표시, 트리거/상세는 Detail Drawer로 이동 (2026-02-07)
+
+### 지도 레이어 & 히트맵
+- ✅ Heatmap 토글 + 강도 범례 표시 (낮음~높음) (2026-02-05)
+- ✅ 지오펜스 내부 이벤트 가중치 반영 (2026-02-05)
+- ✅ 줌 기반 레이어 전환: Heatmap(<9.5) ↔ Status(≥9.5), POI 마커/라벨(≥7.5) (2026-02-06)
+- ✅ 히트맵 반경 줌 레벨에 따른 스케일링 (2026-02-06)
+- ✅ 타이포그래피 개선: 기본 텍스트 크기 및 계층 구조 최적화 (2026-02-06)
 
 ### 맵 POI (고정 11개)
-- ✅ **맵 POI 레이어** (reakmapping SSOT): AGI/DAS/MIR/SHU, DSV M-19/M-44, MOSB/MOSB-SAM, Mina Zayed, Khalifa(KPCT), AUH
+- ✅ **맵 POI 레이어** (reakmapping SSOT): AGI/DAS/MIR/SHU, DSV M-19/M-44, MOSB YARD/MOSB-SCT, Mina Zayed, Khalifa(KPCT), AUH
 - ✅ deck.gl ScatterplotLayer + TextLayer (CollisionFilter)로 라벨 겹침 최소화
-- ✅ 줌 ≥8.5에서 표시, 툴팁 연동
+- ✅ 줌 기반 가시성: 마커 ≥7.5, 라벨 7.5~10.5(코드), 10.5+(상세)
 - 참조: [dash/reakmapping.md](./dash/reakmapping.md)
 
 ### StageCardsStrip
@@ -187,28 +197,28 @@ pnpm test
 - [SETUP.md](./SETUP.md) - 로컬/CI 설정 가이드
 - [CHANGELOG.md](./CHANGELOG.md) - 변경 이력
 - [STATUS (통합 상태 SSOT)](./STATUS.md)
-- [INTEGRATION_STATUS (상세 통합 상태)](./docs/INTEGRATION_STATUS.md)
-- [NEXT_STEPS_PRIORITY (우선순위/실행 계획)](./docs/NEXT_STEPS_PRIORITY.md)
-- [MIGRATION_CHECKLIST](./docs/MIGRATION_CHECKLIST.md)
-- [MIGRATION_COMPLETION_REPORT](./docs/MIGRATION_COMPLETION_REPORT.md)
+- [INTEGRATION_STATUS (상세 통합 상태)](./docs/integration/INTEGRATION_STATUS.md)
+- [NEXT_STEPS_PRIORITY (우선순위/실행 계획)](./docs/integration/NEXT_STEPS_PRIORITY.md)
+- [MIGRATION_CHECKLIST](./docs/migrations/MIGRATION_CHECKLIST.md)
+- [MIGRATION_COMPLETION_REPORT](./docs/migrations/MIGRATION_COMPLETION_REPORT.md)
 - [시스템 아키텍처](./docs/architecture.md)
-- [통합 로드맵](./docs/INTEGRATION_ROADMAP.md)
-- [Realtime 구현 가이드](./docs/REALTIME_IMPLEMENTATION.md)
-- [대시보드 레이아웃 사양](./docs/DASHBOARD_LAYOUT.md) - 🆕 통합 대시보드 레이아웃 상세 사양
-- [ETL 스크립트 가이드](./docs/ETL_GUIDE.md) - 🆕 Supabase 데이터 적재 ETL 가이드
-- [데이터 적재 작업 계획](./docs/DATA_LOADING_PLAN.md) - 🆕 Supabase 데이터 적재 단계별 실행 계획
-- [프로젝트 구조 가이드](./docs/PROJECT_STRUCTURE.md) - 🆕 프로젝트 구조 온보딩 가이드
-- [데이터 로딩 실행 가이드](./REPO_EXECUTION_GUIDE_HVDC_DATA_LOADING.md) - 실제 레포 구조 기반 실행 가이드
-- [데이터 로딩 Runbook](./docs/DATA_LOADING_RUNBOOK.md) - 🆕 Phase 1~7 상세 실행 가이드
-- [데이터 로딩 리포트 템플릿](./docs/DATA_LOADING_REPORT_TEMPLATE.md) - 🆕 실행 결과 기록 템플릿
-- [Realtime KPI 개발 계획](./docs/DEVELOPMENT_PLAN_REALTIME_KPI_DASHBOARD.md) - 🆕 Realtime KPI 개발 계획
-- [대시보드 데이터 통합 진행](./docs/DASHBOARD_DATA_INTEGRATION_PROGRESS.md) - Phase 2~6·대시보드 반영·로컬 테스트 완료
-- [Phase 2 DDL 적용 계획](./docs/PHASE2_DDL_APPLICATION_PLAN.md)
-- [Phase 4 CSV 적재 계획](./docs/PHASE4_CSV_LOADING_PLAN.md)
-- [Phase 5 Gate 1 QA 계획](./docs/PHASE5_GATE1_QA_PLAN.md)
-- [Phase 6 Realtime 활성화 계획](./docs/PHASE6_REALTIME_ACTIVATION_PLAN.md)
-- [Supabase 연결 트러블슈팅](./docs/SUPABASE_CONNECTION_TROUBLESHOOTING.md)
-- [dash 패치 적용 계획](./docs/DASH_PLAN.md) - 맵 POI·StageCardsStrip·GlobalSearch 실제 작업 계획
+- [통합 로드맵](./docs/integration/INTEGRATION_ROADMAP.md)
+- [Realtime 구현 가이드](./docs/guides/REALTIME_IMPLEMENTATION.md)
+- [대시보드 레이아웃 사양](./docs/architecture/DASHBOARD_LAYOUT.md) - 🆕 통합 대시보드 레이아웃 상세 사양
+- [ETL 스크립트 가이드](./docs/data-loading/ETL_GUIDE.md) - 🆕 Supabase 데이터 적재 ETL 가이드
+- [데이터 적재 작업 계획](./docs/data-loading/DATA_LOADING_PLAN.md) - 🆕 Supabase 데이터 적재 단계별 실행 계획
+- [프로젝트 구조 가이드](./docs/architecture/PROJECT_STRUCTURE.md) - 🆕 프로젝트 구조 온보딩 가이드
+- [데이터 로딩 실행 가이드](./docs/guides/REPO_EXECUTION_GUIDE_HVDC_DATA_LOADING.md) - 실제 레포 구조 기반 실행 가이드
+- [데이터 로딩 Runbook](./docs/data-loading/DATA_LOADING_RUNBOOK.md) - 🆕 Phase 1~7 상세 실행 가이드
+- [데이터 로딩 리포트 템플릿](./docs/data-loading/DATA_LOADING_REPORT_TEMPLATE.md) - 🆕 실행 결과 기록 템플릿
+- [Realtime KPI 개발 계획](./docs/guides/DEVELOPMENT_PLAN_REALTIME_KPI_DASHBOARD.md) - 🆕 Realtime KPI 개발 계획
+- [대시보드 데이터 통합 진행](./docs/data-loading/DASHBOARD_DATA_INTEGRATION_PROGRESS.md) - Phase 2~6·대시보드 반영·로컬 테스트 완료
+- [Phase 2 DDL 적용 계획](./docs/data-loading/PHASE2_DDL_APPLICATION_PLAN.md)
+- [Phase 4 CSV 적재 계획](./docs/data-loading/PHASE4_CSV_LOADING_PLAN.md)
+- [Phase 5 Gate 1 QA 계획](./docs/data-loading/PHASE5_GATE1_QA_PLAN.md)
+- [Phase 6 Realtime 활성화 계획](./docs/data-loading/PHASE6_REALTIME_ACTIVATION_PLAN.md)
+- [Supabase 연결 트러블슈팅](./docs/supabase/SUPABASE_CONNECTION_TROUBLESHOOTING.md)
+- [dash 패치 적용 계획](./docs/deployment/DASH_PLAN.md) - 맵 POI·StageCardsStrip·GlobalSearch 실제 작업 계획
 - [dash/reakmapping.md](./dash/reakmapping.md) - 맵 POI 좌표·레이어 SSOT
 - [dash/docs/APPLY_PATCH.md](./dash/docs/APPLY_PATCH.md) - dash 패치 통합 절차
 
@@ -232,4 +242,10 @@ Private
 
 ---
 
-**최종 업데이트**: 2026-01-25
+**최종 업데이트**: 2026-02-07
+
+**최근 주요 변경사항** (2026-02-05 ~ 2026-02-07):
+- 히트맵 강도 범례 및 지오펜스 가중치 적용
+- 줌 기반 레이어 가시성 및 히트맵 반경 스케일링
+- RightPanel 탭 UI 개선 및 타이포그래피 최적화
+- KPI 요약 스트립 고정 및 HVDC 워크리스트 간소화

@@ -7,14 +7,14 @@
 > - RED → GREEN → REFACTOR 사이클
 > - Test SLA: unit ≤0.20s / integration ≤2.00s / e2e ≤5m
 > 
-> **최종 업데이트**: 2026-01-25
+> **최종 업데이트**: 2026-02-07
 
 ## Context & SoT Alignment
 
-- 이 파일은 테스트 계획 관점의 **SoT**이며, 실제 구현/통합 상태는 `STATUS.md`, `docs/INTEGRATION_ROADMAP.md`, `docs/NEXT_STEPS_PRIORITY.md`와 함께 본다.
+- 이 파일은 테스트 계획 관점의 **SoT**이며, 실제 구현/통합 상태는 `STATUS.md`, `docs/integration/INTEGRATION_ROADMAP.md`, `docs/integration/NEXT_STEPS_PRIORITY.md`와 함께 본다.
 - **데이터 적재 실행(Phase 2~6)** 상태·실행 방법은 [DASHBOARD_DATA_INTEGRATION_PROGRESS](docs/DASHBOARD_DATA_INTEGRATION_PROGRESS.md) 및 Phase별 계획(PHASE2/4/5/6) 참조. 권장: Supavisor Session :5432, `SUPABASE_DB_URL` + `connect_timeout`, redaction 규칙.
 - **dash 패치 적용** (맵 POI·StageCardsStrip·GlobalSearch) 상태·실행 방법은 [DASH_PLAN](docs/DASH_PLAN.md) §3.0 진행 체크리스트, 검증은 §4, [dash/reakmapping.md](../dash/reakmapping.md) (POI 좌표 SSOT), [dash/docs/APPLY_PATCH.md](../dash/docs/APPLY_PATCH.md) 참조.
-- 데이터 모델/마이그레이션·RLS·Realtime·Foundry 연계 등 **통합 상태**는 `STATUS.md`와 `docs/INTEGRATION_ROADMAP.md`를 기준으로 하고, 여기서는 해당 항목을 검증하는 테스트만 추적한다.
+- 데이터 모델/마이그레이션·RLS·Realtime·Foundry 연계 등 **통합 상태**는 `STATUS.md`와 `docs/integration/INTEGRATION_ROADMAP.md`를 기준으로 하고, 여기서는 해당 항목을 검증하는 테스트만 추적한다.
 - Monorepo 구조, `UnifiedLayout.tsx`, `schema_v2_unified.sql` 등 이미 완료된 작업은 위 문서들에 맞춰 테스트 코멘트에만 요약으로 표시한다.
 - Flow Code v3.5, OpsStore, RLS/Realtime/테스트 작성 등 남은 작업은 아래 테스트 카테고리와 게이트(Gate 1/2/3)에 매핑해 **TDD 우선순위**를 정한다.
 
@@ -86,6 +86,12 @@
 - [x] test: locations API returns Supabase data (file: tests/ui/test_locations_api.tsx, name: test_locations_api_returns_supabase_data) # completed @2026-01-25 - 맵 레이어 API Supabase 전환 완료: /api/locations (public.locations 조회, 스키마 매핑, Fallback: Mock)
 - [x] test: location-status API returns Supabase data (file: tests/ui/test_location_status_api.tsx, name: test_location_status_api_returns_supabase_data) # completed @2026-01-25 - 맵 레이어 API Supabase 전환 완료: /api/location-status (public.location_statuses 조회, 스키마 매핑, Fallback: Mock)
 - [x] test: events API returns Supabase data with joins (file: tests/ui/test_events_api.tsx, name: test_events_api_returns_supabase_data) # completed @2026-01-25 - 맵 레이어 API Supabase 전환 완료: /api/events (public.events with locations!inner + shipments joins, 스키마 매핑, Fallback: Mock)
+- [x] test: heatmap intensity legend displays (file: tests/ui/test_mapview.tsx, name: test_heatmap_intensity_legend) # completed @2026-02-05 - 히트맵 토글 활성 시 강도 범례 표시 (낮음~매우 높음)
+- [x] test: zoom-based layer visibility works (file: tests/ui/test_mapview.tsx, name: test_zoom_based_layer_visibility) # completed @2026-02-06 - 줌 기반 레이어 전환: Heatmap(<9.5) ↔ Status(≥9.5), POI 마커/라벨(≥7.5), 히트맵 반경 스케일링
+- [x] test: RightPanel tab UI renders (file: tests/ui/test_rightpanel.tsx, name: test_rightpanel_tab_ui) # completed @2026-02-06 - RightPanel 탭 UI (Status/Occupancy/Distribution) 분리 및 키보드 포커스 처리
+- [x] test: typography improvements applied (file: tests/ui/test_typography.tsx, name: test_typography_improvements) # completed @2026-02-06 - 타이포그래피 개선 (text-sm 기준, 가독성 향상)
+- [x] test: KPI strip header fixed (file: tests/ui/test_hvdc_panel.tsx, name: test_kpi_strip_header_fixed) # completed @2026-02-07 - KPI 요약 스트립 헤더 고정 및 레이아웃 간격 조정
+- [x] test: worklist simplified layout (file: tests/ui/test_hvdc_panel.tsx, name: test_worklist_simplified) # completed @2026-02-07 - HVDC 워크리스트 간소화 (핵심 컬럼만 표시, 트리거/상세는 DetailDrawer로 이동)
 
 ### Mobile Interactions
 - [x] test: HVDC Panel mobile drag works (file: tests/ui/test_mobile_interactions.tsx, name: test_hvdc_panel_mobile_drag) # completed @2026-01-23 - UnifiedLayout.tsx에 부분 구현
@@ -154,18 +160,18 @@
 
 - 기본 규칙: 사용자가 `go`라고 하면 이 파일의 `## Tests` 섹션에서 **위에서부터 첫 번째 미체크(`- [ ] test:`)** 테스트 한 건만 선택해 RED → GREEN → REFACTOR 사이클을 수행한다.
 - 현재 테스트 순서는 인프라 → 데이터 모델(Gate 1) → 레이아웃/UX(Gate 2) → Realtime/성능/Foundry(Gate 3) 순으로 배치되어 있어, `go` 프로토콜을 그대로 따르면 게이트 통과 순서와도 정렬된다.
-- 단기 우선순위는 `docs/NEXT_STEPS_PRIORITY.md` 기준으로 **Flow Code v3.5 마이그레이션 검증**, **OpsStore/통합 Store**, **RLS·Realtime·Foundry/Validation 테스트**에 해당하는 항목을 우선 구현하는 것이다.
+- 단기 우선순위는 `docs/integration/NEXT_STEPS_PRIORITY.md` 기준으로 **Flow Code v3.5 마이그레이션 검증**, **OpsStore/통합 Store**, **RLS·Realtime·Foundry/Validation 테스트**에 해당하는 항목을 우선 구현하는 것이다.
 
 ## Progress Summary
 
-**완료된 테스트**: 56개 / 98개 (57.1%)
-**남은 테스트**: 42개
+**완료된 테스트**: 60개 / 97개 (61.9%)
+**남은 테스트**: 37개
 
 ### 완료된 카테고리
 - ✅ Infrastructure & Setup: 4/4 (100%)
 - ✅ RDF Pipeline: 8/10 (80%)
 - ✅ Flow Code v3.5: 6/6 (100%)
-- ✅ UI Components: 15/15 (100%) - dash 패치 적용 완료 (POI 레이어, StageCardsStrip, GlobalSearch), 맵 레이어 API Supabase 전환 완료 (2026-01-25)
+- ✅ UI Components: 21/21 (100%) - dash 패치 적용 완료 (POI 레이어, StageCardsStrip, GlobalSearch), 맵 레이어 API Supabase 전환 완료 (2026-01-25), UI/UX 개선 완료 (히트맵 범례, 줌 기반 레이어, RightPanel 탭, 타이포그래피, KPI 스트립 고정, 워크리스트 간소화) (2026-02-05~07)
 - ✅ Layout Invariants: 3/4 (75%)
 - ✅ Realtime & Performance: 4/7 (57%) - Realtime publication 활성화 완료 (2026-01-25)
 - ✅ Validation & Quality Gates: 4/11 (36%) - Gate 1 QA 검증 완료 (2026-01-25)
@@ -180,18 +186,26 @@
 - ⏳ Validation & Quality Gates: 4/11 (36%) - OCR/SHACL 검증 대기 중
 - ⏳ User Flows: 0/5 (0%)
 
+### 최근 추가된 테스트 (2026-02-05~07)
+- ✅ 히트맵 강도 범례 표시 테스트
+- ✅ 줌 기반 레이어 가시성 테스트
+- ✅ RightPanel 탭 UI 테스트
+- ✅ 타이포그래피 개선 테스트
+- ✅ KPI 스트립 헤더 고정 테스트
+- ✅ 워크리스트 간소화 테스트
+
 ## Notes
 
 - 각 테스트는 RED → GREEN → REFACTOR 사이클로 진행
 - 테스트 실행 시간: unit ≤0.20s, integration ≤2.00s, e2e ≤5m
 - `go` 명령 시 다음 미표시 테스트만 선택하여 진행
 - 테스트 완료 시 체크박스 업데이트: `- [x] test: ... # passed @YYYY-MM-DD <commit:hash>`
-- **최종 업데이트**: 2026-01-25 - Phase 2~6 완료 상태 반영 (DDL 적용, CSV 적재, Gate 1 QA, Realtime 활성화, 대시보드 데이터 반영 완료), dash 패치 적용 완료 (POI 레이어, StageCardsStrip, GlobalSearch), 맵 레이어 API Supabase 전환 완료 (/api/locations, /api/location-status, /api/events)
+- **최종 업데이트**: 2026-02-07 - Phase 2~6 완료 상태 반영 (DDL 적용, CSV 적재, Gate 1 QA, Realtime 활성화, 대시보드 데이터 반영 완료), dash 패치 적용 완료 (POI 레이어, StageCardsStrip, GlobalSearch), 맵 레이어 API Supabase 전환 완료 (/api/locations, /api/location-status, /api/events), 최근 UI 개선사항 반영 (히트맵 강도 범례, 줌 기반 레이어 가시성, RightPanel 탭 UI, 타이포그래피 개선, KPI 스트립 고정, 워크리스트 간소화)
 
 ## 참조 문서
 
 - [STATUS.md](./STATUS.md) - 통합 상태 SSOT
-- [INTEGRATION_ROADMAP.md](./docs/INTEGRATION_ROADMAP.md) - 통합 로드맵
+- [INTEGRATION_ROADMAP.md](./docs/integration/INTEGRATION_ROADMAP.md) - 통합 로드맵
 - [AGENTS.md](./AGENTS.md) - 프로젝트 규칙
 - [DATA_LOADING_PLAN.md](./docs/DATA_LOADING_PLAN.md) - Supabase 데이터 적재 작업 계획
 - [DASHBOARD_DATA_INTEGRATION_PROGRESS.md](./docs/DASHBOARD_DATA_INTEGRATION_PROGRESS.md) - Phase 2~6 실행 방법·진행 상황 SSOT

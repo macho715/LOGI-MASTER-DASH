@@ -129,7 +129,7 @@ Remove-Item -Path "logi-cockpit-docs\logi-cockpit-docs" -Recurse -Force
 
 - [DUPLICATION_ANALYSIS_REPORT.md](../DUPLICATION_ANALYSIS_REPORT.md) - 중복 분석 리포트
 - [STATUS.md](../STATUS.md) - 통합 상태 SSOT
-- [INTEGRATION_ROADMAP.md](./INTEGRATION_ROADMAP.md) - 통합 로드맵
+- [INTEGRATION_ROADMAP.md](../integration/INTEGRATION_ROADMAP.md) - 통합 로드맵
 
 ---
 
