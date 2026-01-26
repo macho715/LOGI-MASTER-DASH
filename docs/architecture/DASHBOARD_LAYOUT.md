@@ -1,8 +1,8 @@
 # 대시보드 전체 레이아웃 문서
 
 > **HVDC + Logistics 통합 대시보드 레이아웃 사양**  
-> **최종 업데이트**: 2026-02-07  
-> **구현 파일**: `apps/logistics-dashboard/components/UnifiedLayout.tsx`
+> **최종 업데이트**: 2026-02-09  
+> **구현 파일**: `apps/logistics-dashboard/components/UnifiedLayout.tsx`, `packages/ui-components/src/UnifiedLayout.tsx`
 
 ---
 
@@ -183,6 +183,7 @@ graph TB
 - **위치**: 메인 영역 좌측
 - **크기**: flex-1 (남은 공간 차지)
 - **최소 너비**: min-w-0 (오버플로우 방지)
+- **최소 높이**: min-h-0 (flex 컨테이너 내 스크롤 영역 보존)
 - **레이어**:
   - Location Layer (위치 마커)
   - Heatmap Layer (밀도 히트맵)
@@ -241,6 +242,8 @@ graph TB
 - **위치**: 메인 영역 우측
 - **크기**: w-80 (320px 고정)
 - **표시 조건**: lg:block (≥1024px)
+- **최소 높이**: min-h-0 (flex 컨테이너 내 스크롤 영역 보존)
+- **스크롤**: overflow-y-auto (내부 콘텐츠 스크롤)
 - **구조**: 탭 UI (Status/Occupancy/Distribution)
 - **내용**:
   - Status 탭: Location Status (위치 상태 정보), Event List (이벤트 목록)
@@ -252,10 +255,11 @@ graph TB
 - **위치**: 화면 하단 고정 (fixed bottom-0)
 - **크기**: 
   - 너비: left-0 right-80 (RightPanel 제외)
-  - 높이: 기본 260px (DEFAULT_PANEL_HEIGHT), 조절 가능
+  - 높이: 기본 h-96 (384px), 조절 가능
 - **구조**:
   - KpiStrip (상단, 고정)
-  - WorklistTable (하단, 스크롤 가능)
+  - WorklistTable 컨테이너 (하단, overflow-auto)
+    - 스크롤: overflow-auto (세로 스크롤 활성화)
     - 간소화된 컬럼: Gate, Title, Due, Score만 표시
     - 상세 정보는 DetailDrawer에서 확인 (Triggers 포함)
 - **Z-index**: z-40
@@ -615,6 +619,14 @@ graph LR
 - **메인 콘텐츠 상단 여백**: pt-24 (헤더 높이 반영)
 - **데스크탑 하단 여백**: lg:pb-96 (HVDC 패널 겹침 방지)
 
+### 레이아웃 컨테이너 높이 설정
+
+- **루트 컨테이너**: `min-h-screen` (최소 화면 높이, 콘텐츠에 따라 확장 가능)
+- **메인 flex wrapper**: `min-h-screen` (최소 화면 높이 보장)
+- **MapView 컨테이너**: `min-h-0` (flex 컨테이너 내 스크롤 영역 보존)
+- **RightPanel 컨테이너**: `min-h-0` (flex 컨테이너 내 스크롤 영역 보존)
+- **WorklistTable 컨테이너**: `overflow-auto` (세로 스크롤 활성화)
+
 ### Z-index 계층
 
 - **HeaderBar**: z-10 (기본)
@@ -717,9 +729,9 @@ sequenceDiagram
 
 ---
 
-**최종 업데이트**: 2026-02-07
+**최종 업데이트**: 2026-02-09
 
-**최근 변경사항** (2026-02-05~2026-02-07):
+**최근 변경사항** (2026-02-05~2026-02-09):
 - 히트맵 강도 범례 추가 (낮음~매우 높음)
 - 줌 기반 레이어 가시성 구현 (히트맵/상태/POI 레이어 동적 표시)
 - POI 라벨 컴팩트/상세 모드 전환
@@ -728,3 +740,5 @@ sequenceDiagram
 - KPI 요약 스트립 헤더 고정 (2행 구조)
 - 레이아웃 간격 조정 (HVDC 패널 겹침 방지)
 - HVDC 워크리스트 간소화 (핵심 컬럼만, 상세는 DetailDrawer)
+- **2026-02-08**: 루트 컨테이너 overflow-hidden 제거, Desktop WorklistTable 세로 스크롤 활성화 (overflow-auto)
+- **2026-02-09**: 레이아웃 컨테이너 높이 설정 최적화 (min-h-screen 루트/래퍼, min-h-0 MapView/RightPanel), 패널 스크롤 영역 보존
