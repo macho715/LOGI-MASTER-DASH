@@ -8,7 +8,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Changed (2026-02-09)
-- logistics-dashboard: allow main layout container to grow naturally to preserve panel scroll regions
+- logistics-dashboard: adjusted UnifiedLayout min-height sizing to allow body scrolling while keeping panel-local scroll
 
 ### Changed (2026-02-08)
 - logistics-dashboard: removed top-level overflow lock so scroll remains scoped to worklist/right panel containers
