@@ -4,6 +4,13 @@ import { buildMockLocationStatuses } from "@/lib/api"
 import { ontologyLocations } from "@/lib/data/ontology-locations"
 import type { LocationStatus, StatusCode } from "@/types/logistics"
 
+const EXCLUDED_STATUS_LOCATION_IDS = new Set(["loc-mosb-sct-office", "mosb-sct-office"])
+
+function isExcludedStatusLocation(location_id: string): boolean {
+  const normalized = location_id.trim().toLowerCase()
+  return EXCLUDED_STATUS_LOCATION_IDS.has(normalized)
+}
+
 function mapDbStatusToStatusCode(status: string | null): StatusCode {
   const normalized = (status ?? "").toUpperCase()
   if (normalized === "WARNING" || normalized === "WARN") return "WARNING"
@@ -19,7 +26,9 @@ function normalizeOccupancyRate(value: number | string | null): number {
 }
 
 export async function GET() {
-  const fallbackStatuses = buildMockLocationStatuses(ontologyLocations)
+  const fallbackStatuses = buildMockLocationStatuses(ontologyLocations).filter(
+    (status) => !isExcludedStatusLocation(status.location_id),
+  )
 
   try {
     const { data, error } = await supabase
@@ -34,7 +43,12 @@ export async function GET() {
     }
 
     const statuses: LocationStatus[] = data
-      .filter((row) => typeof row.location_id === "string" && row.location_id.length > 0)
+      .filter(
+        (row) =>
+          typeof row.location_id === "string" &&
+          row.location_id.length > 0 &&
+          !isExcludedStatusLocation(row.location_id),
+      )
       .map((row) => ({
         location_id: row.location_id,
         status_code: mapDbStatusToStatusCode(row.status),

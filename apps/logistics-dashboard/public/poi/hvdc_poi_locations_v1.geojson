@@ -123,23 +123,6 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "mosb-samsung-yard",
-        "code": "MOSB-SAM",
-        "name": "MOSB – Samsung Yard(대표)",
-        "category": "YARD",
-        "summary": "Yard · Samsung (rep.)"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          54.46685,
-          24.32479
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "id": "zayed-port",
         "code": "MZP",
         "name": "Mina Zayed Port(대표)",

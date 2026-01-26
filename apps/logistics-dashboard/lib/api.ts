@@ -16,6 +16,13 @@ const SITE_TYPE_BY_POI_CATEGORY: Record<string, Location["siteType"]> = {
   AIRPORT: "OTHER",
 }
 
+const EXCLUDED_STATUS_LOCATION_IDS = new Set(["loc-mosb-sct-office", "mosb-sct-office"])
+
+function isExcludedStatusLocation(location_id: string): boolean {
+  const normalized = location_id.trim().toLowerCase()
+  return EXCLUDED_STATUS_LOCATION_IDS.has(normalized)
+}
+
 function getFallbackLocations(): Location[] {
   if (ontologyLocations.length > 0) {
     return ontologyLocations
@@ -37,12 +44,14 @@ function buildMockLocationStatuses(locations: Location[]): LocationStatus[] {
 
   if (locations.length === 0) return []
 
-  return locations.map((location, index) => ({
-    location_id: location.location_id,
-    occupancy_rate: Number((0.35 + ((index * 0.17) % 0.55)).toFixed(2)),
-    status_code: statusCodeCycle[index % statusCodeCycle.length],
-    last_updated: now,
-  }))
+  return locations
+    .filter((location) => !isExcludedStatusLocation(location.location_id))
+    .map((location, index) => ({
+      location_id: location.location_id,
+      occupancy_rate: Number((0.35 + ((index * 0.17) % 0.55)).toFixed(2)),
+      status_code: statusCodeCycle[index % statusCodeCycle.length],
+      last_updated: now,
+    }))
 }
 
 const fallbackLocations = getFallbackLocations()

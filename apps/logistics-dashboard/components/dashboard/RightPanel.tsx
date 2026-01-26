@@ -13,7 +13,13 @@ export function RightPanel() {
   const locationsById = useOpsStore((state) => state.locationsById)
   const statusByLocationId = useOpsStore((state) => state.locationStatusesById)
 
-  const locations = useMemo(() => Object.values(locationsById), [locationsById])
+  const locations = useMemo(
+    () =>
+      Object.values(locationsById).filter(
+        (loc) => loc.location_id.toLowerCase() !== "loc-mosb-sct-office",
+      ),
+    [locationsById],
+  )
 
   const statusCounts = useMemo(() => {
     const statuses = Object.values(statusByLocationId)
@@ -72,13 +78,13 @@ export function RightPanel() {
                       className="flex items-center justify-between px-2 py-1.5 rounded-md hover:bg-accent/50 transition-colors"
                     >
                       <div className="flex-1 min-w-0">
-                        <div className="text-xs font-medium text-foreground truncate">{loc.name}</div>
-                        <div className="text-[10px] text-muted-foreground truncate">
+                        <div className="text-sm font-medium text-foreground truncate">{loc.name}</div>
+                        <div className="text-xs text-muted-foreground truncate">
                           {status?.last_updated ? formatInDubaiTimezone(status.last_updated) : "N/A"}
                         </div>
                       </div>
                       <div className="flex items-center gap-2 shrink-0">
-                        <span className="text-xs font-mono text-foreground">
+                        <span className="text-sm font-mono text-foreground">
                           {status ? `${Math.round(status.occupancy_rate * 100)}%` : "-"}
                         </span>
                         <StatusBadge status={status?.status_code ?? "OK"} />
@@ -102,14 +108,14 @@ export function RightPanel() {
             ) : (
               <ResponsiveContainer width="100%" height={160}>
                 <BarChart data={occupancyData} layout="vertical" margin={{ left: 0, right: 10 }}>
-                  <XAxis type="number" domain={[0, 100]} tick={{ fontSize: 10 }} stroke="#888" />
-                  <YAxis type="category" dataKey="name" width={50} tick={{ fontSize: 10 }} stroke="#888" />
+                  <XAxis type="number" domain={[0, 100]} tick={{ fontSize: 11 }} stroke="#888" />
+                  <YAxis type="category" dataKey="name" width={56} tick={{ fontSize: 11 }} stroke="#888" />
                   <Tooltip
                     content={({ active, payload }) => {
                       if (active && payload?.[0]) {
                         const data = payload[0].payload
                         return (
-                          <div className="bg-popover border border-border rounded-md p-2 shadow-md text-xs">
+                          <div className="bg-popover border border-border rounded-md p-2 shadow-md text-sm">
                             <div className="font-medium">{data.fullName}</div>
                             <div>Occupancy: {data.occupancy}%</div>
                             <div>Status: {data.status}</div>
@@ -166,7 +172,7 @@ export function RightPanel() {
                         if (active && payload?.[0]) {
                           const data = payload[0].payload
                           return (
-                            <div className="bg-popover border border-border rounded-md p-2 shadow-md text-xs">
+                            <div className="bg-popover border border-border rounded-md p-2 shadow-md text-sm">
                               <div className="font-medium">{data.name}</div>
                               <div>Count: {data.value}</div>
                             </div>
@@ -181,7 +187,7 @@ export function RightPanel() {
             )}
             <div className="flex justify-center gap-4 mt-2">
               {statusData.map((item) => (
-                <div key={item.name} className="flex items-center gap-1.5 text-xs">
+                <div key={item.name} className="flex items-center gap-1.5 text-sm">
                   <div className="w-2.5 h-2.5 rounded-full" style={{ backgroundColor: item.color }} />
                   <span className="text-muted-foreground">{item.name}</span>
                   <span className="font-medium text-foreground">{item.value}</span>
@@ -203,7 +209,7 @@ function StatusBadge({ status }: { status: "OK" | "WARNING" | "CRITICAL" }) {
   }
 
   return (
-    <Badge variant="outline" className={`text-[10px] px-1.5 py-0 ${variants[status]}`}>
+    <Badge variant="outline" className={`text-xs px-2 py-0 ${variants[status]}`}>
       {status}
     </Badge>
   )

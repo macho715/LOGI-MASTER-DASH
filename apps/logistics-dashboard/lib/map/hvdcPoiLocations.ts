@@ -110,6 +110,22 @@ export const HVDC_POIS: HvdcPoi[] = [
     "displayLabel": "DSV OFFICE"
   },
   {
+    "id": "dsv-inland-warehouse-m44",
+    "code": "DSV-WH",
+    "name": "DSV Inland Warehouse (M-44)",
+    "category": "WAREHOUSE",
+    "summary": "Warehouse · DSV Inland WH",
+    "coordinates": [
+      54.47772,
+      24.347077
+    ],
+    "labelOffset": [
+      0,
+      18
+    ],
+    "displayLabel": "DSV WAREHOUSE"
+  },
+  {
     "id": "mosb-yard",
     "code": "MOSB-YARD",
     "name": "MOSB YARD",
@@ -140,22 +156,6 @@ export const HVDC_POIS: HvdcPoi[] = [
       18
     ],
     "displayLabel": "MOSB-SCT"
-  },
-  {
-    "id": "mosb-samsung-yard",
-    "code": "MOSB-SAM",
-    "name": "MOSB – Samsung Yard(대표)",
-    "category": "YARD",
-    "summary": "Yard · Samsung (rep.)",
-    "coordinates": [
-      54.46685,
-      24.32479
-    ],
-    "labelOffset": [
-      80,
-      -10
-    ],
-    "displayLabel": "MOSB-SAM"
   },
   {
     "id": "zayed-port",

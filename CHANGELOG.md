@@ -16,7 +16,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed (2026-02-05)
 - logistics-dashboard: heatmap events now gain extra weight when inside geofence areas
 - logistics-dashboard mock events/locations fallback now uses ontology/POI sources with reduced coordinate jitter for closer heatmap alignment
-- logistics-dashboard POI labels emphasize MOSB yard sites and add DSV warehouse to the map
+- logistics-dashboard POI labels emphasize MOSB yard sites, add DSV warehouse labeling, and filter MOSB-SCT office from status views
+- logistics-dashboard base typography contrast increased for better readability
 
 ### Changed (2026-01-26)
 - logistics-dashboard: POI 라벨 크기/패딩/색상 대비를 다크 테마에 맞게 조정하여 가독성 강화
