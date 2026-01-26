@@ -10,6 +10,7 @@ const SITE_TYPE_BY_POI_CATEGORY: Record<string, Location["siteType"]> = {
   HVDC_SITE: "SITE",
   PORT: "PORT",
   BERTH: "BERTH",
+  WAREHOUSE: "MOSB_WH",
   YARD: "MOSB_WH",
   OFFICE: "OTHER",
   AIRPORT: "OTHER",

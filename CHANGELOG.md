@@ -7,11 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-### Changed (2026-01-26)
-- logistics-dashboard: POI 라벨 크기/패딩/색상 대비를 다크 테마에 맞게 조정하여 가독성 강화
-
 ### Changed (2026-02-05)
 - logistics-dashboard mock events/locations fallback now uses ontology/POI sources with reduced coordinate jitter for closer heatmap alignment
+- logistics-dashboard POI labels emphasize MOSB yard sites and add DSV warehouse to the map
+
+### Changed (2026-01-26)
+- logistics-dashboard: POI 라벨 크기/패딩/색상 대비를 다크 테마에 맞게 조정하여 가독성 강화
 
 ### Added (2026-01-25)
 - dash 패치 적용 계획 문서 추가 (`docs/DASH_PLAN.md`) - 맵 POI·StageCardsStrip·GlobalSearch 실제 작업 계획

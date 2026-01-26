@@ -3,6 +3,12 @@ import type { Layer } from '@deck.gl/core';
 
 import { HVDC_POIS, poiColor, type HvdcPoi } from '../../lib/map/hvdcPoiLocations';
 
+const EMPHASIZED_POI_IDS = new Set(['mosb-yard', 'mosb-samsung-yard']);
+
+function getLabelSize(poi: HvdcPoi): number {
+  return EMPHASIZED_POI_IDS.has(poi.id) ? 13 : 11;
+}
+
 /**
  * HVDC POI layers (static coordinates).
  *
@@ -32,11 +38,11 @@ export function createHvdcPoiLayers(): Layer[] {
     pickable: false,
     billboard: true,
     sizeUnits: 'pixels',
-    sizeMinPixels: 10,
-    sizeMaxPixels: 14,
+    sizeMinPixels: 11,
+    sizeMaxPixels: 15,
     getPosition: (d) => d.coordinates,
     getText: (d) => d.displayLabel ?? `${d.code} · ${d.summary}`,
-    getSize: () => 11,
+    getSize: (d) => getLabelSize(d),
     getColor: () => [10, 10, 10, 235],
     getBackgroundColor: () => [255, 255, 255, 220],
     background: true,
