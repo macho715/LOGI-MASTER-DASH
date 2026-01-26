@@ -7,11 +7,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed (2026-01-26)
+- logistics-dashboard: POI 라벨 크기/패딩/색상 대비를 다크 테마에 맞게 조정하여 가독성 강화
+
+### Changed (2026-02-05)
+- logistics-dashboard mock events/locations fallback now uses ontology/POI sources with reduced coordinate jitter for closer heatmap alignment
+
 ### Added (2026-01-25)
 - dash 패치 적용 계획 문서 추가 (`docs/DASH_PLAN.md`) - 맵 POI·StageCardsStrip·GlobalSearch 실제 작업 계획
 - dash 패치 관련 문서 링크 추가 (README, STATUS, plan, NEXT_STEPS_PRIORITY 등)
 - 맵 POI 레이어, StageCardsStrip, GlobalSearch 기능 설명 추가 (README 주요 기능 섹션)
 - Supabase 하이브리드 적재 전략 문서 보완 (`docs/SUPABASE_LOADING_HYBRID_STRATEGY.md`)
+- logistics-dashboard: DSV M-44 창고 POI 추가 (좌표 SSOT 정합)
 
 ### Added (2026-01-25)
 - Phase 2~6 완료: DDL 적용, CSV 적재 (871 shipments + 928 events), Gate 1 QA, Realtime 활성화
@@ -25,6 +32,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - ✅ Vercel 배포 성공: monorepo 구조에서 Next.js 감지 및 빌드 정상 동작 확인
   - 배포 URL: https://logimasterdash-rkz2dqsc8-chas-projects-08028e73.vercel.app/
   - 해결된 문제: Next.js 감지 실패, pnpm 워크스페이스 해결, monorepo 빌드 설정
+- logistics-dashboard: 위치 상태 fallback이 ontology 위치 ID(LOC-*) 기준으로 생성되도록 정합성 개선
 - Option-C ETL: `_extract_ids()`가 `SCT SHIP NO.`/`SCT SHIP NO`도 인식하도록 보완 (status JSON 호환)
 - `useInitialDataLoad`: 초기 fetch 실패 시 API 동일 포맷의 fallback payload로 스토어 채우고 로딩 종료
 - `load_csv.py`: Option-C CSV의 빈 숫자/시간 필드를 NULL로 처리하여 적재 오류 방지

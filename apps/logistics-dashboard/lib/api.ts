@@ -1,36 +1,61 @@
-import type { Location, LocationStatus, Event } from "@/types/logistics"
+import type { Location, LocationStatus, Event, StatusCode } from "@/types/logistics"
 import { ontologyLocations } from "@/lib/data/ontology-locations"
+import { POI_LOCATIONS } from "@/lib/map/poiLocations"
 
 const API_BASE = process.env.NEXT_PUBLIC_API_BASE || ""
 
-// Fallback for location-status / events (ontology used for locations API fallback)
-const mockLocations: Location[] = [
-  { location_id: "site-1", name: "SITE Alpha", siteType: "SITE", lat: 24.4539, lon: 54.3773 },
-  { location_id: "site-2", name: "SITE Bravo", siteType: "SITE", lat: 24.4839, lon: 54.3573 },
-  { location_id: "site-3", name: "SITE Charlie", siteType: "SITE", lat: 24.4239, lon: 54.4073 },
-  { location_id: "site-4", name: "SITE Delta", siteType: "SITE", lat: 24.4639, lon: 54.4273 },
-  { location_id: "mosb-wh", name: "MOSB Warehouse", siteType: "MOSB_WH", lat: 24.5039, lon: 54.3173 },
-  { location_id: "port-1", name: "Khalifa Port", siteType: "PORT", lat: 24.8029, lon: 54.6453 },
-  { location_id: "berth-1", name: "Berth A1", siteType: "BERTH", lat: 24.7929, lon: 54.6353 },
-  { location_id: "extra-1", name: "Staging Area", siteType: "OTHER", lat: 24.4139, lon: 54.3373 },
-]
+const COORD_JITTER_DEGREES = 0.002
 
-const mockStatuses: LocationStatus[] = [
-  { location_id: "site-1", occupancy_rate: 0.75, status_code: "OK", last_updated: new Date().toISOString() },
-  { location_id: "site-2", occupancy_rate: 0.92, status_code: "WARNING", last_updated: new Date().toISOString() },
-  { location_id: "site-3", occupancy_rate: 0.45, status_code: "OK", last_updated: new Date().toISOString() },
-  { location_id: "site-4", occupancy_rate: 0.98, status_code: "CRITICAL", last_updated: new Date().toISOString() },
-  { location_id: "mosb-wh", occupancy_rate: 0.6, status_code: "OK", last_updated: new Date().toISOString() },
-  { location_id: "port-1", occupancy_rate: 0.85, status_code: "WARNING", last_updated: new Date().toISOString() },
-  { location_id: "berth-1", occupancy_rate: 0.3, status_code: "OK", last_updated: new Date().toISOString() },
-  { location_id: "extra-1", occupancy_rate: 0.55, status_code: "OK", last_updated: new Date().toISOString() },
-]
+const SITE_TYPE_BY_POI_CATEGORY: Record<string, Location["siteType"]> = {
+  HVDC_SITE: "SITE",
+  PORT: "PORT",
+  BERTH: "BERTH",
+  YARD: "MOSB_WH",
+  OFFICE: "OTHER",
+  AIRPORT: "OTHER",
+}
+
+function getFallbackLocations(): Location[] {
+  if (ontologyLocations.length > 0) {
+    return ontologyLocations
+  }
+
+  return POI_LOCATIONS.map((poi) => ({
+    location_id: poi.id,
+    name: poi.name,
+    siteType: SITE_TYPE_BY_POI_CATEGORY[poi.category] ?? "OTHER",
+    lat: poi.latitude,
+    lon: poi.longitude,
+  }))
+}
+
+const statusCodeCycle: StatusCode[] = ["OK", "WARNING", "OK", "CRITICAL"]
+
+function buildMockLocationStatuses(locations: Location[]): LocationStatus[] {
+  const now = new Date().toISOString()
+
+  if (locations.length === 0) return []
+
+  return locations.map((location, index) => ({
+    location_id: location.location_id,
+    occupancy_rate: Number((0.35 + ((index * 0.17) % 0.55)).toFixed(2)),
+    status_code: statusCodeCycle[index % statusCodeCycle.length],
+    last_updated: now,
+  }))
+}
+
+const fallbackLocations = getFallbackLocations()
+const mockStatuses = buildMockLocationStatuses(fallbackLocations)
 
 // Generate mock events (uses ontology locations when available)
 function generateMockEvents(): Event[] {
   const events: Event[] = []
   const statuses = ["PICKUP", "IN_TRANSIT", "DELIVERED", "DELAYED", "HOLD"]
-  const locs = ontologyLocations.length ? ontologyLocations : mockLocations
+  const locs = fallbackLocations
+
+  if (locs.length === 0) {
+    return events
+  }
 
   for (let i = 0; i < 50; i++) {
     const location = locs[Math.floor(Math.random() * locs.length)]
@@ -43,8 +68,8 @@ function generateMockEvents(): Event[] {
       shpt_no: `SHPT-${1000 + i}`,
       status: statuses[Math.floor(Math.random() * statuses.length)],
       location_id: location.location_id,
-      lat: location.lat + (Math.random() - 0.5) * 0.05,
-      lon: location.lon + (Math.random() - 0.5) * 0.05,
+      lat: location.lat + (Math.random() - 0.5) * COORD_JITTER_DEGREES,
+      lon: location.lon + (Math.random() - 0.5) * COORD_JITTER_DEGREES,
       remark: Math.random() > 0.7 ? "Sample remark" : undefined,
     })
   }
@@ -85,4 +110,4 @@ export async function fetchEvents(): Promise<Event[]> {
   }
 }
 
-export { mockLocations, mockStatuses }
+export { buildMockLocationStatuses, fallbackLocations as mockLocations, mockStatuses }

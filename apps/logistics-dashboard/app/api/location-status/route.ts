@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server"
 import { supabaseAdmin as supabase } from "@/lib/supabase"
-import { mockStatuses } from "@/lib/api"
+import { buildMockLocationStatuses } from "@/lib/api"
+import { ontologyLocations } from "@/lib/data/ontology-locations"
 import type { LocationStatus, StatusCode } from "@/types/logistics"
 
 function mapDbStatusToStatusCode(status: string | null): StatusCode {
@@ -18,6 +19,8 @@ function normalizeOccupancyRate(value: number | string | null): number {
 }
 
 export async function GET() {
+  const fallbackStatuses = buildMockLocationStatuses(ontologyLocations)
+
   try {
     const { data, error } = await supabase
       .from("location_statuses")
@@ -27,7 +30,7 @@ export async function GET() {
     if (error) throw error
     if (!data || data.length === 0) {
       console.warn("No location statuses found in DB, using mock data")
-      return NextResponse.json(mockStatuses)
+      return NextResponse.json(fallbackStatuses)
     }
 
     const statuses: LocationStatus[] = data
@@ -41,12 +44,12 @@ export async function GET() {
 
     if (statuses.length === 0) {
       console.warn("Location statuses missing IDs, using mock data")
-      return NextResponse.json(mockStatuses)
+      return NextResponse.json(fallbackStatuses)
     }
 
     return NextResponse.json(statuses)
   } catch (error) {
     console.warn("Error fetching location statuses, using mock data")
-    return NextResponse.json(mockStatuses)
+    return NextResponse.json(fallbackStatuses)
   }
 }

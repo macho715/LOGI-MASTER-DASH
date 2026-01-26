@@ -1,20 +1,37 @@
 import { NextResponse } from "next/server"
 import { supabaseAdmin as supabase } from "@/lib/supabase"
+import { ontologyLocations } from "@/lib/data/ontology-locations"
+import { POI_LOCATIONS } from "@/lib/map/poiLocations"
 import type { Event } from "@/types/logistics"
+
+const COORD_JITTER_DEGREES = 0.002
+
+const SITE_TYPE_BY_POI_CATEGORY = {
+  HVDC_SITE: "SITE",
+  PORT: "PORT",
+  BERTH: "BERTH",
+  YARD: "MOSB_WH",
+  OFFICE: "OTHER",
+  AIRPORT: "OTHER",
+} as const
 
 function generateMockEvents(): Event[] {
   const events: Event[] = []
   const statuses = ["PICKUP", "IN_TRANSIT", "DELIVERED", "DELAYED", "HOLD"]
-  const mockLocations = [
-    { location_id: "site-1", lat: 24.4539, lon: 54.3773 },
-    { location_id: "site-2", lat: 24.4839, lon: 54.3573 },
-    { location_id: "site-3", lat: 24.4239, lon: 54.4073 },
-    { location_id: "site-4", lat: 24.4639, lon: 54.4273 },
-    { location_id: "mosb-wh", lat: 24.5039, lon: 54.3173 },
-    { location_id: "port-1", lat: 24.8029, lon: 54.6453 },
-    { location_id: "berth-1", lat: 24.7929, lon: 54.6353 },
-    { location_id: "extra-1", lat: 24.4139, lon: 54.3373 },
-  ]
+  const mockLocations =
+    ontologyLocations.length > 0
+      ? ontologyLocations
+      : POI_LOCATIONS.map((poi) => ({
+          location_id: poi.id,
+          name: poi.name,
+          siteType: SITE_TYPE_BY_POI_CATEGORY[poi.category] ?? "OTHER",
+          lat: poi.latitude,
+          lon: poi.longitude,
+        }))
+
+  if (mockLocations.length === 0) {
+    return events
+  }
 
   for (let i = 0; i < 50; i += 1) {
     const location = mockLocations[Math.floor(Math.random() * mockLocations.length)]
@@ -27,8 +44,8 @@ function generateMockEvents(): Event[] {
       shpt_no: `SHPT-${1000 + i}`,
       status: statuses[Math.floor(Math.random() * statuses.length)],
       location_id: location.location_id,
-      lat: location.lat + (Math.random() - 0.5) * 0.05,
-      lon: location.lon + (Math.random() - 0.5) * 0.05,
+      lat: location.lat + (Math.random() - 0.5) * COORD_JITTER_DEGREES,
+      lon: location.lon + (Math.random() - 0.5) * COORD_JITTER_DEGREES,
       remark: Math.random() > 0.7 ? "Sample remark" : undefined,
     })
   }

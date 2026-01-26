@@ -66,6 +66,18 @@ export const POI_LOCATIONS: ReadonlyArray<PoiLocation> = [
     displayLabel: "DSV OFFICE",
   },
   {
+    id: "dsv-mussafah-warehouse-m44",
+    code: "DSV-M44",
+    name: "DSV M-44 Inland Warehouse(대표)",
+    category: "WAREHOUSE",
+    latitude: 24.347077,
+    longitude: 54.47772,
+    summary: "Warehouse - DSV (M-44)",
+    priority: 790,
+    tags: ["DSV", "warehouse"],
+    displayLabel: "DSV WAREHOUSE",
+  },
+  {
     id: "mosb-yard",
     code: "MOSB-YARD",
     name: "MOSB YARD",
