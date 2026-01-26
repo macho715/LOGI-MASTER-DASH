@@ -19,8 +19,6 @@ export type PoiLayersOptions = {
   labelZoomThreshold?: number
 }
 
-const EMPHASIZED_POI_IDS = new Set(["mosb-yard", "mosb-samsung-yard"])
-
 function categoryColor(category: PoiCategory): [number, number, number, number] {
   switch (category) {
     case "HVDC_SITE":
@@ -45,11 +43,6 @@ function getPoiPosition(poi: PoiLocation): [number, number] {
     return [poi.longitude + poi.displayJitter[0], poi.latitude + poi.displayJitter[1]]
   }
   return [poi.longitude, poi.latitude]
-}
-
-function getLabelSize(poi: PoiLocation, selectedPoiId?: string | null): number {
-  const baseSize = EMPHASIZED_POI_IDS.has(poi.id) ? 14 : 12
-  return poi.id === selectedPoiId ? baseSize + 2 : baseSize
 }
 
 export function createPoiLayers(opts: PoiLayersOptions): Layer[] {
@@ -97,14 +90,14 @@ export function createPoiLayers(opts: PoiLayersOptions): Layer[] {
     getPosition: getPoiPosition,
     getText: (d) => d.displayLabel ?? `${d.code} - ${d.summary}`,
     sizeUnits: "pixels",
-    getSize: (d) => getLabelSize(d, selectedPoiId),
+    getSize: (d) => (d.id === selectedPoiId ? 13 : 12),
     getPixelOffset: (d) => d.labelOffsetPx ?? [0, -16],
     getTextAnchor: "middle",
     getAlignmentBaseline: "bottom",
-    getColor: [226, 232, 240, 255],
+    getColor: [226, 232, 240, 235],
     background: true,
     getBackgroundColor: [15, 23, 42, 230],
-    backgroundPadding: [8, 6],
+    backgroundPadding: [6, 4],
     extensions: [new CollisionFilterExtension()],
     // @ts-ignore - getCollisionPriority may not be in type definitions
     getCollisionPriority: (d: PoiLocation) => d.priority ?? 0,

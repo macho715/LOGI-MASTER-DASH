@@ -20,6 +20,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - 맵 POI 레이어, StageCardsStrip, GlobalSearch 기능 설명 추가 (README 주요 기능 섹션)
 - Supabase 하이브리드 적재 전략 문서 보완 (`docs/SUPABASE_LOADING_HYBRID_STRATEGY.md`)
 - logistics-dashboard: DSV M-44 창고 POI 추가 (좌표 SSOT 정합)
+- logistics-dashboard: MOSB-SCT office POI 추가 및 POI 라벨 대비 개선
 
 ### Added (2026-01-25)
 - Phase 2~6 완료: DDL 적용, CSV 적재 (871 shipments + 928 events), Gate 1 QA, Realtime 활성화
