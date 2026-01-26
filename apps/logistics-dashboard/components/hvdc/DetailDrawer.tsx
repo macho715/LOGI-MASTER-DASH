@@ -90,6 +90,23 @@ export function DetailDrawer({ mode }: { mode: "sidepanel" | "overlay" }) {
               <KV k="Owner" v={row.owner ?? "-"} />
               <KV k="Final" v={row.finalLocation ?? "-"} />
             </div>
+            <div className="rounded-lg border border-border bg-muted/40 p-3 text-xs">
+              <div className="text-[11px] text-muted-foreground">Triggers</div>
+              {row.triggers && row.triggers.length > 0 ? (
+                <div className="mt-2 flex flex-wrap gap-1">
+                  {row.triggers.map((trigger) => (
+                    <span
+                      key={trigger}
+                      className="rounded border border-border bg-muted px-1.5 py-0.5 text-[10px] text-muted-foreground"
+                    >
+                      {trigger}
+                    </span>
+                  ))}
+                </div>
+              ) : (
+                <div className="mt-2 text-muted-foreground">No triggers reported.</div>
+              )}
+            </div>
             <pre className="max-h-64 overflow-auto rounded-md bg-muted/70 p-3 text-xs text-muted-foreground">
               {JSON.stringify(row.meta ?? row, null, 2)}
             </pre>

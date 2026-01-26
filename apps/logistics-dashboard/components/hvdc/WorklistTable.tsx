@@ -27,19 +27,14 @@ export function WorklistTable() {
         <thead className="sticky top-0 bg-muted/70 text-muted-foreground">
           <tr>
             <th className="px-3 py-2 text-left">Gate</th>
-            <th className="px-3 py-2 text-left">Flow</th>
             <th className="px-3 py-2 text-left">Title</th>
-            <th className="px-3 py-2 text-left">ETA</th>
             <th className="px-3 py-2 text-left">Due</th>
-            <th className="px-3 py-2 text-left">Location</th>
-            <th className="px-3 py-2 text-left">Triggers</th>
             <th className="px-3 py-2 text-right">Score</th>
           </tr>
         </thead>
         <tbody>
           {visible.map((row) => {
             const active = row.id === selectedCaseId
-            const triggers = row.triggers ?? []
             return (
               <tr
                 key={row.id}
@@ -47,40 +42,26 @@ export function WorklistTable() {
                   active ? "bg-accent/60" : "bg-background"
                 }`}
                 onClick={() => actions.selectCase(row.id)}
+                onKeyDown={(event) => {
+                  if (event.key === "Enter" || event.key === " ") {
+                    event.preventDefault()
+                    actions.selectCase(row.id)
+                  }
+                }}
                 aria-label={`Open case ${row.title}`}
+                aria-selected={active}
+                tabIndex={0}
               >
                 <td className="px-3 py-2">
                   <span className={`inline-flex rounded-md border px-2 py-0.5 text-[11px] font-semibold ${gateClass(row.gate)}`}>
                     {row.gate}
                   </span>
                 </td>
-                <td className="px-3 py-2 tabular-nums text-muted-foreground">
-                  {typeof row.flowCode === "number" ? row.flowCode : "-"}
-                </td>
                 <td className="px-3 py-2">
                   <div className="font-medium text-foreground">{row.title}</div>
                   <div className="text-[11px] text-muted-foreground">{row.subtitle ?? "-"}</div>
                 </td>
-                <td className="px-3 py-2 text-muted-foreground">{row.eta ?? "-"}</td>
                 <td className="px-3 py-2 text-muted-foreground">{row.dueAt ?? "-"}</td>
-                <td className="px-3 py-2 text-muted-foreground">{row.currentLocation ?? "-"}</td>
-                <td className="px-3 py-2">
-                  <div className="flex flex-wrap gap-1">
-                    {triggers.slice(0, 3).map((trigger) => (
-                      <span
-                        key={trigger}
-                        className="rounded border border-border bg-muted px-1.5 py-0.5 text-[10px] text-muted-foreground"
-                      >
-                        {trigger}
-                      </span>
-                    ))}
-                    {triggers.length > 3 && (
-                      <span className="rounded border border-border bg-muted px-1.5 py-0.5 text-[10px] text-muted-foreground">
-                        +{triggers.length - 3}
-                      </span>
-                    )}
-                  </div>
-                </td>
                 <td className="px-3 py-2 text-right tabular-nums text-foreground">
                   {typeof row.score === "number" ? row.score.toFixed(2) : "-"}
                 </td>
@@ -89,7 +70,7 @@ export function WorklistTable() {
           })}
           {visible.length === 0 && (
             <tr>
-              <td className="px-3 py-6 text-center text-muted-foreground" colSpan={8}>
+              <td className="px-3 py-6 text-center text-muted-foreground" colSpan={4}>
                 No results (check filters)
               </td>
             </tr>

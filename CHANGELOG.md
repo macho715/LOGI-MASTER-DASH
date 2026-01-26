@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed (2026-02-07)
 - logistics-dashboard: fixed KPI summary strip to the header and adjusted layout spacing to avoid HVDC overlap
 - logistics-dashboard: simplified RightPanel to keep detailed status charts without duplicate summary values
+- logistics-dashboard: HVDC worklist table now shows core status columns only, with triggers/details moved into the detail drawer and a shorter default bottom panel height
 
 ### Changed (2026-02-06)
 - logistics-dashboard: heatmap radius now scales with zoom level for clearer density at different map scales

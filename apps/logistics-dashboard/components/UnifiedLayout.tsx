@@ -17,7 +17,7 @@ import type { HvdcBucket } from "@/lib/hvdc/buckets"
 
 const MIN_PANEL_HEIGHT = 200
 const MAX_PANEL_HEIGHT = 600
-const DEFAULT_PANEL_HEIGHT = 320
+const DEFAULT_PANEL_HEIGHT = 260
 
 export function UnifiedLayout() {
   const mapDataLoadDone = useRef(false)
@@ -154,7 +154,7 @@ export function UnifiedLayout() {
         className="hidden lg:block fixed bottom-0 left-0 right-80 bg-card border-t border-border z-40"
         aria-label="HVDC Worklist Panel"
       >
-        <div className="h-96 flex flex-col">
+        <div className="h-80 flex flex-col">
           <div className="p-4 border-b space-y-3">
             <StageCardsStrip rows={worklistRows} onNavigateBucket={handleNavigateBucket} />
             <KpiStrip />
@@ -197,7 +197,7 @@ export function UnifiedLayout() {
         </div>
       </div>
 
-      <div className="hidden lg:block fixed top-24 right-80 bottom-96 w-96 z-50">
+      <div className="hidden lg:block fixed top-24 right-80 bottom-80 w-96 z-50">
         <DetailDrawer mode="sidepanel" />
       </div>
       <div className="lg:hidden">
