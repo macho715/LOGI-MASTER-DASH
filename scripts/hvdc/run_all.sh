@@ -21,10 +21,10 @@ if [[ -z "${SUPABASE_DB_URL:-}" ]]; then
   exit 1
 fi
 
-python "${REPO_ROOT}/scripts/hvdc/validate_inputs.py" --repo-root "${REPO_ROOT}" --source-dir "supabass_ontol" --require-customs
+python "${REPO_ROOT}/scripts/hvdc/validate_inputs.py" --repo-root "${REPO_ROOT}" --source-dir "supabase/data/raw" --require-customs
 
 echo "[run_all] Applying DDL..."
-psql "${SUPABASE_DB_URL}" -f "${REPO_ROOT}/supabass_ontol/20260124_hvdc_layers_status_case_ops.sql"
+psql "${SUPABASE_DB_URL}" -f "${REPO_ROOT}/supabase/scripts/20260124_hvdc_layers_status_case_ops.sql"
 
 echo "[run_all] Creating baseline dashboard views (optional)..."
 psql "${SUPABASE_DB_URL}" -f "${REPO_ROOT}/supabase/migrations/20260124_create_dashboard_views.sql"
@@ -40,11 +40,11 @@ psql "${SUPABASE_DB_URL}" \
   -v do_truncate=on \
   -v status_shipments_csv="${REPO_ROOT}/hvdc_output/supabase/shipments_status.csv" \
   -v status_events_csv="${REPO_ROOT}/hvdc_output/supabase/events_status.csv" \
-  -v case_locations_csv="${REPO_ROOT}/supabase_csv_optionC_v3/locations.csv" \
-  -v case_shipments_csv="${REPO_ROOT}/supabase_csv_optionC_v3/shipments_case.csv" \
-  -v case_cases_csv="${REPO_ROOT}/supabase_csv_optionC_v3/cases.csv" \
-  -v case_flows_csv="${REPO_ROOT}/supabase_csv_optionC_v3/flows.csv" \
-  -v case_events_csv="${REPO_ROOT}/supabase_csv_optionC_v3/events_case.csv" \
+  -v case_locations_csv="${REPO_ROOT}/supabase/data/output/optionC/locations.csv" \
+  -v case_shipments_csv="${REPO_ROOT}/supabase/data/output/optionC/shipments_case.csv" \
+  -v case_cases_csv="${REPO_ROOT}/supabase/data/output/optionC/cases.csv" \
+  -v case_flows_csv="${REPO_ROOT}/supabase/data/output/optionC/flows.csv" \
+  -v case_events_csv="${REPO_ROOT}/supabase/data/output/optionC/events_case.csv" \
   -f "${REPO_ROOT}/scripts/hvdc/load_csv.psql"
 
 echo "[run_all] Gate 1 QA..."

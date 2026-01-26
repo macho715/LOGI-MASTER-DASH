@@ -542,10 +542,10 @@ def write_ops_ttl_status(
             cands.append(case_locations_csv)
         # common patterns
         cands.extend([
-            Path.cwd() / "supabase_csv_optionC_v3" / "locations.csv",
+            Path.cwd() / "supabase" / "data" / "output" / "optionC" / "locations.csv",
             Path.cwd() / "locations.csv",
-            default_hint / "supabase_csv_optionC_v3" / "locations.csv",
-            default_hint.parent / "supabase_csv_optionC_v3" / "locations.csv",
+            default_hint / "supabase" / "data" / "output" / "optionC" / "locations.csv",
+            default_hint.parent / "supabase" / "data" / "output" / "optionC" / "locations.csv",
         ])
         for p in cands:
             try:

@@ -14,15 +14,15 @@
 
 | Item | Path | OK? | Notes |
 |---|---|---:|---|
-| Status JSON | `supabass_ontol/HVDC all status.json` (or `HVDC_all_status.json`) |  |  |
-| Warehouse JSON | `supabass_ontol/hvdc_warehouse_status.json` |  |  |
-| Customs JSON (Option‑C) | `supabass_ontol/HVDC_STATUS.json` |  |  |
+| Status JSON | `supabase/data/raw/HVDC all status.json` (or `HVDC_all_status.json`) |  |  |
+| Warehouse JSON | `supabase/data/raw/hvdc_warehouse_status.json` |  |  |
+| Customs JSON (Option‑C) | `supabase/data/raw/HVDC_STATUS.json` |  |  |
 
 ---
 
 ## 2) DDL
 
-- Applied: `supabass_ontol/20260124_hvdc_layers_status_case_ops.sql`
+- Applied: `supabase/data/raw/20260124_hvdc_layers_status_case_ops.sql`
 - Result:
   - [ ] status schema created
   - [ ] case schema created
@@ -47,11 +47,11 @@
 
 | File | Expected | Exists | Row count |
 |---|---:|---:|---:|
-| `supabase_csv_optionC_v3/locations.csv` | yes |  |  |
-| `supabase_csv_optionC_v3/shipments_case.csv` | yes |  |  |
-| `supabase_csv_optionC_v3/cases.csv` | yes |  |  |
-| `supabase_csv_optionC_v3/flows.csv` | yes |  |  |
-| `supabase_csv_optionC_v3/events_case.csv` | yes |  |  |
+| `supabase/data/output/optionC/locations.csv` | yes |  |  |
+| `supabase/data/output/optionC/shipments_case.csv` | yes |  |  |
+| `supabase/data/output/optionC/cases.csv` | yes |  |  |
+| `supabase/data/output/optionC/flows.csv` | yes |  |  |
+| `supabase/data/output/optionC/events_case.csv` | yes |  |  |
 
 ---
 

@@ -236,18 +236,18 @@ c:\LOGI MASTER DASH\
 
 ---
 
-## Q6: supabass_ontol 폴더 활용 현황
+## Q6: supabase/data/raw 폴더 활용 현황
 
 ### 문의 내용
-`supabass_ontol` 여기에 있는 자료를 활용하는가?
+`supabase/data/raw` 여기에 있는 자료를 활용하는가?
 
 ### 답변 요약
 
 #### 핵심 활용 파일
 
 1. **ETL 스크립트** (데이터 변환)
-   - `Untitled-4_dashboard_ready_FULL.py` - Status SSOT 레이어 ETL
-   - `Untitled-3_dashboard_ready_FULL.py` - Option-C Case 레이어 ETL
+   - `scripts/etl/status_etl.py` - Status SSOT 레이어 ETL
+   - `scripts/etl/optionc_etl.py` - Option-C Case 레이어 ETL
 
 2. **DDL 파일** (데이터베이스 스키마)
    - `20260124_hvdc_layers_status_case_ops.sql` - Status/Case 레이어 테이블 생성
@@ -268,8 +268,8 @@ c:\LOGI MASTER DASH\
 
 | 파일/폴더 | 활용 여부 | 용도 |
 |---------|---------|------|
-| `Untitled-4_dashboard_ready_FULL.py` | ✅ 필수 | Status 레이어 ETL |
-| `Untitled-3_dashboard_ready_FULL.py` | ✅ 필수 | Case 레이어 ETL |
+| `scripts/etl/status_etl.py` | ✅ 필수 | Status 레이어 ETL |
+| `scripts/etl/optionc_etl.py` | ✅ 필수 | Case 레이어 ETL |
 | `20260124_hvdc_layers_status_case_ops.sql` | ✅ 필수 | DB 스키마 생성 |
 | `HVDC_all_status.json` | ✅ 필수 | 입력 데이터 |
 | `hvdc_warehouse_status.json` | ✅ 필수 | 입력 데이터 |
@@ -279,7 +279,7 @@ c:\LOGI MASTER DASH\
 | `RUNBOOK_HVDC_SUPABASE_SETUP.md` | ✅ 참조 | 문서 |
 
 #### 결론
-**`supabass_ontol` 폴더는 데이터 로딩 파이프라인의 핵심입니다.**
+**`supabase/data/raw` 폴더는 데이터 로딩 파이프라인의 핵심입니다.**
 - 이 폴더 없이는 데이터 적재가 불가능합니다.
 - ETL 스크립트, DDL 파일, 입력 데이터, 문서가 모두 이 폴더에 있습니다.
 
@@ -308,7 +308,7 @@ c:\LOGI MASTER DASH\
 - `REPO_EXECUTION_GUIDE_HVDC_DATA_LOADING - 복사본.md` 삭제 완료
 - `REPO_EXECUTION_GUIDE_HVDC_DATA_LOADING.md`는 루트에 이미 존재하므로 유지
 
-#### supabass_ontol 폴더 확인 결과
+#### supabase/data/raw 폴더 확인 결과
 - ✅ 필수 파일 모두 존재 (Status SSOT 레이어 실행 가능)
 - ❌ `HVDC_STATUS.json` 누락 (Option-C Case 레이어용, Status만 사용 시 불필요)
 

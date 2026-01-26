@@ -2,7 +2,7 @@
 
 > **HVDC + Logistics 통합 대시보드 데이터 적재 단계별 실행 계획**  
 > **최종 업데이트**: 2026-02-07  
-> **참조**: [RUNBOOK_HVDC_SUPABASE_SETUP.md](../supabass_ontol/RUNBOOK_HVDC_SUPABASE_SETUP.md), [README_dashboard_ready_FULL.md](../supabass_ontol/README_dashboard_ready_FULL.md)
+> **참조**: [RUNBOOK_HVDC_SUPABASE_SETUP.md](../supabase/data/raw/RUNBOOK_HVDC_SUPABASE_SETUP.md), [README_dashboard_ready_FULL.md](../supabase/data/raw/README_dashboard_ready_FULL.md)
 
 ---
 
@@ -31,16 +31,16 @@ Supabase 적재 (COPY/Import)
 ### Phase 1: 사전 준비 및 검증 (0.5일)
 
 #### 1.1 입력 파일 확인
-- [ ] `supabass_ontol/HVDC all status.json` 존재 확인
-- [ ] `supabass_ontol/hvdc_warehouse_status.json` 존재 확인
-- [ ] (Option-C용) `supabass_ontol/hvdc_excel_reporter_final_sqm_rev_3.json` 존재 확인 (✅ 우선: FLOW_CODE 포함된 처리 완료 데이터, 8,804 rows)
-- [ ] (Option-C용) `supabass_ontol/hvdc_excel_reporter_final_sqm_rev_3.csv` 존재 확인 (✅ 백업/참조용)
+- [ ] `supabase/data/raw/HVDC all status.json` 존재 확인
+- [ ] `supabase/data/raw/hvdc_warehouse_status.json` 존재 확인
+- [ ] (Option-C용) `supabase/data/raw/hvdc_excel_reporter_final_sqm_rev_3.json` 존재 확인 (✅ 우선: FLOW_CODE 포함된 처리 완료 데이터, 8,804 rows)
+- [ ] (Option-C용) `supabase/data/raw/hvdc_excel_reporter_final_sqm_rev_3.csv` 존재 확인 (✅ 백업/참조용)
 - [ ] (Option-C용) `HVDC_STATUS.json` 존재 확인
 - [ ] 파일 크기 및 형식 검증
 
 #### 1.2 ETL 스크립트 확인
-- [ ] `supabass_ontol/Untitled-4_dashboard_ready_FULL.py` 실행 가능 확인
-- [ ] `supabass_ontol/Untitled-3_dashboard_ready_FULL.py` 실행 가능 확인
+- [ ] `supabase/data/raw/scripts/etl/status_etl.py` 실행 가능 확인
+- [ ] `supabase/data/raw/scripts/etl/optionc_etl.py` 실행 가능 확인
 - [ ] Python 의존성 설치 확인 (pandas, numpy 등)
 - [ ] `flow_code_calculator.py` 존재 확인 (Option-C용)
 
@@ -63,7 +63,7 @@ Supabase 적재 (COPY/Import)
 - 상세: [Phase 2 DDL 적용 계획](../data-loading/PHASE2_DDL_APPLICATION_PLAN.md)
 
 **체크리스트**:
-- [ ] `supabass_ontol/20260124_hvdc_layers_status_case_ops.sql` 실행
+- [ ] `supabase/data/raw/20260124_hvdc_layers_status_case_ops.sql` 실행
   - Status 레이어: `status.shipments_status`, `status.events_status`
   - Case 레이어: `case.locations`, `case.shipments_case`, `case.cases`, `case.flows`, `case.events_case`
   - Ops 레이어: (향후 확장)
@@ -84,14 +84,14 @@ Supabase 적재 (COPY/Import)
 #### 3.1 Status SSOT 레이어 ETL 실행
 
 ```bash
-cd supabass_ontol
+cd supabase/data/raw
 
-python Untitled-4_dashboard_ready_FULL.py \
+python scripts/etl/status_etl.py \
   --status "HVDC all status.json" \
   --warehouse hvdc_warehouse_status.json \
   --outdir ../hvdc_output \
   --base-iri https://example.com/hvdc \
-  --case-locations .../supabase/SUPABASE_csv_optionC_v3/locations.csv
+  --case-locations .../supabase/supabase/data/output/optionC/locations.csv
 ```
 
 **생성 파일 확인**:
@@ -109,23 +109,23 @@ python Untitled-4_dashboard_ready_FULL.py \
 #### 3.2 Option-C Case 레이어 ETL 실행
 
 ```bash
-python Untitled-3_dashboard_ready_FULL.py \
+python scripts/etl/optionc_etl.py \
   --all "HVDC all status.json" \
   --wh hvdc_warehouse_status.json \
   --customs "HVDC_STATUS.json" \
-  --output-dir .../supabase/SUPABASE_csv_optionC_v3 \
+  --output-dir .../supabase/supabase/data/output/optionC \
   --export-ttl \
   --base-iri https://example.com/hvdc
 ```
 
 **생성 파일 확인**:
-- [ ] `supabase_csv_optionC_v3/locations.csv` 생성 확인
-- [ ] `supabase_csv_optionC_v3/shipments_case.csv` 생성 확인
-- [ ] `supabase_csv_optionC_v3/cases.csv` 생성 확인
-- [ ] `supabase_csv_optionC_v3/flows.csv` 생성 확인 (Flow Code v3.5 포함)
-- [ ] `supabase_csv_optionC_v3/events_case.csv` 생성 확인
-- [ ] `supabase_csv_optionC_v3/events_case_debug.csv` 생성 확인 (옵션)
-- [ ] `supabase_csv_optionC_v3/report.md` 생성 확인
+- [ ] `supabase/data/output/optionC/locations.csv` 생성 확인
+- [ ] `supabase/data/output/optionC/shipments_case.csv` 생성 확인
+- [ ] `supabase/data/output/optionC/cases.csv` 생성 확인
+- [ ] `supabase/data/output/optionC/flows.csv` 생성 확인 (Flow Code v3.5 포함)
+- [ ] `supabase/data/output/optionC/events_case.csv` 생성 확인
+- [ ] `supabase/data/output/optionC/events_case_debug.csv` 생성 확인 (옵션)
+- [ ] `supabase/data/output/optionC/report.md` 생성 확인
 
 **QA 리포트 검토**:
 - [ ] Flow Code 분포 확인 (0~5)
@@ -198,7 +198,7 @@ ON CONFLICT (hvdc_code) DO UPDATE SET ...;
   location_id, location_code, name, category, hvdc_node,
   is_mosb, is_site, is_port, active
 )
-FROM 'supabase_csv_optionC_v3/locations.csv'
+FROM 'supabase/data/output/optionC/locations.csv'
 WITH (FORMAT csv, HEADER true, ENCODING 'UTF8');
 
 -- 2) shipments_case
@@ -206,7 +206,7 @@ WITH (FORMAT csv, HEADER true, ENCODING 'UTF8');
   hvdc_code, shipment_invoice_no, vendor, coe, pol, pod,
   vessel, hs_code, currency, price
 )
-FROM 'supabase_csv_optionC_v3/shipments_case.csv'
+FROM 'supabase/data/output/optionC/shipments_case.csv'
 WITH (FORMAT csv, HEADER true, ENCODING 'UTF8');
 
 -- 3) cases
@@ -214,7 +214,7 @@ WITH (FORMAT csv, HEADER true, ENCODING 'UTF8');
   hvdc_code, case_no, site_code, eq_no, pkg, description,
   final_location, storage, l_cm, w_cm, h_cm, cbm, nw_kg, gw_kg, sqm, vendor
 )
-FROM 'supabase_csv_optionC_v3/cases.csv'
+FROM 'supabase/data/output/optionC/cases.csv'
 WITH (FORMAT csv, HEADER true, ENCODING 'UTF8');
 
 -- 4) flows
@@ -223,7 +223,7 @@ WITH (FORMAT csv, HEADER true, ENCODING 'UTF8');
   override_reason, warehouse_count, has_mosb_leg, has_site_arrival,
   customs_code, customs_start_iso, customs_end_iso, last_status, requires_review
 )
-FROM 'supabase_csv_optionC_v3/flows.csv'
+FROM 'supabase/data/output/optionC/flows.csv'
 WITH (FORMAT csv, HEADER true, ENCODING 'UTF8');
 
 -- 5) events_case
@@ -231,7 +231,7 @@ WITH (FORMAT csv, HEADER true, ENCODING 'UTF8');
   hvdc_code, case_no, event_type, event_time_iso, location_id,
   source_field, source_system, raw_epoch_ms
 )
-FROM 'supabase_csv_optionC_v3/events_case.csv'
+FROM 'supabase/data/output/optionC/events_case.csv'
 WITH (FORMAT csv, HEADER true, ENCODING 'UTF8');
 ```
 
@@ -450,11 +450,11 @@ GROUP BY ss.hvdc_code, ss.status_no, ss.vendor, ss.eta, ss.ata;
 - [Phase 6: Realtime 활성화 계획](../data-loading/PHASE6_REALTIME_ACTIVATION_PLAN.md) - Realtime publication 활성화
 
 ### 통합 플랜
-- [supabass_ontol 데이터 Supabase 업로드 완전 플랜](../supabase/SUPABASE_UPLOAD_COMPLETE_PLAN.md) - Phase 2~6 통합 플랜
+- [supabase/data/raw 데이터 Supabase 업로드 완전 플랜](../supabase/SUPABASE_UPLOAD_COMPLETE_PLAN.md) - Phase 2~6 통합 플랜
 
 ### 관련 문서
-- [RUNBOOK_HVDC_SUPABASE_SETUP.md](../supabass_ontol/RUNBOOK_HVDC_SUPABASE_SETUP.md) - Supabase 구성 Runbook
-- [README_dashboard_ready_FULL.md](../supabass_ontol/README_dashboard_ready_FULL.md) - ETL 스크립트 설명
+- [RUNBOOK_HVDC_SUPABASE_SETUP.md](../supabase/data/raw/RUNBOOK_HVDC_SUPABASE_SETUP.md) - Supabase 구성 Runbook
+- [README_dashboard_ready_FULL.md](../supabase/data/raw/README_dashboard_ready_FULL.md) - ETL 스크립트 설명
 - [ETL_GUIDE.md](./ETL_GUIDE.md) - ETL 스크립트 가이드
 - [DATA_LOADING_RUNBOOK.md](../data-loading/DATA_LOADING_RUNBOOK.md) - 실행 Runbook
 - [DASHBOARD_DATA_INTEGRATION_PROGRESS.md](../data-loading/DASHBOARD_DATA_INTEGRATION_PROGRESS.md) - 진행 상황

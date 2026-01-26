@@ -11,7 +11,7 @@
 
 ### 목표
 - Status 레이어 CSV 적재: `shipments_status.csv` → `status.shipments_status`, `events_status.csv` → `status.events_status`
-- Case 레이어 CSV 적재 (선택): `supabase_csv_optionC_v3/*.csv` → `case.*` 테이블들
+- Case 레이어 CSV 적재 (선택): `supabase/data/output/optionC/*.csv` → `case.*` 테이블들
 
 ### 현재 상황
 - ✅ Phase 1 완료: 입력 검증 완료
@@ -22,7 +22,7 @@
 
 ### CSV 파일 위치
 - Status 레이어: `hvdc_output/supabase/*.csv`
-- Case 레이어: `supabase_csv_optionC_v3/*.csv` (Option-C 실행 시)
+- Case 레이어: `supabase/data/output/optionC/*.csv` (Option-C 실행 시)
 
 ---
 
@@ -40,11 +40,11 @@ ls -la hvdc_output/supabase/shipments_status.csv
 ls -la hvdc_output/supabase/events_status.csv
 
 # Case 레이어 (Option-C 실행 시)
-ls -la supabase_csv_optionC_v3/locations.csv
-ls -la supabase_csv_optionC_v3/shipments_case.csv
-ls -la supabase_csv_optionC_v3/cases.csv
-ls -la supabase_csv_optionC_v3/flows.csv
-ls -la supabase_csv_optionC_v3/events_case.csv
+ls -la supabase/data/output/optionC/locations.csv
+ls -la supabase/data/output/optionC/shipments_case.csv
+ls -la supabase/data/output/optionC/cases.csv
+ls -la supabase/data/output/optionC/flows.csv
+ls -la supabase/data/output/optionC/events_case.csv
 ```
 
 ### 3. Supabase 연결 확인
@@ -82,23 +82,23 @@ ls -la supabase_csv_optionC_v3/events_case.csv
 
 1. **locations** (FK 의존성 없음)
    - `case.locations` 테이블 선택
-   - `supabase_csv_optionC_v3/locations.csv` 업로드
+   - `supabase/data/output/optionC/locations.csv` 업로드
 
 2. **shipments_case** (FK 의존성 없음)
    - `case.shipments_case` 테이블 선택
-   - `supabase_csv_optionC_v3/shipments_case.csv` 업로드
+   - `supabase/data/output/optionC/shipments_case.csv` 업로드
 
 3. **cases** (shipments_case 참조 가능)
    - `case.cases` 테이블 선택
-   - `supabase_csv_optionC_v3/cases.csv` 업로드
+   - `supabase/data/output/optionC/cases.csv` 업로드
 
 4. **flows** (cases 참조 필요)
    - `case.flows` 테이블 선택
-   - `supabase_csv_optionC_v3/flows.csv` 업로드
+   - `supabase/data/output/optionC/flows.csv` 업로드
 
 5. **events_case** (cases, locations 참조 필요)
    - `case.events_case` 테이블 선택
-   - `supabase_csv_optionC_v3/events_case.csv` 업로드
+   - `supabase/data/output/optionC/events_case.csv` 업로드
 
 ---
 

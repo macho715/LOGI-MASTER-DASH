@@ -270,11 +270,11 @@ def main():
     status_events_csv = repo_root / "hvdc_output" / "supabase" / "events_status.csv"
     
     # Case layer CSV paths (optional)
-    case_locations_csv = repo_root / "supabase_csv_optionC_v3" / "locations.csv"
-    case_shipments_csv = repo_root / "supabase_csv_optionC_v3" / "shipments_case.csv"
-    case_cases_csv = repo_root / "supabase_csv_optionC_v3" / "cases.csv"
-    case_flows_csv = repo_root / "supabase_csv_optionC_v3" / "flows.csv"
-    case_events_csv = repo_root / "supabase_csv_optionC_v3" / "events_case.csv"
+    case_locations_csv = repo_root / "supabase" / "data" / "output" / "optionC" / "locations.csv"
+    case_shipments_csv = repo_root / "supabase" / "data" / "output" / "optionC" / "shipments_case.csv"
+    case_cases_csv = repo_root / "supabase" / "data" / "output" / "optionC" / "cases.csv"
+    case_flows_csv = repo_root / "supabase" / "data" / "output" / "optionC" / "flows.csv"
+    case_events_csv = repo_root / "supabase" / "data" / "output" / "optionC" / "events_case.csv"
     
     timeout_label = f"{connect_timeout}s" if connect_timeout else "default"
     print(f"[load_csv] Connecting to database (timeout={timeout_label})...")

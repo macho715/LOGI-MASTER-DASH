@@ -281,5 +281,5 @@ Ensure RLS policies exist for subscribed tables (see `./realtime-config-review.m
   - [RLS Guide](https://supabase.com/docs/guides/database/postgres/row-level-security)
 - **Project Docs**:
   - `데이터.md`, `데이터2.md` (source data pipeline)
-  - `supabass_ontol/RUNBOOK_HVDC_SUPABASE_SETUP.md` (setup procedure)
+  - `supabase/data/raw/RUNBOOK_HVDC_SUPABASE_SETUP.md` (setup procedure)
   - `./realtime-config-review.md` (RLS and Realtime configuration)

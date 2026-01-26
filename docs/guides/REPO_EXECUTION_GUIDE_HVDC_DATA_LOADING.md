@@ -115,9 +115,9 @@ Realtime(Postgres Changes)는 Supabase Dashboard에서 `supabase_realtime` publi
   - Postgres client 설치 또는 PATH 설정이 필요합니다.
 
 - **ETL 스크립트가 파일을 못 찾음**
-  - `supabass_ontol/` 내에 `HVDC all status.json` 또는 `HVDC_all_status.json`이 있는지 확인
+  - `supabase/data/raw/` 내에 `HVDC all status.json` 또는 `HVDC_all_status.json`이 있는지 확인
   - `hvdc_warehouse_status.json`, `HVDC_STATUS.json` 존재 확인
 
 - **DB 스키마 없음**
-  - `supabass_ontol/20260124_hvdc_layers_status_case_ops.sql`이 적용되었는지 확인
+  - `supabase/data/raw/20260124_hvdc_layers_status_case_ops.sql`이 적용되었는지 확인
 

@@ -165,18 +165,18 @@ markers = [
 
 ## 사전 요구사항 확인
 
-### supabass_ontol 폴더 필수 파일 확인
+### supabase/data/raw 폴더 필수 파일 확인
 
-통합 작업 전에 `supabass_ontol/` 폴더에 다음 필수 파일들이 존재하는지 확인해야 합니다:
+통합 작업 전에 `supabase/data/raw/` 폴더에 다음 필수 파일들이 존재하는지 확인해야 합니다:
 
 #### 필수 파일 (Status SSOT 레이어)
 - ✅ `HVDC_all_status.json` (또는 `HVDC all status.json`) - **확인됨**
 - ✅ `hvdc_warehouse_status.json` - **확인됨**
-- ✅ `Untitled-4_dashboard_ready_FULL.py` - **확인됨**
+- ✅ `scripts/etl/status_etl.py` - **확인됨**
 - ✅ `20260124_hvdc_layers_status_case_ops.sql` - **확인됨**
 
 #### 필수 파일 (Option-C Case 레이어)
-- ✅ `Untitled-3_dashboard_ready_FULL.py` - **확인됨**
+- ✅ `scripts/etl/optionc_etl.py` - **확인됨**
 - ✅ `flow_code_calculator.py` - **확인됨**
 - ❌ `HVDC_STATUS.json` - **누락됨** (Option-C 실행 시 필요)
 
@@ -184,28 +184,28 @@ markers = [
 
 ```bash
 # validate_inputs.py 스크립트로 확인
-python scripts/hvdc/validate_inputs.py --repo-root . --source-dir supabass_ontol
+python scripts/hvdc/validate_inputs.py --repo-root . --source-dir supabase/data/raw
 
 # 또는 수동 확인
-ls supabass_ontol/HVDC_all_status.json
-ls supabass_ontol/hvdc_warehouse_status.json
-ls supabass_ontol/Untitled-4_dashboard_ready_FULL.py
-ls supabass_ontol/Untitled-3_dashboard_ready_FULL.py
-ls supabass_ontol/flow_code_calculator.py
-ls supabass_ontol/20260124_hvdc_layers_status_case_ops.sql
+ls supabase/data/raw/HVDC_all_status.json
+ls supabase/data/raw/hvdc_warehouse_status.json
+ls supabase/data/raw/scripts/etl/status_etl.py
+ls supabase/data/raw/scripts/etl/optionc_etl.py
+ls supabase/data/raw/flow_code_calculator.py
+ls supabase/data/raw/20260124_hvdc_layers_status_case_ops.sql
 ```
 
 #### 누락 파일 처리
 
 - `HVDC_STATUS.json`이 없으면 Option-C Case 레이어 ETL은 실행할 수 없습니다.
 - Status SSOT 레이어만 사용하는 경우에는 문제없습니다.
-- Option-C를 사용하려면 `HVDC_STATUS.json` 파일을 `supabass_ontol/` 폴더에 추가해야 합니다.
+- Option-C를 사용하려면 `HVDC_STATUS.json` 파일을 `supabase/data/raw/` 폴더에 추가해야 합니다.
 
 ## 실행 순서
 
 ### 0단계: 사전 요구사항 확인
 
-1. `supabass_ontol/` 폴더 존재 확인
+1. `supabase/data/raw/` 폴더 존재 확인
 2. 필수 파일 확인 (위의 "사전 요구사항 확인" 섹션 참조)
 3. `validate_inputs.py` 실행하여 검증
 

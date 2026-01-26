@@ -2,11 +2,11 @@
 set -euo pipefail
 
 # HVDC Status SSOT ETL runner
-# - wraps supabass_ontol/Untitled-4_dashboard_ready_FULL.py
+# - wraps scripts/etl/status_etl.py (이전: supabass_ontol/Untitled-4_dashboard_ready_FULL.py)
 # - aligns with docs/DATA_LOADING_PLAN.md Phase 3.1
 
 REPO_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)"
-SRC_DIR="${SRC_DIR:-${REPO_ROOT}/supabass_ontol}"
+SRC_DIR="${SRC_DIR:-${REPO_ROOT}/supabase/data/raw}"
 OUTDIR="${OUTDIR:-${REPO_ROOT}/hvdc_output}"
 BASE_IRI="${HVDC_BASE_IRI:-https://example.com/hvdc}"
 
@@ -38,14 +38,14 @@ if [[ -z "${WAREHOUSE_JSON}" ]]; then
   exit 1
 fi
 
-ETL_SCRIPT="${SRC_DIR}/Untitled-4_dashboard_ready_FULL.py"
+ETL_SCRIPT="${REPO_ROOT}/scripts/etl/status_etl.py"
 if [[ ! -f "${ETL_SCRIPT}" ]]; then
   echo "[run_etl_status] ERROR: ETL script not found: ${ETL_SCRIPT}" >&2
   exit 1
 fi
 
 # Optional: locations.csv to enrich events_status
-CASE_LOCATIONS="${REPO_ROOT}/supabase_csv_optionC_v3/locations.csv"
+CASE_LOCATIONS="${REPO_ROOT}/supabase/data/output/optionC/locations.csv"
 CASE_LOCATIONS_ARG=()
 if [[ -f "${CASE_LOCATIONS}" ]]; then
   CASE_LOCATIONS_ARG=(--case-locations "${CASE_LOCATIONS}")

@@ -7,7 +7,7 @@ from pathlib import Path
 
 def _load_etl_module():
     repo_root = Path(__file__).resolve().parents[2]
-    etl_path = repo_root / "supabass_ontol" / "Untitled-3_dashboard_ready_FULL.py"
+    etl_path = repo_root / "scripts" / "etl" / "optionc_etl.py"
     sys.path.insert(0, str(etl_path.parent))
     spec = importlib.util.spec_from_file_location("etl_optionc", etl_path)
     if spec is None or spec.loader is None:

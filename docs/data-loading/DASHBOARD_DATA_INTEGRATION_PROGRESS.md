@@ -229,7 +229,7 @@
 - [Phase 6: Realtime 활성화 계획](../data-loading/PHASE6_REALTIME_ACTIVATION_PLAN.md) - Realtime publication 활성화
 
 ### 통합 플랜
-- [supabass_ontol 데이터 Supabase 업로드 완전 플랜](../supabase/SUPABASE_UPLOAD_COMPLETE_PLAN.md) - Phase 2~6 통합 플랜
+- [supabase/data/raw 데이터 Supabase 업로드 완전 플랜](../supabase/SUPABASE_UPLOAD_COMPLETE_PLAN.md) - Phase 2~6 통합 플랜
 - [대시보드 데이터 통합 완료 계획](../.cursor/plans/대시보드_데이터_통합_완료_계획_6fe9f10b.plan.md)
 - [supabase_upload_complete Cursor plan](../.cursor/plans/supabase_upload_complete.plan.md)
 

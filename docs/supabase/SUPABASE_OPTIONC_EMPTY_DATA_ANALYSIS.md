@@ -1,7 +1,7 @@
-# supabase_csv_optionC_v3 빈 데이터 원인 분석
+# supabase/data/output/optionC 빈 데이터 원인 분석
 
 > **최종 업데이트**: 2026-01-25  
-> **문제**: `supabase_csv_optionC_v3/` 디렉토리의 모든 CSV 파일이 비어있음 (0행)  
+> **문제**: `supabase/data/output/optionC/` 디렉토리의 모든 CSV 파일이 비어있음 (0행)  
 > **해결 상태**: ✅ **해결됨** (2026-01-25)
 
 ---
@@ -39,7 +39,7 @@
 
 **ETL 스크립트 기대 필드명**:
 - `_extract_ids()` 함수는 `"HVDC CODE"` 필드를 찾습니다.
-- 코드 위치: `supabass_ontol/Untitled-3_dashboard_ready_FULL.py:244`
+- 코드 위치: `supabase/data/raw/scripts/etl/optionc_etl.py:244`
 
 ```python
 def _extract_ids(record: Dict[str, Any]) -> Tuple[str, str]:
@@ -101,7 +101,7 @@ python $etl3 --all $statusJson --wh $warehouseJson --customs $customsJson ...
 
 `_extract_ids()` 함수를 수정하여 `"SCT SHIP NO."` 필드도 인식하도록 했습니다.
 
-**수정 위치**: `supabass_ontol/Untitled-3_dashboard_ready_FULL.py:243-249`
+**수정 위치**: `supabase/data/raw/scripts/etl/optionc_etl.py:243-249`
 
 **수정 후**:
 ```python
@@ -151,12 +151,12 @@ python $etl3 --all $allshptJson --wh $warehouseJson --customs $customsJson ...
 ### 수정 후 재실행
 
 ```bash
-cd supabass_ontol
-python Untitled-3_dashboard_ready_FULL.py \
+cd supabase/data/raw
+python scripts/etl/optionc_etl.py \
   --all "HVDC_all_status.json" \
   --wh "hvdc_warehouse_status.json" \
   --customs "HVDC_STATUS.json" \
-  --output-dir ".../supabase/SUPABASE_csv_optionC_v3"
+  --output-dir ".../supabase/supabase/data/output/optionC"
 ```
 
 또는 `run_all.ps1` 실행:
@@ -168,7 +168,7 @@ powershell -ExecutionPolicy Bypass -File scripts/hvdc/run_all.ps1
 ### 리포트 확인
 
 ```bash
-cat supabase_csv_optionC_v3/report.json
+cat supabase/data/output/optionC/report.json
 ```
 
 **예상 결과**:
@@ -200,9 +200,9 @@ test_extract_ids_accepts_sct_ship_no_without_dot PASSED
 
 ## 🔗 참조
 
-- **ETL 스크립트**: `supabass_ontol/Untitled-3_dashboard_ready_FULL.py`
+- **ETL 스크립트**: `supabase/data/raw/scripts/etl/optionc_etl.py`
 - **실행 스크립트**: `scripts/hvdc/run_all.ps1`
-- **입력 파일**: `supabass_ontol/HVDC_all_status.json`
+- **입력 파일**: `supabase/data/raw/HVDC_all_status.json`
 - **테스트**: `tests/validation/test_extract_ids.py`
 - **성공 사례**: `hvdc_output/optionC/` (다른 ETL 실행 결과)
 - **CHANGELOG**: `CHANGELOG.md` (2026-01-25)

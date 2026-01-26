@@ -25,7 +25,7 @@ Outputs:
 Usage examples:
   python export_hvdc_ops_ttl.py \
     --status-dir out/supabase \
-    --case-dir supabase_csv_optionC_v3 \
+    --case-dir supabase/data/output/optionC \
     --schema-ttl hvdc_ops_ontology.ttl \
     --shapes-ttl hvdc_ops_shapes.ttl \
     --out out/ontology/hvdc_ops_data.ttl

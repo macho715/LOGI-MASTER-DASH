@@ -7,7 +7,7 @@ HVDC Status(SSOT) + Warehouse(Overlay) → Supabase CSV(status.*) + OPS TTL + QA
 입력(예)
 - HVDC_all_status.json           # SSOT: "No"(1~830xx), "SCT SHIP NO." 포함
 - hvdc_warehouse_status.json     # Overlay(케이스 단위): "HVDC CODE" + location date 필드 포함
-- (옵션) supabase_csv_optionC_v3/locations.csv  # Option-C locations 디멘전 (location_code, name, ...)
+- (옵션) supabase/data/output/optionC/locations.csv  # Option-C locations 디멘전 (location_code, name, ...)
 
 핵심 원칙
 1) SSOT 전량 출력: Status 레코드 수 == shipments_status 출력 수 (Coverage=100.00%)

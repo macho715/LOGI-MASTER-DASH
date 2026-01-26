@@ -10,7 +10,7 @@ It checks:
 - Python dependencies import (pandas, numpy)
 
 Usage:
-  python scripts/hvdc/validate_inputs.py --repo-root . --source-dir supabass_ontol
+  python scripts/hvdc/validate_inputs.py --repo-root . --source-dir supabase/data/raw
 
 Exit codes:
   0 = OK
@@ -72,7 +72,7 @@ def _check_import(pkg: str) -> tuple[bool, str]:
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--repo-root", default=".")
-    ap.add_argument("--source-dir", default="supabass_ontol")
+    ap.add_argument("--source-dir", default="supabase/data/raw")
     ap.add_argument("--require-customs", action="store_true", help="Fail if HVDC_STATUS.json is missing")
     args = ap.parse_args()
 

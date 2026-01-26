@@ -1,6 +1,6 @@
 # Phase 2: DDL 적용 플랜
 
-> **목적**: `supabass_ontol/20260124_hvdc_layers_status_case_ops.sql` DDL을 Supabase에 적용하여 Status/Case/Ops 스키마 및 테이블을 생성합니다.  
+> **목적**: `supabase/data/raw/20260124_hvdc_layers_status_case_ops.sql` DDL을 Supabase에 적용하여 Status/Case/Ops 스키마 및 테이블을 생성합니다.  
 > **최종 업데이트**: 2026-02-07  
 > **참조**: [DATA_LOADING_PLAN.md](../data-loading/DATA_LOADING_PLAN.md), [DATA_LOADING_RUNBOOK.md](../data-loading/DATA_LOADING_RUNBOOK.md), [SUPABASE_CONNECTION_TROUBLESHOOTING.md](../supabase/SUPABASE_CONNECTION_TROUBLESHOOTING.md)
 
@@ -20,7 +20,7 @@
 - ✅ **Phase 2 완료** (2026-01-25): DDL 적용 완료. `apply_ddl.py` + Session pooler(5432) 사용, `verify_phase2_ddl.py` 검증 통과.
 
 ### DDL 파일 경로
-- `supabass_ontol/20260124_hvdc_layers_status_case_ops.sql`
+- `supabase/data/raw/20260124_hvdc_layers_status_case_ops.sql`
 
 ---
 
@@ -88,7 +88,7 @@ supabase link --project-ref <your-project-ref>
 ### 3. DDL 파일 확인
 ```bash
 # 프로젝트 루트에서
-ls -la supabass_ontol/20260124_hvdc_layers_status_case_ops.sql
+ls -la supabase/data/raw/20260124_hvdc_layers_status_case_ops.sql
 ```
 
 ---
@@ -101,12 +101,12 @@ ls -la supabass_ontol/20260124_hvdc_layers_status_case_ops.sql
 
 ```bash
 # 프로젝트 루트에서 실행
-supabase db execute -f supabass_ontol/20260124_hvdc_layers_status_case_ops.sql
+supabase db execute -f supabase/data/raw/20260124_hvdc_layers_status_case_ops.sql
 ```
 
 **예상 출력**:
 ```
-Executing SQL from supabass_ontol/20260124_hvdc_layers_status_case_ops.sql...
+Executing SQL from supabase/data/raw/20260124_hvdc_layers_status_case_ops.sql...
 Successfully executed.
 ```
 
@@ -118,7 +118,7 @@ CLI 사용이 불가능한 경우:
 2. 프로젝트 선택
 3. 왼쪽 메뉴에서 **SQL Editor** 클릭
 4. **New query** 클릭
-5. `supabass_ontol/20260124_hvdc_layers_status_case_ops.sql` 파일 내용 전체 복사
+5. `supabase/data/raw/20260124_hvdc_layers_status_case_ops.sql` 파일 내용 전체 복사
 6. SQL Editor에 붙여넣기
 7. **Run** 버튼 클릭 (또는 `Ctrl+Enter`)
 8. 성공 메시지 확인
@@ -127,7 +127,7 @@ CLI 사용이 불가능한 경우:
 
 ```bash
 # supabase/migrations/ 디렉토리에 복사
-cp supabass_ontol/20260124_hvdc_layers_status_case_ops.sql supabase/migrations/20260124_hvdc_layers_status_case_ops.sql
+cp supabase/data/raw/20260124_hvdc_layers_status_case_ops.sql supabase/migrations/20260124_hvdc_layers_status_case_ops.sql
 
 # 마이그레이션 적용
 supabase db push
@@ -137,7 +137,7 @@ supabase db push
 
 ```bash
 # SUPABASE_DB_URL = Session pooler(5432) URI 설정 후
-python scripts/hvdc/apply_ddl.py supabass_ontol/20260124_hvdc_layers_status_case_ops.sql
+python scripts/hvdc/apply_ddl.py supabase/data/raw/20260124_hvdc_layers_status_case_ops.sql
 # 검증: python scripts/hvdc/verify_phase2_ddl.py
 ```
 
@@ -386,7 +386,7 @@ Phase 2 완료 후:
 - [DATA_LOADING_RUNBOOK.md](../data-loading/DATA_LOADING_RUNBOOK.md) - 실행 Runbook
 - [SUPABASE_CONNECTION_TROUBLESHOOTING.md](../supabase/SUPABASE_CONNECTION_TROUBLESHOOTING.md) - 연결 문제 해결
 - [DASHBOARD_DATA_INTEGRATION_PROGRESS.md](../data-loading/DASHBOARD_DATA_INTEGRATION_PROGRESS.md) - 진행 상황
-- [supabass_ontol/20260124_hvdc_layers_status_case_ops.sql](../supabass_ontol/20260124_hvdc_layers_status_case_ops.sql) - DDL 파일
+- [supabase/data/raw/20260124_hvdc_layers_status_case_ops.sql](../supabase/data/raw/20260124_hvdc_layers_status_case_ops.sql) - DDL 파일
 
 ---
 

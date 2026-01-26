@@ -147,7 +147,7 @@ export function UnifiedLayout() {
   }, [handlePanelDragMove, handlePanelDragEnd])
 
   return (
-    <div className="h-screen w-screen overflow-hidden bg-background dark">
+    <div className="h-screen w-screen bg-background dark">
       {/* Header Bar */}
       <HeaderBar />
 

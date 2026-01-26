@@ -12,7 +12,7 @@
 
 ### 실행 단계 (자동)
 
-1. **파일 이동** (자동): RAW DATA 파일을 `supabass_ontol/`로 이동
+1. **파일 이동** (자동): RAW DATA 파일을 `supabase/data/raw/`로 이동
 2. **Phase 1**: 입력 검증
 3. **Phase 2**: DDL 적용
 4. **Phase 3**: ETL 실행 (Status + Option-C)
@@ -54,15 +54,15 @@
 
 ### 3. 필수 파일 확인
 
-**입력 파일** (`supabass_ontol/`):
+**입력 파일** (`supabase/data/raw/`):
 - ✅ `HVDC_all_status.json` (또는 `HVDC all status.json`)
 - ✅ `hvdc_warehouse_status.json`
 - ✅ `hvdc_excel_reporter_final_sqm_rev_3.json` (✅ 우선: FLOW_CODE 포함, 8,804 rows)
 - ✅ `HVDC_STATUS.json` (또는 `hvdc_status.json`)
 
-**ETL 스크립트** (`supabass_ontol/`):
-- ✅ `Untitled-4_dashboard_ready_FULL.py`
-- ✅ `Untitled-3_dashboard_ready_FULL.py`
+**ETL 스크립트** (`supabase/data/raw/`):
+- ✅ `scripts/etl/status_etl.py`
+- ✅ `scripts/etl/optionc_etl.py`
 - ✅ `flow_code_calculator.py`
 
 ---
@@ -103,13 +103,13 @@ powershell -ExecutionPolicy Bypass -File scripts/hvdc/run_all.ps1
 ### Step 0: 파일 이동 (자동)
 
 스크립트가 자동으로 다음 파일을 이동합니다:
-- `hvdc_excel_reporter_final_sqm_rev_3.json` → `supabass_ontol/`
-- `hvdc_excel_reporter_final_sqm_rev_3.csv` → `supabass_ontol/`
+- `hvdc_excel_reporter_final_sqm_rev_3.json` → `supabase/data/raw/`
+- `hvdc_excel_reporter_final_sqm_rev_3.csv` → `supabase/data/raw/`
 
 ### Step 1: Phase 1 - 입력 검증
 
 ```powershell
-python scripts/hvdc/validate_inputs.py --repo-root . --source-dir supabass_ontol --require-customs
+python scripts/hvdc/validate_inputs.py --repo-root . --source-dir supabase/data/raw --require-customs
 ```
 
 **검증 항목**:
@@ -120,7 +120,7 @@ python scripts/hvdc/validate_inputs.py --repo-root . --source-dir supabass_ontol
 ### Step 2: Phase 2 - DDL 적용
 
 ```sql
--- supabass_ontol/20260124_hvdc_layers_status_case_ops.sql 실행
+-- supabase/data/raw/20260124_hvdc_layers_status_case_ops.sql 실행
 ```
 
 **생성되는 스키마/테이블**:
@@ -133,7 +133,7 @@ python scripts/hvdc/validate_inputs.py --repo-root . --source-dir supabass_ontol
 #### 3.1 Status SSOT 레이어
 
 ```bash
-python Untitled-4_dashboard_ready_FULL.py \
+python scripts/etl/status_etl.py \
   --status "HVDC_all_status.json" \
   --warehouse hvdc_warehouse_status.json \
   --outdir ../hvdc_output
@@ -146,20 +146,20 @@ python Untitled-4_dashboard_ready_FULL.py \
 #### 3.2 Option-C Case 레이어
 
 ```bash
-python Untitled-3_dashboard_ready_FULL.py \
+python scripts/etl/optionc_etl.py \
   --all hvdc_excel_reporter_final_sqm_rev_3.json \  # ✅ 우선 사용
   --wh hvdc_warehouse_status.json \
   --customs HVDC_STATUS.json \
-  --output-dir .../supabase/SUPABASE_csv_optionC_v3 \
+  --output-dir .../supabase/supabase/data/output/optionC \
   --export-ttl
 ```
 
 **생성 파일**:
-- `supabase_csv_optionC_v3/locations.csv` (예상: 28행)
-- `supabase_csv_optionC_v3/shipments_case.csv` (예상: 491행)
-- `supabase_csv_optionC_v3/cases.csv` (예상: 8,804행)
-- `supabase_csv_optionC_v3/flows.csv` (예상: 8,804행)
-- `supabase_csv_optionC_v3/events_case.csv` (예상: 50,677행)
+- `supabase/data/output/optionC/locations.csv` (예상: 28행)
+- `supabase/data/output/optionC/shipments_case.csv` (예상: 491행)
+- `supabase/data/output/optionC/cases.csv` (예상: 8,804행)
+- `supabase/data/output/optionC/flows.csv` (예상: 8,804행)
+- `supabase/data/output/optionC/events_case.csv` (예상: 50,677행)
 
 ### Step 4: Phase 4 - CSV 적재
 
@@ -237,8 +237,8 @@ Get-Content hvdc_output/supabase/shipments_status.csv | Measure-Object -Line
 Get-Content hvdc_output/supabase/events_status.csv | Measure-Object -Line
 
 # Case 레이어
-Get-Content supabase_csv_optionC_v3/cases.csv | Measure-Object -Line
-Get-Content supabase_csv_optionC_v3/flows.csv | Measure-Object -Line
+Get-Content supabase/data/output/optionC/cases.csv | Measure-Object -Line
+Get-Content supabase/data/output/optionC/flows.csv | Measure-Object -Line
 ```
 
 **예상 결과**:
@@ -251,7 +251,7 @@ Get-Content supabase_csv_optionC_v3/flows.csv | Measure-Object -Line
 
 ```powershell
 # Option-C ETL 리포트
-Get-Content supabase_csv_optionC_v3/report.json | ConvertFrom-Json | Format-List
+Get-Content supabase/data/output/optionC/report.json | ConvertFrom-Json | Format-List
 ```
 
 **예상 결과**:
@@ -304,11 +304,11 @@ $env:SUPABASE_DB_URL = "postgresql://..."
 
 ### 오류 3: `Option-C input JSON not found`
 
-**원인**: `hvdc_excel_reporter_final_sqm_rev_3.json`이 `supabass_ontol/`에 없음
+**원인**: `hvdc_excel_reporter_final_sqm_rev_3.json`이 `supabase/data/raw/`에 없음
 
 **해결**:
 - 파일이 루트 디렉토리에 있으면 스크립트가 자동 이동
-- 수동 이동: `Move-Item -Path "hvdc_excel_reporter_final_sqm_rev_3.json" -Destination "supabass_ontol/"`
+- 수동 이동: `Move-Item -Path "hvdc_excel_reporter_final_sqm_rev_3.json" -Destination "supabase/data/raw/"`
 
 ### 오류 4: ETL 스크립트 실행 실패
 
@@ -320,7 +320,7 @@ $env:SUPABASE_DB_URL = "postgresql://..."
 pip install pandas numpy
 
 # 입력 파일 확인
-python scripts/hvdc/validate_inputs.py --repo-root . --source-dir supabass_ontol
+python scripts/hvdc/validate_inputs.py --repo-root . --source-dir supabase/data/raw
 ```
 
 ---
@@ -348,8 +348,8 @@ python scripts/hvdc/validate_inputs.py --repo-root . --source-dir supabass_ontol
 - [SUPABASE_OPTIONC_EMPTY_DATA_ANALYSIS.md](../supabase/SUPABASE_OPTIONC_EMPTY_DATA_ANALYSIS.md) - Option-C 빈 데이터 원인 분석
 
 ### 소스 파일
-- [supabass_ontol/RUNBOOK_HVDC_SUPABASE_SETUP.md](../supabass_ontol/RUNBOOK_HVDC_SUPABASE_SETUP.md) - Supabase 구성 Runbook
-- [supabass_ontol/README_dashboard_ready_FULL.md](../supabass_ontol/README_dashboard_ready_FULL.md) - ETL 스크립트 설명
+- [supabase/data/raw/RUNBOOK_HVDC_SUPABASE_SETUP.md](../supabase/data/raw/RUNBOOK_HVDC_SUPABASE_SETUP.md) - Supabase 구성 Runbook
+- [supabase/data/raw/README_dashboard_ready_FULL.md](../supabase/data/raw/README_dashboard_ready_FULL.md) - ETL 스크립트 설명
 
 ---
 

@@ -137,7 +137,7 @@ export function UnifiedLayout() {
   )
 
   return (
-    <div className="h-screen w-screen overflow-hidden bg-background dark">
+    <div className="h-screen w-screen bg-background dark">
       <HeaderBar />
 
       <div className="flex h-full pt-24 lg:pb-96">

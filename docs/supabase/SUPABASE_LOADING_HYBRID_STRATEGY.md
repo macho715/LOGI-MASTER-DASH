@@ -27,7 +27,7 @@ This strategy covers:
 
 - Status layer (shipments_status + events_status)
 - Case/Option-C layer (locations, shipments_case, cases, flows, events_case)
-- HVDC JSON -> CSV + TTL pipeline outputs (ETL scripts in `supabass_ontol/`)
+- HVDC JSON -> CSV + TTL pipeline outputs (ETL scripts in `supabase/data/raw/`)
 - Supabase DB loading and validation (Gate 1 QA)
 
 Out of scope:
@@ -43,8 +43,8 @@ Out of scope:
 1) ETL step
 - Inputs: `HVDC_all_status.json`, `hvdc_warehouse_status.json`, `HVDC_STATUS.json`
 - Scripts:
-  - `supabass_ontol/Untitled-4_dashboard_ready_FULL.py` (status)
-  - `supabass_ontol/Untitled-3_dashboard_ready_FULL.py` (option-c)
+  - `supabase/data/raw/scripts/etl/status_etl.py` (status)
+  - `supabase/data/raw/scripts/etl/optionc_etl.py` (option-c)
 - Outputs:
   - CSVs (status + option-c)
   - TTL (optional)
@@ -108,16 +108,16 @@ powershell -ExecutionPolicy Bypass -File scripts/hvdc/run_all.ps1
 ### 2) Manual ETL (if needed)
 
 ```powershell
-python supabass_ontol/Untitled-4_dashboard_ready_FULL.py \
-  --status supabass_ontol/HVDC_all_status.json \
-  --warehouse supabass_ontol/hvdc_warehouse_status.json \
+python supabase/data/raw/scripts/etl/status_etl.py \
+  --status supabase/data/raw/HVDC_all_status.json \
+  --warehouse supabase/data/raw/hvdc_warehouse_status.json \
   --outdir hvdc_output
 
-python supabass_ontol/Untitled-3_dashboard_ready_FULL.py \
-  --all supabass_ontol/HVDC_all_status.json \
-  --wh supabass_ontol/hvdc_warehouse_status.json \
-  --customs supabass_ontol/HVDC_STATUS.json \
-  --output-dir supabase_csv_optionC_v3 \
+python supabase/data/raw/scripts/etl/optionc_etl.py \
+  --all supabase/data/raw/HVDC_all_status.json \
+  --wh supabase/data/raw/hvdc_warehouse_status.json \
+  --customs supabase/data/raw/HVDC_STATUS.json \
+  --output-dir supabase/data/output/optionC \
   --export-ttl
 ```
 
@@ -184,7 +184,7 @@ Minimum checks:
 
 ## Observability / Artifacts
 
-- `supabase_csv_optionC_v3/report.json` and `report.md`
+- `supabase/data/output/optionC/report.json` and `report.md`
 - `hvdc_output/report/qa_report.md`
 - Gate 1 QA SQL output
 
@@ -203,13 +203,13 @@ Store these artifacts per run for audit and rollback.
 ## Appendix: Source Files
 
 Inputs:
-- `supabass_ontol/HVDC_all_status.json`
-- `supabass_ontol/hvdc_warehouse_status.json`
-- `supabass_ontol/HVDC_STATUS.json`
+- `supabase/data/raw/HVDC_all_status.json`
+- `supabase/data/raw/hvdc_warehouse_status.json`
+- `supabase/data/raw/HVDC_STATUS.json`
 
 Outputs:
 - `hvdc_output/` (status layer)
-- `supabase_csv_optionC_v3/` (option-c layer)
+- `supabase/data/output/optionC/` (option-c layer)
 
 ---
 

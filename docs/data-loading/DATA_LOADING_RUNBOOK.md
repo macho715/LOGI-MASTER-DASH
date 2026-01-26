@@ -14,17 +14,17 @@
 
 ### 0.1 필수 파일 (Source JSON)
 
-- `supabass_ontol/HVDC all status.json` (또는 `HVDC_all_status.json`)
-- `supabass_ontol/hvdc_warehouse_status.json`
-- (Option-C) `supabass_ontol/HVDC_STATUS.json`
+- `supabase/data/raw/HVDC all status.json` (또는 `HVDC_all_status.json`)
+- `supabase/data/raw/hvdc_warehouse_status.json`
+- (Option-C) `supabase/data/raw/HVDC_STATUS.json`
 
 > 파일명은 환경마다 underscore/space가 혼재할 수 있으므로, `scripts/hvdc/validate_inputs.py`가 자동 탐지한다.
 
 ### 0.2 필수 스크립트 (ETL)
 
-- `supabass_ontol/Untitled-4_dashboard_ready_FULL.py` (Status)
-- `supabass_ontol/Untitled-3_dashboard_ready_FULL.py` (Option-C)
-- (Option-C) `supabass_ontol/flow_code_calculator.py`
+- `supabase/data/raw/scripts/etl/status_etl.py` (Status)
+- `supabase/data/raw/scripts/etl/optionc_etl.py` (Option-C)
+- (Option-C) `supabase/data/raw/flow_code_calculator.py`
 
 ### 0.3 필수 환경변수
 
@@ -42,7 +42,7 @@
 ```bash
 python scripts/hvdc/validate_inputs.py \
   --repo-root . \
-  --source-dir supabass_ontol
+  --source-dir supabase/data/raw
 ```
 
 **성공 기준**: required JSON/ETL 스크립트가 모두 존재하고, pandas/numpy import 가능.
@@ -56,7 +56,7 @@ python scripts/hvdc/validate_inputs.py \
 > DDL 파일은 runbook 상 경로만 고정. 실제 파일 존재는 레포에서 확인.
 
 ```bash
-psql "$SUPABASE_DB_URL" -f supabass_ontol/20260124_hvdc_layers_status_case_ops.sql
+psql "$SUPABASE_DB_URL" -f supabase/data/raw/20260124_hvdc_layers_status_case_ops.sql
 ```
 
 ---
@@ -81,11 +81,11 @@ bash scripts/hvdc/run_etl_case.sh
 ```
 
 생성물(기본):
-- `supabase_csv_optionC_v3/locations.csv`
-- `supabase_csv_optionC_v3/shipments_case.csv`
-- `supabase_csv_optionC_v3/cases.csv`
-- `supabase_csv_optionC_v3/flows.csv`
-- `supabase_csv_optionC_v3/events_case.csv`
+- `supabase/data/output/optionC/locations.csv`
+- `supabase/data/output/optionC/shipments_case.csv`
+- `supabase/data/output/optionC/cases.csv`
+- `supabase/data/output/optionC/flows.csv`
+- `supabase/data/output/optionC/events_case.csv`
 
 ---
 
@@ -98,11 +98,11 @@ psql "$SUPABASE_DB_URL" \
   -v do_truncate=on \
   -v status_shipments_csv="$(pwd)/hvdc_output/supabase/shipments_status.csv" \
   -v status_events_csv="$(pwd)/hvdc_output/supabase/events_status.csv" \
-  -v case_locations_csv="$(pwd)/supabase_csv_optionC_v3/locations.csv" \
-  -v case_shipments_csv="$(pwd)/supabase_csv_optionC_v3/shipments_case.csv" \
-  -v case_cases_csv="$(pwd)/supabase_csv_optionC_v3/cases.csv" \
-  -v case_flows_csv="$(pwd)/supabase_csv_optionC_v3/flows.csv" \
-  -v case_events_csv="$(pwd)/supabase_csv_optionC_v3/events_case.csv" \
+  -v case_locations_csv="$(pwd)/supabase/data/output/optionC/locations.csv" \
+  -v case_shipments_csv="$(pwd)/supabase/data/output/optionC/shipments_case.csv" \
+  -v case_cases_csv="$(pwd)/supabase/data/output/optionC/cases.csv" \
+  -v case_flows_csv="$(pwd)/supabase/data/output/optionC/flows.csv" \
+  -v case_events_csv="$(pwd)/supabase/data/output/optionC/events_case.csv" \
   -f scripts/hvdc/load_csv.psql
 ```
 

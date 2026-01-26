@@ -5,10 +5,10 @@
 
 $ErrorActionPreference = "Stop"
 $root = $PSScriptRoot
-while (-not (Test-Path (Join-Path $root "supabass_ontol"))) { $root = Split-Path $root -Parent }
+while (-not (Test-Path (Join-Path $root "supabase"))) { $root = Split-Path $root -Parent }
 Set-Location $root
 
-$ddl = "supabass_ontol/20260124_hvdc_layers_status_case_ops.sql"
+$ddl = "supabase/scripts/20260124_hvdc_layers_status_case_ops.sql"
 if (-not (Test-Path $ddl)) {
   Write-Error "DDL file not found: $ddl"
   exit 1

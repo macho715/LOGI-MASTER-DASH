@@ -1,12 +1,12 @@
 #requires -Version 5.1
 <#!
-Move RAW DATA files to supabass_ontol/ folder
+Move RAW DATA files to supabase/data/raw/ folder
 
 Files to move:
 - hvdc_excel_reporter_final_sqm_rev_3.json
 - hvdc_excel_reporter_final_sqm_rev_3.csv
 
-Destination: supabass_ontol/
+Destination: supabase/data/raw/
 
 Usage:
   powershell -ExecutionPolicy Bypass -File scripts/hvdc/move_raw_data.ps1
@@ -15,7 +15,7 @@ Usage:
 $ErrorActionPreference = 'Stop'
 
 $RepoRoot = (Resolve-Path (Join-Path $PSScriptRoot "..\.." )).Path
-$SrcDir = Join-Path $RepoRoot "supabass_ontol"
+$SrcDir = Join-Path $RepoRoot "supabase\data\raw"
 
 Write-Host "[move_raw_data.ps1] repo_root=$RepoRoot"
 Write-Host "[move_raw_data.ps1] destination=$SrcDir"

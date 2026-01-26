@@ -33,30 +33,30 @@ Write-Host "[run_all.ps1] repo_root=$RepoRoot"
 
 # 0) Move RAW DATA files if needed
 Write-Host "[run_all.ps1] Checking RAW DATA files..."
-$SrcDir = Join-Path $RepoRoot "supabass_ontol"
+$SrcDir = Join-Path $RepoRoot "supabase\data\raw"
 $rawJsonSource = Join-Path $RepoRoot "hvdc_excel_reporter_final_sqm_rev_3.json"
 $rawJsonDest = Join-Path $SrcDir "hvdc_excel_reporter_final_sqm_rev_3.json"
 $rawCsvSource = Join-Path $RepoRoot "hvdc_excel_reporter_final_sqm_rev_3.csv"
 $rawCsvDest = Join-Path $SrcDir "hvdc_excel_reporter_final_sqm_rev_3.csv"
 
 if ((Test-Path $rawJsonSource) -and -not (Test-Path $rawJsonDest)) {
-  Write-Host "[run_all.ps1] Moving RAW DATA JSON to supabass_ontol/..."
+  Write-Host "[run_all.ps1] Moving RAW DATA JSON to supabase/data/raw/..."
   Move-Item -Path $rawJsonSource -Destination $rawJsonDest -Force
   Write-Host "[run_all.ps1] ✅ Moved: hvdc_excel_reporter_final_sqm_rev_3.json"
 }
 
 if ((Test-Path $rawCsvSource) -and -not (Test-Path $rawCsvDest)) {
-  Write-Host "[run_all.ps1] Moving RAW DATA CSV to supabass_ontol/..."
+  Write-Host "[run_all.ps1] Moving RAW DATA CSV to supabase/data/raw/..."
   Move-Item -Path $rawCsvSource -Destination $rawCsvDest -Force
   Write-Host "[run_all.ps1] ✅ Moved: hvdc_excel_reporter_final_sqm_rev_3.csv"
 }
 
 # 1) Validate inputs
-python (Join-Path $RepoRoot "scripts\hvdc\validate_inputs.py") --repo-root $RepoRoot --source-dir "supabass_ontol" --require-customs
+python (Join-Path $RepoRoot "scripts\hvdc\validate_inputs.py") --repo-root $RepoRoot --source-dir "supabase\data\raw" --require-customs
 
 # 2) Apply DDL
 Write-Host "[run_all.ps1] Applying DDL..."
-psql $env:SUPABASE_DB_URL -f (Join-Path $RepoRoot "supabass_ontol\20260124_hvdc_layers_status_case_ops.sql")
+psql $env:SUPABASE_DB_URL -f (Join-Path $RepoRoot "supabase\scripts\20260124_hvdc_layers_status_case_ops.sql")
 
 # 2.5) Create baseline views (optional)
 Write-Host "[run_all.ps1] Creating baseline dashboard views (optional)..."
@@ -64,7 +64,7 @@ psql $env:SUPABASE_DB_URL -f (Join-Path $RepoRoot "supabase\migrations\20260124_
 
 # 3) Run ETL - Status
 Write-Host "[run_all.ps1] Running ETL (status)..."
-$SrcDir = Join-Path $RepoRoot "supabass_ontol"
+$SrcDir = Join-Path $RepoRoot "supabase\data\raw"
 $OutDir = Join-Path $RepoRoot "hvdc_output"
 $BaseIri = if ($env:HVDC_BASE_IRI) { $env:HVDC_BASE_IRI } else { "https://example.com/hvdc" }
 
@@ -94,12 +94,12 @@ if (-not $warehouseJson) {
   throw "[run_all.ps1] Warehouse JSON not found in $SrcDir (expected hvdc_warehouse_status.json or variants)"
 }
 
-$etl4 = Join-Path $SrcDir "Untitled-4_dashboard_ready_FULL.py"
+$etl4 = Join-Path $RepoRoot "scripts\etl\status_etl.py"
 if (-not (Test-Path $etl4)) {
   throw "[run_all.ps1] ETL script not found: $etl4"
 }
 
-$caseLocations = Join-Path $RepoRoot "supabase_csv_optionC_v3\locations.csv"
+$caseLocations = Join-Path $RepoRoot "supabase\data\output\optionC\locations.csv"
 $caseArgs = @()
 if (Test-Path $caseLocations) {
   $caseArgs = @("--case-locations", $caseLocations)
@@ -109,7 +109,7 @@ python $etl4 --status $statusJson --warehouse $warehouseJson --outdir $OutDir --
 
 # 3.2) Run ETL - Option C
 Write-Host "[run_all.ps1] Running ETL (option-c)..."
-$etl3 = Join-Path $SrcDir "Untitled-3_dashboard_ready_FULL.py"
+$etl3 = Join-Path $RepoRoot "scripts\etl\optionc_etl.py"
 if (-not (Test-Path $etl3)) {
   throw "[run_all.ps1] ETL script not found: $etl3"
 }
@@ -141,7 +141,7 @@ if (-not $customsJson) {
   throw "[run_all.ps1] Customs JSON not found in $SrcDir (expected HVDC_STATUS.json)"
 }
 
-$caseOutDir = Join-Path $RepoRoot "supabase_csv_optionC_v3"
+$caseOutDir = Join-Path $RepoRoot "supabase\data\output\optionC"
 if (-not (Test-Path $caseOutDir)) { New-Item -ItemType Directory -Force -Path $caseOutDir | Out-Null }
 
 python $etl3 --all $allshptJson --wh $warehouseJson --customs $customsJson --output-dir $caseOutDir --base-iri $BaseIri --export-ttl
@@ -150,11 +150,11 @@ python $etl3 --all $allshptJson --wh $warehouseJson --customs $customsJson --out
 Write-Host "[run_all.ps1] Loading CSVs..."
 $StatusShipmentsCsv = Join-Path $RepoRoot "hvdc_output\supabase\shipments_status.csv"
 $StatusEventsCsv    = Join-Path $RepoRoot "hvdc_output\supabase\events_status.csv"
-$CaseLocationsCsv   = Join-Path $RepoRoot "supabase_csv_optionC_v3\locations.csv"
-$CaseShipmentsCsv   = Join-Path $RepoRoot "supabase_csv_optionC_v3\shipments_case.csv"
-$CaseCasesCsv       = Join-Path $RepoRoot "supabase_csv_optionC_v3\cases.csv"
-$CaseFlowsCsv       = Join-Path $RepoRoot "supabase_csv_optionC_v3\flows.csv"
-$CaseEventsCsv      = Join-Path $RepoRoot "supabase_csv_optionC_v3\events_case.csv"
+$CaseLocationsCsv   = Join-Path $RepoRoot "supabase\data\output\optionC\locations.csv"
+$CaseShipmentsCsv   = Join-Path $RepoRoot "supabase\data\output\optionC\shipments_case.csv"
+$CaseCasesCsv       = Join-Path $RepoRoot "supabase\data\output\optionC\cases.csv"
+$CaseFlowsCsv       = Join-Path $RepoRoot "supabase\data\output\optionC\flows.csv"
+$CaseEventsCsv      = Join-Path $RepoRoot "supabase\data\output\optionC\events_case.csv"
 
 psql $env:SUPABASE_DB_URL \
   -v do_truncate=on \

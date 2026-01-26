@@ -9,7 +9,7 @@
 
 ### ✅ Case 레이어 RAW DATA (처리 완료 데이터)
 
-**위치**: `supabass_ontol/` (✅ 이동 완료)
+**위치**: `supabase/data/raw/` (✅ 이동 완료)
 
 | 파일명 | 용도 | 행 수 | 상태 | 비고 |
 |--------|------|------|------|------|
@@ -35,7 +35,7 @@
 
 **사용 방법**:
 - `run_all.ps1`이 자동으로 `hvdc_excel_reporter_final_sqm_rev_3.json`을 우선 인식
-- ETL 스크립트(`Untitled-3_dashboard_ready_FULL.py`)가 `--all` 인자로 사용
+- ETL 스크립트(`scripts/etl/optionc_etl.py`)가 `--all` 인자로 사용
 
 ---
 
@@ -92,7 +92,7 @@
 
 ### Case 레이어 (Option-C, 빈 파일)
 
-**위치**: `supabase_csv_optionC_v3/`
+**위치**: `supabase/data/output/optionC/`
 
 | 파일명 | 테이블 | 행 수 | 상태 | 비고 |
 |--------|--------|------|------|------|
@@ -110,7 +110,7 @@
 - `all_unique_case_keys: 0`
 - `merged_rows: 0`
 
-**결론**: `supabase_csv_optionC_v3/` 디렉토리의 CSV 파일들은 ETL 실행이 실패했거나 데이터가 없는 상태입니다. **업로드하지 마세요.**
+**결론**: `supabase/data/output/optionC/` 디렉토리의 CSV 파일들은 ETL 실행이 실패했거나 데이터가 없는 상태입니다. **업로드하지 마세요.**
 
 ---
 
@@ -223,12 +223,12 @@ WHERE e.location_id IS NOT NULL
 - **Case 레이어**: `hvdc_output/optionC/` (5개 파일)
 
 ### ❌ 업로드 불가능한 데이터
-- **Case 레이어**: `supabase_csv_optionC_v3/` (모든 파일이 비어있음)
+- **Case 레이어**: `supabase/data/output/optionC/` (모든 파일이 비어있음)
 
 ### 권장 사항
 1. **Status 레이어 먼저 업로드**: `hvdc_output/supabase/` 디렉토리 사용
 2. **Case 레이어 다음 업로드**: `hvdc_output/optionC/` 디렉토리 사용 (FK 순서 준수)
-3. **`supabase_csv_optionC_v3/` 디렉토리는 무시**: 데이터가 없으므로 업로드하지 마세요
+3. **`supabase/data/output/optionC/` 디렉토리는 무시**: 데이터가 없으므로 업로드하지 마세요
 
 ---
 

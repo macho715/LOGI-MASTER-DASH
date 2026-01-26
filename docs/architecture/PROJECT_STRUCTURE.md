@@ -23,8 +23,16 @@ LOGI MASTER DASH/
 │   ├── core/                   # json_to_ttl.py 등 핵심 스크립트
 │   └── pipelines/              # 실행 파이프라인
 ├── supabase/
-│   └── migrations/              # DB 스키마 마이그레이션
-├── supabass_ontol/              # ETL 스크립트 (Status/Case 레이어)
+│   ├── migrations/              # DB 스키마 마이그레이션
+│   ├── scripts/                 # SQL 스크립트 (DDL)
+│   ├── data/
+│   │   ├── raw/                 # 입력 데이터 (JSON/CSV)
+│   │   └── output/optionC/      # ETL 출력 (Option-C CSV)
+│   ├── docs/                    # Supabase 관련 문서
+│   └── ontology/                # TTL 온톨로지 파일
+├── scripts/
+│   ├── etl/                     # ETL 스크립트 (status_etl.py, optionc_etl.py)
+│   └── hvdc/                    # 실행 파이프라인
 ├── docs/                        # 프로젝트 문서 (SSOT)
 ├── configs/                     # 컬럼 매핑 SSOT
 └── hvdc_output/                 # ETL 출력 (CSV/TTL)
@@ -104,22 +112,44 @@ LOGI MASTER DASH/
 
 ---
 
-### `supabass_ontol/` - ETL 스크립트 (데이터 적재)
+### `supabase/` - Supabase 관련 파일 통합
+
+#### `supabase/scripts/`
+- **SQL 스크립트**: `20260124_hvdc_layers_status_case_ops.sql` - Status/Case 레이어 DDL
+- **역할**: 데이터베이스 스키마 생성 및 관리
+
+#### `supabase/data/raw/`
+- **입력 데이터**: `HVDC_all_status.json`, `hvdc_warehouse_status.json`, `hvdc_excel_reporter_final_sqm_rev_3.json`
+- **역할**: ETL 스크립트의 입력 소스 데이터
+
+#### `supabase/data/output/optionC/`
+- **출력 데이터**: Option-C ETL 실행 시 생성되는 CSV 파일들
+- **파일**: `locations.csv`, `shipments_case.csv`, `cases.csv`, `flows.csv`, `events_case.csv`
+
+#### `supabase/docs/`
+- **문서**: ETL 스크립트 사용 가이드, Supabase 설정 가이드
+- **파일**: `README_dashboard_ready_FULL.md`, `RUNBOOK_HVDC_SUPABASE_SETUP.md` 등
+
+#### `supabase/ontology/`
+- **TTL 파일**: `hvdc_ops_ontology.ttl`, `hvdc_ops_shapes.ttl`
+- **역할**: RDF 온톨로지 정의
+
+### `scripts/etl/` - ETL 스크립트
 
 #### Status SSOT 레이어
-- **스크립트**: `Untitled-4_dashboard_ready_FULL.py`
+- **스크립트**: `status_etl.py` (이전: `scripts/etl/status_etl.py`)
 - **목적**: `status.shipments_status`, `status.events_status` 생성
-- **입력**: `HVDC_all_status.json`, `hvdc_warehouse_status.json`
-- **출력**: `out/supabase/shipments_status.csv`, `events_status.csv`
+- **입력**: `supabase/data/raw/HVDC_all_status.json`, `hvdc_warehouse_status.json`
+- **출력**: `hvdc_output/supabase/shipments_status.csv`, `events_status.csv`
 
 #### Option-C Case 레이어
-- **스크립트**: `Untitled-3_dashboard_ready_FULL.py`
+- **스크립트**: `optionc_etl.py` (이전: `scripts/etl/optionc_etl.py`)
 - **목적**: `case.*` 테이블용 CSV 생성 (cases, flows, events_case)
-- **입력**: `hvdc_allshpt_status.json`, `hvdc_warehouse_status.json`, `HVDC_STATUS.json`
-- **출력**: `supabase_csv_optionC_v3/*.csv`
-- **특징**: Flow Code v3.5 계산 포함
+- **입력**: `supabase/data/raw/hvdc_allshpt_status.json`, `hvdc_warehouse_status.json`, `HVDC_STATUS.json`
+- **출력**: `supabase/data/output/optionC/*.csv`
+- **특징**: Flow Code v3.5 계산 포함 (`flow_code_calculator.py`)
 
-**상세 가이드**: [ETL_GUIDE.md](./ETL_GUIDE.md), [DATA_LOADING_PLAN.md](../data-loading/DATA_LOADING_PLAN.md)
+**상세 가이드**: [ETL_GUIDE.md](../data-loading/ETL_GUIDE.md), [DATA_LOADING_PLAN.md](../data-loading/DATA_LOADING_PLAN.md)
 
 ---
 

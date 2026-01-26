@@ -18,9 +18,9 @@ from typing import Dict, List, Tuple
 
 # Project root (assuming script is in scripts/)
 PROJECT_ROOT = Path(__file__).parent.parent
-SUPABASS_ONTOL = PROJECT_ROOT / "supabass_ontol"
+SUPABASS_ONTOL = PROJECT_ROOT / "supabase" / "data" / "raw"
 HVDC_OUTPUT = PROJECT_ROOT / "hvdc_output"
-MIGRATION_FILE = SUPABASS_ONTOL / "20260124_hvdc_layers_status_case_ops.sql"
+MIGRATION_FILE = PROJECT_ROOT / "supabase" / "scripts" / "20260124_hvdc_layers_status_case_ops.sql"
 
 
 def check_source_json_files() -> Tuple[bool, List[str]]:
@@ -271,7 +271,7 @@ def main() -> int:
         print("[OK] All validation checks passed!")
         print()
         print("Next steps:")
-        print("1. Apply migration: supabass_ontol/20260124_hvdc_layers_status_case_ops.sql")
+        print("1. Apply migration: supabase/scripts/20260124_hvdc_layers_status_case_ops.sql")
         print("2. Load CSV data in order: locations -> shipments -> cases -> flows -> events")
         print("3. Run Gate 1 QA queries: scripts/gate1_qa_queries.sql")
         return 0

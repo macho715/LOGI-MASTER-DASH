@@ -35,8 +35,8 @@ graph TB
     end
 
     subgraph "ETL Pipeline"
-        ETL4[Untitled-4<br/>Status SSOT Layer]
-        ETL3[Untitled-3<br/>Option-C Case Layer]
+        ETL4[status_etl.py<br/>Status SSOT Layer]
+        ETL3[optionc_etl.py<br/>Option-C Case Layer]
         CSV[CSV Generation]
     end
 
@@ -133,8 +133,8 @@ flowchart LR
     end
 
     subgraph "ETL Processing"
-        D[Untitled-4<br/>Status SSOT ETL]
-        E[Untitled-3<br/>Case Layer ETL]
+        D[status_etl.py<br/>Status SSOT ETL]
+        E[optionc_etl.py<br/>Case Layer ETL]
         F[Flow Code v3.5<br/>Calculation]
     end
 
@@ -196,8 +196,8 @@ graph TD
     end
 
     subgraph "Phase 3: ETL Execution"
-        ETL4_RUN[Untitled-4 Execution<br/>Status SSOT Layer]
-        ETL3_RUN[Untitled-3 Execution<br/>Case Layer]
+        ETL4_RUN[status_etl.py Execution<br/>Status SSOT Layer]
+        ETL3_RUN[optionc_etl.py Execution<br/>Case Layer]
         CSV_GEN[CSV Generation]
         QA_REPORT[QA Report Generation]
     end
@@ -303,7 +303,7 @@ graph TB
     end
 
     subgraph "ETL Pipeline"
-        ETL_Scripts[Python ETL Scripts<br/>Untitled-4 + Untitled-3]
+        ETL_Scripts[Python ETL Scripts<br/>status_etl.py + optionc_etl.py]
         FlowCode[Flow Code v3.5<br/>Calculator]
         ColumnAudit[Column Audit<br/>Used Columns Log]
     end

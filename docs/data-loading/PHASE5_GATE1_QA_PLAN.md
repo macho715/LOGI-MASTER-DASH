@@ -3,7 +3,7 @@
 > **목적**: Phase 4 완료 후 데이터 무결성 검증 (Orphan, Duplicate, Flow Code 규칙)을 수행합니다.  
 > **최종 업데이트**: 2026-01-25  
 > **전제 조건**: Phase 4 (CSV 적재) 완료 필요  
-> **참조**: [DATA_LOADING_PLAN.md](../data-loading/DATA_LOADING_PLAN.md), [RUNBOOK_HVDC_SUPABASE_SETUP.md](../supabass_ontol/RUNBOOK_HVDC_SUPABASE_SETUP.md)
+> **참조**: [DATA_LOADING_PLAN.md](../data-loading/DATA_LOADING_PLAN.md), [RUNBOOK_HVDC_SUPABASE_SETUP.md](../supabase/data/raw/RUNBOOK_HVDC_SUPABASE_SETUP.md)
 
 ---
 
@@ -376,7 +376,7 @@ Phase 5 완료 후:
 
 - [DATA_LOADING_PLAN.md](../data-loading/DATA_LOADING_PLAN.md) - 전체 데이터 로딩 계획
 - [PHASE4_CSV_LOADING_PLAN.md](../data-loading/PHASE4_CSV_LOADING_PLAN.md) - Phase 4 CSV 적재
-- [RUNBOOK_HVDC_SUPABASE_SETUP.md](../supabass_ontol/RUNBOOK_HVDC_SUPABASE_SETUP.md) - Supabase 설정 Runbook
+- [RUNBOOK_HVDC_SUPABASE_SETUP.md](../supabase/data/raw/RUNBOOK_HVDC_SUPABASE_SETUP.md) - Supabase 설정 Runbook
 - [scripts/hvdc/gate1_qa.sql](../scripts/hvdc/gate1_qa.sql) - Gate 1 QA SQL 스크립트
 - [scripts/hvdc/gate1_qa.py](../scripts/hvdc/gate1_qa.py) - Gate 1 QA Python 스크립트 (`--json` 지원)
 - [scripts/hvdc/run_gate1_qa.ps1](../scripts/hvdc/run_gate1_qa.ps1) - PowerShell 실행 스크립트

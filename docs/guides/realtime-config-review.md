@@ -29,7 +29,7 @@
 - ✅ Idempotent migration (safe to run multiple times)
 - ✅ Schema-qualified table name support
 
-**Option-C Layer (`supabass_ontol/20260124_hvdc_layers_status_case_ops.sql`)**:
+**Option-C Layer (`supabase/data/raw/20260124_hvdc_layers_status_case_ops.sql`)**:
 - Creates `status.*` and `"case".*` schemas
 - **No Realtime publication statements** in this migration (handled by `20260124_enable_realtime.sql`)
 - **No RLS policies** defined for these schemas (needs verification)
@@ -216,5 +216,5 @@ ORDER BY schemaname, tablename;
 
 - Supabase RLS Guide: https://supabase.com/docs/guides/database/postgres/row-level-security
 - Supabase Realtime Postgres Changes: https://supabase.com/docs/guides/realtime/postgres-changes
-- Project migration: `supabass_ontol/20260124_hvdc_layers_status_case_ops.sql`
+- Project migration: `supabase/data/raw/20260124_hvdc_layers_status_case_ops.sql`
 - Realtime Implementation: `./REALTIME_IMPLEMENTATION.md`

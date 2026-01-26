@@ -7,6 +7,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed (2026-02-08)
+- logistics-dashboard: removed top-level overflow lock so scroll remains scoped to worklist/right panel containers
+
 ### Changed (2026-02-07)
 - logistics-dashboard: fixed KPI summary strip to the header and adjusted layout spacing to avoid HVDC overlap
 - logistics-dashboard: simplified RightPanel to keep detailed status charts without duplicate summary values

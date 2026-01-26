@@ -229,9 +229,9 @@ JSONB는 테이블에 넣기 위한 기본 포맷이라기보다, **(1) 스키�
 
 ```bash
 # 1. ETL: JSON → CSV 변환
-python supabass_ontol/Untitled-4_dashboard_ready_FULL.py \
-  --status supabass_ontol/HVDC_all_status.json \
-  --warehouse supabass_ontol/hvdc_warehouse_status.json \
+python supabase/data/raw/scripts/etl/status_etl.py \
+  --status supabase/data/raw/HVDC_all_status.json \
+  --warehouse supabase/data/raw/hvdc_warehouse_status.json \
   --outdir hvdc_output
 
 # 2. CSV 적재 (COPY 방식)

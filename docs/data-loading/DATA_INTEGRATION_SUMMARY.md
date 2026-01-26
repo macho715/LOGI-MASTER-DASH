@@ -67,7 +67,7 @@ SUPABASE_SERVICE_ROLE_KEY=<service_role_key>
 
 | 단계 | 명령 |
 |------|------|
-| Phase 1 | `python scripts/hvdc/validate_inputs.py --repo-root . --source-dir supabass_ontol` |
+| Phase 1 | `python scripts/hvdc/validate_inputs.py --repo-root . --source-dir supabase/data/raw` |
 | Phase 2 | `./scripts/hvdc/run_phase2_ddl.ps1` 또는 `apply_ddl.py` + `verify_phase2_ddl.py` |
 | Phase 3 | `run_etl_status.sh` / `run_etl_case.sh` (CSV 생성) |
 | Phase 4 | `load_csv.py --status-only` (또는 `load_csv.psql`) |

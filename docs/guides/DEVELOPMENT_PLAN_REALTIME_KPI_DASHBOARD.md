@@ -16,7 +16,7 @@
 - Run `scripts/hvdc/validate_inputs.py` (hard fail on missing Status/Warehouse, optional on Customs if Option-C disabled)
 
 ### A2. Apply DDL ✅ 완료 (2026-01-25)
-- Apply `supabass_ontol/20260124_hvdc_layers_status_case_ops.sql`
+- Apply `supabase/data/raw/20260124_hvdc_layers_status_case_ops.sql`
 - Confirm indexes + RLS present
 
 ### A3. Run ETL ✅ 완료 (2026-01-25)

@@ -1,6 +1,6 @@
-# supabass_ontol 데이터 Supabase 업로드 완전 플랜
+# supabase/data/raw 데이터 Supabase 업로드 완전 플랜
 
-> **목적**: `supabass_ontol` 폴더의 파일과 자료(HVDC JSON, ETL 스크립트, DDL, CSV)를 이용해서 Supabase에 업로드하는 전체 파이프라인(Phase 2~6) 통합 플랜  
+> **목적**: `supabase/data/raw` 폴더의 파일과 자료(HVDC JSON, ETL 스크립트, DDL, CSV)를 이용해서 Supabase에 업로드하는 전체 파이프라인(Phase 2~6) 통합 플랜  
 > **최종 업데이트**: 2026-01-25  
 > **참조**: [DATA_LOADING_PLAN.md](../data-loading/DATA_LOADING_PLAN.md), [DATA_LOADING_RUNBOOK.md](../data-loading/DATA_LOADING_RUNBOOK.md), [DASHBOARD_DATA_INTEGRATION_PROGRESS.md](../data-loading/DASHBOARD_DATA_INTEGRATION_PROGRESS.md)
 
@@ -9,12 +9,12 @@
 ## 전체 개요
 
 ### 목표
-`supabass_ontol` 폴더의 파일과 자료를 활용하여 Supabase에 데이터를 업로드하고, 대시보드에서 실시간으로 데이터를 확인할 수 있도록 합니다.
+`supabase/data/raw` 폴더의 파일과 자료를 활용하여 Supabase에 데이터를 업로드하고, 대시보드에서 실시간으로 데이터를 확인할 수 있도록 합니다.
 
 ### 데이터 흐름도
 
 ```
-supabass_ontol/
+supabase/data/raw/
   ├── HVDC_all_status.json ──┐
   ├── hvdc_warehouse_status.json ──┼─→ ETL (Untitled-4) ──→ CSV ──→ Supabase
   └── 20260124_hvdc_layers_status_case_ops.sql ────────────┘
@@ -196,7 +196,7 @@ supabass_ontol/
 - [REALTIME_IMPLEMENTATION.md](./REALTIME_IMPLEMENTATION.md) - Realtime 구현 가이드
 
 ### 소스 파일
-- [supabass_ontol/20260124_hvdc_layers_status_case_ops.sql](../supabass_ontol/20260124_hvdc_layers_status_case_ops.sql) - DDL 파일
+- [supabase/data/raw/20260124_hvdc_layers_status_case_ops.sql](../supabase/data/raw/20260124_hvdc_layers_status_case_ops.sql) - DDL 파일
 - [supabase/migrations/20260124_enable_realtime_layers.sql](../supabase/migrations/20260124_enable_realtime_layers.sql) - Realtime 활성화 마이그레이션
 - [scripts/hvdc/load_csv.py](../scripts/hvdc/load_csv.py) - CSV 적재 Python 스크립트
 - [scripts/hvdc/gate1_qa.sql](../scripts/hvdc/gate1_qa.sql) - Gate 1 QA SQL 스크립트
@@ -212,7 +212,7 @@ supabase login
 supabase link --project-ref <your-project-ref>
 
 # DDL 적용
-supabase db execute -f supabass_ontol/20260124_hvdc_layers_status_case_ops.sql
+supabase db execute -f supabase/data/raw/20260124_hvdc_layers_status_case_ops.sql
 ```
 
 ### 2. Phase 4 실행

@@ -2,7 +2,7 @@
 
 > **Supabase 데이터 적재를 위한 ETL 스크립트 사용 가이드**  
 > **최종 업데이트**: 2026-01-24  
-> **참조**: [README_dashboard_ready_FULL.md](../supabass_ontol/README_dashboard_ready_FULL.md)
+> **참조**: [README_dashboard_ready_FULL.md](../supabase/data/raw/README_dashboard_ready_FULL.md)
 
 ---
 
@@ -10,8 +10,8 @@
 
 HVDC 데이터를 Supabase에 적재하기 위한 두 가지 ETL 스크립트가 준비되어 있습니다:
 
-1. **Status SSOT 레이어** (`Untitled-4_dashboard_ready_FULL.py`)
-2. **Option-C Case 레이어** (`Untitled-3_dashboard_ready_FULL.py`)
+1. **Status SSOT 레이어** (`scripts/etl/status_etl.py`)
+2. **Option-C Case 레이어** (`scripts/etl/optionc_etl.py`)
 
 ---
 
@@ -25,7 +25,7 @@ HVDC 데이터를 Supabase에 적재하기 위한 두 가지 ETL 스크립트가
 ### 입력 파일
 - `HVDC_all_status.json` - Status SSOT 데이터
 - `hvdc_warehouse_status.json` - Warehouse 데이터 (케이스 단위)
-- (옵션) `supabase_csv_optionC_v3/locations.csv` - Option-C locations
+- (옵션) `supabase/data/output/optionC/locations.csv` - Option-C locations
 
 ### 출력 파일 (out/)
 - `supabase/schema.sql` - 스키마 정의
@@ -41,12 +41,12 @@ HVDC 데이터를 Supabase에 적재하기 위한 두 가지 ETL 스크립트가
 ### 실행 예시
 
 ```bash
-python supabass_ontol/Untitled-4_dashboard_ready_FULL.py \
+python supabase/data/raw/scripts/etl/status_etl.py \
   --status HVDC_all_status.json \
   --warehouse hvdc_warehouse_status.json \
   --outdir out \
   --base-iri https://example.com/hvdc \
-  --case-locations supabase_csv_optionC_v3/locations.csv
+  --case-locations supabase/data/output/optionC/locations.csv
 ```
 
 ---
@@ -75,11 +75,11 @@ python supabass_ontol/Untitled-4_dashboard_ready_FULL.py \
 ### 실행 예시
 
 ```bash
-python supabass_ontol/Untitled-3_dashboard_ready_FULL.py \
+python supabase/data/raw/scripts/etl/optionc_etl.py \
   --all hvdc_allshpt_status.json \
   --wh hvdc_warehouse_status.json \
   --customs HVDC_STATUS.json \
-  --output-dir supabase_csv_optionC_v3 \
+  --output-dir supabase/data/output/optionC \
   --export-ttl \
   --base-iri https://example.com/hvdc
 ```
@@ -90,7 +90,7 @@ python supabass_ontol/Untitled-3_dashboard_ready_FULL.py \
 
 ### 권장 순서
 
-1. **DDL 적용**: `supabass_ontol/20260124_hvdc_layers_status_case_ops.sql` 실행
+1. **DDL 적용**: `supabase/data/raw/20260124_hvdc_layers_status_case_ops.sql` 실행
 
 2. **Status 레이어 적재**:
    ```sql
@@ -101,19 +101,19 @@ python supabass_ontol/Untitled-3_dashboard_ready_FULL.py \
 3. **Case 레이어 적재** (순서 중요):
    ```sql
    -- 1) locations 먼저 (FK 참조)
-   \copy "case".locations from 'supabase_csv_optionC_v3/locations.csv' with (format csv, header true, encoding 'UTF8');
+   \copy "case".locations from 'supabase/data/output/optionC/locations.csv' with (format csv, header true, encoding 'UTF8');
    
    -- 2) shipments_case
-   \copy "case".shipments_case from 'supabase_csv_optionC_v3/shipments_case.csv' with (format csv, header true, encoding 'UTF8');
+   \copy "case".shipments_case from 'supabase/data/output/optionC/shipments_case.csv' with (format csv, header true, encoding 'UTF8');
    
    -- 3) cases
-   \copy "case".cases from 'supabase_csv_optionC_v3/cases.csv' with (format csv, header true, encoding 'UTF8');
+   \copy "case".cases from 'supabase/data/output/optionC/cases.csv' with (format csv, header true, encoding 'UTF8');
    
    -- 4) flows
-   \copy "case".flows from 'supabase_csv_optionC_v3/flows.csv' with (format csv, header true, encoding 'UTF8');
+   \copy "case".flows from 'supabase/data/output/optionC/flows.csv' with (format csv, header true, encoding 'UTF8');
    
    -- 5) events_case
-   \copy "case".events_case from 'supabase_csv_optionC_v3/events_case.csv' with (format csv, header true, encoding 'UTF8');
+   \copy "case".events_case from 'supabase/data/output/optionC/events_case.csv' with (format csv, header true, encoding 'UTF8');
    ```
 
 ---
@@ -179,8 +179,8 @@ where flow_code=5 and requires_review is not true;
 
 ## 📚 참조 문서
 
-- [README_dashboard_ready_FULL.md](../supabass_ontol/README_dashboard_ready_FULL.md) - 스크립트 상세 설명
-- [RUNBOOK_HVDC_SUPABASE_SETUP.md](../supabass_ontol/RUNBOOK_HVDC_SUPABASE_SETUP.md) - Supabase 구성 Runbook
+- [README_dashboard_ready_FULL.md](../supabase/data/raw/README_dashboard_ready_FULL.md) - 스크립트 상세 설명
+- [RUNBOOK_HVDC_SUPABASE_SETUP.md](../supabase/data/raw/RUNBOOK_HVDC_SUPABASE_SETUP.md) - Supabase 구성 Runbook
 - [DATA_LOADING_PLAN.md](../data-loading/DATA_LOADING_PLAN.md) - 데이터 적재 단계별 실행 계획
 - [STATUS.md](../STATUS.md) - 통합 상태 SSOT
 
