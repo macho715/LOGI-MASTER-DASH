@@ -140,12 +140,12 @@ export function UnifiedLayout() {
     <div className="min-h-screen bg-background dark">
       <HeaderBar />
 
-      <div className="flex min-h-screen pt-24 lg:pb-96">
-        <div className="flex-1 relative min-w-0" role="main" aria-label="Logistics Map View">
+      <div className="flex min-h-0 pt-24 lg:pb-96">
+        <div className="flex-1 relative min-w-0 min-h-0" role="main" aria-label="Logistics Map View">
           <MapView />
         </div>
 
-        <aside className="hidden lg:block w-80 shrink-0" aria-label="Location Status Panel">
+        <aside className="hidden lg:block w-80 shrink-0 min-h-0" aria-label="Location Status Panel">
           <RightPanel />
         </aside>
       </div>

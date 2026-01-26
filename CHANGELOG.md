@@ -7,10 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed (2026-02-09)
+- logistics-dashboard: allow main layout container to grow naturally to preserve panel scroll regions
+
 ### Changed (2026-02-08)
 - logistics-dashboard: removed top-level overflow lock so scroll remains scoped to worklist/right panel containers
 - logistics-dashboard: desktop worklist panel allows vertical scrolling within the table container
-- logistics-dashboard: allow page layout to expand vertically by removing fixed-height wrappers
 
 ### Changed (2026-02-07)
 - logistics-dashboard: fixed KPI summary strip to the header and adjusted layout spacing to avoid HVDC overlap
