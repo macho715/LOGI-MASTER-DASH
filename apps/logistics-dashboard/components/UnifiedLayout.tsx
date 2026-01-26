@@ -137,10 +137,10 @@ export function UnifiedLayout() {
   )
 
   return (
-    <div className="h-screen w-screen bg-background dark">
+    <div className="min-h-screen bg-background dark">
       <HeaderBar />
 
-      <div className="flex h-full pt-24 lg:pb-96">
+      <div className="flex min-h-screen pt-24 lg:pb-96">
         <div className="flex-1 relative min-w-0" role="main" aria-label="Logistics Map View">
           <MapView />
         </div>

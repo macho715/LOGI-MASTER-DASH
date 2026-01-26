@@ -147,12 +147,12 @@ export function UnifiedLayout() {
   }, [handlePanelDragMove, handlePanelDragEnd])
 
   return (
-    <div className="h-screen w-screen bg-background dark">
+    <div className="min-h-screen w-full bg-background dark">
       {/* Header Bar */}
       <HeaderBar />
 
       {/* Main Content Area */}
-      <div className="flex h-full pt-14">
+      <div className="flex min-h-screen pt-14">
         {/* Left: MapView */}
         <div className="flex-1 relative min-w-0" role="main" aria-label="Logistics Map View">
           <MapView />
