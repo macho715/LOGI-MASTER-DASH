@@ -1,5 +1,8 @@
 # Dashboard-Ready FULL 스크립트 (복사/붙여넣기용)
 
+> **최종 업데이트**: 2026-02-07  
+> **상태**: Phase 2~6 완료 (DDL 적용, CSV 적재 871+928, Gate 1 QA, Realtime 활성화)
+
 ## 1) Untitled-4_dashboard_ready_FULL.py (Status SSOT)
 ### 목표
 - Status(SSOT) 전량(=HVDC S No 1~830xx) 기준으로 `status.shipments_status` 를 갱신

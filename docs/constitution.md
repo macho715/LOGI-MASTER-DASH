@@ -356,9 +356,9 @@
 ## 11. 참조 문서
 
 - [AGENTS.md](../AGENTS.md) - 프로젝트 규칙 상세 (이 문서의 소스)
-- [INTEGRATION_STATUS.md](./INTEGRATION_STATUS.md) - 통합 상태
-- [architecture.md](./architecture.md) - 시스템 아키텍처
-- [roadmap_system_doc.md](./roadmap_system_doc.md) - 로드맵
+- [INTEGRATION_STATUS.md](../integration/INTEGRATION_STATUS.md) - 통합 상태
+- [architecture.md](../architecture/architecture.md) - 시스템 아키텍처
+- [roadmap_system_doc.md](../integration/roadmap_system_doc.md) - 로드맵
 - [SSOT.md](../.cursor/skills/hvdc-logistics-ssot/references/SSOT.md) - 단일 진실원
 
 ---

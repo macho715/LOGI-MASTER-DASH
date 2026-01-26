@@ -192,5 +192,5 @@ end $$;
 -- 1. This migration is idempotent - safe to run multiple times
 -- 2. Tables are only added if they exist in the database
 -- 3. Schema-qualified names are used for status.* and "case".* schemas
--- 4. Ensure RLS policies exist before enabling Realtime (see docs/realtime-config-review.md)
+-- 4. Ensure RLS policies exist before enabling Realtime (see docs/guides/realtime-config-review.md)
 -- 5. Realtime subscriptions require SELECT permissions via RLS policies

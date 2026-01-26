@@ -2,7 +2,7 @@
 
 > 이 문서는 프로젝트 통합의 **현재 상태/리스크/다음 액션**을 한 곳에서 추적하기 위한 **SSOT**입니다.
 > 
-> **참조**: [AGENTS.md](./AGENTS.md), [INTEGRATION_ROADMAP.md](./docs/INTEGRATION_ROADMAP.md), [DASHBOARD_DATA_INTEGRATION_PROGRESS.md](./docs/DASHBOARD_DATA_INTEGRATION_PROGRESS.md)
+> **참조**: [AGENTS.md](./AGENTS.md), [INTEGRATION_ROADMAP.md](./docs/integration/INTEGRATION_ROADMAP.md), [DASHBOARD_DATA_INTEGRATION_PROGRESS.md](./docs/data-loading/DASHBOARD_DATA_INTEGRATION_PROGRESS.md)
 
 ---
 
@@ -24,6 +24,7 @@
 - ✅ Supabase 연동 완료: `/api/worklist` 엔드포인트 구현
 - ✅ Flow Code v3.5 통합: 계산 로직 및 AGI/DAS 규칙 검증 포함
 - ✅ **대시보드 데이터 반영 완료**: `public.shipments` 뷰 생성, 871 rows 로컬 테스트 성공
+- ✅ **UI/UX 개선 완료** (2026-02-05~2026-02-07): 히트맵 범례, 줌 기반 레이어 가시성, RightPanel 탭 UI, 타이포그래피 개선, KPI 스트립 헤더 고정, 워크리스트 간소화
 - ✅ 포트: 3001 (개발 서버 실행 중)
 
 3) **logiontology_scaffold_2026-01-23**
@@ -291,6 +292,27 @@
      - 로컬 테스트 성공 (871 rows + KPI 정상 반환)
      - Python 스크립트: `check_dashboard_data.py`
 
+10. ✅ **UI/UX 개선 완료** (2026-02-05~2026-02-07)
+    - **히트맵 강도 범례** ✅ (2026-02-05)
+      - 히트맵 토글 활성 시 강도 범례 표시 (낮음~매우 높음)
+      - 지오펜스 영역 이벤트 가중치 적용
+      - POI 라벨 강조 (MOSB yard)
+      - DSV 창고 라벨링 추가
+      - MOSB-SCT 오피스 상태 필터링
+      - 타이포그래피 대비 개선
+    - **줌 기반 레이어 가시성** ✅ (2026-02-06)
+      - 히트맵/상태/POI 레이어 동적 표시 (줌 임계값 기반)
+      - POI 라벨 컴팩트/상세 모드 전환
+      - 히트맵 반경 줌 스케일링
+      - RightPanel 탭 UI (Status/Occupancy/Distribution)
+      - 접근성 포커스 처리
+      - 타이포그래피 스케일 개선 (text-sm 기준)
+    - **레이아웃 및 워크리스트 개선** ✅ (2026-02-07)
+      - KPI 요약 스트립 헤더 고정
+      - 레이아웃 간격 조정 (HVDC 패널 겹침 방지)
+      - HVDC 워크리스트 간소화 (핵심 컬럼만, 상세는 DetailDrawer)
+      - RightPanel 중복 요약 제거
+
 ### 진행 중인 작업 ⏳
 
 1. ⏳ 통합 Store 연결
@@ -327,14 +349,17 @@
 - **2026-01-25**: **대시보드 데이터 반영 완료** - `public.shipments` 뷰 생성, Worklist API 수정, 로컬 테스트 성공 (871 rows)
 - **2026-01-25**: **dash 패치 문서 반영** - DASH_PLAN §3.0 진행 체크리스트 추가, STATUS 갭 분석·다음 2주에 dash §3.0·reakmapping·APPLY_PATCH 링크 반영
 - **2026-01-25**: **맵 레이어 API 라우트 Supabase 전환 완료** - `/api/locations`, `/api/location-status`, `/api/events` Mock→실제 데이터 조회, 스키마 매핑·Fallback 구현
+- **2026-02-05**: **히트맵 강도 범례 추가** - 히트맵 토글 활성 시 강도 범례(낮음~매우 높음) 표시, 지오펜스 영역 가중치 적용, POI 라벨 강조(MOSB yard), DSV 창고 라벨링, MOSB-SCT 오피스 상태 필터링, 타이포그래피 대비 개선
+- **2026-02-06**: **줌 기반 레이어 가시성 구현** - 히트맵/상태/POI 레이어 동적 표시, POI 라벨 컴팩트/상세 모드 전환, 히트맵 반경 줌 스케일링, RightPanel 탭 UI(Status/Occupancy/Distribution) 및 접근성 포커스 처리, 타이포그래피 스케일 개선
+- **2026-02-07**: **레이아웃 및 워크리스트 개선** - KPI 요약 스트립 헤더 고정, 레이아웃 간격 조정(HVDC 패널 겹침 방지), HVDC 워크리스트 간소화(핵심 컬럼만, 상세는 DetailDrawer), RightPanel 중복 요약 제거
 
 ---
 
 ## 9) 참조 문서
 
 - [AGENTS.md](./AGENTS.md) - 프로젝트 규칙
-- [INTEGRATION_ROADMAP.md](./docs/INTEGRATION_ROADMAP.md) - 통합 로드맵
-- [INTEGRATION_STATUS.md](./docs/INTEGRATION_STATUS.md) - 상세 통합 상태
+- [INTEGRATION_ROADMAP.md](./docs/integration/INTEGRATION_ROADMAP.md) - 통합 로드맵
+- [INTEGRATION_STATUS.md](./docs/integration/INTEGRATION_STATUS.md) - 상세 통합 상태
 - [DASHBOARD_DATA_INTEGRATION_PROGRESS.md](./docs/DASHBOARD_DATA_INTEGRATION_PROGRESS.md) - 대시보드 데이터 통합 진행 상황
 - [PHASE2_DDL_APPLICATION_PLAN.md](./docs/PHASE2_DDL_APPLICATION_PLAN.md) - Phase 2 DDL 적용 계획
 - [PHASE4_CSV_LOADING_PLAN.md](./docs/PHASE4_CSV_LOADING_PLAN.md) - Phase 4 CSV 적재 계획

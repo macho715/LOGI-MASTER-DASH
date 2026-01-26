@@ -20,4 +20,4 @@ dash 패치(맵 POI 11개·StageCardsStrip·GlobalSearch) 적용의 **실제 작
 | **C** | GlobalSearch (searchIndex, worklist·locations 검색) |
 | **D** | (선택) `poi_locations` 테이블 마이그레이션 |
 
-**최종 업데이트**: 2026-01-25 (누락 점검 반영, DASH_PLAN §3.0 체크리스트·STATUS·plan·README 문서 반영)
+**최종 업데이트**: 2026-02-07 (UI/UX 개선사항 반영: 히트맵 강도 범례, 줌 기반 레이어 가시성, RightPanel 탭 UI, 타이포그래피 개선, KPI 스트립 고정, 워크리스트 간소화)
