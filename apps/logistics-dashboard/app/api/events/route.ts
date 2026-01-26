@@ -16,6 +16,31 @@ const SITE_TYPE_BY_POI_CATEGORY = {
   AIRPORT: "OTHER",
 } as const
 
+type LocationJoin = { id?: string; lat: number; lng: number }
+type ShipmentJoin = { sct_ship_no?: string | null }
+
+function getObject(value: unknown): Record<string, unknown> | null {
+  if (!value || typeof value !== "object" || Array.isArray(value)) return null
+  return value as Record<string, unknown>
+}
+
+function getLocationJoin(value: unknown): LocationJoin | null {
+  const obj = Array.isArray(value) ? getObject(value[0]) : getObject(value)
+  if (!obj) return null
+  const lat = typeof obj.lat === "number" ? obj.lat : null
+  const lng = typeof obj.lng === "number" ? obj.lng : null
+  if (lat === null || lng === null) return null
+  const id = typeof obj.id === "string" ? obj.id : undefined
+  return { id, lat, lng }
+}
+
+function getShipmentJoin(value: unknown): ShipmentJoin | null {
+  const obj = Array.isArray(value) ? getObject(value[0]) : getObject(value)
+  if (!obj) return null
+  const sct_ship_no = typeof obj.sct_ship_no === "string" ? obj.sct_ship_no : null
+  return { sct_ship_no }
+}
+
 function generateMockEvents(): Event[] {
   const events: Event[] = []
   const statuses = ["PICKUP", "IN_TRANSIT", "DELIVERED", "DELAYED", "HOLD"]
@@ -87,36 +112,43 @@ export async function GET() {
       return NextResponse.json(generateMockEvents())
     }
 
-    const events: Event[] = data
-      .filter((row) => {
-        const location = row.locations as { lat: number | null; lng: number | null } | null
-        return (
-          location &&
-          typeof location.lat === "number" &&
-          typeof location.lng === "number" &&
-          typeof row.ts === "string"
-        )
-      })
-      .map((row) => {
-        const location = row.locations as { id: string; lat: number; lng: number } | null
-        const shipment = row.shipments as { id: string; sct_ship_no: string | null } | null
+    const events = data
+      .map((row): Event | null => {
+        const record = row as Record<string, unknown>
+        const location = getLocationJoin(record.locations)
+        if (!location) return null
+        const ts = typeof record.ts === "string" ? record.ts : null
+        if (!ts) return null
+        const event_id = typeof record.id === "string" ? record.id : null
+        if (!event_id) return null
+        const event_type = typeof record.event_type === "string" ? record.event_type : undefined
+        const description = typeof record.description === "string" ? record.description : undefined
+        const location_id =
+          typeof record.location_id === "string" ? record.location_id : location.id ?? ""
+        const shipment = getShipmentJoin(record.shipments)
+        const metadata = record.metadata
+        const event_date_dubai =
+          metadata && typeof metadata === "object" && !Array.isArray(metadata)
+            ? typeof (metadata as { event_date_dubai?: unknown }).event_date_dubai === "string"
+              ? ((metadata as { event_date_dubai: string }).event_date_dubai as string)
+              : undefined
+            : undefined
 
-        return {
-          event_id: row.id,
-          ts: row.ts,
+        const event: Event = {
+          event_id,
+          ts,
           shpt_no: shipment?.sct_ship_no ?? "",
-          status: row.event_type ?? "UNKNOWN",
-          location_id: row.location_id ?? location?.id ?? "",
-          lat: location!.lat,
-          lon: location!.lng,
-          remark: row.description ?? undefined,
-          event_type: row.event_type ?? undefined,
-          event_date_dubai:
-            row.metadata && typeof row.metadata === "object"
-              ? (row.metadata.event_date_dubai as string | undefined)
-              : undefined,
+          status: event_type ?? "UNKNOWN",
+          location_id,
+          lat: location.lat,
+          lon: location.lng,
+          ...(description && { remark: description }),
+          ...(event_type && { event_type }),
+          ...(event_date_dubai && { event_date_dubai }),
         }
+        return event
       })
+      .filter((event): event is Event => event !== null)
 
     return NextResponse.json(events)
   } catch (error) {
