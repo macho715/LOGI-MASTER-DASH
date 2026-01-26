@@ -4,8 +4,9 @@
 
 **SSOT 문서**:
 - 📊 **[PROJECT_SUMMARY.md](./PROJECT_SUMMARY.md)** - 한눈에 보는 개발 현황 및 다음 단계
-- ✅ **[docs/VERCEL_DEPLOYMENT_SUCCESS.md](./docs/VERCEL_DEPLOYMENT_SUCCESS.md)** - Vercel 배포 성공 리포트
+- ✅ **[docs/deployment/VERCEL_DEPLOYMENT_SUCCESS.md](./docs/deployment/VERCEL_DEPLOYMENT_SUCCESS.md)** - Vercel 배포 성공 리포트
 - [STATUS.md](./STATUS.md) - 통합 상태 SSOT
+- [docs/README.md](./docs/README.md) - 📚 문서 인덱스 및 네비게이션 가이드 (카테고리별 정리)
 - [DASHBOARD_DATA_INTEGRATION_PROGRESS](./docs/data-loading/DASHBOARD_DATA_INTEGRATION_PROGRESS.md) - Phase 2~6 실행·진행 SSOT
 - [DATA_INTEGRATION_SUMMARY](./docs/data-loading/DATA_INTEGRATION_SUMMARY.md) - 데이터 연동 요약 (흐름·확인·재실행)
 - [dash/reakmapping.md](./dash/reakmapping.md) - 맵 POI 좌표·레이어 SSOT
@@ -75,7 +76,15 @@ SUPABASE_SERVICE_ROLE_KEY=your_service_role_key
 │   └── docs/                    # dash 패치 문서 (APPLY_PATCH.md, FEATURE_SPEC_*.md)
 ├── supabase/
 │   └── migrations/              # Supabase 마이그레이션
-└── docs/                        # 프로젝트 문서
+└── docs/                        # 프로젝트 문서 (카테고리별 정리)
+    ├── architecture/            # 아키텍처 및 컴포넌트 사양
+    ├── data-loading/            # 데이터 적재 계획 및 실행 가이드
+    ├── integration/             # 통합 로드맵 및 상태
+    ├── supabase/                # Supabase 설정 및 가이드
+    ├── troubleshooting/         # 문제 해결 가이드
+    ├── guides/                  # 실행 가이드 및 튜토리얼
+    ├── migrations/              # 마이그레이션 체크리스트
+    └── deployment/              # 배포 관련 문서
 ```
 
 ---
@@ -103,7 +112,7 @@ SUPABASE_SERVICE_ROLE_KEY=your_service_role_key
 - **StageCardsStrip**: HVDC Panel 내 KpiStrip 상단 3카드, 라우팅 연동
 - **GlobalSearch**: locations·worklist 검색
 
-**상태**: 적용 완료 (검증 체크리스트는 [docs/DASH_PLAN.md](./docs/DASH_PLAN.md) §4).  
+**상태**: 적용 완료 (검증 체크리스트는 [docs/deployment/DASH_PLAN.md](./docs/deployment/DASH_PLAN.md) §4).  
 **POI 좌표 SSOT**: [dash/reakmapping.md](./dash/reakmapping.md) (DASH Phase A와 함께 구현)
 
 ---
@@ -192,35 +201,44 @@ pnpm test
 
 ## 📚 주요 문서
 
-- 📊 **[PROJECT_SUMMARY.md](./PROJECT_SUMMARY.md)** - 🆕 한눈에 보는 개발 현황 및 다음 단계
-- ✅ **[docs/VERCEL_DEPLOYMENT_SUCCESS.md](./docs/VERCEL_DEPLOYMENT_SUCCESS.md)** - 🆕 Vercel 배포 성공 리포트 (문제 해결 과정 및 최종 설정)
-- [SETUP.md](./SETUP.md) - 로컬/CI 설정 가이드
-- [CHANGELOG.md](./CHANGELOG.md) - 변경 이력
-- [STATUS (통합 상태 SSOT)](./STATUS.md)
-- [INTEGRATION_STATUS (상세 통합 상태)](./docs/integration/INTEGRATION_STATUS.md)
-- [NEXT_STEPS_PRIORITY (우선순위/실행 계획)](./docs/integration/NEXT_STEPS_PRIORITY.md)
-- [MIGRATION_CHECKLIST](./docs/migrations/MIGRATION_CHECKLIST.md)
-- [MIGRATION_COMPLETION_REPORT](./docs/migrations/MIGRATION_COMPLETION_REPORT.md)
-- [시스템 아키텍처](./docs/architecture.md)
-- [통합 로드맵](./docs/integration/INTEGRATION_ROADMAP.md)
-- [Realtime 구현 가이드](./docs/guides/REALTIME_IMPLEMENTATION.md)
-- [대시보드 레이아웃 사양](./docs/architecture/DASHBOARD_LAYOUT.md) - 🆕 통합 대시보드 레이아웃 상세 사양
-- [ETL 스크립트 가이드](./docs/data-loading/ETL_GUIDE.md) - 🆕 Supabase 데이터 적재 ETL 가이드
-- [데이터 적재 작업 계획](./docs/data-loading/DATA_LOADING_PLAN.md) - 🆕 Supabase 데이터 적재 단계별 실행 계획
-- [프로젝트 구조 가이드](./docs/architecture/PROJECT_STRUCTURE.md) - 🆕 프로젝트 구조 온보딩 가이드
-- [데이터 로딩 실행 가이드](./docs/guides/REPO_EXECUTION_GUIDE_HVDC_DATA_LOADING.md) - 실제 레포 구조 기반 실행 가이드
-- [데이터 로딩 Runbook](./docs/data-loading/DATA_LOADING_RUNBOOK.md) - 🆕 Phase 1~7 상세 실행 가이드
-- [데이터 로딩 리포트 템플릿](./docs/data-loading/DATA_LOADING_REPORT_TEMPLATE.md) - 🆕 실행 결과 기록 템플릿
-- [Realtime KPI 개발 계획](./docs/guides/DEVELOPMENT_PLAN_REALTIME_KPI_DASHBOARD.md) - 🆕 Realtime KPI 개발 계획
-- [대시보드 데이터 통합 진행](./docs/data-loading/DASHBOARD_DATA_INTEGRATION_PROGRESS.md) - Phase 2~6·대시보드 반영·로컬 테스트 완료
-- [Phase 2 DDL 적용 계획](./docs/data-loading/PHASE2_DDL_APPLICATION_PLAN.md)
-- [Phase 4 CSV 적재 계획](./docs/data-loading/PHASE4_CSV_LOADING_PLAN.md)
-- [Phase 5 Gate 1 QA 계획](./docs/data-loading/PHASE5_GATE1_QA_PLAN.md)
-- [Phase 6 Realtime 활성화 계획](./docs/data-loading/PHASE6_REALTIME_ACTIVATION_PLAN.md)
-- [Supabase 연결 트러블슈팅](./docs/supabase/SUPABASE_CONNECTION_TROUBLESHOOTING.md)
-- [dash 패치 적용 계획](./docs/deployment/DASH_PLAN.md) - 맵 POI·StageCardsStrip·GlobalSearch 실제 작업 계획
+> **📖 전체 문서 인덱스**: [docs/README.md](./docs/README.md) - 카테고리별로 정리된 모든 문서 목록
+
+### 핵심 문서
+- 📊 **[PROJECT_SUMMARY.md](./PROJECT_SUMMARY.md)** - 한눈에 보는 개발 현황 및 다음 단계
+- ✅ **[docs/deployment/VERCEL_DEPLOYMENT_SUCCESS.md](./docs/deployment/VERCEL_DEPLOYMENT_SUCCESS.md)** - Vercel 배포 성공 리포트
+- [STATUS.md](./STATUS.md) - 통합 상태 SSOT
+- [docs/integration/INTEGRATION_STATUS.md](./docs/integration/INTEGRATION_STATUS.md) - 상세 통합 상태
+- [docs/integration/NEXT_STEPS_PRIORITY.md](./docs/integration/NEXT_STEPS_PRIORITY.md) - 우선순위 및 실행 계획
+
+### 아키텍처 및 구조
+- [docs/architecture/architecture.md](./docs/architecture/architecture.md) - 시스템 아키텍처
+- [docs/architecture/DASHBOARD_LAYOUT.md](./docs/architecture/DASHBOARD_LAYOUT.md) - 통합 대시보드 레이아웃 상세 사양
+- [docs/architecture/COMPONENT_DETAIL_SPEC.md](./docs/architecture/COMPONENT_DETAIL_SPEC.md) - 컴포넌트 구현 상세
+- [docs/architecture/PROJECT_STRUCTURE.md](./docs/architecture/PROJECT_STRUCTURE.md) - 프로젝트 구조 온보딩 가이드
+
+### 데이터 로딩 및 통합
+- [docs/data-loading/DATA_LOADING_PLAN.md](./docs/data-loading/DATA_LOADING_PLAN.md) - Supabase 데이터 적재 단계별 실행 계획
+- [docs/data-loading/DATA_LOADING_RUNBOOK.md](./docs/data-loading/DATA_LOADING_RUNBOOK.md) - Phase 1~7 상세 실행 가이드
+- [docs/data-loading/DASHBOARD_DATA_INTEGRATION_PROGRESS.md](./docs/data-loading/DASHBOARD_DATA_INTEGRATION_PROGRESS.md) - Phase 2~6 실행·진행 SSOT
+- [docs/data-loading/DATA_INTEGRATION_SUMMARY.md](./docs/data-loading/DATA_INTEGRATION_SUMMARY.md) - 데이터 연동 요약
+- [docs/data-loading/ETL_GUIDE.md](./docs/data-loading/ETL_GUIDE.md) - ETL 스크립트 사용 가이드
+- [docs/data-loading/DATA_LOADING_QA.md](./docs/data-loading/DATA_LOADING_QA.md) - 데이터 로딩 Q&A 종합
+
+### Realtime 및 개발 가이드
+- [docs/guides/REALTIME_IMPLEMENTATION.md](./docs/guides/REALTIME_IMPLEMENTATION.md) - Supabase Realtime KPI Dashboard 구현 가이드
+- [docs/guides/DEVELOPMENT_PLAN_REALTIME_KPI_DASHBOARD.md](./docs/guides/DEVELOPMENT_PLAN_REALTIME_KPI_DASHBOARD.md) - Realtime KPI 개발 계획
+- [docs/guides/REPO_EXECUTION_GUIDE_HVDC_DATA_LOADING.md](./docs/guides/REPO_EXECUTION_GUIDE_HVDC_DATA_LOADING.md) - 실제 레포 구조 기반 실행 가이드
+
+### 배포 및 패치
+- [docs/deployment/DASH_PLAN.md](./docs/deployment/DASH_PLAN.md) - dash 패치 적용 계획 (맵 POI·StageCardsStrip·GlobalSearch)
+- [docs/deployment/POI_MAP_PATCH_RUNBOOK.md](./docs/deployment/POI_MAP_PATCH_RUNBOOK.md) - POI 맵 패치 실행 가이드
 - [dash/reakmapping.md](./dash/reakmapping.md) - 맵 POI 좌표·레이어 SSOT
 - [dash/docs/APPLY_PATCH.md](./dash/docs/APPLY_PATCH.md) - dash 패치 통합 절차
+
+### 기타
+- [SETUP.md](./SETUP.md) - 로컬/CI 설정 가이드
+- [CHANGELOG.md](./CHANGELOG.md) - 변경 이력
+- [AGENTS.md](./AGENTS.md) - 코딩 규칙 SSOT
 
 ---
 
@@ -245,7 +263,10 @@ Private
 **최종 업데이트**: 2026-02-07
 
 **최근 주요 변경사항** (2026-02-05 ~ 2026-02-07):
-- 히트맵 강도 범례 및 지오펜스 가중치 적용
-- 줌 기반 레이어 가시성 및 히트맵 반경 스케일링
-- RightPanel 탭 UI 개선 및 타이포그래피 최적화
-- KPI 요약 스트립 고정 및 HVDC 워크리스트 간소화
+- ✅ **docs 폴더 카테고리별 정리 완료**: 37개 문서를 8개 카테고리 폴더로 이동, 문서 인덱스 생성
+- ✅ 히트맵 강도 범례 및 지오펜스 가중치 적용
+- ✅ 줌 기반 레이어 가시성 및 히트맵 반경 스케일링
+- ✅ RightPanel 탭 UI 개선 및 타이포그래피 최적화
+- ✅ KPI 요약 스트립 고정 및 HVDC 워크리스트 간소화
+
+**문서 구조**: 모든 문서는 [docs/README.md](./docs/README.md)에서 카테고리별로 정리되어 있습니다.
