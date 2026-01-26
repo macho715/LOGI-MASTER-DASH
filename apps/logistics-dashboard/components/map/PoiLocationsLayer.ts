@@ -11,12 +11,14 @@ export type PoiLayersOptions = {
   zoom: number
   onSelectPoi?: (poi: PoiLocation) => void
   onHover?: (info: PickingInfo) => void
+  visible?: boolean
   /**
    * If true, labels are always attempted.
    * If false, labels appear only at zoom >= labelZoomThreshold.
    */
   forceLabels?: boolean
   labelZoomThreshold?: number
+  labelDetailZoomThreshold?: number
 }
 
 const EMPHASIZED_POI_IDS = new Set(["mosb-yard"])
@@ -59,16 +61,20 @@ export function createPoiLayers(opts: PoiLayersOptions): Layer[] {
     zoom,
     onSelectPoi,
     onHover,
+    visible = true,
     forceLabels = false,
     labelZoomThreshold = 8.5,
+    labelDetailZoomThreshold = 10.5,
   } = opts
 
-  const showLabels = forceLabels || zoom >= labelZoomThreshold
+  const showLabels = visible && (forceLabels || zoom >= labelZoomThreshold)
+  const useDetailedLabels = zoom >= labelDetailZoomThreshold
 
   const pointsLayer = new ScatterplotLayer<PoiLocation>({
     id: "poi-markers",
     data: pois,
     pickable: true,
+    visible,
     radiusUnits: "pixels",
     getPosition: getPoiPosition,
     getRadius: (d) => (d.id === selectedPoiId ? 10 : 7),
@@ -95,7 +101,7 @@ export function createPoiLayers(opts: PoiLayersOptions): Layer[] {
     pickable: true,
     visible: showLabels,
     getPosition: getPoiPosition,
-    getText: (d) => d.displayLabel ?? `${d.code} - ${d.summary}`,
+    getText: (d) => (useDetailedLabels ? d.displayLabel ?? `${d.code} - ${d.summary}` : d.code),
     sizeUnits: "pixels",
     getSize: (d) => getLabelSize(d, selectedPoiId),
     getPixelOffset: (d) => d.labelOffsetPx ?? [0, -16],
@@ -118,6 +124,7 @@ export function createPoiLayers(opts: PoiLayersOptions): Layer[] {
     onHover,
     updateTriggers: {
       getSize: [selectedPoiId],
+      getText: [useDetailedLabels],
       visible: [showLabels],
     },
   })

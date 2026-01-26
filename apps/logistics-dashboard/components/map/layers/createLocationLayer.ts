@@ -17,6 +17,7 @@ export function createLocationLayer(
   locations: Location[],
   statusByLocationId: Record<string, LocationStatus>,
   onHover?: (info: PickingInfo<LocationWithStatus>) => void,
+  { visible = true }: { visible?: boolean } = {},
 ) {
   const data: LocationWithStatus[] = locations.map((loc) => ({
     ...loc,
@@ -27,6 +28,7 @@ export function createLocationLayer(
     id: "location-layer",
     data,
     pickable: true,
+    visible,
     opacity: 0.8,
     stroked: true,
     filled: true,

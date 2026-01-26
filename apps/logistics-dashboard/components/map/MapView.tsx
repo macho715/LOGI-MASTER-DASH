@@ -38,6 +38,14 @@ const POI_BOUNDS: maplibregl.LngLatBoundsLike = [
   [54.65, 25.15],
 ]
 
+const MAP_LAYER_ZOOM_THRESHOLDS = {
+  heatmapMax: 9.5,
+  statusMin: 9.5,
+  poiMin: 7.5,
+  poiLabelMin: 7.5,
+  poiDetailMin: 10.5,
+}
+
 export function MapView() {
   const mapContainerRef = useRef<HTMLDivElement>(null)
   const mapRef = useRef<maplibregl.Map | null>(null)
@@ -83,6 +91,10 @@ export function MapView() {
     }
     return 80
   }, [zoom])
+
+  const showHeatmapLayer = showHeatmap && zoom < MAP_LAYER_ZOOM_THRESHOLDS.heatmapMax
+  const showStatusLayer = zoom >= MAP_LAYER_ZOOM_THRESHOLDS.statusMin
+  const showPoiLayer = zoom >= MAP_LAYER_ZOOM_THRESHOLDS.poiMin
 
   const handleHover = useCallback((info: PickingInfo) => {
     if (!info?.object) {
@@ -174,6 +186,9 @@ export function MapView() {
       pois: POI_LOCATIONS,
       selectedPoiId,
       zoom,
+      visible: showPoiLayer,
+      labelZoomThreshold: MAP_LAYER_ZOOM_THRESHOLDS.poiLabelMin,
+      labelDetailZoomThreshold: MAP_LAYER_ZOOM_THRESHOLDS.poiDetailMin,
       onSelectPoi: (poi) => setSelectedPoiId(poi.id),
       onHover: handleHover,
     })
@@ -183,10 +198,12 @@ export function MapView() {
       createHeatmapLayer(filteredEvents, {
         getWeight: geofenceWeight,
         radiusPixels: heatmapRadiusPixels,
-        visible: showHeatmap,
+        visible: showHeatmapLayer,
       }),
       createEtaWedgeLayer(locations, showEtaWedge),
-      createLocationLayer(locations, statusByLocationId, handleHover),
+      createLocationLayer(locations, statusByLocationId, handleHover, {
+        visible: showStatusLayer,
+      }),
       ...poiLayers,
       ...createHvdcPoiLayers(),
     ]
@@ -205,13 +222,16 @@ export function MapView() {
     heatmapRadiusPixels,
     selectedPoiId,
     zoom,
+    showHeatmapLayer,
+    showPoiLayer,
+    showStatusLayer,
   ])
 
   return (
     <div className="relative w-full h-full">
       <div ref={mapContainerRef} className="w-full h-full" />
 
-      {showHeatmap ? <HeatmapLegend /> : null}
+      {showHeatmapLayer ? <HeatmapLegend /> : null}
 
       {/* Tooltip */}
       {tooltip && tooltip.kind === "location" && (

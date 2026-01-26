@@ -13,6 +13,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed (2026-02-06)
 - logistics-dashboard: heatmap radius now scales with zoom level for clearer density at different map scales
+- logistics-dashboard: zoom-based visibility for heatmap/status/POI layers with compact-to-detailed POI labels
 - logistics-dashboard: RightPanel 탭 UI로 Status/Occupancy/Distribution 섹션 분리 및 접근성 포커스 처리
 
 ### Added (2026-02-05)
