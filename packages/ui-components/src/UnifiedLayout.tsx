@@ -170,7 +170,7 @@ export function UnifiedLayout() {
           <div className="p-4 border-b">
             <KpiStrip />
           </div>
-          <div className="flex-1 overflow-hidden">
+          <div className="flex-1 overflow-auto">
             <WorklistTable />
           </div>
         </div>

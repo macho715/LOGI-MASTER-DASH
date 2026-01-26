@@ -159,7 +159,7 @@ export function UnifiedLayout() {
             <StageCardsStrip rows={worklistRows} onNavigateBucket={handleNavigateBucket} />
             <KpiStrip />
           </div>
-          <div className="flex-1 overflow-hidden">
+          <div className="flex-1 overflow-auto">
             <WorklistTable />
           </div>
         </div>

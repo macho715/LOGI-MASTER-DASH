@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed (2026-02-08)
 - logistics-dashboard: removed top-level overflow lock so scroll remains scoped to worklist/right panel containers
+- logistics-dashboard: desktop worklist panel allows vertical scrolling within the table container
 
 ### Changed (2026-02-07)
 - logistics-dashboard: fixed KPI summary strip to the header and adjusted layout spacing to avoid HVDC overlap
