@@ -9,6 +9,8 @@ export type StageCardsStripProps = {
   rows: ReadonlyArray<WorklistRow>
   onNavigateBucket: (bucket: HvdcBucket) => void
   className?: string
+  activeBucket?: HvdcBucket
+  disabled?: boolean
 }
 
 type StageCardSpec = {
@@ -35,7 +37,13 @@ const CARD_SPECS: StageCardSpec[] = [
   },
 ]
 
-export function StageCardsStrip({ rows, onNavigateBucket, className }: StageCardsStripProps) {
+export function StageCardsStrip({
+  rows,
+  onNavigateBucket,
+  className,
+  activeBucket,
+  disabled = false,
+}: StageCardsStripProps) {
   const bucketRows = useMemo(() => rows.map(toBucketRecord), [rows])
   const counts = useMemo(() => computeBucketCounts(bucketRows), [bucketRows])
 
@@ -44,15 +52,27 @@ export function StageCardsStrip({ rows, onNavigateBucket, className }: StageCard
       <div className="grid grid-cols-3 gap-2">
         {CARD_SPECS.map((spec) => {
           const value = counts[spec.bucket]
+          const isActive = activeBucket === spec.bucket
           return (
             <button
               key={spec.bucket}
               type="button"
               onClick={() => onNavigateBucket(spec.bucket)}
-              className="rounded-lg border border-border bg-card/80 px-3 py-2 text-left shadow-sm outline-none hover:bg-accent/40 focus:ring-2 focus:ring-ring"
+              disabled={disabled}
+              aria-pressed={isActive}
+              title={spec.subtitle}
+              className={[
+                "rounded-lg border border-border bg-card/80 px-3 py-2 text-left shadow-sm outline-none",
+                "min-h-[72px]",
+                "transition-colors transition-shadow duration-150",
+                "hover:bg-accent/40",
+                "focus-visible:ring-2 focus-visible:ring-ring",
+                isActive ? "ring-2 ring-ring" : "",
+                disabled ? "opacity-50 pointer-events-none" : "",
+              ].join(" ")}
               aria-label={`${spec.title} 카드 열기: ${spec.subtitle}`}
             >
-              <div className="text-xs text-muted-foreground">{spec.subtitle}</div>
+              <div className="text-xs text-muted-foreground truncate">{spec.subtitle}</div>
               <div className="mt-1 flex items-baseline justify-between gap-2">
                 <div className="text-sm font-semibold text-foreground">{spec.title}</div>
                 <div className="text-2xl font-semibold tabular-nums text-foreground">{value}</div>

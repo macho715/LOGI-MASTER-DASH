@@ -113,14 +113,21 @@ export function UnifiedLayout() {
 
   useEffect(() => () => handlePanelDragEnd(), [handlePanelDragEnd])
 
-  useEffect(() => {
+  const activeBucket = (() => {
     const raw = searchParams.get("bucket")
-    if (raw !== "cumulative" && raw !== "current" && raw !== "future") {
-      actions.setFilters({ bucket: undefined })
-      return
+    if (raw === "cumulative" || raw === "current" || raw === "future") {
+      return raw as HvdcBucket
     }
-    actions.setFilters({ bucket: raw as HvdcBucket })
-  }, [actions, searchParams])
+    return undefined
+  })()
+
+  useEffect(() => {
+    if (activeBucket) {
+      actions.setFilters({ bucket: activeBucket })
+    } else {
+      actions.setFilters({ bucket: undefined })
+    }
+  }, [actions, activeBucket])
 
   const handleNavigateBucket = useCallback(
     (bucket: HvdcBucket) => {
@@ -148,7 +155,7 @@ export function UnifiedLayout() {
         <div className="w-full bg-card border-t border-border" aria-label="HVDC Worklist Panel">
           <div className="h-80 flex flex-col">
             <div className="p-4 border-b space-y-3">
-              <StageCardsStrip rows={worklistRows} onNavigateBucket={handleNavigateBucket} />
+              <StageCardsStrip rows={worklistRows} onNavigateBucket={handleNavigateBucket} activeBucket={activeBucket} />
               <KpiStrip />
             </div>
             <div className="flex-1 overflow-auto">
@@ -181,7 +188,7 @@ export function UnifiedLayout() {
 
         <div className="overflow-hidden transition-all duration-200" style={{ height: `${panelHeight}px` }}>
           <div className="p-4 border-b space-y-3">
-            <StageCardsStrip rows={worklistRows} onNavigateBucket={handleNavigateBucket} />
+            <StageCardsStrip rows={worklistRows} onNavigateBucket={handleNavigateBucket} activeBucket={activeBucket} />
             <KpiStrip />
           </div>
           <div className="flex-1 overflow-auto" style={{ height: `${panelHeight - 120}px` }}>
