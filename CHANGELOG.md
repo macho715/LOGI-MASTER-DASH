@@ -13,6 +13,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed (2026-02-06)
 - logistics-dashboard: heatmap radius now scales with zoom level for clearer density at different map scales
+- logistics-dashboard: RightPanel 탭 UI로 Status/Occupancy/Distribution 섹션 분리 및 접근성 포커스 처리
 
 ### Added (2026-02-05)
 - logistics-dashboard: 히트맵 토글 활성 시 강도 범례(낮음~높음) 표시
