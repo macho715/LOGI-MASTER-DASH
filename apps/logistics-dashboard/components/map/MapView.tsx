@@ -11,11 +11,13 @@ import { createLocationLayer } from "./layers/createLocationLayer"
 import { createHeatmapLayer } from "./layers/createHeatmapLayer"
 import { createGeofenceLayer } from "./layers/createGeofenceLayer"
 import { createEtaWedgeLayer } from "./layers/createEtaWedgeLayer"
+import { createGeofenceGeojson, isPointInGeofence } from "./layers/geofenceUtils"
+import { HeatmapLegend } from "./HeatmapLegend"
 import { createPoiLayers, getPoiTooltip } from "@/components/map/PoiLocationsLayer"
 import { createHvdcPoiLayers } from "./HvdcPoiLayers"
 import { POI_LOCATIONS } from "@/lib/map/poiLocations"
 import { formatInDubaiTimezone } from "@/lib/time"
-import type { Location, LocationStatus } from "@repo/shared"
+import type { Event, Location, LocationStatus } from "@repo/shared"
 
 type TooltipInfo =
   | { kind: "location"; x: number; y: number; object: Location & { status?: LocationStatus } }
@@ -55,6 +57,7 @@ export function MapView() {
   const heatFilter = useLogisticsStore((state) => state.heatFilter)
 
   const locations = useMemo(() => Object.values(locationsById), [locationsById])
+  const geofenceGeojson = useMemo(() => createGeofenceGeojson(locations), [locations])
 
   const eventsInWindow = useMemo(() => {
     const events = Object.values(eventsById)
@@ -62,6 +65,14 @@ export function MapView() {
     const now = Date.now()
     return events.filter((evt) => now - new Date(evt.ts).getTime() <= windowMs)
   }, [eventsById, windowHours])
+
+  const geofenceWeight = useCallback(
+    (event: Event) => {
+      if (geofenceGeojson.features.length === 0) return 1
+      return isPointInGeofence(event.lon, event.lat, geofenceGeojson) ? 2 : 1
+    },
+    [geofenceGeojson],
+  )
 
   const heatmapRadiusPixels = useMemo(() => {
     if (zoom >= 12) {
@@ -170,6 +181,7 @@ export function MapView() {
     const layers = [
       createGeofenceLayer(locations, showGeofence),
       createHeatmapLayer(filteredEvents, {
+        getWeight: geofenceWeight,
         radiusPixels: heatmapRadiusPixels,
         visible: showHeatmap,
       }),
@@ -189,6 +201,7 @@ export function MapView() {
     showEtaWedge,
     heatFilter,
     handleHover,
+    geofenceWeight,
     heatmapRadiusPixels,
     selectedPoiId,
     zoom,
@@ -197,6 +210,8 @@ export function MapView() {
   return (
     <div className="relative w-full h-full">
       <div ref={mapContainerRef} className="w-full h-full" />
+
+      {showHeatmap ? <HeatmapLegend /> : null}
 
       {/* Tooltip */}
       {tooltip && tooltip.kind === "location" && (

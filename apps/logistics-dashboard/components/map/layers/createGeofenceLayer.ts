@@ -1,39 +1,9 @@
 import { GeoJsonLayer } from "@deck.gl/layers"
 import type { Location } from "@/types/logistics"
-
-// Generate simple polygon geofences around locations
-function generateGeofencePolygons(locations: Location[]) {
-  return {
-    type: "FeatureCollection" as const,
-    features: locations.map((loc) => {
-      // Create a simple square geofence around each location
-      const offset = 0.02 // ~2km offset
-      return {
-        type: "Feature" as const,
-        properties: {
-          location_id: loc.location_id,
-          name: loc.name,
-          siteType: loc.siteType,
-        },
-        geometry: {
-          type: "Polygon" as const,
-          coordinates: [
-            [
-              [loc.lon - offset, loc.lat - offset],
-              [loc.lon + offset, loc.lat - offset],
-              [loc.lon + offset, loc.lat + offset],
-              [loc.lon - offset, loc.lat + offset],
-              [loc.lon - offset, loc.lat - offset],
-            ],
-          ],
-        },
-      }
-    }),
-  }
-}
+import { createGeofenceGeojson } from "./geofenceUtils"
 
 export function createGeofenceLayer(locations: Location[], visible = true) {
-  const geojson = generateGeofencePolygons(locations)
+  const geojson = createGeofenceGeojson(locations)
 
   return new GeoJsonLayer({
     id: "geofence-layer",
