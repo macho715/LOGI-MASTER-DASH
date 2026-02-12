@@ -95,11 +95,11 @@ export function HeaderBar() {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-card/95 backdrop-blur-sm border-b border-border">
       <div className="flex flex-col">
-        <div className="flex items-center justify-between px-4 py-2 gap-4">
+        <div className="flex items-center justify-between px-4 py-2 gap-4 flex-wrap">
           {/* Title and Connection Status */}
           <div className="flex items-center gap-3 shrink-0">
             <h1 className="text-lg font-semibold text-foreground whitespace-nowrap">MOSB Logistics Dashboard</h1>
-            <Badge variant="secondary" className="text-sm">
+            <Badge variant="secondary" className="text-sm hidden sm:inline-flex">
               Client-Only Mode
             </Badge>
             <div className="flex items-center gap-1.5">
@@ -111,12 +111,12 @@ export function HeaderBar() {
           </div>
 
           {/* Global Search */}
-          <div className="hidden xl:block w-80 shrink-0">
+          <div className="hidden lg:block w-80 shrink-0">
             <GlobalSearch items={searchItems} onSelect={handleSearchSelect} />
           </div>
 
           {/* Toggles */}
-          <div className="flex items-center gap-4 shrink-0">
+          <div className="hidden md:flex items-center gap-4 shrink-0">
             <div className="flex items-center gap-2">
               <Switch id="geofence" checked={showGeofence} onCheckedChange={toggleGeofence} />
               <Label htmlFor="geofence" className="text-sm whitespace-nowrap">
@@ -138,11 +138,11 @@ export function HeaderBar() {
           </div>
 
           {/* Inputs */}
-          <div className="flex items-center gap-3 shrink-0">
-          <div className="flex items-center gap-2">
-            <Label htmlFor="window" className="text-sm whitespace-nowrap">
-              Window (h)
-            </Label>
+          <div className="hidden md:flex items-center gap-3 shrink-0">
+            <div className="flex items-center gap-2">
+              <Label htmlFor="window" className="text-sm whitespace-nowrap">
+                Window (h)
+              </Label>
               <Input
                 id="window"
                 type="number"
@@ -153,10 +153,10 @@ export function HeaderBar() {
                 className="w-16 h-8 text-sm"
               />
             </div>
-          <div className="flex items-center gap-2">
-            <Label htmlFor="heat-filter" className="text-sm whitespace-nowrap">
-              Heat Filter
-            </Label>
+            <div className="flex items-center gap-2">
+              <Label htmlFor="heat-filter" className="text-sm whitespace-nowrap">
+                Heat Filter
+              </Label>
               <Select value={heatFilter} onValueChange={(v) => setHeatFilter(v as typeof heatFilter)}>
                 <SelectTrigger className="w-24 h-8 text-sm">
                   <SelectValue />
@@ -173,7 +173,7 @@ export function HeaderBar() {
 
           {/* User info and Logout */}
           <div className="flex items-center gap-3 shrink-0">
-            <span className="text-sm text-muted-foreground whitespace-nowrap">
+            <span className="text-sm text-muted-foreground whitespace-nowrap hidden sm:inline">
               User: <span className="text-foreground font-medium">admin</span>{" "}
               <Badge variant="outline" className="text-xs ml-1">
                 ADMIN

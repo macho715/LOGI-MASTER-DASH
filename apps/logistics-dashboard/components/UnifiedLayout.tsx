@@ -142,17 +142,17 @@ export function UnifiedLayout() {
     <div className="min-h-screen bg-background dark flex flex-col">
       <HeaderBar />
 
-      <div className="flex-1 overflow-y-auto pt-24">
-        <div className="flex min-h-[calc(100vh-96px)]">
+      <div className="flex-1 overflow-hidden pt-24 flex flex-col pb-[260px] lg:pb-0">
+        <div className="flex flex-1 min-h-0">
           <div className="flex-[2] relative min-w-0 min-h-0" role="main" aria-label="Logistics Map View">
             <MapView />
           </div>
-          <div className="flex-[1] relative min-w-0 min-h-0">
+          <div className="hidden lg:block flex-[1] relative min-w-0 min-h-0">
             <DetailDrawer mode="sidepanel" />
           </div>
         </div>
 
-        <div className="w-full bg-card border-t border-border" aria-label="HVDC Worklist Panel">
+        <div className="hidden lg:block w-full bg-card border-t border-border" aria-label="HVDC Worklist Panel">
           <div className="h-80 flex flex-col">
             <div className="p-4 border-b space-y-3">
               <StageCardsStrip rows={worklistRows} onNavigateBucket={handleNavigateBucket} activeBucket={activeBucket} />
